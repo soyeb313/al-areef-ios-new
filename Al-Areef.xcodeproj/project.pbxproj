@@ -3,27 +3,119 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35703DB22621BCC500D4F260 /* DashBoardCustomer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DB12621BCC500D4F260 /* DashBoardCustomer.storyboard */; };
+		35703DBB2621C8BC00D4F260 /* Poppins-Bold.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DB62621C88F00D4F260 /* Poppins-Bold.ttf */; };
+		35703DBC2621C8BC00D4F260 /* Poppins-Light.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DB72621C88F00D4F260 /* Poppins-Light.ttf */; };
+		35703DBD2621C8BC00D4F260 /* Poppins-Medium.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DB92621C89000D4F260 /* Poppins-Medium.ttf */; };
+		35703DBE2621C8BC00D4F260 /* Poppins-Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DB82621C88F00D4F260 /* Poppins-Regular.ttf */; };
+		35703DBF2621C8BC00D4F260 /* Poppins-SemiBold.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DB52621C88F00D4F260 /* Poppins-SemiBold.ttf */; };
+		35703DC02621C8BC00D4F260 /* Poppins-Thin.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DBA2621C89000D4F260 /* Poppins-Thin.ttf */; };
+		35703DC32621E2E300D4F260 /* Khebrat Musamim 2018 Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 35703DC22621E2D900D4F260 /* Khebrat Musamim 2018 Regular.ttf */; };
+		35703DC72621F0D300D4F260 /* DasBoardCustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35703DC62621F0D300D4F260 /* DasBoardCustViewController.swift */; };
+		35703DCC2621F17300D4F260 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35703DCB2621F17300D4F260 /* DashBoardTableViewCell.swift */; };
+		35703DD02621F5B500D4F260 /* UtechTab_UTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35703DCF2621F5B500D4F260 /* UtechTab_UTC.swift */; };
+		35703DDC2621FB9400D4F260 /* SettingTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35703DDB2621FB9400D4F260 /* SettingTabVC.swift */; };
+		35703DDF2621FBB800D4F260 /* ProfilleTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35703DDE2621FBB800D4F260 /* ProfilleTabVC.swift */; };
+		35703DE32621FBE200D4F260 /* CalendarTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35703DE22621FBE200D4F260 /* CalendarTabVC.swift */; };
+		35703DE62621FBFB00D4F260 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */; };
+		35703DE92621FC4700D4F260 /* CalendarTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DE82621FC4700D4F260 /* CalendarTab.storyboard */; };
+		35703DEC2621FC9500D4F260 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DEB2621FC9500D4F260 /* SettingTab.storyboard */; };
+		79692CCC262087880056FB00 /* UIColor + AI-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */; };
+		79692CD726208E0F0056FB00 /* LoginStepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */; };
+		79692CDB26208E330056FB00 /* LonginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CDA26208E330056FB00 /* LonginVC.swift */; };
+		79692CDF262094110056FB00 /* UIView + Al-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CDE262094110056FB00 /* UIView + Al-Areef.swift */; };
+		79692CE2262097330056FB00 /* UILabel + Al-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CE1262097330056FB00 /* UILabel + Al-Areef.swift */; };
+		79692CE626209D210056FB00 /* UITapGestureRecognizer + Al-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CE526209D210056FB00 /* UITapGestureRecognizer + Al-Areef.swift */; };
+		79692CE92620A5020056FB00 /* UIViewController + Al-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CE82620A5020056FB00 /* UIViewController + Al-Areef.swift */; };
+		79692CED2620A7D90056FB00 /* CustomerRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CEC2620A7D90056FB00 /* CustomerRegistrationVC.swift */; };
+		79692CF12620A8150056FB00 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CF02620A8150056FB00 /* SignUpVC.swift */; };
+		79692CF82620B96C0056FB00 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CF52620B96C0056FB00 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		79692CF92620B96C0056FB00 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CF62620B96C0056FB00 /* SkyFloatingLabelTextField.swift */; };
+		79692CFA2620B96C0056FB00 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CF72620B96C0056FB00 /* UITextField+fixCaretPosition.swift */; };
+		79692D012620BDD60056FB00 /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692D002620BDD60056FB00 /* OTPVC.swift */; };
+		79692D052620C3090056FB00 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692D042620C3090056FB00 /* OTPView.swift */; };
+		79692D082620C37F0056FB00 /* String + AI-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692D072620C37F0056FB00 /* String + AI-Areef.swift */; };
+		79692D0B2620D1DE0056FB00 /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79692D0A2620D1DE0056FB00 /* Customer.storyboard */; };
+		79692D0F2620D2B80056FB00 /* Storyboard + AI-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692D0E2620D2B80056FB00 /* Storyboard + AI-Areef.swift */; };
 		79960D1426206FCD0094483C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D1326206FCD0094483C /* AppDelegate.swift */; };
 		79960D1626206FCD0094483C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D1526206FCD0094483C /* SceneDelegate.swift */; };
-		79960D1826206FCD0094483C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D1726206FCD0094483C /* ViewController.swift */; };
+		79960D1826206FCD0094483C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79960D1726206FCD0094483C /* SplashVC.swift */; };
 		79960D1B26206FCD0094483C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79960D1926206FCD0094483C /* Main.storyboard */; };
 		79960D1D26206FCE0094483C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79960D1C26206FCE0094483C /* Assets.xcassets */; };
 		79960D2026206FCE0094483C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79960D1E26206FCE0094483C /* LaunchScreen.storyboard */; };
+		79CBD8B92624487C00CB0FC9 /* Doctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CBD8B82624487C00CB0FC9 /* Doctor.storyboard */; };
+		79CBD8CF262460F000CB0FC9 /* InfoSliderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8CE262460F000CB0FC9 /* InfoSliderVC.swift */; };
+		79CBD8EC262466D200CB0FC9 /* InfoSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8EB262466D200CB0FC9 /* InfoSliderCell.swift */; };
+		79CBD8F026247F4800CB0FC9 /* RegistrationStepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8EF26247F4800CB0FC9 /* RegistrationStepOneVC.swift */; };
+		79CBD8F3262486BC00CB0FC9 /* RegistrationStepTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8F2262486BC00CB0FC9 /* RegistrationStepTwoVC.swift */; };
+		79CBD8F62624961300CB0FC9 /* UIImage + AI-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8F52624961300CB0FC9 /* UIImage + AI-Areef.swift */; };
+		79CBD8F92624A13000CB0FC9 /* CreateDoctorProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8F82624A13000CB0FC9 /* CreateDoctorProfileVC.swift */; };
+		79CBD9002624B8C100CB0FC9 /* AcademicQualificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD8FF2624B8C100CB0FC9 /* AcademicQualificationVC.swift */; };
+		79CBD9042624B8D000CB0FC9 /* WorkExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD9032624B8D000CB0FC9 /* WorkExperienceVC.swift */; };
+		79CBD9072624B8E000CB0FC9 /* ConsultantProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CBD9062624B8E000CB0FC9 /* ConsultantProfileVC.swift */; };
+		A05B53B8A5E85D9023A390BD /* Pods_Al_Areef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5525756C1DB9CA2B98F4DCC0 /* Pods_Al_Areef.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14C6E187FF4B6DACDB186EC2 /* Pods-Al-Areef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Al-Areef.release.xcconfig"; path = "Target Support Files/Pods-Al-Areef/Pods-Al-Areef.release.xcconfig"; sourceTree = "<group>"; };
+		35703DB12621BCC500D4F260 /* DashBoardCustomer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashBoardCustomer.storyboard; sourceTree = "<group>"; };
+		35703DB52621C88F00D4F260 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		35703DB62621C88F00D4F260 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		35703DB72621C88F00D4F260 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		35703DB82621C88F00D4F260 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		35703DB92621C89000D4F260 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		35703DBA2621C89000D4F260 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		35703DC22621E2D900D4F260 /* Khebrat Musamim 2018 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khebrat Musamim 2018 Regular.ttf"; sourceTree = "<group>"; };
+		35703DC62621F0D300D4F260 /* DasBoardCustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasBoardCustViewController.swift; sourceTree = "<group>"; };
+		35703DCB2621F17300D4F260 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
+		35703DCF2621F5B500D4F260 /* UtechTab_UTC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtechTab_UTC.swift; sourceTree = "<group>"; };
+		35703DDB2621FB9400D4F260 /* SettingTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTabVC.swift; sourceTree = "<group>"; };
+		35703DDE2621FBB800D4F260 /* ProfilleTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilleTabVC.swift; sourceTree = "<group>"; };
+		35703DE22621FBE200D4F260 /* CalendarTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabVC.swift; sourceTree = "<group>"; };
+		35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
+		35703DE82621FC4700D4F260 /* CalendarTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarTab.storyboard; sourceTree = "<group>"; };
+		35703DEB2621FC9500D4F260 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
+		5525756C1DB9CA2B98F4DCC0 /* Pods_Al_Areef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Al_Areef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + AI-Areef.swift"; sourceTree = "<group>"; };
+		79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStepOneVC.swift; sourceTree = "<group>"; };
+		79692CDA26208E330056FB00 /* LonginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginVC.swift; sourceTree = "<group>"; };
+		79692CDE262094110056FB00 /* UIView + Al-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Al-Areef.swift"; sourceTree = "<group>"; };
+		79692CE1262097330056FB00 /* UILabel + Al-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Al-Areef.swift"; sourceTree = "<group>"; };
+		79692CE526209D210056FB00 /* UITapGestureRecognizer + Al-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer + Al-Areef.swift"; sourceTree = "<group>"; };
+		79692CE82620A5020056FB00 /* UIViewController + Al-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Al-Areef.swift"; sourceTree = "<group>"; };
+		79692CEC2620A7D90056FB00 /* CustomerRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRegistrationVC.swift; sourceTree = "<group>"; };
+		79692CF02620A8150056FB00 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		79692CF52620B96C0056FB00 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		79692CF62620B96C0056FB00 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		79692CF72620B96C0056FB00 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		79692D002620BDD60056FB00 /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
+		79692D042620C3090056FB00 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		79692D072620C37F0056FB00 /* String + AI-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + AI-Areef.swift"; sourceTree = "<group>"; };
+		79692D0A2620D1DE0056FB00 /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
+		79692D0E2620D2B80056FB00 /* Storyboard + AI-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard + AI-Areef.swift"; sourceTree = "<group>"; };
 		79960D1026206FCD0094483C /* Al-Areef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Al-Areef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79960D1326206FCD0094483C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79960D1526206FCD0094483C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79960D1726206FCD0094483C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79960D1726206FCD0094483C /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		79960D1A26206FCD0094483C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79960D1C26206FCE0094483C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79960D1F26206FCE0094483C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79960D2126206FCE0094483C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79CBD8B82624487C00CB0FC9 /* Doctor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Doctor.storyboard; sourceTree = "<group>"; };
+		79CBD8CE262460F000CB0FC9 /* InfoSliderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSliderVC.swift; sourceTree = "<group>"; };
+		79CBD8EB262466D200CB0FC9 /* InfoSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSliderCell.swift; sourceTree = "<group>"; };
+		79CBD8EF26247F4800CB0FC9 /* RegistrationStepOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStepOneVC.swift; sourceTree = "<group>"; };
+		79CBD8F2262486BC00CB0FC9 /* RegistrationStepTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStepTwoVC.swift; sourceTree = "<group>"; };
+		79CBD8F52624961300CB0FC9 /* UIImage + AI-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + AI-Areef.swift"; sourceTree = "<group>"; };
+		79CBD8F82624A13000CB0FC9 /* CreateDoctorProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDoctorProfileVC.swift; sourceTree = "<group>"; };
+		79CBD8FF2624B8C100CB0FC9 /* AcademicQualificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicQualificationVC.swift; sourceTree = "<group>"; };
+		79CBD9032624B8D000CB0FC9 /* WorkExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceVC.swift; sourceTree = "<group>"; };
+		79CBD9062624B8E000CB0FC9 /* ConsultantProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultantProfileVC.swift; sourceTree = "<group>"; };
+		FE55281E7FF829D10990383A /* Pods-Al-Areef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Al-Areef.debug.xcconfig"; path = "Target Support Files/Pods-Al-Areef/Pods-Al-Areef.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +123,207 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05B53B8A5E85D9023A390BD /* Pods_Al_Areef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F4FFA539202C5C07D9A7DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5525756C1DB9CA2B98F4DCC0 /* Pods_Al_Areef.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35703DAF2621BC7800D4F260 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				79960D1926206FCD0094483C /* Main.storyboard */,
+				79692D0A2620D1DE0056FB00 /* Customer.storyboard */,
+				35703DB12621BCC500D4F260 /* DashBoardCustomer.storyboard */,
+				35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */,
+				35703DE82621FC4700D4F260 /* CalendarTab.storyboard */,
+				35703DEB2621FC9500D4F260 /* SettingTab.storyboard */,
+				79CBD8B82624487C00CB0FC9 /* Doctor.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		35703DB42621C85A00D4F260 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				35703DB62621C88F00D4F260 /* Poppins-Bold.ttf */,
+				35703DB72621C88F00D4F260 /* Poppins-Light.ttf */,
+				35703DB92621C89000D4F260 /* Poppins-Medium.ttf */,
+				35703DC22621E2D900D4F260 /* Khebrat Musamim 2018 Regular.ttf */,
+				35703DB82621C88F00D4F260 /* Poppins-Regular.ttf */,
+				35703DB52621C88F00D4F260 /* Poppins-SemiBold.ttf */,
+				35703DBA2621C89000D4F260 /* Poppins-Thin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		35703DC52621F0A200D4F260 /* Dashboard_CustVC */ = {
+			isa = PBXGroup;
+			children = (
+				35703DC92621F14D00D4F260 /* Cell */,
+				35703DC62621F0D300D4F260 /* DasBoardCustViewController.swift */,
+			);
+			path = Dashboard_CustVC;
+			sourceTree = "<group>";
+		};
+		35703DC92621F14D00D4F260 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				35703DCB2621F17300D4F260 /* DashBoardTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		35703DD82621FB4900D4F260 /* CalendarTab */ = {
+			isa = PBXGroup;
+			children = (
+				35703DE22621FBE200D4F260 /* CalendarTabVC.swift */,
+			);
+			path = CalendarTab;
+			sourceTree = "<group>";
+		};
+		35703DD92621FB5700D4F260 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				35703DDE2621FBB800D4F260 /* ProfilleTabVC.swift */,
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		35703DDA2621FB6B00D4F260 /* SettingTab */ = {
+			isa = PBXGroup;
+			children = (
+				35703DDB2621FB9400D4F260 /* SettingTabVC.swift */,
+			);
+			path = SettingTab;
+			sourceTree = "<group>";
+		};
+		79692CC7262086850056FB00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8BB26244A7F00CB0FC9 /* Doctor */,
+				35703DDA2621FB6B00D4F260 /* SettingTab */,
+				35703DD92621FB5700D4F260 /* ProfileTab */,
+				35703DD82621FB4900D4F260 /* CalendarTab */,
+				35703DCF2621F5B500D4F260 /* UtechTab_UTC.swift */,
+				35703DC52621F0A200D4F260 /* Dashboard_CustVC */,
+				79692CFE2620BDB40056FB00 /* OTPVC */,
+				79692CEF2620A7E40056FB00 /* SignUpVC */,
+				79692CEB2620A7830056FB00 /* CustomerRegistrationVC */,
+				79692CC82620868D0056FB00 /* SplashVC */,
+				79692CD526208DF20056FB00 /* LoginStepOneVC */,
+				79692CD426208DD80056FB00 /* LonginVC */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		79692CC82620868D0056FB00 /* SplashVC */ = {
+			isa = PBXGroup;
+			children = (
+				79960D1726206FCD0094483C /* SplashVC.swift */,
+			);
+			path = SplashVC;
+			sourceTree = "<group>";
+		};
+		79692CC9262087460056FB00 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				79692CCF26208C510056FB00 /* Libraries */,
+				79692CCA262087630056FB00 /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		79692CCA262087630056FB00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */,
+				79692CDE262094110056FB00 /* UIView + Al-Areef.swift */,
+				79692CE1262097330056FB00 /* UILabel + Al-Areef.swift */,
+				79692CE526209D210056FB00 /* UITapGestureRecognizer + Al-Areef.swift */,
+				79692CE82620A5020056FB00 /* UIViewController + Al-Areef.swift */,
+				79692D072620C37F0056FB00 /* String + AI-Areef.swift */,
+				79692D0E2620D2B80056FB00 /* Storyboard + AI-Areef.swift */,
+				79CBD8F52624961300CB0FC9 /* UIImage + AI-Areef.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		79692CCF26208C510056FB00 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				79692CF42620B9560056FB00 /* SkyFloatingLabelTextField */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		79692CD426208DD80056FB00 /* LonginVC */ = {
+			isa = PBXGroup;
+			children = (
+				79692CDA26208E330056FB00 /* LonginVC.swift */,
+			);
+			path = LonginVC;
+			sourceTree = "<group>";
+		};
+		79692CD526208DF20056FB00 /* LoginStepOneVC */ = {
+			isa = PBXGroup;
+			children = (
+				79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */,
+			);
+			path = LoginStepOneVC;
+			sourceTree = "<group>";
+		};
+		79692CEB2620A7830056FB00 /* CustomerRegistrationVC */ = {
+			isa = PBXGroup;
+			children = (
+				79692CEC2620A7D90056FB00 /* CustomerRegistrationVC.swift */,
+			);
+			path = CustomerRegistrationVC;
+			sourceTree = "<group>";
+		};
+		79692CEF2620A7E40056FB00 /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				79692CF02620A8150056FB00 /* SignUpVC.swift */,
+			);
+			path = SignUpVC;
+			sourceTree = "<group>";
+		};
+		79692CF42620B9560056FB00 /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				79692CF62620B96C0056FB00 /* SkyFloatingLabelTextField.swift */,
+				79692CF52620B96C0056FB00 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				79692CF72620B96C0056FB00 /* UITextField+fixCaretPosition.swift */,
+			);
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
+		79692CFE2620BDB40056FB00 /* OTPVC */ = {
+			isa = PBXGroup;
+			children = (
+				79692D002620BDD60056FB00 /* OTPVC.swift */,
+				79692D042620C3090056FB00 /* OTPView.swift */,
+			);
+			path = OTPVC;
+			sourceTree = "<group>";
+		};
 		79960D0726206FCD0094483C = {
 			isa = PBXGroup;
 			children = (
 				79960D1226206FCD0094483C /* Al-Areef */,
 				79960D1126206FCD0094483C /* Products */,
+				A488DAB8478AD1141A93677B /* Pods */,
+				09F4FFA539202C5C07D9A7DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +338,105 @@
 		79960D1226206FCD0094483C /* Al-Areef */ = {
 			isa = PBXGroup;
 			children = (
+				35703DB42621C85A00D4F260 /* Font */,
+				35703DAF2621BC7800D4F260 /* Storyboard */,
+				79692CC9262087460056FB00 /* Helper */,
+				79692CC7262086850056FB00 /* Controller */,
 				79960D1326206FCD0094483C /* AppDelegate.swift */,
 				79960D1526206FCD0094483C /* SceneDelegate.swift */,
-				79960D1726206FCD0094483C /* ViewController.swift */,
-				79960D1926206FCD0094483C /* Main.storyboard */,
 				79960D1C26206FCE0094483C /* Assets.xcassets */,
 				79960D1E26206FCE0094483C /* LaunchScreen.storyboard */,
 				79960D2126206FCE0094483C /* Info.plist */,
 			);
 			path = "Al-Areef";
+			sourceTree = "<group>";
+		};
+		79CBD8BB26244A7F00CB0FC9 /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8FE2624B80A00CB0FC9 /* ConsultantProfileVC */,
+				79CBD8FD2624B7F700CB0FC9 /* WorkExperienceVC */,
+				79CBD8FC2624B7BC00CB0FC9 /* AcademicQualificationVC */,
+				79CBD8C52624606600CB0FC9 /* InfoSliderVC */,
+				79CBD8BF26244ACF00CB0FC9 /* CreateDoctorProfileVC */,
+				79CBD8BE26244AB000CB0FC9 /* RegistrationStepTwoVC */,
+				79CBD8BC26244A8600CB0FC9 /* RegistrationStepOneVC */,
+			);
+			path = Doctor;
+			sourceTree = "<group>";
+		};
+		79CBD8BC26244A8600CB0FC9 /* RegistrationStepOneVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8EF26247F4800CB0FC9 /* RegistrationStepOneVC.swift */,
+			);
+			path = RegistrationStepOneVC;
+			sourceTree = "<group>";
+		};
+		79CBD8BE26244AB000CB0FC9 /* RegistrationStepTwoVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8F2262486BC00CB0FC9 /* RegistrationStepTwoVC.swift */,
+			);
+			path = RegistrationStepTwoVC;
+			sourceTree = "<group>";
+		};
+		79CBD8BF26244ACF00CB0FC9 /* CreateDoctorProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8F82624A13000CB0FC9 /* CreateDoctorProfileVC.swift */,
+			);
+			path = CreateDoctorProfileVC;
+			sourceTree = "<group>";
+		};
+		79CBD8C52624606600CB0FC9 /* InfoSliderVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8EA262466B800CB0FC9 /* View */,
+				79CBD8CE262460F000CB0FC9 /* InfoSliderVC.swift */,
+			);
+			path = InfoSliderVC;
+			sourceTree = "<group>";
+		};
+		79CBD8EA262466B800CB0FC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8EB262466D200CB0FC9 /* InfoSliderCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79CBD8FC2624B7BC00CB0FC9 /* AcademicQualificationVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD8FF2624B8C100CB0FC9 /* AcademicQualificationVC.swift */,
+			);
+			path = AcademicQualificationVC;
+			sourceTree = "<group>";
+		};
+		79CBD8FD2624B7F700CB0FC9 /* WorkExperienceVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD9032624B8D000CB0FC9 /* WorkExperienceVC.swift */,
+			);
+			path = WorkExperienceVC;
+			sourceTree = "<group>";
+		};
+		79CBD8FE2624B80A00CB0FC9 /* ConsultantProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				79CBD9062624B8E000CB0FC9 /* ConsultantProfileVC.swift */,
+			);
+			path = ConsultantProfileVC;
+			sourceTree = "<group>";
+		};
+		A488DAB8478AD1141A93677B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE55281E7FF829D10990383A /* Pods-Al-Areef.debug.xcconfig */,
+				14C6E187FF4B6DACDB186EC2 /* Pods-Al-Areef.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +446,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79960D2426206FCE0094483C /* Build configuration list for PBXNativeTarget "Al-Areef" */;
 			buildPhases = (
+				8EAC43EA628BE2C4D068170F /* [CP] Check Pods Manifest.lock */,
 				79960D0C26206FCD0094483C /* Sources */,
 				79960D0D26206FCD0094483C /* Frameworks */,
 				79960D0E26206FCD0094483C /* Resources */,
+				BD4948C8494295487D2BD6D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,21 +498,107 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35703DE62621FBFB00D4F260 /* ProfileTab.storyboard in Resources */,
+				35703DE92621FC4700D4F260 /* CalendarTab.storyboard in Resources */,
+				79692D0B2620D1DE0056FB00 /* Customer.storyboard in Resources */,
+				35703DB22621BCC500D4F260 /* DashBoardCustomer.storyboard in Resources */,
+				35703DEC2621FC9500D4F260 /* SettingTab.storyboard in Resources */,
 				79960D2026206FCE0094483C /* LaunchScreen.storyboard in Resources */,
 				79960D1D26206FCE0094483C /* Assets.xcassets in Resources */,
+				79CBD8B92624487C00CB0FC9 /* Doctor.storyboard in Resources */,
 				79960D1B26206FCD0094483C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8EAC43EA628BE2C4D068170F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Al-Areef-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4948C8494295487D2BD6D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Al-Areef/Pods-Al-Areef-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Al-Areef/Pods-Al-Areef-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Al-Areef/Pods-Al-Areef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79960D0C26206FCD0094483C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79960D1826206FCD0094483C /* ViewController.swift in Sources */,
+				79CBD8EC262466D200CB0FC9 /* InfoSliderCell.swift in Sources */,
+				35703DC32621E2E300D4F260 /* Khebrat Musamim 2018 Regular.ttf in Sources */,
+				79CBD9072624B8E000CB0FC9 /* ConsultantProfileVC.swift in Sources */,
+				35703DDC2621FB9400D4F260 /* SettingTabVC.swift in Sources */,
+				35703DBB2621C8BC00D4F260 /* Poppins-Bold.ttf in Sources */,
+				35703DCC2621F17300D4F260 /* DashBoardTableViewCell.swift in Sources */,
+				35703DBC2621C8BC00D4F260 /* Poppins-Light.ttf in Sources */,
+				35703DBD2621C8BC00D4F260 /* Poppins-Medium.ttf in Sources */,
+				35703DD02621F5B500D4F260 /* UtechTab_UTC.swift in Sources */,
+				35703DBE2621C8BC00D4F260 /* Poppins-Regular.ttf in Sources */,
+				35703DBF2621C8BC00D4F260 /* Poppins-SemiBold.ttf in Sources */,
+				35703DC02621C8BC00D4F260 /* Poppins-Thin.ttf in Sources */,
+				79692D082620C37F0056FB00 /* String + AI-Areef.swift in Sources */,
+				79CBD8F3262486BC00CB0FC9 /* RegistrationStepTwoVC.swift in Sources */,
+				79CBD9042624B8D000CB0FC9 /* WorkExperienceVC.swift in Sources */,
+				79692CE626209D210056FB00 /* UITapGestureRecognizer + Al-Areef.swift in Sources */,
+				79692D052620C3090056FB00 /* OTPView.swift in Sources */,
+				79692CED2620A7D90056FB00 /* CustomerRegistrationVC.swift in Sources */,
+				79692D012620BDD60056FB00 /* OTPVC.swift in Sources */,
+				79692CFA2620B96C0056FB00 /* UITextField+fixCaretPosition.swift in Sources */,
+				79CBD8F62624961300CB0FC9 /* UIImage + AI-Areef.swift in Sources */,
+				79960D1826206FCD0094483C /* SplashVC.swift in Sources */,
+				79CBD8F026247F4800CB0FC9 /* RegistrationStepOneVC.swift in Sources */,
+				79692CD726208E0F0056FB00 /* LoginStepOneVC.swift in Sources */,
+				79692CCC262087880056FB00 /* UIColor + AI-Areef.swift in Sources */,
+				79CBD8F92624A13000CB0FC9 /* CreateDoctorProfileVC.swift in Sources */,
+				79CBD9002624B8C100CB0FC9 /* AcademicQualificationVC.swift in Sources */,
+				79692CDF262094110056FB00 /* UIView + Al-Areef.swift in Sources */,
+				35703DC72621F0D300D4F260 /* DasBoardCustViewController.swift in Sources */,
+				35703DDF2621FBB800D4F260 /* ProfilleTabVC.swift in Sources */,
+				79692CE2262097330056FB00 /* UILabel + Al-Areef.swift in Sources */,
+				79692CE92620A5020056FB00 /* UIViewController + Al-Areef.swift in Sources */,
+				35703DE32621FBE200D4F260 /* CalendarTabVC.swift in Sources */,
+				79692CDB26208E330056FB00 /* LonginVC.swift in Sources */,
+				79CBD8CF262460F000CB0FC9 /* InfoSliderVC.swift in Sources */,
+				79692CF92620B96C0056FB00 /* SkyFloatingLabelTextField.swift in Sources */,
+				79692CF82620B96C0056FB00 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				79960D1426206FCD0094483C /* AppDelegate.swift in Sources */,
+				79692D0F2620D2B80056FB00 /* Storyboard + AI-Areef.swift in Sources */,
+				79692CF12620A8150056FB00 /* SignUpVC.swift in Sources */,
 				79960D1626206FCD0094483C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +743,7 @@
 		};
 		79960D2526206FCE0094483C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE55281E7FF829D10990383A /* Pods-Al-Areef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +762,7 @@
 		};
 		79960D2626206FCE0094483C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C6E187FF4B6DACDB186EC2 /* Pods-Al-Areef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -9,21 +9,51 @@ import UIKit
 
 class RegistrationStepOneVC: UIViewController {
 
+    // MARK:- Outlets
+    @IBOutlet weak var btnRegisterNow          : UIButton!
+  
+    // MARK:- Variables
+    
+    // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
+    // MARK:- SetUpView
+    private func setUpView() {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    // MARK:- Button Actions
+    @IBAction func btnRegisterNowTapped(_ sender : UIButton){
+        pushLInfoSliderVC()
+    }
+    
+    // MARK:- Push Methods
+    private func pushLInfoSliderVC() {
+        guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: InfoSliderVC.self)) as? InfoSliderVC else { return }
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+   
+    // MARK:- Custom Methods
+    
+    // MARK:- ReceiveMemoryWarning
+    override func didReceiveMemoryWarning() {
+        debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")
+    }
+    
+    // MARK:-
+    deinit {
+        debugPrint("🏹 Controller is removed from memory \(self) 🎯 🏆")
+    }
+    
+    
+} //class
 
-}
+

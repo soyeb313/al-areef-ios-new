@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SplashVC-->
         <scene sceneID="tne-QT-ifu">
@@ -20,16 +25,16 @@
                                 <rect key="frame" x="124" y="370" width="166" height="166"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-jJ-HmQ">
-                                <rect key="frame" x="296" y="64" width="98" height="32"/>
+                                <rect key="frame" x="273" y="64" width="121" height="38"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clu-AA-SV0">
-                                        <rect key="frame" x="12" y="5" width="55" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clu-AA-SV0">
+                                        <rect key="frame" x="23" y="5" width="67" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowdown" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-43-oDl">
-                                        <rect key="frame" x="71" y="6" width="15" height="20"/>
+                                        <rect key="frame" x="91" y="9" width="15" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="mkF-ZX-YDB"/>
                                             <constraint firstAttribute="width" constant="15" id="pml-E3-dgr"/>
@@ -38,19 +43,54 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="mU4-43-oDl" secondAttribute="trailing" constant="12" id="8vr-jo-Amn"/>
+                                    <constraint firstAttribute="trailing" secondItem="mU4-43-oDl" secondAttribute="trailing" constant="15" id="8vr-jo-Amn"/>
                                     <constraint firstItem="clu-AA-SV0" firstAttribute="top" secondItem="a7P-jJ-HmQ" secondAttribute="top" constant="5" id="J21-bk-dhH"/>
                                     <constraint firstItem="mU4-43-oDl" firstAttribute="centerY" secondItem="a7P-jJ-HmQ" secondAttribute="centerY" id="UpN-PF-QA8"/>
                                     <constraint firstAttribute="bottom" secondItem="clu-AA-SV0" secondAttribute="bottom" constant="5" id="nfS-zo-H1P"/>
-                                    <constraint firstItem="clu-AA-SV0" firstAttribute="leading" secondItem="a7P-jJ-HmQ" secondAttribute="leading" constant="12" id="swQ-c2-WC4"/>
-                                    <constraint firstItem="mU4-43-oDl" firstAttribute="leading" secondItem="clu-AA-SV0" secondAttribute="trailing" constant="4" id="wWx-fk-eE5"/>
+                                    <constraint firstItem="clu-AA-SV0" firstAttribute="leading" secondItem="a7P-jJ-HmQ" secondAttribute="leading" constant="23" id="swQ-c2-WC4"/>
+                                    <constraint firstItem="mU4-43-oDl" firstAttribute="leading" secondItem="clu-AA-SV0" secondAttribute="trailing" constant="1" id="wWx-fk-eE5"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbl-QR-NGo">
-                                <rect key="frame" x="296" y="64" width="98" height="32"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="273" y="64" width="121" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="FYa-xr-I5m"/>
+                                    <constraint firstAttribute="height" constant="38" id="Tky-yi-v4R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
                                 <connections>
                                     <action selector="btnSelectLanguageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLH-dC-6ea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxJ-oc-ujj">
+                                <rect key="frame" x="273" y="105" width="121" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="JnE-Iv-G31"/>
+                                    <constraint firstAttribute="width" constant="121" id="nSd-M7-exP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
+                                <state key="normal" title="Arabic">
+                                    <color key="titleColor" red="0.01993647963" green="0.70774048570000003" blue="0.54507982730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLang:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anW-gk-61X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-NR-bd1">
+                                <rect key="frame" x="42" y="682" width="331" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6zb-N1-fYb"/>
+                                    <constraint firstAttribute="width" constant="331" id="cL1-BV-VOd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="0.01993647963" green="0.70774048570000003" blue="0.54507982730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnContinue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVt-6b-2JN"/>
+                                    <action selector="btnLoginCustomerTapped:" destination="llm-mV-H5p" eventType="touchUpInside" id="OZK-ul-N49"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,20 +98,30 @@
                         <color key="backgroundColor" red="0.91764706370000004" green="0.9529411793" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a7P-jJ-HmQ" secondAttribute="trailing" constant="20" id="2jn-uj-L4e"/>
+                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="3fC-6B-pyh"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="top" secondItem="a7P-jJ-HmQ" secondAttribute="top" id="575-tH-wgj"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7X3-oA-COD"/>
+                            <constraint firstItem="bxJ-oc-ujj" firstAttribute="top" secondItem="zbl-QR-NGo" secondAttribute="bottom" constant="3" id="Q5F-HY-fyv"/>
+                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="top" secondItem="irx-0s-o5F" secondAttribute="bottom" constant="146" id="ReJ-oO-Q2r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zbl-QR-NGo" secondAttribute="trailing" constant="20" id="Rth-Nl-jSS"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UAn-p7-8cU"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="trailing" secondItem="a7P-jJ-HmQ" secondAttribute="trailing" id="bxh-wV-q6e"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="leading" secondItem="a7P-jJ-HmQ" secondAttribute="leading" id="cMc-Io-9Pq"/>
                             <constraint firstItem="a7P-jJ-HmQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eVk-we-JnL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PSZ-NR-bd1" secondAttribute="trailing" constant="41" id="oin-wm-J4H"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="bottom" secondItem="a7P-jJ-HmQ" secondAttribute="bottom" id="pJH-UN-QzR"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="r51-nP-Jwi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxJ-oc-ujj" secondAttribute="trailing" constant="20" id="tRy-m2-XIQ"/>
+                            <constraint firstItem="zbl-QR-NGo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xmf-0t-Kjk"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="zE4-UD-Edl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9by-H1-rSa"/>
                     <connections>
+                        <outlet property="btnContinue" destination="PSZ-NR-bd1" id="XHd-Mc-ZT6"/>
+                        <outlet property="btnLang" destination="bxJ-oc-ujj" id="cIm-fx-iCG"/>
                         <outlet property="btnSelectLanguage" destination="zbl-QR-NGo" id="bxq-sk-p71"/>
+                        <outlet property="lblLanguage" destination="clu-AA-SV0" id="uY2-8t-1pd"/>
                         <outlet property="vwBackSelectLanguage" destination="a7P-jJ-HmQ" id="Qk2-5f-c8b"/>
                     </connections>
                 </viewController>
@@ -342,6 +392,9 @@
                                                                 <state key="normal" title="Log in as customer">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnLoginClicked:" destination="GwG-YP-IX8" eventType="touchUpInside" id="2l5-6f-6EA"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -461,6 +514,9 @@
                                                                 <state key="normal" title="Sign up for doctor">
                                                                     <color key="titleColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSignUpDoctorTapped:" destination="8Zw-hm-fgb" eventType="touchUpInside" id="Uux-gd-bEk"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh4-aA-crs">
                                                                 <rect key="frame" x="0.0" y="110" width="331" height="45"/>
@@ -534,20 +590,96 @@
             </objects>
             <point key="canvasLocation" x="3232" y="62"/>
         </scene>
+        <!--ProfilleTabVC-->
+        <scene sceneID="g7k-ll-FvY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfilleTabVC" storyboardName="ProfileTab" referencedIdentifier="ProfilleTabVC" id="cPQ-DO-6vc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Image-11" selectedImage="Image-8" id="OVc-TR-gBi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VA1-fK-6iE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="-336"/>
+        </scene>
+        <!--CalendarTabVC-->
+        <scene sceneID="zrR-ve-Wcy">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CalendarTabVC" storyboardName="CalendarTab" referencedIdentifier="CalendarTabVC" id="SEn-RF-Qr0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Image-10" selectedImage="Image-8" id="nBc-kX-ECk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZR-o8-VHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="-364"/>
+        </scene>
+        <!--Utech TabUTC-->
+        <scene sceneID="yA9-iT-igY">
+            <objects>
+                <tabBarController storyboardIdentifier="UtechTab_UTC" automaticallyAdjustsScrollViewInsets="NO" id="Y2K-oP-c3J" customClass="UtechTab_UTC" customModule="Al_Areef" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="Image-8" id="vrs-9C-Sxo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Al5-2k-phd" kind="relationship" relationship="viewControllers" id="GjP-qv-A3e"/>
+                        <segue destination="SEn-RF-Qr0" kind="relationship" relationship="viewControllers" id="qQ3-Du-Dbf"/>
+                        <segue destination="cPQ-DO-6vc" kind="relationship" relationship="viewControllers" id="G7z-Qf-HD2"/>
+                        <segue destination="JFp-wm-OkK" kind="relationship" relationship="viewControllers" id="1Ep-Qn-E0i"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxt-QU-PqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="-742"/>
+        </scene>
+        <!--SettingTabVC-->
+        <scene sceneID="OaW-zq-e98">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SettingTabVC" storyboardName="SettingTab" referencedIdentifier="SettingTabVC" id="JFp-wm-OkK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Image-9" selectedImage="Image-8" id="WqA-Lv-8lw">
+                        <color key="badgeColor" systemColor="systemBlueColor"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfO-qK-gYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="-380"/>
+        </scene>
+        <!--DasBoardCustViewController-->
+        <scene sceneID="cct-t2-n9U">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DasBoardCustViewController" storyboardName="DashBoardCustomer" referencedIdentifier="DasBoardCustViewController" id="Al5-2k-phd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Image-12" selectedImage="Image-8" id="rkX-O8-KbM">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ii-CO-GhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="-444"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="TMU-9R-0pt">
-            <size key="intrinsicContentSize" width="311" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="62.5" height="17"/>
         </designable>
         <designable name="bxp-qR-23f">
-            <size key="intrinsicContentSize" width="311" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="48" height="18.5"/>
         </designable>
     </designables>
     <resources>
+        <image name="Image-10" width="25" height="25"/>
+        <image name="Image-11" width="25" height="25"/>
+        <image name="Image-12" width="25" height="25"/>
+        <image name="Image-8" width="80" height="40"/>
+        <image name="Image-9" width="25" height="25"/>
         <image name="Logo" width="294" height="294"/>
         <image name="arrowdown" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

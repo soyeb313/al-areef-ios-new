@@ -16,7 +16,6 @@
         <!--OTPVC-->
         <scene sceneID="Jaa-EG-bSR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="faR-vI-dh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="OTPVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XAc-Sv-Cnp" customClass="OTPVC" customModule="Al_Areef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WsL-bR-X0b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -431,6 +430,7 @@
                         <outlet property="viewOTP" destination="xZu-6M-Pji" id="9qU-E2-gdU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faR-vI-dh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5117" y="62"/>
         </scene>

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension String{
+    
+    var isNumeric: Bool {
+        return CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: self))
+    }
+    
+}

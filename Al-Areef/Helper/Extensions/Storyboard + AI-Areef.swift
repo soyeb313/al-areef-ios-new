@@ -5,4 +5,12 @@
 //  Created by Amruta Warankar on 09/04/21.
 //
 
-import Foundation
+import UIKit
+
+extension UIStoryboard {
+    
+    static let main             = UIStoryboard.init(name: "Main", bundle: nil)
+    static let Customer         = UIStoryboard.init(name: "Customer", bundle: nil)
+    static let Doctor         = UIStoryboard.init(name: "Doctor", bundle: nil)
+}
+    

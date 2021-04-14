@@ -8,7 +8,10 @@
 import UIKit
 
 class DashBoardTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var imgServices: UIImageView!
+    @IBOutlet weak var btnAction: UIButton!
+    @IBOutlet weak var lblTitleSertvice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

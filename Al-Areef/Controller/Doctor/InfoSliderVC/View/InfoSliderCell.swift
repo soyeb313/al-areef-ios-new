@@ -8,5 +8,18 @@
 import UIKit
 
 class InfoSliderCell: UICollectionViewCell {
+    @IBOutlet weak var imgInfo: UIImageView!
+    @IBOutlet weak var lblInfo: UILabel!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    func configure(tutorial: Tutorial) {
+        
+        lblInfo.text = tutorial.detail
+        
+    }
 }

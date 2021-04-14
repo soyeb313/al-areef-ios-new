@@ -9,21 +9,48 @@ import UIKit
 
 class OTPVC: UIViewController {
 
+    // MARK:- Outlets
+    @IBOutlet weak var viewOTP          : OTPView!
+    @IBOutlet weak var btnResent        : UIButton!
+    
+    // MARK:- Variables
+    var otp = "24678"
+    
+    // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK:- SetUpView
+    private func setUpView() {
+        self.viewOTP.setUpView(5, strPinValue: otp)
+        self.btnResent.setCornerRadius(radius: 5)
+        self.btnResent.setShadow(shadowColor: UIColor.lightGray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
     }
-    */
+    
+    // MARK:- Button Actions
 
-}
+    
+    // MARK:- Push Methods
+
+    
+    // MARK:- Custom Methods
+    
+    // MARK:- ReceiveMemoryWarning
+    override func didReceiveMemoryWarning() {
+        debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")
+    }
+    
+    // MARK:-
+    deinit {
+        debugPrint("🏹 Controller is removed from memory \(self) 🎯 🏆")
+    }
+    
+} //class
+
+

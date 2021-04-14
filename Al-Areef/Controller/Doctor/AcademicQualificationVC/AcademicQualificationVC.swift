@@ -1,5 +1,5 @@
 //
-//  CreateDoctorProfileVC.swift
+//  AcademicQualificationVC.swift
 //  Al-Areef
 //
 //  Created by Amruta Warankar on 12/04/21.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class CreateDoctorProfileVC: UIViewController {
-    
+class AcademicQualificationVC: UIViewController {
+
     // MARK:- Outlets
-    @IBOutlet weak var btnCreateProfile          : UIButton!
-    
+    @IBOutlet weak var btnNext                          : UIButton!
+    @IBOutlet weak var btnDegreeCertificateUpload       : UIButton!
+    @IBOutlet weak var btnCertificateUpload             : UIButton!
     // MARK:- Variables
     
     // MARK:- View Life Cycle
@@ -26,12 +27,12 @@ class CreateDoctorProfileVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-        self.title = "Create Your Profile"
+        self.title = "Academia"
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         
-        
         self.navigationItem.leftBarButtonItem = backBtn
-        
+        self.btnDegreeCertificateUpload.setCornerRadius(radius: 5)
+        self.btnCertificateUpload.setCornerRadius(radius: 5)
     }
     
     // MARK:- Button Actions
@@ -40,13 +41,13 @@ class CreateDoctorProfileVC: UIViewController {
     }
     
     
-    @IBAction func btnCreateProfileTapped(_ sender : UIButton){
-        pushAcademicQualificationVC()
+    @IBAction func btnNextTapped(_ sender : UIButton){
+        pushWorkExperienceVC()
     }
     
     // MARK:- Push Methods
-    private func pushAcademicQualificationVC() {
-        guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: AcademicQualificationVC.self)) as? AcademicQualificationVC else { return }
+    private func pushWorkExperienceVC() {
+        guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: WorkExperienceVC.self)) as? WorkExperienceVC else { return }
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
