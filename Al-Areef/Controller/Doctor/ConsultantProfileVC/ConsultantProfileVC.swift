@@ -28,7 +28,7 @@ class ConsultantProfileVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-        self.title = "Consultant's Profile"
+        self.title = "Consultant's Profile".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         
         self.navigationItem.leftBarButtonItem = backBtn

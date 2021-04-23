@@ -7,7 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-
+import LanguageManager_iOS
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = UIColor.app_Green
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        LanguageManager.shared.defaultLanguage = .en
         return true
     }
 

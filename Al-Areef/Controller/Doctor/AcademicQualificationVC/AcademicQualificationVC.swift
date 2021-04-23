@@ -27,7 +27,7 @@ class AcademicQualificationVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-        self.title = "Academia"
+        self.title = "Academia".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         
         self.navigationItem.leftBarButtonItem = backBtn

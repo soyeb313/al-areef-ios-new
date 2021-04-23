@@ -21,11 +21,20 @@ class DasBoardCustViewController: UIViewController {
         self.btnViewappoinments.layer.masksToBounds = true
         self.btnViewappoinments.layer.borderWidth = 1
         self.btnViewappoinments.layer.borderColor = UIColor.white.cgColor
-      
+        self.btnViewappoinments.setTitle("View appointments".localiz(), for: .normal)
     }
     
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationController?.isNavigationBarHidden = true
+    }
+    
+    
+    // MARK:- Push Methods
+    private func pushConsultingPersonalVC() {
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultingPersonalVC.self)) as? ConsultingPersonalVC else { return }
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
 }
 
 extension DasBoardCustViewController : UITableViewDelegate, UITableViewDataSource
@@ -39,14 +48,14 @@ extension DasBoardCustViewController : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"DashBoardTableViewCell", for: indexPath) as! DashBoardTableViewCell
-        cell.lblTitleSertvice.text = arrTitle[indexPath.row]
-        cell.btnAction.setTitle(arrBtnTitle[indexPath.row], for: .normal)
+        cell.lblTitleSertvice.text = arrTitle[indexPath.row].localiz()
+        cell.btnAction.setTitle(arrBtnTitle[indexPath.row].localiz(), for: .normal)
         cell.imgServices.image = arrImages[indexPath.row]
         cell.btnAction.layer.cornerRadius = 5
         cell.btnAction.layer.masksToBounds = true
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        pushConsultingPersonalVC()
     }
 }

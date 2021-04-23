@@ -1,0 +1,45 @@
+
+/* Class = "UIButton"; normalTitle = "Sign up for doctor"; ObjectID = "DwJ-MG-6bZ"; */
+"DwJ-MG-6bZ.normalTitle" = "Sign up for doctor";
+
+/* Class = "UIButton"; normalTitle = "Log in as customer"; ObjectID = "NJW-I7-LHs"; */
+"NJW-I7-LHs.normalTitle" = "Log in as customer";
+
+/* Class = "UILabel"; text = "If you don't have an account? Sign Up"; ObjectID = "NwO-Io-Gh8"; */
+"NwO-Io-Gh8.text" = "If you don't have an account? Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Continue as visitor"; ObjectID = "Oln-q3-SpF"; */
+"Oln-q3-SpF.normalTitle" = "Continue as visitor";
+
+/* Class = "UIButton"; normalTitle = "CONTINUE"; ObjectID = "PSZ-NR-bd1"; */
+"PSZ-NR-bd1.normalTitle" = "CONTINUE";
+
+/* Class = "UIButton"; normalTitle = "Sign up for Company"; ObjectID = "Rh4-aA-crs"; */
+"Rh4-aA-crs.normalTitle" = "Sign up for Company";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "TMU-9R-0pt"; */
+"TMU-9R-0pt.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Already have an account? Log in"; ObjectID = "TOB-8z-HIr"; */
+"TOB-8z-HIr.text" = "Already have an account? Log in";
+
+/* Class = "UIButton"; normalTitle = "Log in as doctor"; ObjectID = "VXU-9j-mww"; */
+"VXU-9j-mww.normalTitle" = "Log in as doctor";
+
+/* Class = "UIButton"; normalTitle = "Arabic"; ObjectID = "bxJ-oc-ujj"; */
+"bxJ-oc-ujj.normalTitle" = "Arabic";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "bxp-qR-23f"; */
+"bxp-qR-23f.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "clu-AA-SV0"; */
+"clu-AA-SV0.text" = "English";
+
+/* Class = "UILabel"; text = "If you don't have an account? Sign Up"; ObjectID = "dkh-SH-m00"; */
+"dkh-SH-m00.text" = "If you don't have an account? Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Log in as customer"; ObjectID = "mEy-WM-w7M"; */
+"mEy-WM-w7M.normalTitle" = "Log in as customer";
+
+/* Class = "UIButton"; normalTitle = "Sign up for customer"; ObjectID = "uSp-FE-dWE"; */
+"uSp-FE-dWE.normalTitle" = "Sign up for customer";

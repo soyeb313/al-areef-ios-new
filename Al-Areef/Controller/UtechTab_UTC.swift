@@ -17,6 +17,7 @@ class UtechTab_UTC: UITabBarController {
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.hexStringToUIColor(hex: "#303030")], for: .selected)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

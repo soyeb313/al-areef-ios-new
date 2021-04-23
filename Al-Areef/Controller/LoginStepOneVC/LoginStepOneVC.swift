@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginStepOneVC: UIViewController {
-
+    var switchLanguage = LanguageDetails()
     // MARK:- Outlets
     @IBOutlet weak var btnLoginCustomer          : UIButton!
     @IBOutlet weak var btnLoginDoctor            : UIButton!
@@ -29,12 +29,17 @@ class LoginStepOneVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
+        
         btnLoginCustomer.backgroundColor = .app_DarkGray
         btnLoginDoctor.setBorder(with: .app_Green, 1)
         btnLoginVisitor.setBorder(with: .app_Green, 1)
-        lblSignUpInfo.halfTextColorChange(fullText: "If you don't have an account? Sign Up", changeText: "Sign Up", fontColor: .app_Green)
+        lblSignUpInfo.halfTextColorChange(fullText: switchLanguage.LocalString(key: "If you don't have an account? Sign Up".localiz()), changeText:"Sign Up",  fontColor: .app_Green)
+       
         lblSignUpInfo.isUserInteractionEnabled = true
         lblSignUpInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
+        btnLoginCustomer.setTitle("Log in as customer".localiz(), for: .normal)
+        btnLoginVisitor.setTitle("Log in as doctor".localiz(), for: .normal)
+        btnLoginDoctor.setTitle("Continue as visitor".localiz(), for: .normal)
     }
     
     @IBAction func btnLoginCustomerTapped(_ sender : UIButton){
@@ -47,10 +52,10 @@ class LoginStepOneVC: UIViewController {
             return
         }
 
-        if let range = text.range(of: "Sign Up"),
-            recognizer.didTapAttributedTextInLabel(label: lblSignUpInfo, inRange: NSRange(range, in: text)) {
+       // if let range = text.range(of: "Sign Up"),
+          //  recognizer.didTapAttributedTextInLabel(label: lblSignUpInfo, inRange: NSRange(range, in: text)) {
             pushSignUpVC()
-        }
+        
     }
     
     // MARK:- Push Methods

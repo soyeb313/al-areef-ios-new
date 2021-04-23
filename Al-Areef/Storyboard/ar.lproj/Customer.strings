@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Completes"; ObjectID = "20K-vL-4q5"; */
+"20K-vL-4q5.normalTitle" = "Completes";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "6Uw-6G-HxK"; */
+"6Uw-6G-HxK.text" = "Password";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "Gsv-vi-I0q"; */
+"Gsv-vi-I0q.placeholder" = "example@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Resend"; ObjectID = "HDn-mK-BN2"; */
+"HDn-mK-BN2.normalTitle" = "Resend";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "Ilu-5H-gsf"; */
+"Ilu-5H-gsf.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "If you have not received your OTP code, you can press The re-transmitter button below to get a new code."; ObjectID = "c0i-CY-HIp"; */
+"c0i-CY-HIp.text" = "If you have not received your OTP code, you can press The re-transmitter button below to get a new code.";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "cGo-X5-7v7"; */
+"cGo-X5-7v7.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "Enter the OTP code"; ObjectID = "iMC-YM-lrP"; */
+"iMC-YM-lrP.text" = "Enter the OTP code";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "nTj-eJ-A2f"; */
+"nTj-eJ-A2f.placeholder" = "example@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Completes"; ObjectID = "qpA-uS-QHp"; */
+"qpA-uS-QHp.normalTitle" = "Completes";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "uqA-eU-byI"; */
+"uqA-eU-byI.placeholder" = "example@gmail.com";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "zic-gx-Czx"; */
+"zic-gx-Czx.placeholder" = "example@gmail.com";

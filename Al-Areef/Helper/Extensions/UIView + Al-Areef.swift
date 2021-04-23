@@ -59,4 +59,43 @@ extension UIView {
         layer.shadowOpacity = opacity
         layer.shadowRadius = radius
     }
+    
+    func setShadow(clr: UIColor = .darkGray, sRadius: CGFloat = 4.0) {
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius  = sRadius
+        self.layer.shadowColor   = clr.cgColor
+        self.layer.shadowOffset  = CGSize(width: 2.0, height: 2.0)
+        self.layer.shadowOpacity = 0.3
+        self.layer.contentsScale = UIScreen.main.scale
+    }
+    
+    func removeGradientLayer() {
+        if !(self.layer.sublayers?.isEmpty ?? false) {
+            for layer in self.layer.sublayers ?? [CALayer()]{
+                if layer.name == "masklayer" {
+                    layer.removeFromSuperlayer()
+                }
+            }
+        }
+    }
+    
+    func layerGradient(colors c:[CGColor]) {
+        if !(self.layer.sublayers?.isEmpty ?? false) {
+            for layer in self.layer.sublayers ?? [CALayer()]{
+                if layer.name == "masklayer" {
+                    layer.removeFromSuperlayer()
+                }
+            }
+        }
+        self.layer.sublayers = self.layer.sublayers?.filter(){!($0 is CAGradientLayer)}
+        let layer : CAGradientLayer = CAGradientLayer()
+        layer.name = "masklayer"
+        layer.frame.size = self.frame.size
+        layer.frame.origin = CGPoint.zero
+        layer.colors = c
+        self.layer.insertSublayer(layer, at: 0)
+    }
+    
+    
+
 }

@@ -32,9 +32,13 @@ class SignUpVC: UIViewController {
         btnSignUpCustomer.backgroundColor = .app_DarkGray
         btnSignUpDoctor.setBorder(with: .app_Green, 1)
         btnSignUpCompany.setBorder(with: .app_Green, 1)
-        lblLoginInfo.halfTextColorChange(fullText: "Already have an account? Log in", changeText: "Log in", fontColor: .app_Green)
+        lblLoginInfo.halfTextColorChange(fullText: "Already have an account? Log in".localiz(), changeText: "Log in", fontColor: .app_Green)
         lblLoginInfo.isUserInteractionEnabled = true
         lblLoginInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
+        self.btnSignUpDoctor.setTitle("Sign up for doctor".localiz(), for: .normal)
+        self.btnSignUpCompany.setTitle("Sign up for company".localiz(), for: .normal)
+        
+        self.btnSignUpCustomer.setTitle("Sign up for Customer".localiz(), for: .normal)
     }
     
     @IBAction func btnSignUpCustomerTapped(_ sender : UIButton){
@@ -51,10 +55,10 @@ class SignUpVC: UIViewController {
             return
         }
         
-        if let range = text.range(of: "Log in"),
-           recognizer.didTapAttributedTextInLabel(label: lblLoginInfo, inRange: NSRange(range, in: text)) {
+       // if let range = text.range(of: "Log in"),
+        ///   recognizer.didTapAttributedTextInLabel(label: lblLoginInfo, inRange: NSRange(range, in: text)) {
             pushLoginVC()
-        }
+       // }
     }
     
     // MARK:- Push Methods

@@ -448,7 +448,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnLogin" destination="NJW-I7-LHs" id="kGg-Ux-jSj"/>
                         <outlet property="lblSignUpInfo" destination="NwO-Io-Gh8" id="IJG-Yk-MSQ"/>
+                        <outlet property="txtPassword" destination="TMU-9R-0pt" id="Lho-iR-2gg"/>
+                        <outlet property="txtemail" destination="bxp-qR-23f" id="xvW-DQ-W1O"/>
                         <outlet property="viewBackPassword" destination="0uH-1Z-vMU" id="Y6k-LP-4S6"/>
                         <outlet property="viewBackUserID" destination="hlf-Ea-ajX" id="cmD-QD-Pua"/>
                     </connections>
@@ -600,10 +603,10 @@
             </objects>
             <point key="canvasLocation" x="1821" y="-336"/>
         </scene>
-        <!--CalendarTabVC-->
+        <!--MyAppointmentVC-->
         <scene sceneID="zrR-ve-Wcy">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="CalendarTabVC" storyboardName="CalendarTab" referencedIdentifier="CalendarTabVC" id="SEn-RF-Qr0" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MyAppointmentVC" storyboardName="DashBoardCustomer" referencedIdentifier="MyAppointmentVC" id="SEn-RF-Qr0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="Image-10" selectedImage="Image-8" id="nBc-kX-ECk"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZR-o8-VHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

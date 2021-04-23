@@ -15,7 +15,11 @@ class SettingTabVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationController?.isNavigationBarHidden = true
+    }
+    
     /*
     // MARK: - Navigation
 

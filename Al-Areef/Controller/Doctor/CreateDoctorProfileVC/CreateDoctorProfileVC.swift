@@ -26,7 +26,7 @@ class CreateDoctorProfileVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-        self.title = "Create Your Profile"
+        self.title = "Create Your Profile".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         
         

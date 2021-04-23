@@ -28,7 +28,7 @@ class WorkExperienceVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-        self.title = "Work Experience"
+        self.title = "Work Experience".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         
         self.navigationItem.leftBarButtonItem = backBtn

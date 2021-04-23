@@ -21,10 +21,10 @@ class InfoSliderVC: UIViewController {
     
     // MARK:- Variables
     let tutorials = [
-        Tutorial(imageName: "1", summary: "", detail: "Create your profile to connect with patient instantly"),
-        Tutorial(imageName: "2", summary: "", detail: "Join a network of professional consultants"),
-        Tutorial(imageName: "3", summary: "", detail: "Share your knowledge"),
-        Tutorial(imageName: "4", summary: "", detail: "Learn and Grow")
+        Tutorial(imageName: "1", summary: "", detail: "Create your profile to connect with patient instantly".localiz()),
+        Tutorial(imageName: "2", summary: "", detail: "Join a network of professional consultants".localiz()),
+        Tutorial(imageName: "3", summary: "", detail: "Share your knowledge".localiz()),
+        Tutorial(imageName: "4", summary: "", detail: "Learn and Grow".localiz())
     ]
 
     // MARK:- View Life Cycle

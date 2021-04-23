@@ -6,9 +6,13 @@
 //
 
 import UIKit
-
+import LanguageManager_iOS
 class LonginVC: UIViewController {
+    var switchLanguage = LanguageDetails()
 
+    @IBOutlet weak var txtPassword: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtemail: SkyFloatingLabelTextField!
+    @IBOutlet weak var btnLogin: UIButton!
     // MARK:- Outlets
     @IBOutlet weak var lblSignUpInfo             : UILabel!
     @IBOutlet weak var viewBackUserID            : UIView!
@@ -24,17 +28,32 @@ class LonginVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        if  LanguageManager.shared.isRightToLeft == true {
+          
+            switchLanguage.changeLanguageTo(lang: "ar")
+                 UIView.appearance().semanticContentAttribute = .forceRightToLeft
+         
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+                
+        }else{
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+            switchLanguage.changeLanguageTo(lang: "en")
+        }
     }
     
     // MARK:- SetUpView
     private func setUpView() {
-        
+       
         viewBackUserID.setBorder(with: .app_Green, 1)
         viewBackPassword.setBorder(with: .app_Green, 1)
-        lblSignUpInfo.halfTextColorChange(fullText: "If you don't have an account? Sign Up", changeText: "Sign Up", fontColor: .app_Green)
+        lblSignUpInfo.halfTextColorChange(fullText:  "If you don't have an account? Sign Up".localiz(), changeText:"SignUp".localiz() , fontColor: .app_Green)
         lblSignUpInfo.isUserInteractionEnabled = true
         lblSignUpInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
         self.hideKeyboardWhenTappedAround()
+        self.btnLogin.setTitle("Log in as customer".localiz(), for: .normal)
+        self.txtemail.placeholder = "User id".localiz()
+        self.txtPassword.placeholder = "Password".localiz()
     }
     
     // MARK:- Button Actions
@@ -43,10 +62,10 @@ class LonginVC: UIViewController {
             return
         }
 
-        if let range = text.range(of: "Sign Up"),
-            recognizer.didTapAttributedTextInLabel(label: lblSignUpInfo, inRange: NSRange(range, in: text)) {
+       // if let range = text.range(of: "Sign Up"),
+         //   recognizer.didTapAttributedTextInLabel(label: lblSignUpInfo, inRange: NSRange(range, in: text)) {
             pushSignUpVC()
-        }
+      //  }
     }
     
     // MARK:- Push Methods

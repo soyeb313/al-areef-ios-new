@@ -6,15 +6,15 @@
 //
 
 import UIKit
-
+import LanguageManager_iOS
 class SplashVC: UIViewController {
-
+    var switchLanguage = LanguageDetails()
     // MARK:- Outlets
     @IBOutlet weak var btnSelectLanguage          : UIButton!
     @IBOutlet weak var vwBackSelectLanguage       : UIView!
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var btnLang: UIButton!
-    
+    var selectedLanguage: Languages = .ar
     @IBOutlet weak var btnContinue: UIButton!
     // MARK:- Variables
     
@@ -43,6 +43,8 @@ class SplashVC: UIViewController {
         self.btnLang.layer.borderColor = UIColor.hexStringToUIColor(hex: "#32AC93").cgColor
         self.lblLanguage.text = "Arabic"
         self.btnLang.setTitle("English", for: .normal)
+        btnContinue.setTitle("CONTINUE".localiz(), for: .normal)
+
     }
     
     // MARK:- Button Actions
@@ -54,8 +56,18 @@ class SplashVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushLoginVC() {
+        // change the language
+    LanguageManager.shared.setLanguage(language: selectedLanguage)
+        if  LanguageManager.shared.isRightToLeft == true {
+                 UIView.appearance().semanticContentAttribute = .forceRightToLeft
+           }else{
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+    
+        }
+       
         guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LoginStepOneVC.self)) as? LoginStepOneVC else { return }
-        self.navigationController?.setViewControllers([vc], animated: true)
+        self.navigationController?.pushViewController(vc, animated: false)
+        
     }
     
     @IBAction func btnLang(_ sender: UIButton) {
@@ -68,10 +80,19 @@ class SplashVC: UIViewController {
         if lblLanguage.text == "Arabic" {
             self.lblLanguage.text = "English"
             self.btnLang.setTitle("Arabic", for: .normal)
+       // switchLanguage.changeLanguageTo(lang: "ar")
+                  //  self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+            selectedLanguage = .en
         }else{
             self.lblLanguage.text = "Arabic"
             self.btnLang.setTitle("English", for: .normal)
+            selectedLanguage = .ar
+
         }
+   
+ 
+           
+          
         
     }
     // MARK:- Custom Methods
