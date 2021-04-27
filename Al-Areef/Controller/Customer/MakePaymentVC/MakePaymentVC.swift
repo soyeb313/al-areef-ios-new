@@ -84,13 +84,14 @@ class MakePaymentVC: UIViewController {
     @IBAction func btnAddToCartPressed(_ sender : UIButton){
         guard let PopVC = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
         PopVC.view.frame = self.view.frame
+        PopVC.paymentSuccessDelegate = self
         self.addChild(PopVC)
         self.view.addSubview(PopVC.view)
         PopVC.didMove(toParent: self)
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
-        vc.paymentSuccessDelegate = self
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: false)
+//        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
+//        vc.paymentSuccessDelegate = self
+//        vc.modalPresentationStyle = .overCurrentContext
+//        self.present(vc, animated: false)
     }
     
     // MARK:- Push Methods
@@ -116,8 +117,12 @@ class MakePaymentVC: UIViewController {
 extension MakePaymentVC : PaymentSuccessProtocol {
     func PaymentSuccess(_ flag: Bool) {
         switch consultType {
-        case .VoiceMessage,.TextMessage:
+        case .TextMessage:
             break
+        case .VoiceMessage:
+            guard let vc = UIStoryboard.RecordMessage.instantiateViewController(withIdentifier: String(describing: RecordMessageVC.self)) as? RecordMessageVC else { return }
+            self.navigationController?.pushViewController(vc, animated: true)
+            self.dismiss(animated: false, completion: nil)
         default:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultantDetailsVC.self)) as? ConsultantDetailsVC else { return }
     //        vc.consultType = consultType

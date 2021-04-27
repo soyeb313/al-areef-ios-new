@@ -22,7 +22,7 @@ class RecordReviewVC: UIViewController {
     @IBOutlet weak var lblCounslingSubject: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Consultation details".localiz()
+        
         // Do any additional setup after loading the view.
         
         viewTwo.layer.shadowColor = UIColor.darkGray.cgColor
@@ -34,6 +34,21 @@ class RecordReviewVC: UIViewController {
         viewReboot.layer.shadowOpacity = 1
         viewReboot.layer.shadowOffset = .zero
         viewReboot.layer.shadowRadius = 10
+        setUpView()
+    }
+    
+    // MARK:- SetUpView
+    private func setUpView() {
+        self.title = "Consultation details".localiz()
+       
+        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        self.navigationItem.leftBarButtonItem = backBtn
+        
+    }
+    
+    // MARK:- Button Actions
+    @objc private func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func btnReboot(_ sender: Any) {

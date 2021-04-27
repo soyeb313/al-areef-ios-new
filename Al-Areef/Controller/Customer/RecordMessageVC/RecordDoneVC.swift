@@ -16,22 +16,26 @@ class RecordDoneVC: UIViewController {
     @IBOutlet weak var lblTime: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Confirm the voice message".localiz()
+//        self.title = "Confirm the voice message".localiz()
         // Do any additional setup after loading the view.
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
-
+        setUpView()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK:- SetUpView
+    private func setUpView() {
+        self.title = "Confirm the voice message".localiz()
+       
+        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        self.navigationItem.leftBarButtonItem = backBtn
+        
     }
-    */
+    
+    // MARK:- Button Actions
+    @objc private func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     @IBAction func btnSend(_ sender: Any) {
         guard let vc = UIStoryboard.RecordMessage.instantiateViewController(withIdentifier: String(describing: RecordReviewVC.self)) as? RecordReviewVC else { return }
