@@ -13,6 +13,7 @@ class ChooseDurationVC: UIViewController {
     @IBOutlet weak var tableView          : UITableView!
    
     // MARK:- Variables
+    var consultType : ConsultingType?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -47,8 +48,18 @@ class ChooseDurationVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
-        self.navigationController?.pushViewController(vc, animated: false)
+        switch consultType {
+        case .TextMessage:
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: WriteMessageVC.self)) as? WriteMessageVC else { return }
+            self.navigationController?.pushViewController(vc, animated: false)
+        case .VoiceMessage :
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
+            vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: false)
+        default:
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentReservationVC.self)) as? AppointmentReservationVC else { return }
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
     }
     
     // MARK:- Custom Methods

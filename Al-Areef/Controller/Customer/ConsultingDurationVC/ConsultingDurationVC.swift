@@ -11,19 +11,23 @@ class ConsultingDurationVC: UIViewController {
 
     // MARK:- Outlets
     @IBOutlet weak var btnNext          : UIButton!
-    @IBOutlet weak var lbldoller: UILabel!
+    @IBOutlet weak var lblPrice1: UILabel!
     @IBOutlet weak var vwBack           : UIView!
     @IBOutlet weak var vwDurationBack1  : UIView!
     @IBOutlet weak var vwDurationBack2  : UIView!
     @IBOutlet weak var vwDurationBack3  : UIView!
-    @IBOutlet weak var lblMin: UILabel!
+    @IBOutlet weak var vwAddWords       : UIView!
+    @IBOutlet weak var lblMin1: UILabel!
     @IBOutlet weak var lblDescription   : UILabel!
-    // MARK:- Variables
-    @IBOutlet weak var lblPrice: UILabel!
+    
+    @IBOutlet weak var lblPrice3: UILabel!
     @IBOutlet weak var lblMin3: UILabel!
     
     @IBOutlet weak var lblPrice2: UILabel!
     @IBOutlet weak var lbmin2: UILabel!
+    
+    // MARK:- Variables
+    var consultType : ConsultingType?
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +57,29 @@ class ConsultingDurationVC: UIViewController {
         self.btnNext.setShadow(shadowColor: UIColor.lightGray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         
         lblDescription.text = "Please specify how long you want to book the appointment".localiz()
-        lbldoller.text = "10 USD".localiz()
-        lblPrice.text =  "20 USD".localiz()
-        lblPrice2.text  = "30 USD".localiz()
-        lblMin.text = "10 Minutes".localiz()
-        lblMin3.text = "30 Minutes".localiz()
-        lbmin2.text  = "20 Minutes".localiz()
+        
+        if consultType == ConsultingType.TextMessage {
+            self.vwAddWords.isHidden = false
+            lblPrice1.text = "100 dollars".localiz()
+            lblPrice2.text =  "30 dollars".localiz()
+            lblPrice3.text  = "60 dollars".localiz()
+            lblMin1.text = "1000 words".localiz()
+            lblMin3.text = "200 words".localiz()
+            lbmin2.text  = "500 words".localiz()
+            self.vwDurationBack2.isHidden = true
+            self.vwDurationBack3.isHidden = true
+        }else{
+            self.vwAddWords.isHidden = true
+            lblPrice1.text = "100 USD".localiz()
+            lblPrice2.text =  "20 USD".localiz()
+            lblPrice3.text  = "30 USD".localiz()
+            lblMin1.text = "10 Minutes".localiz()
+            lblMin3.text = "30 Minutes".localiz()
+            lbmin2.text  = "20 Minutes".localiz()
+            self.vwDurationBack2.isHidden = false
+            self.vwDurationBack3.isHidden = false
+        }
+        
         btnNext.setTitle("NEXT".localiz(), for: .normal)
     }
     
@@ -72,9 +93,15 @@ class ConsultingDurationVC: UIViewController {
         pushChooseDurationVC()
     }
     
+    @IBAction func btnAddWordsTapped(_ sender : UIButton){
+        self.vwDurationBack2.isHidden = false
+        self.vwDurationBack3.isHidden = false
+    }
+    
     // MARK:- Push Methods
     private func pushChooseDurationVC() {
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
+        vc.consultType = consultType
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

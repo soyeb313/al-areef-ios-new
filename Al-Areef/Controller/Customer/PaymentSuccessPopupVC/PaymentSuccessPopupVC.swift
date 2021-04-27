@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol PaymentSuccessProtocol: class {
+    func PaymentSuccess(_ flag : Bool)
+}
+
+
 class PaymentSuccessPopupVC: UIViewController {
 
     @IBOutlet weak var vwBack                : UIView!
@@ -14,6 +19,8 @@ class PaymentSuccessPopupVC: UIViewController {
     @IBOutlet weak var lblDescription        : UILabel!
     @IBOutlet weak var lblSubDescription     : UILabel!
     @IBOutlet weak var lblAmount             : UILabel!
+    
+    weak var paymentSuccessDelegate: PaymentSuccessProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +43,7 @@ class PaymentSuccessPopupVC: UIViewController {
     }
     
     @IBAction func btnContinuePressed(_ sender : UIButton){
+        paymentSuccessDelegate?.PaymentSuccess(true)
         self.dismiss(animated: false, completion: nil)
     }
     /*

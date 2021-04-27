@@ -32,6 +32,7 @@ class MakePaymentVC: UIViewController {
     @IBOutlet weak var btnAddCard                   : UIButton!
     
     // MARK:- Variables
+    var consultType : ConsultingType?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -82,14 +83,14 @@ class MakePaymentVC: UIViewController {
     
     @IBAction func btnAddToCartPressed(_ sender : UIButton){
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
+        vc.paymentSuccessDelegate = self
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: false)
     }
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
-        self.navigationController?.pushViewController(vc, animated: false)
+
     }
     
     // MARK:- Custom Methods
@@ -107,4 +108,18 @@ class MakePaymentVC: UIViewController {
     
 } //class
 
-
+extension MakePaymentVC : PaymentSuccessProtocol {
+    func PaymentSuccess(_ flag: Bool) {
+        switch consultType {
+        case .VoiceMessage,.TextMessage:
+            break
+        default:
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultantDetailsVC.self)) as? ConsultantDetailsVC else { return }
+    //        vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+       
+    }
+    
+    
+}

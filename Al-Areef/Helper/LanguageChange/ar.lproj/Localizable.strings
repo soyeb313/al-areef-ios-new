@@ -225,3 +225,9 @@
 
 /* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "yXp-yb-qlc"; */
 "Skip" = "يتخطى";
+
+"Voice message" = "رسالة صوتية";
+"Text message" = "رسالة نصية";
+"Audio connections" = "التوصيلات الصوتية";
+"Video connections" = "وصلات الفيديو";
+"Personal meeting" = "اجتماع شخصي";
