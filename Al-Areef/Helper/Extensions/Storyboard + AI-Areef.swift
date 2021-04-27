@@ -13,5 +13,6 @@ extension UIStoryboard {
     static let Customer             = UIStoryboard.init(name: "Customer", bundle: nil)
     static let Doctor               = UIStoryboard.init(name: "Doctor", bundle: nil)
     static let DashBoardCustomer    = UIStoryboard.init(name: "DashBoardCustomer", bundle: nil)
+    static let RecordMessage    = UIStoryboard.init(name: "RecordMessage", bundle: nil)
 }
     

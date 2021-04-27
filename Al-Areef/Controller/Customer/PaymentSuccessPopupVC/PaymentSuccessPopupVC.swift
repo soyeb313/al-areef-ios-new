@@ -36,6 +36,9 @@ class PaymentSuccessPopupVC: UIViewController {
     }
     
     @IBAction func btnContinuePressed(_ sender : UIButton){
+      
+        guard let vc = UIStoryboard.RecordMessage.instantiateViewController(withIdentifier: String(describing: RecordMessageVC.self)) as? RecordMessageVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
         self.dismiss(animated: false, completion: nil)
     }
     /*
