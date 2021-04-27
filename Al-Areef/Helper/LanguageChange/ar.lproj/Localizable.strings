@@ -226,6 +226,56 @@
 /* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "yXp-yb-qlc"; */
 "Skip" = "يتخطى";
 
+
+/* Class = "UILabel"; text = "Family relations"; ObjectID = "179-XD-aXp"; */
+"Family relations" = "العلاقات الأسرية";
+
+/* Class = "UIButton"; normalTitle = "Register again"; ObjectID = "1ac-8W-nMB"; */
+"Register again" = "التسجيل مرة أخرى";
+
+/* Class = "UILabel"; text = "Dr. Anila Khaldoum"; ObjectID = "5p2-ov-AIs"; */
+"Dr. Anila Khaldoum" = "در. أنيل خلدوم";
+
+/* Class = "UILabel"; text = "Time has passed"; ObjectID = "6bo-Iy-OCR"; */
+"Time has passed" = "فات الوقت";
+
+/* Class = "UILabel"; text = "Press the circle button to start or stop recording"; ObjectID = "9Ne-xW-PlC"; */
+"Press the circle button to start or stop recording" = "اضغط على زر الدائرة لبدء التسجيل أو إيقافه";
+
+/* Class = "UILabel"; text = "Press the circle button to start or stop recording"; ObjectID = "B7p-AO-7I0"; */
+
+/* Class = "UILabel"; text = "03:34"; ObjectID = "CLb-cu-nAK"; */
+"CLb-cu-nAK.text" = "03:34";
+
+/* Class = "UILabel"; text = "Your voice note"; ObjectID = "JBZ-XR-SHW"; */
+"Your voice note" = "ملاحظتك الصوتية";
+
+/* Class = "UILabel"; text = "Our advisors take at least 24 hours to review and respond to voice notes. we appreciate your patience."; ObjectID = "LLr-AH-jZ8"; */
+"Our advisors take at least 24 hours to review and respond to voice notes. we appreciate your patience." = "يستغرق مستشارونا 24 ساعة على الأقل لمراجعة الملاحظات الصوتية والرد عليها. نحن نقدر سعة صدرك.";
+
+/* Class = "UILabel"; text = "03:34"; ObjectID = "MP0-nc-pEU"; */
+"03:3" = "03:34";
+
+/* Class = "UILabel"; text = "Advisor"; ObjectID = "SOm-0i-du3"; */
+"Advisor" = "مستشار";
+
+/* Class = "UILabel"; text = "Subject matter of counseling"; ObjectID = "TBM-cj-910"; */
+"Subject matter of counseling" = "موضوع الاستشارة";
+
+/* Class = "UILabel"; text = "Reboot"; ObjectID = "WGe-TM-vHT"; */
+"Reboot" = "اعادة التشغيل";
+
+/* Class = "UILabel"; text = "Time has passed"; ObjectID = "k0H-9A-Ozw"; */
+"Time has passed" = "فات الوقت";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "l2j-1m-EQv"; */
+"Send" = "إرسال";
+
+/* Class = "UILabel"; text = "Consultant responded"; ObjectID = "mNE-cT-ybA"; */
+"Consultant responded" = "رد المستشار";
+"Confirm the voice message"="قم بتأكيد الرسالة الصوتية";
+"Record the message"="تسجيل الرسالة";
+"Consultation details"="تفاصيل الاستشارة";
 "Voice message" = "رسالة صوتية";
 "Text message" = "رسالة نصية";
 "Audio connections" = "التوصيلات الصوتية";

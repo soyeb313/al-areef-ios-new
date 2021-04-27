@@ -30,6 +30,10 @@
 		35703DE62621FBFB00D4F260 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */; };
 		35703DE92621FC4700D4F260 /* CalendarTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DE82621FC4700D4F260 /* CalendarTab.storyboard */; };
 		35703DEC2621FC9500D4F260 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DEB2621FC9500D4F260 /* SettingTab.storyboard */; };
+		35B999B9263743310073F30F /* RecordMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B999B8263743310073F30F /* RecordMessageVC.swift */; };
+		35B999BC263754C70073F30F /* RecordDoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B999BB263754C70073F30F /* RecordDoneVC.swift */; };
+		35C5A10226385C0600BDCA3A /* RecordReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A10126385C0600BDCA3A /* RecordReviewVC.swift */; };
+		35C5A11B2638741B00BDCA3A /* RecordMessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C5A11A2638741B00BDCA3A /* RecordMessage.storyboard */; };
 		79692CCC262087880056FB00 /* UIColor + AI-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */; };
 		79692CD726208E0F0056FB00 /* LoginStepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */; };
 		79692CDB26208E330056FB00 /* LonginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CDA26208E330056FB00 /* LonginVC.swift */; };
@@ -117,6 +121,10 @@
 		35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		35703DE82621FC4700D4F260 /* CalendarTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarTab.storyboard; sourceTree = "<group>"; };
 		35703DEB2621FC9500D4F260 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
+		35B999B8263743310073F30F /* RecordMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMessageVC.swift; sourceTree = "<group>"; };
+		35B999BB263754C70073F30F /* RecordDoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDoneVC.swift; sourceTree = "<group>"; };
+		35C5A10126385C0600BDCA3A /* RecordReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordReviewVC.swift; sourceTree = "<group>"; };
+		35C5A11A2638741B00BDCA3A /* RecordMessage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordMessage.storyboard; sourceTree = "<group>"; };
 		5525756C1DB9CA2B98F4DCC0 /* Pods_Al_Areef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Al_Areef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + AI-Areef.swift"; sourceTree = "<group>"; };
 		79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStepOneVC.swift; sourceTree = "<group>"; };
@@ -218,6 +226,7 @@
 				35703DE82621FC4700D4F260 /* CalendarTab.storyboard */,
 				35703DEB2621FC9500D4F260 /* SettingTab.storyboard */,
 				355DEF1B26320CD9005B2919 /* Doctor.storyboard */,
+				35C5A11A2638741B00BDCA3A /* RecordMessage.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -275,6 +284,23 @@
 				35703DDB2621FB9400D4F260 /* SettingTabVC.swift */,
 			);
 			path = SettingTab;
+			sourceTree = "<group>";
+		};
+		35B999B6263742B20073F30F /* RecordMessageVC */ = {
+			isa = PBXGroup;
+			children = (
+				35B999B8263743310073F30F /* RecordMessageVC.swift */,
+				35B999BB263754C70073F30F /* RecordDoneVC.swift */,
+			);
+			path = RecordMessageVC;
+			sourceTree = "<group>";
+		};
+		35C5A10026385BE200BDCA3A /* ReviewRecordMessage */ = {
+			isa = PBXGroup;
+			children = (
+				35C5A10126385C0600BDCA3A /* RecordReviewVC.swift */,
+			);
+			path = ReviewRecordMessage;
 			sourceTree = "<group>";
 		};
 		79692CC7262086850056FB00 /* Controller */ = {
@@ -472,6 +498,8 @@
 		7986ADA0262EA29D0091B1D8 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
+				35C5A10026385BE200BDCA3A /* ReviewRecordMessage */,
+				35B999B6263742B20073F30F /* RecordMessageVC */,
 				7993AE0126383260001E7110 /* ConsultantDetailsVC */,
 				7993ADFC2637BFD4001E7110 /* WriteMessageVC */,
 				79A11F9926372B6A008803CB /* AppointmentReservationVC */,
@@ -750,6 +778,7 @@
 				35703DE92621FC4700D4F260 /* CalendarTab.storyboard in Resources */,
 				35703DB22621BCC500D4F260 /* DashBoardCustomer.storyboard in Resources */,
 				35703DEC2621FC9500D4F260 /* SettingTab.storyboard in Resources */,
+				35C5A11B2638741B00BDCA3A /* RecordMessage.storyboard in Resources */,
 				355CCEFA2630C7A900FE22E0 /* Localizable.strings in Resources */,
 				79960D2026206FCE0094483C /* LaunchScreen.storyboard in Resources */,
 				79960D1D26206FCE0094483C /* Assets.xcassets in Resources */,
@@ -843,6 +872,7 @@
 				79692CFA2620B96C0056FB00 /* UITextField+fixCaretPosition.swift in Sources */,
 				79CBD8F62624961300CB0FC9 /* UIImage + AI-Areef.swift in Sources */,
 				79960D1826206FCD0094483C /* SplashVC.swift in Sources */,
+				35B999BC263754C70073F30F /* RecordDoneVC.swift in Sources */,
 				79CBD8F026247F4800CB0FC9 /* RegistrationStepOneVC.swift in Sources */,
 				7980E29A262F133B00930A34 /* ConsultingListHeaderCell.swift in Sources */,
 				79692CD726208E0F0056FB00 /* LoginStepOneVC.swift in Sources */,
@@ -859,6 +889,8 @@
 				7980E29E262F179100930A34 /* ConsultingTypeCell.swift in Sources */,
 				79692CE2262097330056FB00 /* UILabel + Al-Areef.swift in Sources */,
 				79692CE92620A5020056FB00 /* UIViewController + Al-Areef.swift in Sources */,
+				35B999B9263743310073F30F /* RecordMessageVC.swift in Sources */,
+				35C5A10226385C0600BDCA3A /* RecordReviewVC.swift in Sources */,
 				35703DE32621FBE200D4F260 /* CalendarTabVC.swift in Sources */,
 				79692CDB26208E330056FB00 /* LonginVC.swift in Sources */,
 				79CBD8CF262460F000CB0FC9 /* InfoSliderVC.swift in Sources */,
