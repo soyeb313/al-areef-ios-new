@@ -42,17 +42,17 @@ class WebServiceHandler: NSObject {
                             
                             complete(response.result.value! as! [String : Any], false)
                         }
-                        else if let exception = JSON["exception"] as? Dictionary<String, AnyObject>
+                        else if let exception = JSON["message"] as? String
                         {
                             DispatchQueue.main.async {
                             SVProgressHUD.dismiss()
                             }
-                            let error = exception["error"] as? Dictionary<String, AnyObject>
-                            let message = "\(String(describing:error!["message"]!))"
-                            let code = "\(String(describing:error!["code"]!))"
-                            if code == "E401"
+                            let error = JSON as? Dictionary<String, AnyObject>
+                            let message = "\(String(describing:exception))"
+                            let code = "\(String(describing:error!["error_code"]!))"
+                            if code == "1"
                             {
-                                complete(exception, true)
+                                complete(JSON as! [String : Any], true)
                                 
                             }
                             else{

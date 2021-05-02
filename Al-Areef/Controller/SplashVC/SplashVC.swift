@@ -21,7 +21,16 @@ class SplashVC: UIViewController {
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpView()
+        let is_login = UserDefaults.standard.bool(forKey: User_defaults_Constants.LOGGED_IN)
+        if is_login == true
+        {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            setUpView()
+        }
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

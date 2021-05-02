@@ -10,6 +10,7 @@ import Loaf
 import SVProgressHUD
 class CustomerRegistrationVC: UIViewController {
 
+    @IBOutlet weak var txtPasword: SkyFloatingLabelTextField!
     @IBOutlet weak var txtPhoneNumber: SkyFloatingLabelTextField!
     @IBOutlet weak var txtUserId: SkyFloatingLabelTextField!
     @IBOutlet weak var txtEmail: SkyFloatingLabelTextField!
@@ -17,7 +18,7 @@ class CustomerRegistrationVC: UIViewController {
     @IBOutlet weak var txtGender: SkyFloatingLabelTextField!
     @IBOutlet weak var txtFullName: SkyFloatingLabelTextField!
     // MARK:- Outlets
-    
+    var OTP = ""
     // MARK:- Variables
     
     // MARK:- View Life Cycle
@@ -58,9 +59,12 @@ class CustomerRegistrationVC: UIViewController {
         }else   if  txtPhoneNumber.text == ""
         {
             Loaf("Please enter your phone number.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if  txtPasword.text == ""
+        {
+            Loaf("Please enter password.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else
         {
-           // SVProgressHUD.show()
+            SVProgressHUD.show()
             wsSendOtp()
            
         }
@@ -84,11 +88,12 @@ class CustomerRegistrationVC: UIViewController {
                 
                 let message = "\(String(describing:result))"
                 print(message)
-              
+                self.OTP = "\( responseDict["Otp"] as? Int ?? 0)"
                 DispatchQueue.main.async {
+                    self.pushOTPVC()
                     Loaf("OTP sent sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
 
-                self.pushOTPVC()
+               
                 }
             }
            
@@ -104,6 +109,14 @@ class CustomerRegistrationVC: UIViewController {
     // MARK:- Push Methods
     private func pushOTPVC() {
         guard let vc = UIStoryboard.Customer.instantiateViewController(withIdentifier: String(describing: OTPVC.self)) as? OTPVC else { return }
+        vc.fullName = self.txtFullName.text ?? ""
+        vc.email = self.txtEmail.text ?? ""
+        vc.gender = self.txtGender.text ?? ""
+        vc.userID = self.txtUserId.text ?? ""
+        vc.specialID = self.txtSpecialIdNumber.text ?? ""
+        vc.phonenumber = self.txtPhoneNumber.text ?? ""
+        vc.otp = OTP
+        vc.password = self.txtPasword.text ?? ""
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

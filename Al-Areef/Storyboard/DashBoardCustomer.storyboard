@@ -3644,11 +3644,23 @@ myself just one click </string>
         </scene>
     </scenes>
     <designables>
+        <designable name="CfF-0I-vko">
+            <size key="intrinsicContentSize" width="95" height="15"/>
+        </designable>
         <designable name="SXM-G5-cel">
             <size key="intrinsicContentSize" width="10" height="33"/>
         </designable>
+        <designable name="ktD-29-F4T">
+            <size key="intrinsicContentSize" width="145" height="25"/>
+        </designable>
+        <designable name="maG-z8-5h4">
+            <size key="intrinsicContentSize" width="145" height="25"/>
+        </designable>
         <designable name="nND-rb-dab">
             <size key="intrinsicContentSize" width="10" height="33"/>
+        </designable>
+        <designable name="vCe-ZI-mls">
+            <size key="intrinsicContentSize" width="145" height="25"/>
         </designable>
     </designables>
     <resources>

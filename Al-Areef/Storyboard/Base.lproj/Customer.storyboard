@@ -370,6 +370,9 @@
                                                                         <state key="normal" title="Resend">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="btnResnet:" destination="XAc-Sv-Cnp" eventType="touchUpInside" id="ca0-Us-VIL"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -410,6 +413,9 @@
                                 <state key="normal" title="Completes">
                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnComplete:" destination="XAc-Sv-Cnp" eventType="touchUpInside" id="o1G-Pi-nr5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dbl-AM-hLi"/>
@@ -446,7 +452,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="733"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OLY-mO-EA9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="602"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="657"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0h-Wz-Q2V">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="262"/>
@@ -476,10 +482,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kup-JR-9ix">
-                                                <rect key="frame" x="0.0" y="262" width="414" height="340"/>
+                                                <rect key="frame" x="0.0" y="262" width="414" height="395"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ke4-YS-sK1">
-                                                        <rect key="frame" x="20" y="10" width="374" height="320"/>
+                                                        <rect key="frame" x="20" y="10" width="374" height="375"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fn-2l-2zv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -638,7 +644,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="User ID"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="City"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                                 <color key="value" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             </userDefinedRuntimeAttribute>
@@ -703,6 +709,43 @@
                                                                     <constraint firstItem="cGo-X5-7v7" firstAttribute="top" secondItem="mOZ-4s-nyE" secondAttribute="top" id="uj4-Qz-yEi"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0px-mo-1eo">
+                                                                <rect key="frame" x="0.0" y="330" width="374" height="45"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEk-4W-Gad" customClass="SkyFloatingLabelTextField" customModule="Al_Areef" customModuleProvider="target">
+                                                                        <rect key="frame" x="10" y="0.0" width="354" height="45"/>
+                                                                        <color key="textColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                                <color key="value" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                                                <color key="value" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="eEk-4W-Gad" secondAttribute="trailing" constant="10" id="52i-Hb-H9A"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="9IN-5E-VQq"/>
+                                                                    <constraint firstItem="eEk-4W-Gad" firstAttribute="leading" secondItem="0px-mo-1eo" secondAttribute="leading" constant="10" id="UfC-JC-wH4"/>
+                                                                    <constraint firstItem="eEk-4W-Gad" firstAttribute="top" secondItem="0px-mo-1eo" secondAttribute="top" id="oWJ-Gj-Ebk"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="eEk-4W-Gad" secondAttribute="bottom" id="pTS-kn-iVn"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -756,6 +799,7 @@
                         <outlet property="txtEmail" destination="Gsv-vi-I0q" id="Yv1-XC-WzG"/>
                         <outlet property="txtFullName" destination="nTj-eJ-A2f" id="a1m-R0-gGS"/>
                         <outlet property="txtGender" destination="zic-gx-Czx" id="fWb-Mo-EdE"/>
+                        <outlet property="txtPasword" destination="eEk-4W-Gad" id="G4c-7a-uy3"/>
                         <outlet property="txtPhoneNumber" destination="cGo-X5-7v7" id="kU4-e4-Ued"/>
                         <outlet property="txtSpecialIdNumber" destination="uqA-eU-byI" id="Cgn-k9-7wT"/>
                         <outlet property="txtUserId" destination="Ilu-5H-gsf" id="ea3-r7-xp3"/>
@@ -763,27 +807,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sf-HP-NsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4343" y="62"/>
+            <point key="canvasLocation" x="4342.0289855072469" y="61.607142857142854"/>
         </scene>
     </scenes>
     <designables>
         <designable name="Gsv-vi-I0q">
-            <size key="intrinsicContentSize" width="354" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="122.5" height="18.5"/>
         </designable>
         <designable name="Ilu-5H-gsf">
-            <size key="intrinsicContentSize" width="354" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="26" height="18.5"/>
         </designable>
         <designable name="cGo-X5-7v7">
-            <size key="intrinsicContentSize" width="354" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="127" height="18.5"/>
+        </designable>
+        <designable name="eEk-4W-Gad">
+            <size key="intrinsicContentSize" width="62.5" height="17"/>
         </designable>
         <designable name="nTj-eJ-A2f">
-            <size key="intrinsicContentSize" width="354" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="46" height="18.5"/>
         </designable>
         <designable name="uqA-eU-byI">
-            <size key="intrinsicContentSize" width="354" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="118" height="18.5"/>
         </designable>
         <designable name="zic-gx-Czx">
-            <size key="intrinsicContentSize" width="354" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="81" height="18.5"/>
         </designable>
     </designables>
     <resources>

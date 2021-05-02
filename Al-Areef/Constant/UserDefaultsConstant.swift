@@ -19,14 +19,14 @@ struct User_defaults_Constants {
     static let SelectedMaterialTagsArr = "SelectedMaterialTagsArr"
     static let UserId = "UserId"
     static let MobileNumber = "MobileNumber"
-    static let SelectedPlotAddressPincode = "SelectedPlotAddressPincode"
-    static let SelectedPlotAddressLat = "SelectedPlotAddressLat"
-    static let SelectedPlotAddressLong = "SelectedPlotAddressLong"
-    static let SelectedMaterialValueAddedServicesArr = "SelectedMaterialValueAddedServicesArr"
-    static let SelectedExpertsTag = "SelectedExpertsTag"
-    static let SelectedYearsExperianceArr = "SelectedYearsExperianceArr"
-    static let SelectedTypeOfProjectArr = "SelectedTypeOfProjectArr"
-    static let SelectedServiceOfferedArr = "SelectedServiceOfferedArr"
+    static let city = "city"
+    static let user_id = "id"
+    static let user_type = "user_type"
+    static let email = "email"
+    static let id_number = "id_number"
+    static let gender = "gender"
+    static let mobile_number = "mobile_number"
+    static let full_name = "full_name"
 
 
 

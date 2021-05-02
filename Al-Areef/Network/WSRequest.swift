@@ -20,6 +20,15 @@ public class WSRequest {
     class func LoginUser() -> String {
         return WSRequest.GetBaseURL() +  "api/ws-login-user"
     }
+    class func ConsultantRegisterStep1() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-consultant-register-step-1"
+    }
+    class func ConsultantAddAcadmic() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-consultant-register-add-academic"
+    }
+    class func ConsultantAddAcadmic2() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-consultant-register-add-certificate"
+    }
    
     }
    

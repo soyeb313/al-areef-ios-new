@@ -11,6 +11,8 @@ class RegistrationStepOneVC: UIViewController {
 
     // MARK:- Outlets
     @IBOutlet weak var btnRegisterNow          : UIButton!
+    @IBOutlet weak var txtName          : UITextField!
+  
   
     // MARK:- Variables
     
