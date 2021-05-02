@@ -30,6 +30,12 @@
 		35703DE62621FBFB00D4F260 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */; };
 		35703DE92621FC4700D4F260 /* CalendarTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DE82621FC4700D4F260 /* CalendarTab.storyboard */; };
 		35703DEC2621FC9500D4F260 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35703DEB2621FC9500D4F260 /* SettingTab.storyboard */; };
+		35748D75263E35430002DC21 /* WSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35748D73263E35430002DC21 /* WSRequest.swift */; };
+		35748D76263E35430002DC21 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35748D74263E35430002DC21 /* ApiCall.swift */; };
+		35748D82263E36230002DC21 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35748D81263E36220002DC21 /* Reachability.swift */; };
+		35748D85263E36CE0002DC21 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35748D84263E36CE0002DC21 /* Utility.swift */; };
+		35748D88263E38130002DC21 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35748D87263E38130002DC21 /* AppUtility.swift */; };
+		35748D8C263E392A0002DC21 /* UserDefaultsConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35748D8B263E392A0002DC21 /* UserDefaultsConstant.swift */; };
 		35B999B9263743310073F30F /* RecordMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B999B8263743310073F30F /* RecordMessageVC.swift */; };
 		35B999BC263754C70073F30F /* RecordDoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B999BB263754C70073F30F /* RecordDoneVC.swift */; };
 		35C5A10226385C0600BDCA3A /* RecordReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A10126385C0600BDCA3A /* RecordReviewVC.swift */; };
@@ -121,6 +127,12 @@
 		35703DE52621FBFB00D4F260 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		35703DE82621FC4700D4F260 /* CalendarTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarTab.storyboard; sourceTree = "<group>"; };
 		35703DEB2621FC9500D4F260 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
+		35748D73263E35430002DC21 /* WSRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSRequest.swift; sourceTree = "<group>"; };
+		35748D74263E35430002DC21 /* ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		35748D81263E36220002DC21 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		35748D84263E36CE0002DC21 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		35748D87263E38130002DC21 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		35748D8B263E392A0002DC21 /* UserDefaultsConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstant.swift; sourceTree = "<group>"; };
 		35B999B8263743310073F30F /* RecordMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMessageVC.swift; sourceTree = "<group>"; };
 		35B999BB263754C70073F30F /* RecordDoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDoneVC.swift; sourceTree = "<group>"; };
 		35C5A10126385C0600BDCA3A /* RecordReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordReviewVC.swift; sourceTree = "<group>"; };
@@ -284,6 +296,26 @@
 				35703DDB2621FB9400D4F260 /* SettingTabVC.swift */,
 			);
 			path = SettingTab;
+			sourceTree = "<group>";
+		};
+		35748D6A263E32930002DC21 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				35748D81263E36220002DC21 /* Reachability.swift */,
+				35748D74263E35430002DC21 /* ApiCall.swift */,
+				35748D84263E36CE0002DC21 /* Utility.swift */,
+				35748D87263E38130002DC21 /* AppUtility.swift */,
+				35748D73263E35430002DC21 /* WSRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		35748D8A263E39070002DC21 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				35748D8B263E392A0002DC21 /* UserDefaultsConstant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		35B999B6263742B20073F30F /* RecordMessageVC */ = {
@@ -570,6 +602,8 @@
 		79960D1226206FCD0094483C /* Al-Areef */ = {
 			isa = PBXGroup;
 			children = (
+				35748D8A263E39070002DC21 /* Constant */,
+				35748D6A263E32930002DC21 /* Network */,
 				35703DB42621C85A00D4F260 /* Font */,
 				35703DAF2621BC7800D4F260 /* Storyboard */,
 				79692CC9262087460056FB00 /* Helper */,
@@ -838,11 +872,13 @@
 			files = (
 				355CCEE12630BCE300FE22E0 /* LocalizationSystem.swift in Sources */,
 				7980E282262EF72500930A34 /* ConsultingTypeVC.swift in Sources */,
+				35748D88263E38130002DC21 /* AppUtility.swift in Sources */,
 				79FA8D622631CC1300CEEB77 /* PaymentSuccessPopupVC.swift in Sources */,
 				79CBD8EC262466D200CB0FC9 /* InfoSliderCell.swift in Sources */,
 				35703DC32621E2E300D4F260 /* Khebrat Musamim 2018 Regular.ttf in Sources */,
 				7986ADA9262EC5C70091B1D8 /* MyAppointmentCell.swift in Sources */,
 				79CBD9072624B8E000CB0FC9 /* ConsultantProfileVC.swift in Sources */,
+				35748D82263E36230002DC21 /* Reachability.swift in Sources */,
 				353B6ABE263099F900FAC433 /* AppChangeLanguage.swift in Sources */,
 				35703DDC2621FB9400D4F260 /* SettingTabVC.swift in Sources */,
 				355CCEE22630BCE300FE22E0 /* Localizable.swift in Sources */,
@@ -851,6 +887,7 @@
 				35703DBC2621C8BC00D4F260 /* Poppins-Light.ttf in Sources */,
 				35703DBD2621C8BC00D4F260 /* Poppins-Medium.ttf in Sources */,
 				7980E2AA262F2AE100930A34 /* ChooseDurationFooterCell.swift in Sources */,
+				35748D85263E36CE0002DC21 /* Utility.swift in Sources */,
 				35703DD02621F5B500D4F260 /* UtechTab_UTC.swift in Sources */,
 				35703DBE2621C8BC00D4F260 /* Poppins-Regular.ttf in Sources */,
 				79D98B012634454C003B511B /* PlaceholderTextView.swift in Sources */,
@@ -871,6 +908,7 @@
 				7993AE0326383286001E7110 /* ConsultantDetailsVC.swift in Sources */,
 				79692CFA2620B96C0056FB00 /* UITextField+fixCaretPosition.swift in Sources */,
 				79CBD8F62624961300CB0FC9 /* UIImage + AI-Areef.swift in Sources */,
+				35748D8C263E392A0002DC21 /* UserDefaultsConstant.swift in Sources */,
 				79960D1826206FCD0094483C /* SplashVC.swift in Sources */,
 				35B999BC263754C70073F30F /* RecordDoneVC.swift in Sources */,
 				79CBD8F026247F4800CB0FC9 /* RegistrationStepOneVC.swift in Sources */,
@@ -906,6 +944,8 @@
 				79A11F9B26372B92008803CB /* AppointmentReservationVC.swift in Sources */,
 				79692CF12620A8150056FB00 /* SignUpVC.swift in Sources */,
 				79960D1626206FCD0094483C /* SceneDelegate.swift in Sources */,
+				35748D76263E35430002DC21 /* ApiCall.swift in Sources */,
+				35748D75263E35430002DC21 /* WSRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

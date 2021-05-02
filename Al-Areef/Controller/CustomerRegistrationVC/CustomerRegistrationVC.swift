@@ -6,9 +6,16 @@
 //
 
 import UIKit
-
+import Loaf
+import SVProgressHUD
 class CustomerRegistrationVC: UIViewController {
 
+    @IBOutlet weak var txtPhoneNumber: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtUserId: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtEmail: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtSpecialIdNumber: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtGender: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtFullName: SkyFloatingLabelTextField!
     // MARK:- Outlets
     
     // MARK:- Variables
@@ -30,9 +37,70 @@ class CustomerRegistrationVC: UIViewController {
     
     // MARK:- Button Actions
     @IBAction func btnCompeteRegisterationTapped(_ sender : UIButton){
-        pushOTPVC()
+        
+        if self.txtFullName.text  == "" {
+            Loaf("Please enter full name.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if self.txtGender.text  == ""
+        {
+            Loaf("Please enter your  gender.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if self.txtSpecialIdNumber.text  == ""
+        {
+            Loaf("Please enter your  speacial ID number.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if self.txtEmail.text  == ""
+        {
+            Loaf("Please enter your Email id.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if  isValidEmail(testStr:txtEmail.text ?? "") == false
+        {
+            Loaf("Please enter valid Email id.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if  txtUserId.text == ""
+        {
+            Loaf("Please enter User ID.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else   if  txtPhoneNumber.text == ""
+        {
+            Loaf("Please enter your phone number.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }else
+        {
+           // SVProgressHUD.show()
+            wsSendOtp()
+           
+        }
+        
     }
+    func wsSendOtp() {
+       
+        
+        let parameters = [ "user_type": 1,
+                          "mobile_number": txtPhoneNumber.text ?? "",
+                          "user_id" :  1 ] as [String : Any]
     
+
+        let url = WSRequest.SendOtp()
+        
+        WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
+            print(responseDict,err)
+            SVProgressHUD.dismiss()
+            if let result = responseDict["message"] as? String
+            {
+                
+                let message = "\(String(describing:result))"
+                print(message)
+              
+                DispatchQueue.main.async {
+                    Loaf("OTP sent sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+
+                self.pushOTPVC()
+                }
+            }
+           
+        }
+
+    }
+    func isValidEmail(testStr:String) -> Bool {
+       let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+       
+       let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+       return emailTest.evaluate(with: testStr)
+   }
     // MARK:- Push Methods
     private func pushOTPVC() {
         guard let vc = UIStoryboard.Customer.instantiateViewController(withIdentifier: String(describing: OTPVC.self)) as? OTPVC else { return }

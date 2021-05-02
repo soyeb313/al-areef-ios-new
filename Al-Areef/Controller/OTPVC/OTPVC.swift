@@ -12,9 +12,14 @@ class OTPVC: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var viewOTP          : OTPView!
     @IBOutlet weak var btnResent        : UIButton!
-    
+    var fullName = ""
+    var gender = ""
+    var email = ""
+    var phonenumber  = ""
+    var specialID = ""
+    var userID = ""
     // MARK:- Variables
-    var otp = "24678"
+    var otp = ""
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {

@@ -1,24 +1,42 @@
 PODS:
+  - Alamofire (4.9.1)
   - Cosmos (23.0.0)
   - IQKeyboardManagerSwift (6.5.6)
   - LanguageManager-iOS (1.2.3)
+  - Loaf (0.7.0)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.9.1)
   - Cosmos
   - IQKeyboardManagerSwift
   - LanguageManager-iOS
+  - Loaf
+  - SDWebImage
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Cosmos
     - IQKeyboardManagerSwift
     - LanguageManager-iOS
+    - Loaf
+    - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   LanguageManager-iOS: 020a6849c97949683926773fd5b82baceaa142db
+  Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 99609eafadd6fbce8575b1d1e9083ecd872216fc
+PODFILE CHECKSUM: 001726d6566f1cf0066d25403a10db1da08359ce
 
 COCOAPODS: 1.10.0

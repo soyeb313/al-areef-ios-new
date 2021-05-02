@@ -8,14 +8,20 @@
 import UIKit
 import IQKeyboardManagerSwift
 import LanguageManager_iOS
+import SVProgressHUD
 @main
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var defaultsData: UserDefaults!;
+    lazy var window: UIWindow? = {
+        return UIApplication.shared.windows.first
+    }()
+    let nav = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        defaultsData = UserDefaults.standard;
+
         //IQKeyboardManager setup
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
@@ -23,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.app_Green
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         LanguageManager.shared.defaultLanguage = .en
+        SVProgressHUD.setDefaultMaskType(.gradient)
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+        nav.viewControllers = [mainView]
+
         return true
     }
 
@@ -43,3 +53,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate;

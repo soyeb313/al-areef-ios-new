@@ -562,7 +562,7 @@
                                                                         <rect key="frame" x="10" y="0.0" width="354" height="45"/>
                                                                         <color key="textColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Special ID number"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -673,7 +673,7 @@
                                                                         <rect key="frame" x="10" y="0.0" width="354" height="45"/>
                                                                         <color key="textColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Your phone number"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -752,6 +752,14 @@
                             <constraint firstItem="czM-h5-PKk" firstAttribute="trailing" secondItem="20K-vL-4q5" secondAttribute="trailing" constant="20" id="srm-bD-IRM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Gsv-vi-I0q" id="Yv1-XC-WzG"/>
+                        <outlet property="txtFullName" destination="nTj-eJ-A2f" id="a1m-R0-gGS"/>
+                        <outlet property="txtGender" destination="zic-gx-Czx" id="fWb-Mo-EdE"/>
+                        <outlet property="txtPhoneNumber" destination="cGo-X5-7v7" id="kU4-e4-Ued"/>
+                        <outlet property="txtSpecialIdNumber" destination="uqA-eU-byI" id="Cgn-k9-7wT"/>
+                        <outlet property="txtUserId" destination="Ilu-5H-gsf" id="ea3-r7-xp3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sf-HP-NsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

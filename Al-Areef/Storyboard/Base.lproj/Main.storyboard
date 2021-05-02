@@ -41,7 +41,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.019607843137254902" green="0.70588235294117641" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mU4-43-oDl" secondAttribute="trailing" constant="15" id="8vr-jo-Amn"/>
                                     <constraint firstItem="clu-AA-SV0" firstAttribute="top" secondItem="a7P-jJ-HmQ" secondAttribute="top" constant="5" id="J21-bk-dhH"/>
@@ -664,10 +664,10 @@
     </scenes>
     <designables>
         <designable name="TMU-9R-0pt">
-            <size key="intrinsicContentSize" width="62.5" height="17"/>
+            <size key="intrinsicContentSize" width="311" height="39.220703125"/>
         </designable>
         <designable name="bxp-qR-23f">
-            <size key="intrinsicContentSize" width="48" height="18.5"/>
+            <size key="intrinsicContentSize" width="311" height="39.220703125"/>
         </designable>
     </designables>
     <resources>

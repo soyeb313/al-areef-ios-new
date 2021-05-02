@@ -9,4 +9,8 @@ target 'Al-Areef' do
   pod 'IQKeyboardManagerSwift'
   pod 'Cosmos'
   pod 'LanguageManager-iOS'
+  pod 'Alamofire', '~> 4.9.1'
+  pod 'SVProgressHUD'
+  pod 'SDWebImage'
+  pod 'Loaf'
 end
