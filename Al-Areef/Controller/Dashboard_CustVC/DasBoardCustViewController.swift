@@ -11,7 +11,7 @@ class DasBoardCustViewController: UIViewController {
 
     @IBOutlet weak var tblServices: UITableView!
     @IBOutlet weak var btnViewappoinments: UIButton!
-    
+    @IBOutlet weak var viewBG             : UIView!
     var arrTitle = ["Consulting personal","Consulting comapanies", "Courses", "Al-Dhasal bank", "Ask us","Adviser","Who we are","Conatact Us"]
     var arrBtnTitle = ["The beginning","Hands", "The beginning", "Ask us", "The beginning","Better","Call","Show"]
     var arrImages : [UIImage] = [#imageLiteral(resourceName: "Image-1"),#imageLiteral(resourceName: "Image-2"),#imageLiteral(resourceName: "Image-3"),#imageLiteral(resourceName: "Image-4"),#imageLiteral(resourceName: "Image-2"),#imageLiteral(resourceName: "Image-6"),#imageLiteral(resourceName: "Image-5"),#imageLiteral(resourceName: "Image-7")]
@@ -22,11 +22,22 @@ class DasBoardCustViewController: UIViewController {
         self.btnViewappoinments.layer.borderWidth = 1
         self.btnViewappoinments.layer.borderColor = UIColor.white.cgColor
         self.btnViewappoinments.setTitle("View appointments".localiz(), for: .normal)
+        setUpView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationController?.isNavigationBarHidden = true
+    }
+    
+    // MARK:- SetUpView
+    private func setUpView() {
+        
+        DispatchQueue.main.async {
+            self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.white.cgColor])
+            
+        }
+
     }
     
     

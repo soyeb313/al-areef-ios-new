@@ -1,16 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "iossearch.png",
+      "filename" : "Icon ionic-ios-search.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "iossearch@2x.png",
+      "filename" : "Icon ionic-ios-search@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Icon ionic-ios-search@3x-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -18,5 +19,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }

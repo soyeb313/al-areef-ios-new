@@ -52,10 +52,12 @@ class RecordReviewVC: UIViewController {
     }
     
     @IBAction func btnReboot(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
-        vc.selectedIndex = 0
-        self.navigationController?.pushViewController(vc, animated: true)
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ConsultingTypeVC.self) {
+                self.navigationController?.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     /*

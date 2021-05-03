@@ -38,6 +38,9 @@ class WriteMessageVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
+        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+        self.navigationItem.rightBarButtonItem = searchbtn
+        
         lblWords1.text = "200 words".localiz()
         lblWords2.text = "500 words".localiz()
         lblPrice1.text = "30 dollars".localiz()
@@ -50,6 +53,10 @@ class WriteMessageVC: UIViewController {
     
     // MARK:- Button Actions
     @objc private func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func btnSearchPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     

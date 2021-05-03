@@ -17,6 +17,16 @@ class CustomerRegistrationVC: UIViewController {
     @IBOutlet weak var txtSpecialIdNumber: SkyFloatingLabelTextField!
     @IBOutlet weak var txtGender: SkyFloatingLabelTextField!
     @IBOutlet weak var txtFullName: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var vwName: UIView!
+    @IBOutlet weak var vwGender: UIView!
+    @IBOutlet weak var vwIdNumber: UIView!
+    @IBOutlet weak var vwEmail: UIView!
+    @IBOutlet weak var vwCity: UIView!
+    @IBOutlet weak var vwPhoneNumber: UIView!
+    @IBOutlet weak var vwPassword: UIView!
+    @IBOutlet weak var lblRegistration: UILabel!
+    
     // MARK:- Outlets
     var OTP = ""
     // MARK:- Variables
@@ -34,6 +44,17 @@ class CustomerRegistrationVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.hideKeyboardWhenTappedAround()
+        lblRegistration.text = "Registration".localiz()
+        vwName.setBorder(with: .app_Green, 1)
+        vwGender.setBorder(with: .app_Green, 1)
+        vwIdNumber.setBorder(with: .app_Green, 1)
+        vwEmail.setBorder(with: .app_Green, 1)
+        vwCity.setBorder(with: .app_Green, 1)
+        vwPhoneNumber.setBorder(with: .app_Green, 1)
+        vwPassword.setBorder(with: .app_Green, 1)
+        
+        
+        
     }
     
     // MARK:- Button Actions

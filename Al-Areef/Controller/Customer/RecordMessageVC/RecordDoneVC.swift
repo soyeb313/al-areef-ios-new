@@ -29,7 +29,7 @@ class RecordDoneVC: UIViewController {
        
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
-        
+        btnRegisteragin.setTitle("Record again".localiz(), for: .normal)
     }
     
     // MARK:- Button Actions

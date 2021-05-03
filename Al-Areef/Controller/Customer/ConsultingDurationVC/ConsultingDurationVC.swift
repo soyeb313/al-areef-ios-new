@@ -50,6 +50,9 @@ class ConsultingDurationVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
+        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+        self.navigationItem.rightBarButtonItem = searchbtn
+        
         self.vwBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         self.vwDurationBack1.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         self.vwDurationBack2.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
@@ -89,6 +92,10 @@ class ConsultingDurationVC: UIViewController {
     
     // MARK:- Button Actions
     @objc private func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func btnSearchPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     

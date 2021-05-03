@@ -13,6 +13,20 @@ class ConsultantDetailsVC: UIViewController {
     @IBOutlet weak var vwAppointmentDetailBack: UIView!
     @IBOutlet weak var vwRatingDetailBack: UIView!
     @IBOutlet weak var vwTextNoteBack: UIView!
+    @IBOutlet weak var lblHeader2: UILabel!
+    @IBOutlet weak var lblHeader: UILabel!
+    @IBOutlet weak var lblSubHeader: UILabel!
+    @IBOutlet weak var lblDesignationr: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblVoiceCall: UILabel!
+    @IBOutlet weak var lblAppointmentStatusTitle: UILabel!
+    @IBOutlet weak var lblAppointmentStatus: UILabel!
+    @IBOutlet weak var lblReminder: UILabel!
+    @IBOutlet weak var lblCallQuality: UILabel!
+    @IBOutlet weak var lblQualityofservice: UILabel!
+    @IBOutlet weak var lblConsultantEvaluation: UILabel!
+    @IBOutlet weak var txtVwAdditionInfo: PlaceholderTextView!
+    
     
     // MARK:- Variables
     var consultType : ConsultingType?
@@ -27,6 +41,7 @@ class ConsultantDetailsVC: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Consutation details".localiz()
@@ -37,6 +52,22 @@ class ConsultantDetailsVC: UIViewController {
         vwRatingDetailBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         vwTextNoteBack.setCornerRadius(radius: 3)
         vwTextNoteBack.setBorder(with: .lightGray, 0.5)
+        
+        lblHeader2.text = "How was your experience with our consultant Dr.Anila Khaldoum".localiz()
+        lblHeader.text = "subject matter of counseling".localiz()
+        lblSubHeader.text = "Family relations".localiz()
+        lblDesignationr.text = "Dr. Anila Khaldoum".localiz()
+        lblName.text = "Dr. Anila Khaldoum".localiz()
+        lblVoiceCall.text = "Voice call".localiz()
+        lblAppointmentStatusTitle.text = "Appointment status".localiz()
+        lblAppointmentStatus.text = "has been confirmed".localiz()
+        lblReminder.text = "You will receive periodic reminders before the date of the voice call".localiz()
+        lblCallQuality.text = "Call quality".localiz()
+        lblQualityofservice.text = "Quality of service".localiz()
+        lblConsultantEvaluation.text = "Consultant evaluation".localiz()
+        txtVwAdditionInfo.placeholder = "Please write additional notes here".localiz()
+        
+        
     }
     
     // MARK:- Button Actions
@@ -45,7 +76,12 @@ class ConsultantDetailsVC: UIViewController {
     }
     
     @IBAction func btnNextPressed(_ sender : UIButton){
-        pushMakePaymentVC()
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ConsultingTypeVC.self) {
+                self.navigationController?.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     

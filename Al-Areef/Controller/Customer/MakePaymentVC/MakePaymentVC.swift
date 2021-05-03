@@ -50,6 +50,9 @@ class MakePaymentVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
+        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+        self.navigationItem.rightBarButtonItem = searchbtn
+        
         vwNameCard.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         vwNumberCard.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         
@@ -78,6 +81,10 @@ class MakePaymentVC: UIViewController {
     
     // MARK:- Button Actions
     @objc private func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func btnSearchPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -124,6 +131,7 @@ extension MakePaymentVC : PaymentSuccessProtocol {
             self.navigationController?.pushViewController(vc, animated: true)
             self.dismiss(animated: false, completion: nil)
         case .ConsultantRegistration :
+            self.navigationController?.popToRootViewController(animated: true)
             self.dismiss(animated: false, completion: nil)
             print("ConsultantRegistration")
         default:

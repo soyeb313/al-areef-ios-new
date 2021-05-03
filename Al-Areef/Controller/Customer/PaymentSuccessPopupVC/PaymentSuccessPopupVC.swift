@@ -26,7 +26,7 @@ class PaymentSuccessPopupVC: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.view.isOpaque = false
-        vwBack.setCornerRadius(radius: 10)
+        vwBack.setCornerRadius(radius: 20)
         vwBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         
         btnContinue.setCornerRadius(radius: 5)
@@ -42,10 +42,9 @@ class PaymentSuccessPopupVC: UIViewController {
         self.dismiss(animated: false, completion: nil)
     }
     
+    
+    
     @IBAction func btnContinuePressed(_ sender : UIButton){
-      
-        
-        
         paymentSuccessDelegate?.PaymentSuccess(true)
     }
     /*

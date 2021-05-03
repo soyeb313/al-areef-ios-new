@@ -52,7 +52,7 @@ class SplashVC: UIViewController {
         self.btnLang.layer.borderColor = UIColor.hexStringToUIColor(hex: "#32AC93").cgColor
         self.lblLanguage.text = "Arabic"
         self.btnLang.setTitle("English", for: .normal)
-        btnContinue.setTitle("CONTINUE".localiz(), for: .normal)
+       // btnContinue.setTitle("CONTINUE".localiz(), for: .normal)
 
     }
     

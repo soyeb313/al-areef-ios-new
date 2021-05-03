@@ -30,6 +30,10 @@ class ChooseDurationVC: UIViewController {
         self.title = "Choose Duration".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
+        
+        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+        self.navigationItem.rightBarButtonItem = searchbtn
+        
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionHeaderHeight = 35
         self.tableView.sectionFooterHeight = UITableView.automaticDimension
@@ -38,6 +42,10 @@ class ChooseDurationVC: UIViewController {
     
     // MARK:- Button Actions
     @objc private func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func btnSearchPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     

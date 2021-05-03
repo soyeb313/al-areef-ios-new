@@ -78,15 +78,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-NR-bd1">
-                                <rect key="frame" x="42" y="682" width="331" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="6zb-N1-fYb"/>
-                                    <constraint firstAttribute="width" constant="331" id="cL1-BV-VOd"/>
-                                </constraints>
+                                <rect key="frame" x="124" y="370" width="166" height="166"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
-                                <state key="normal" title="CONTINUE">
-                                    <color key="titleColor" red="0.01993647963" green="0.70774048570000003" blue="0.54507982730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="btnContinue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVt-6b-2JN"/>
@@ -98,19 +94,20 @@
                         <color key="backgroundColor" red="0.91764706370000004" green="0.9529411793" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a7P-jJ-HmQ" secondAttribute="trailing" constant="20" id="2jn-uj-L4e"/>
-                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="3fC-6B-pyh"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="top" secondItem="a7P-jJ-HmQ" secondAttribute="top" id="575-tH-wgj"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7X3-oA-COD"/>
+                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="width" secondItem="irx-0s-o5F" secondAttribute="width" id="7vs-3t-22H"/>
                             <constraint firstItem="bxJ-oc-ujj" firstAttribute="top" secondItem="zbl-QR-NGo" secondAttribute="bottom" constant="3" id="Q5F-HY-fyv"/>
-                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="top" secondItem="irx-0s-o5F" secondAttribute="bottom" constant="146" id="ReJ-oO-Q2r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zbl-QR-NGo" secondAttribute="trailing" constant="20" id="Rth-Nl-jSS"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UAn-p7-8cU"/>
+                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="height" secondItem="irx-0s-o5F" secondAttribute="height" id="WeV-ku-d8I"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="trailing" secondItem="a7P-jJ-HmQ" secondAttribute="trailing" id="bxh-wV-q6e"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="leading" secondItem="a7P-jJ-HmQ" secondAttribute="leading" id="cMc-Io-9Pq"/>
                             <constraint firstItem="a7P-jJ-HmQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eVk-we-JnL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PSZ-NR-bd1" secondAttribute="trailing" constant="41" id="oin-wm-J4H"/>
+                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="centerY" secondItem="irx-0s-o5F" secondAttribute="centerY" id="jVz-fw-7Dg"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="bottom" secondItem="a7P-jJ-HmQ" secondAttribute="bottom" id="pJH-UN-QzR"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="r51-nP-Jwi"/>
+                            <constraint firstItem="PSZ-NR-bd1" firstAttribute="centerX" secondItem="irx-0s-o5F" secondAttribute="centerX" id="rqO-y4-M73"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxJ-oc-ujj" secondAttribute="trailing" constant="20" id="tRy-m2-XIQ"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xmf-0t-Kjk"/>
                             <constraint firstItem="irx-0s-o5F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="zE4-UD-Edl"/>
@@ -316,7 +313,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxp-qR-23f" customClass="SkyFloatingLabelTextField" customModule="Al_Areef" customModuleProvider="target">
-                                                                        <rect key="frame" x="10" y="0.0" width="311" height="50"/>
+                                                                        <rect key="frame" x="10" y="5" width="311" height="40"/>
                                                                         <color key="textColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -342,9 +339,9 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="bxp-qR-23f" secondAttribute="bottom" id="5D6-Md-10N"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="bxp-qR-23f" secondAttribute="bottom" constant="5" id="5D6-Md-10N"/>
                                                                     <constraint firstAttribute="trailing" secondItem="bxp-qR-23f" secondAttribute="trailing" constant="10" id="9hB-nK-Y4S"/>
-                                                                    <constraint firstItem="bxp-qR-23f" firstAttribute="top" secondItem="hlf-Ea-ajX" secondAttribute="top" id="j7k-Je-LCF"/>
+                                                                    <constraint firstItem="bxp-qR-23f" firstAttribute="top" secondItem="hlf-Ea-ajX" secondAttribute="top" constant="5" id="j7k-Je-LCF"/>
                                                                     <constraint firstItem="bxp-qR-23f" firstAttribute="leading" secondItem="hlf-Ea-ajX" secondAttribute="leading" constant="10" id="sQb-PT-Btj"/>
                                                                 </constraints>
                                                             </view>
@@ -352,7 +349,7 @@
                                                                 <rect key="frame" x="0.0" y="60" width="331" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMU-9R-0pt" customClass="SkyFloatingLabelTextField" customModule="Al_Areef" customModuleProvider="target">
-                                                                        <rect key="frame" x="10" y="0.0" width="311" height="50"/>
+                                                                        <rect key="frame" x="10" y="5" width="311" height="40"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -379,8 +376,8 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="TMU-9R-0pt" secondAttribute="trailing" constant="10" id="4gN-tk-na8"/>
                                                                     <constraint firstItem="TMU-9R-0pt" firstAttribute="leading" secondItem="0uH-1Z-vMU" secondAttribute="leading" constant="10" id="8Yz-xR-lzU"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="TMU-9R-0pt" secondAttribute="bottom" id="ERD-Ln-fks"/>
-                                                                    <constraint firstItem="TMU-9R-0pt" firstAttribute="top" secondItem="0uH-1Z-vMU" secondAttribute="top" id="lDe-8D-1iZ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="TMU-9R-0pt" secondAttribute="bottom" constant="5" id="ERD-Ln-fks"/>
+                                                                    <constraint firstItem="TMU-9R-0pt" firstAttribute="top" secondItem="0uH-1Z-vMU" secondAttribute="top" constant="5" id="lDe-8D-1iZ"/>
                                                                 </constraints>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJW-I7-LHs">

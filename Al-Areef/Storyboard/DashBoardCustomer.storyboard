@@ -28,6 +28,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNz-Co-bFS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szm-Nc-Zjy">
                                 <rect key="frame" x="1" y="54" width="417" height="96"/>
                                 <subviews>
@@ -39,17 +43,16 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1254" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCv-GF-GcR">
-                                        <rect key="frame" x="89" y="43" width="65" height="21"/>
+                                        <rect key="frame" x="89" y="43" width="105" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Iya-Uo-tWF"/>
-                                            <constraint firstAttribute="width" constant="65" id="y4P-Gg-A4F"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="KhebratMusamim2018" family="Khebrat Musamim 2018" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-fY-82W">
-                                        <rect key="frame" x="161" y="30" width="60" height="43"/>
+                                        <rect key="frame" x="201" y="30" width="60" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="6l2-u8-D6s"/>
                                             <constraint firstAttribute="width" constant="60" id="fPp-UJ-RAl"/>
@@ -57,16 +60,16 @@
                                         <state key="normal" backgroundImage="sos"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW7-C4-Zah">
-                                        <rect key="frame" x="229" y="37" width="122" height="36"/>
+                                        <rect key="frame" x="269" y="37" width="104" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="122" id="VFf-g6-xdG"/>
                                             <constraint firstAttribute="height" constant="36" id="bng-du-uIX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="KhebratMusamim2018" family="Khebrat Musamim 2018" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="KhebratMusamim2018" family="Khebrat Musamim 2018" pointSize="10"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="View appointments"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" translatesAutoresizingMaskIntoConstraints="NO" id="dC0-6V-LBS">
-                                        <rect key="frame" x="355" y="37" width="30" height="30"/>
+                                        <rect key="frame" x="377" y="37" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="GVE-TP-ou5"/>
                                             <constraint firstAttribute="width" constant="30" id="abz-Xg-dX2"/>
@@ -85,11 +88,13 @@
                                     <constraint firstAttribute="width" constant="417" id="QI0-BF-1Hj"/>
                                     <constraint firstItem="q3h-ex-UmU" firstAttribute="top" secondItem="Szm-Nc-Zjy" secondAttribute="top" constant="20" id="S8m-Ny-FSQ"/>
                                     <constraint firstItem="dC0-6V-LBS" firstAttribute="top" secondItem="Szm-Nc-Zjy" secondAttribute="top" constant="37" id="T6i-XY-5O2"/>
+                                    <constraint firstAttribute="trailing" secondItem="dC0-6V-LBS" secondAttribute="trailing" constant="10" id="XVk-kI-Jcr"/>
                                     <constraint firstItem="q3h-ex-UmU" firstAttribute="leading" secondItem="Szm-Nc-Zjy" secondAttribute="leading" constant="10" id="hfr-VX-LTi"/>
                                     <constraint firstItem="xCv-GF-GcR" firstAttribute="leading" secondItem="q3h-ex-UmU" secondAttribute="trailing" constant="9" id="iH2-cU-Lu9"/>
                                     <constraint firstItem="AW7-C4-Zah" firstAttribute="leading" secondItem="Iee-fY-82W" secondAttribute="trailing" constant="8" id="itD-Um-20B"/>
                                     <constraint firstItem="xCv-GF-GcR" firstAttribute="top" secondItem="Szm-Nc-Zjy" secondAttribute="top" constant="43" id="luw-46-S9o"/>
                                     <constraint firstItem="dC0-6V-LBS" firstAttribute="leading" secondItem="AW7-C4-Zah" secondAttribute="trailing" constant="4" id="nDi-zf-eLW"/>
+                                    <constraint firstItem="AW7-C4-Zah" firstAttribute="width" secondItem="Szm-Nc-Zjy" secondAttribute="width" multiplier="0.25" id="vQE-lU-YPQ"/>
                                     <constraint firstItem="Iee-fY-82W" firstAttribute="leading" secondItem="xCv-GF-GcR" secondAttribute="trailing" constant="7" id="wMG-MO-Kom"/>
                                     <constraint firstItem="Iee-fY-82W" firstAttribute="top" secondItem="Szm-Nc-Zjy" secondAttribute="top" constant="30" id="y4Y-Ay-Rci"/>
                                 </constraints>
@@ -113,14 +118,14 @@
                                                     <rect key="frame" x="8" y="2" width="399" height="254"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="eLJ-av-E2z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="399" height="178"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="399" height="191"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="178" id="4qs-Zc-3qi"/>
                                                                 <constraint firstAttribute="width" constant="399" id="OPA-vA-BfM"/>
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDx-22-1bY">
-                                                            <rect key="frame" x="8" y="192" width="107" height="35"/>
+                                                            <rect key="frame" x="8" y="205" width="107" height="35"/>
                                                             <color key="backgroundColor" red="0.34711560609999997" green="0.66373938320000003" blue="0.58038485049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="107" id="aK0-Rm-fLy"/>
@@ -132,9 +137,8 @@
                                                             </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulting Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3s-7B-dtz">
-                                                            <rect key="frame" x="205" y="190" width="186" height="39"/>
+                                                            <rect key="frame" x="231.5" y="203" width="159.5" height="39"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="186" id="L5b-FE-dhB"/>
                                                                 <constraint firstAttribute="height" constant="39" id="zwb-ph-8Rc"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
@@ -145,10 +149,11 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="eLJ-av-E2z" secondAttribute="trailing" id="3Ev-4d-ysu"/>
-                                                        <constraint firstItem="I3s-7B-dtz" firstAttribute="leading" secondItem="oDx-22-1bY" secondAttribute="trailing" constant="90" id="3wF-nm-AwM"/>
+                                                        <constraint firstItem="I3s-7B-dtz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oDx-22-1bY" secondAttribute="trailing" constant="10" id="3wF-nm-AwM"/>
                                                         <constraint firstItem="oDx-22-1bY" firstAttribute="leading" secondItem="3on-gL-Xv5" secondAttribute="leading" constant="8" id="4Qx-EC-Gz0"/>
                                                         <constraint firstItem="eLJ-av-E2z" firstAttribute="top" secondItem="3on-gL-Xv5" secondAttribute="top" id="FDF-yx-gS2"/>
-                                                        <constraint firstAttribute="height" constant="254" id="JFP-jy-auP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="I3s-7B-dtz" secondAttribute="bottom" constant="12" id="aKQ-gN-tFg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="I3s-7B-dtz" secondAttribute="trailing" constant="8" id="bit-vx-Bqx"/>
                                                         <constraint firstItem="oDx-22-1bY" firstAttribute="top" secondItem="eLJ-av-E2z" secondAttribute="bottom" constant="14" id="gWJ-SC-vhc"/>
                                                         <constraint firstItem="I3s-7B-dtz" firstAttribute="top" secondItem="eLJ-av-E2z" secondAttribute="bottom" constant="12" id="n0I-DJ-d04"/>
                                                         <constraint firstAttribute="width" constant="399" id="n1R-Bf-Eih"/>
@@ -179,16 +184,19 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qsy-xx-zaj"/>
-                        <color key="backgroundColor" name="customColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Szm-Nc-Zjy" firstAttribute="trailing" secondItem="qsy-xx-zaj" secondAttribute="trailing" constant="4" id="2RE-cb-A7e"/>
+                            <constraint firstAttribute="bottom" secondItem="DNz-Co-bFS" secondAttribute="bottom" id="3cs-ge-Vga"/>
                             <constraint firstItem="cMc-Pz-DiL" firstAttribute="leading" secondItem="qsy-xx-zaj" secondAttribute="leading" id="Acc-5p-6Kt"/>
                             <constraint firstItem="cMc-Pz-DiL" firstAttribute="top" secondItem="Szm-Nc-Zjy" secondAttribute="bottom" constant="8" symbolic="YES" id="GUx-cO-AAp"/>
                             <constraint firstItem="cMc-Pz-DiL" firstAttribute="bottom" secondItem="qsy-xx-zaj" secondAttribute="bottom" constant="34" id="Gby-sm-z3t"/>
+                            <constraint firstItem="DNz-Co-bFS" firstAttribute="top" secondItem="y2d-5y-32W" secondAttribute="top" id="TAZ-7e-mgS"/>
+                            <constraint firstItem="DNz-Co-bFS" firstAttribute="leading" secondItem="qsy-xx-zaj" secondAttribute="leading" id="Tdc-NX-i5i"/>
                             <constraint firstItem="Szm-Nc-Zjy" firstAttribute="top" secondItem="qsy-xx-zaj" secondAttribute="top" constant="10" id="nCT-Ua-dsJ"/>
                             <constraint firstItem="qsy-xx-zaj" firstAttribute="trailing" secondItem="cMc-Pz-DiL" secondAttribute="trailing" id="qKX-t9-vOm"/>
                             <constraint firstItem="Szm-Nc-Zjy" firstAttribute="leading" secondItem="qsy-xx-zaj" secondAttribute="leading" constant="1" id="vcL-0N-1dp"/>
+                            <constraint firstItem="qsy-xx-zaj" firstAttribute="trailing" secondItem="DNz-Co-bFS" secondAttribute="trailing" id="zOl-Vv-zhH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Image-12" id="KRG-hv-R3E">
@@ -199,6 +207,7 @@
                     <connections>
                         <outlet property="btnViewappoinments" destination="AW7-C4-Zah" id="q2S-PZ-54E"/>
                         <outlet property="tblServices" destination="cMc-Pz-DiL" id="pfb-I1-2pY"/>
+                        <outlet property="viewBG" destination="DNz-Co-bFS" id="Agd-sY-CrN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbb-G9-ebz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -225,24 +234,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wul-ax-YqM">
-                                                    <rect key="frame" x="15" y="10" width="384" height="185"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="185"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="P1Y-wz-IaA">
-                                                            <rect key="frame" x="344" y="24" width="25" height="25"/>
+                                                            <rect key="frame" x="354" y="24" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="OOJ-b7-pCA"/>
                                                                 <constraint firstAttribute="height" constant="25" id="XKH-b8-sxh"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="l42-hk-iWK">
-                                                            <rect key="frame" x="344" y="69" width="25" height="25"/>
+                                                            <rect key="frame" x="354" y="69" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="Esu-RX-aoN"/>
                                                                 <constraint firstAttribute="height" constant="25" id="qf2-pi-CLB"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBn-sM-y9r">
-                                                            <rect key="frame" x="266.5" y="20" width="67.5" height="32.5"/>
+                                                            <rect key="frame" x="276.5" y="20" width="67.5" height="32.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -254,16 +263,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 Thursday 19 April" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMS-ig-eOe">
-                                                            <rect key="frame" x="177" y="72.5" width="157" height="18"/>
+                                                            <rect key="frame" x="187" y="72.5" width="157" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-oh-2Og">
-                                                            <rect key="frame" x="307" y="111" width="62" height="38"/>
+                                                            <rect key="frame" x="315.5" y="111" width="63.5" height="38"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVp-k6-qO3">
-                                                                    <rect key="frame" x="10" y="10" width="42" height="18"/>
+                                                                    <rect key="frame" x="10" y="10" width="43.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -284,7 +293,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive periodic reminders before the voice call." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtj-6y-kdF">
-                                                            <rect key="frame" x="15" y="112" width="282" height="36"/>
+                                                            <rect key="frame" x="15" y="112" width="290.5" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.35294118520000001" green="0.66666668650000005" blue="0.58431375029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -318,8 +327,8 @@
                                             <constraints>
                                                 <constraint firstItem="wul-ax-YqM" firstAttribute="top" secondItem="yPX-E3-Ced" secondAttribute="top" constant="10" id="DLR-DL-dx7"/>
                                                 <constraint firstAttribute="bottom" secondItem="wul-ax-YqM" secondAttribute="bottom" constant="5" id="Es5-Md-kcZ"/>
-                                                <constraint firstItem="wul-ax-YqM" firstAttribute="leading" secondItem="yPX-E3-Ced" secondAttribute="leading" constant="15" id="Izb-gQ-6zZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="wul-ax-YqM" secondAttribute="trailing" constant="15" id="pHP-Rf-Lhp"/>
+                                                <constraint firstItem="wul-ax-YqM" firstAttribute="leading" secondItem="yPX-E3-Ced" secondAttribute="leading" constant="10" id="Izb-gQ-6zZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="wul-ax-YqM" secondAttribute="trailing" constant="10" id="pHP-Rf-Lhp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -387,16 +396,16 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKt-pn-fTZ">
-                                                                    <rect key="frame" x="20" y="20" width="374" height="248"/>
+                                                                    <rect key="frame" x="10" y="20" width="394" height="248"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-KM-DmL">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="200" id="kdd-3l-Z2h"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-9m-d5B">
-                                                                            <rect key="frame" x="20" y="215" width="334" height="18"/>
+                                                                            <rect key="frame" x="20" y="215" width="354" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -414,13 +423,13 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4c-B0-Uog">
-                                                                    <rect key="frame" x="20" y="288" width="374" height="20.5"/>
+                                                                    <rect key="frame" x="10" y="288" width="394" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Reu-SO-wNe">
-                                                                    <rect key="frame" x="20" y="328.5" width="374" height="45"/>
+                                                                    <rect key="frame" x="10" y="328.5" width="394" height="45"/>
                                                                     <color key="backgroundColor" name="customColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="45" id="1q4-6F-BFf"/>
@@ -438,11 +447,11 @@
                                                                 <constraint firstItem="wKt-pn-fTZ" firstAttribute="top" secondItem="N1Z-J4-A3m" secondAttribute="top" constant="20" id="0ve-kP-9yS"/>
                                                                 <constraint firstItem="Reu-SO-wNe" firstAttribute="top" secondItem="f4c-B0-Uog" secondAttribute="bottom" constant="20" id="2XO-Oa-Lrb"/>
                                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Reu-SO-wNe" secondAttribute="bottom" constant="20" id="6mZ-ex-16i"/>
-                                                                <constraint firstItem="wKt-pn-fTZ" firstAttribute="leading" secondItem="N1Z-J4-A3m" secondAttribute="leading" constant="20" id="9EN-XO-G4u"/>
+                                                                <constraint firstItem="wKt-pn-fTZ" firstAttribute="leading" secondItem="N1Z-J4-A3m" secondAttribute="leading" constant="10" id="9EN-XO-G4u"/>
                                                                 <constraint firstItem="Reu-SO-wNe" firstAttribute="leading" secondItem="f4c-B0-Uog" secondAttribute="leading" id="Cff-iE-iJf"/>
                                                                 <constraint firstItem="f4c-B0-Uog" firstAttribute="top" secondItem="wKt-pn-fTZ" secondAttribute="bottom" constant="20" id="GE3-wa-p4J"/>
                                                                 <constraint firstItem="Reu-SO-wNe" firstAttribute="trailing" secondItem="f4c-B0-Uog" secondAttribute="trailing" id="bZl-pg-wnT"/>
-                                                                <constraint firstAttribute="trailing" secondItem="wKt-pn-fTZ" secondAttribute="trailing" constant="20" id="gDc-D7-MTB"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wKt-pn-fTZ" secondAttribute="trailing" constant="10" id="gDc-D7-MTB"/>
                                                                 <constraint firstItem="f4c-B0-Uog" firstAttribute="trailing" secondItem="wKt-pn-fTZ" secondAttribute="trailing" id="wSh-tw-lnd"/>
                                                                 <constraint firstItem="f4c-B0-Uog" firstAttribute="leading" secondItem="wKt-pn-fTZ" secondAttribute="leading" id="xvl-qq-K0V"/>
                                                             </constraints>
@@ -493,7 +502,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1254" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-h3-KJ0">
-                                        <rect key="frame" x="89" y="43" width="33.5" height="21"/>
+                                        <rect key="frame" x="89" y="43" width="25.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="t3p-Yf-gi6"/>
                                         </constraints>
@@ -502,7 +511,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-5V-YJS">
-                                        <rect key="frame" x="190" y="30" width="60" height="43"/>
+                                        <rect key="frame" x="216" y="30" width="60" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="HF8-QI-qll"/>
                                             <constraint firstAttribute="height" constant="43" id="s8v-uC-jh2"/>
@@ -510,7 +519,7 @@
                                         <state key="normal" backgroundImage="sos"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK8-qJ-4KG">
-                                        <rect key="frame" x="258" y="37" width="112" height="36"/>
+                                        <rect key="frame" x="284" y="37" width="86" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="cSd-o9-QRo"/>
                                         </constraints>
@@ -596,7 +605,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBZ-Ct-5ve">
-                                                            <rect key="frame" x="20" y="25" width="374" height="95.5"/>
+                                                            <rect key="frame" x="10" y="25" width="394" height="95.5"/>
                                                             <string key="text">Give your plate.
 Mental or</string>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
@@ -604,7 +613,7 @@ Mental or</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzc-eX-lZz">
-                                                            <rect key="frame" x="20" y="145.5" width="374" height="36"/>
+                                                            <rect key="frame" x="10" y="145.5" width="394" height="36"/>
                                                             <string key="text">You can get advice online from a therapist 
 myself just one click </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -617,10 +626,10 @@ myself just one click </string>
                                                         <constraint firstItem="mBZ-Ct-5ve" firstAttribute="top" secondItem="h2N-k8-8mC" secondAttribute="top" constant="25" id="8ui-8a-KhY"/>
                                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Lzc-eX-lZz" secondAttribute="bottom" constant="25" id="L8e-MY-slX"/>
                                                         <constraint firstItem="Lzc-eX-lZz" firstAttribute="top" secondItem="mBZ-Ct-5ve" secondAttribute="bottom" constant="25" id="T66-bD-mbm"/>
-                                                        <constraint firstItem="Lzc-eX-lZz" firstAttribute="leading" secondItem="h2N-k8-8mC" secondAttribute="leading" constant="20" id="iwz-pA-p7v"/>
-                                                        <constraint firstAttribute="trailing" secondItem="mBZ-Ct-5ve" secondAttribute="trailing" constant="20" id="s3K-i3-Z7j"/>
-                                                        <constraint firstItem="mBZ-Ct-5ve" firstAttribute="leading" secondItem="h2N-k8-8mC" secondAttribute="leading" constant="20" id="ypO-su-m30"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Lzc-eX-lZz" secondAttribute="trailing" constant="20" id="zPi-9b-rWc"/>
+                                                        <constraint firstItem="Lzc-eX-lZz" firstAttribute="leading" secondItem="h2N-k8-8mC" secondAttribute="leading" constant="10" id="iwz-pA-p7v"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mBZ-Ct-5ve" secondAttribute="trailing" constant="10" id="s3K-i3-Z7j"/>
+                                                        <constraint firstItem="mBZ-Ct-5ve" firstAttribute="leading" secondItem="h2N-k8-8mC" secondAttribute="leading" constant="10" id="ypO-su-m30"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Lzc-eX-lZz" secondAttribute="trailing" constant="10" id="zPi-9b-rWc"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -637,22 +646,22 @@ myself just one click </string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fab-HR-g2X">
-                                                            <rect key="frame" x="20" y="15" width="374" height="280"/>
+                                                            <rect key="frame" x="10" y="15" width="394" height="280"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="fPR-Ah-mAV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="200" id="l5R-FF-Sge"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career success counseling" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4j-JR-23A">
-                                                                    <rect key="frame" x="149.5" y="220" width="204.5" height="40"/>
+                                                                    <rect key="frame" x="146" y="220" width="228" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncc-S0-sbx">
-                                                                    <rect key="frame" x="20" y="222.5" width="119.5" height="35"/>
+                                                                    <rect key="frame" x="10" y="222.5" width="126" height="35"/>
                                                                     <color key="backgroundColor" name="customColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="35" id="JpA-uC-MKC"/>
@@ -673,15 +682,15 @@ myself just one click </string>
                                                                 <constraint firstItem="c4j-JR-23A" firstAttribute="leading" secondItem="Ncc-S0-sbx" secondAttribute="trailing" constant="10" id="SKL-vv-d6k"/>
                                                                 <constraint firstAttribute="trailing" secondItem="c4j-JR-23A" secondAttribute="trailing" constant="20" id="X5e-8n-Nda"/>
                                                                 <constraint firstAttribute="bottom" secondItem="c4j-JR-23A" secondAttribute="bottom" constant="20" id="g0G-YE-3Ex"/>
-                                                                <constraint firstItem="Ncc-S0-sbx" firstAttribute="leading" secondItem="fab-HR-g2X" secondAttribute="leading" constant="20" id="rxl-c3-YBV"/>
+                                                                <constraint firstItem="Ncc-S0-sbx" firstAttribute="leading" secondItem="fab-HR-g2X" secondAttribute="leading" constant="10" id="rxl-c3-YBV"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="fab-HR-g2X" firstAttribute="leading" secondItem="vcd-34-QsD" secondAttribute="leading" constant="20" id="3bh-OI-PQg"/>
+                                                        <constraint firstItem="fab-HR-g2X" firstAttribute="leading" secondItem="vcd-34-QsD" secondAttribute="leading" constant="10" id="3bh-OI-PQg"/>
                                                         <constraint firstItem="fab-HR-g2X" firstAttribute="top" secondItem="vcd-34-QsD" secondAttribute="top" constant="15" id="JuU-fe-OU9"/>
-                                                        <constraint firstAttribute="trailing" secondItem="fab-HR-g2X" secondAttribute="trailing" constant="20" id="MsC-Jj-S8I"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fab-HR-g2X" secondAttribute="trailing" constant="10" id="MsC-Jj-S8I"/>
                                                         <constraint firstAttribute="bottom" secondItem="fab-HR-g2X" secondAttribute="bottom" constant="15" id="x6K-at-9Lm"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -721,7 +730,7 @@ myself just one click </string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1254" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-x7-xxp">
-                                        <rect key="frame" x="89" y="43" width="33.5" height="21"/>
+                                        <rect key="frame" x="89" y="43" width="25.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="4eo-WQ-h6g"/>
                                         </constraints>
@@ -730,7 +739,7 @@ myself just one click </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzy-HN-OEd">
-                                        <rect key="frame" x="129.5" y="30" width="60" height="43"/>
+                                        <rect key="frame" x="121.5" y="30" width="60" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="CVO-E7-eox"/>
                                             <constraint firstAttribute="height" constant="43" id="f1L-jK-lPS"/>
@@ -738,7 +747,7 @@ myself just one click </string>
                                         <state key="normal" backgroundImage="sos"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-7R-Ao0">
-                                        <rect key="frame" x="197.5" y="37" width="172.5" height="36"/>
+                                        <rect key="frame" x="189.5" y="37" width="180.5" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="wUI-xj-hGu"/>
                                         </constraints>
@@ -824,31 +833,31 @@ myself just one click </string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-74-3Ug">
-                                                            <rect key="frame" x="20" y="15" width="374" height="335"/>
+                                                            <rect key="frame" x="10" y="15" width="394" height="345"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-5" translatesAutoresizingMaskIntoConstraints="NO" id="TN0-W5-OsG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="200" id="IrN-QC-xRQ"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-pQ-1HZ">
-                                                                    <rect key="frame" x="0.0" y="210" width="374" height="110"/>
+                                                                    <rect key="frame" x="0.0" y="210" width="394" height="125"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice message" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbR-Nv-02Q">
-                                                                            <rect key="frame" x="142" y="10" width="217" height="18"/>
+                                                                            <rect key="frame" x="148" y="10" width="231" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Reply within 24 hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvk-4N-f1H">
-                                                                            <rect key="frame" x="137" y="38" width="222" height="21"/>
+                                                                            <rect key="frame" x="143" y="38" width="236" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" name="customColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26k-3O-QZG">
-                                                                            <rect key="frame" x="15" y="32.5" width="112" height="45"/>
+                                                                            <rect key="frame" x="15" y="40" width="118" height="45"/>
                                                                             <color key="backgroundColor" name="customColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="45" id="Z0S-cc-q0h"/>
@@ -879,7 +888,7 @@ myself just one click </string>
                                                                 <constraint firstAttribute="trailing" secondItem="GPX-pQ-1HZ" secondAttribute="trailing" id="Czd-08-vUK"/>
                                                                 <constraint firstItem="GPX-pQ-1HZ" firstAttribute="leading" secondItem="QUd-74-3Ug" secondAttribute="leading" id="FgV-1q-saK"/>
                                                                 <constraint firstItem="TN0-W5-OsG" firstAttribute="leading" secondItem="QUd-74-3Ug" secondAttribute="leading" id="U6r-Pf-dPR"/>
-                                                                <constraint firstAttribute="bottom" secondItem="GPX-pQ-1HZ" secondAttribute="bottom" constant="15" id="VsM-z4-LSg"/>
+                                                                <constraint firstAttribute="bottom" secondItem="GPX-pQ-1HZ" secondAttribute="bottom" constant="10" id="VsM-z4-LSg"/>
                                                                 <constraint firstItem="GPX-pQ-1HZ" firstAttribute="top" secondItem="TN0-W5-OsG" secondAttribute="bottom" constant="10" id="o7b-lu-Hso"/>
                                                                 <constraint firstItem="TN0-W5-OsG" firstAttribute="top" secondItem="QUd-74-3Ug" secondAttribute="top" id="wBo-tL-RrY"/>
                                                             </constraints>
@@ -887,10 +896,10 @@ myself just one click </string>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="QUd-74-3Ug" firstAttribute="leading" secondItem="gJ6-nW-o7h" secondAttribute="leading" constant="20" id="5pJ-ld-wLZ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="QUd-74-3Ug" secondAttribute="bottom" constant="15" id="eNl-nm-6H0"/>
+                                                        <constraint firstItem="QUd-74-3Ug" firstAttribute="leading" secondItem="gJ6-nW-o7h" secondAttribute="leading" constant="10" id="5pJ-ld-wLZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QUd-74-3Ug" secondAttribute="bottom" constant="5" id="eNl-nm-6H0"/>
                                                         <constraint firstItem="QUd-74-3Ug" firstAttribute="top" secondItem="gJ6-nW-o7h" secondAttribute="top" constant="15" id="pHD-dT-FE4"/>
-                                                        <constraint firstAttribute="trailing" secondItem="QUd-74-3Ug" secondAttribute="trailing" constant="20" id="s3c-cm-8la"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QUd-74-3Ug" secondAttribute="trailing" constant="10" id="s3c-cm-8la"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -930,7 +939,7 @@ myself just one click </string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1254" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOu-8k-8L0">
-                                        <rect key="frame" x="89" y="43" width="33.5" height="21"/>
+                                        <rect key="frame" x="89" y="43" width="25.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="slb-3u-QRw"/>
                                         </constraints>
@@ -939,7 +948,7 @@ myself just one click </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAl-Lr-6ql">
-                                        <rect key="frame" x="129.5" y="30" width="60" height="43"/>
+                                        <rect key="frame" x="121.5" y="30" width="60" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="S2z-09-UhS"/>
                                             <constraint firstAttribute="width" constant="60" id="gJ5-z8-iif"/>
@@ -947,7 +956,7 @@ myself just one click </string>
                                         <state key="normal" backgroundImage="sos"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjG-4A-5Sl">
-                                        <rect key="frame" x="197.5" y="37" width="172.5" height="36"/>
+                                        <rect key="frame" x="189.5" y="37" width="180.5" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="UFH-Qk-0ka"/>
                                         </constraints>
@@ -1028,16 +1037,16 @@ myself just one click </string>
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpG-Qq-tGV">
-                                                        <rect key="frame" x="20" y="10" width="374" height="248"/>
+                                                        <rect key="frame" x="10" y="10" width="394" height="248"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-4" translatesAutoresizingMaskIntoConstraints="NO" id="d0J-aj-St4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="200" id="fYh-RA-gOb"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-OQ-dsF">
-                                                                <rect key="frame" x="20" y="215" width="334" height="18"/>
+                                                                <rect key="frame" x="20" y="215" width="354" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1057,9 +1066,9 @@ myself just one click </string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="CpG-Qq-tGV" firstAttribute="leading" secondItem="zB0-Wx-L9a" secondAttribute="leading" constant="20" id="2uN-ID-bW9"/>
+                                                    <constraint firstItem="CpG-Qq-tGV" firstAttribute="leading" secondItem="zB0-Wx-L9a" secondAttribute="leading" constant="10" id="2uN-ID-bW9"/>
                                                     <constraint firstAttribute="bottom" secondItem="CpG-Qq-tGV" secondAttribute="bottom" constant="20" id="7op-ux-MJE"/>
-                                                    <constraint firstAttribute="trailing" secondItem="CpG-Qq-tGV" secondAttribute="trailing" constant="20" id="PMW-fE-H3B"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CpG-Qq-tGV" secondAttribute="trailing" constant="10" id="PMW-fE-H3B"/>
                                                     <constraint firstItem="CpG-Qq-tGV" firstAttribute="top" secondItem="zB0-Wx-L9a" secondAttribute="top" constant="10" id="icc-Ne-x9b"/>
                                                 </constraints>
                                             </view>
@@ -1246,10 +1255,10 @@ myself just one click </string>
                                                 <rect key="frame" x="0.0" y="278" width="414" height="230"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fwH-nz-gUz">
-                                                        <rect key="frame" x="20" y="0.0" width="374" height="230"/>
+                                                        <rect key="frame" x="10" y="0.0" width="394" height="230"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN6-Fa-Um9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_radio_button_2_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="5rW-wG-At2">
                                                                         <rect key="frame" x="15" y="12.5" width="25" height="25"/>
@@ -1259,27 +1268,27 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR8-Zz-6mM">
-                                                                        <rect key="frame" x="240" y="15" width="80" height="20"/>
+                                                                        <rect key="frame" x="265" y="15" width="80" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-eg-P9e">
-                                                                        <rect key="frame" x="334" y="12.5" width="25" height="25"/>
+                                                                        <rect key="frame" x="359" y="15" width="20" height="20"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="25" id="a3i-4D-bEv"/>
-                                                                            <constraint firstAttribute="height" constant="25" id="qDd-9H-223"/>
+                                                                            <constraint firstAttribute="width" constant="20" id="a3i-4D-bEv"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="qDd-9H-223"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDE-kQ-6Za">
-                                                                        <rect key="frame" x="54" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="118" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-Wk-rD0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1303,10 +1312,10 @@ myself just one click </string>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mac-F1-ERk">
-                                                                <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                                                <rect key="frame" x="0.0" y="60" width="394" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-KX-bfh">
-                                                                        <rect key="frame" x="93.5" y="5" width="187" height="40"/>
+                                                                        <rect key="frame" x="98.5" y="5" width="197" height="40"/>
                                                                         <color key="backgroundColor" red="0.35294118520000001" green="0.66666668650000005" blue="0.58431375029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="ip7-Ac-7xq"/>
@@ -1329,7 +1338,7 @@ myself just one click </string>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do5-q8-V24">
-                                                                <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                                                <rect key="frame" x="0.0" y="120" width="394" height="50"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_radio_button_2_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="QAC-xJ-jsO">
                                                                         <rect key="frame" x="15" y="12.5" width="25" height="25"/>
@@ -1339,27 +1348,27 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 words " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOX-yZ-vlK">
-                                                                        <rect key="frame" x="243" y="15" width="77" height="20"/>
+                                                                        <rect key="frame" x="268" y="15" width="77" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-Fb-6Pf">
-                                                                        <rect key="frame" x="334" y="12.5" width="25" height="25"/>
+                                                                        <rect key="frame" x="359" y="15" width="20" height="20"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="25" id="8bK-gw-5Ql"/>
-                                                                            <constraint firstAttribute="height" constant="25" id="ZlK-GE-F1g"/>
+                                                                            <constraint firstAttribute="width" constant="20" id="8bK-gw-5Ql"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="ZlK-GE-F1g"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8y-xg-V0C">
-                                                                        <rect key="frame" x="54" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="118" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOp-Rb-ABg">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1383,7 +1392,7 @@ myself just one click </string>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkp-cc-pPY">
-                                                                <rect key="frame" x="0.0" y="180" width="374" height="50"/>
+                                                                <rect key="frame" x="0.0" y="180" width="394" height="50"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_radio_button_2_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-Uz-d7O">
                                                                         <rect key="frame" x="15" y="12.5" width="25" height="25"/>
@@ -1393,27 +1402,27 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-iP-XPQ">
-                                                                        <rect key="frame" x="246.5" y="15" width="73.5" height="20"/>
+                                                                        <rect key="frame" x="271.5" y="15" width="73.5" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="WpK-Fn-HkG">
-                                                                        <rect key="frame" x="334" y="12.5" width="25" height="25"/>
+                                                                        <rect key="frame" x="359" y="15" width="20" height="20"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="25" id="8Kz-Go-PZ0"/>
-                                                                            <constraint firstAttribute="height" constant="25" id="izj-W2-j14"/>
+                                                                            <constraint firstAttribute="width" constant="20" id="8Kz-Go-PZ0"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="izj-W2-j14"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-xy-iig">
-                                                                        <rect key="frame" x="55" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="55" y="0.0" width="118" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jh-2g-BlZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1442,9 +1451,9 @@ myself just one click </string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="fwH-nz-gUz" secondAttribute="bottom" id="Bhs-2n-U6h"/>
-                                                    <constraint firstItem="fwH-nz-gUz" firstAttribute="leading" secondItem="Hsa-GE-wQq" secondAttribute="leading" constant="20" id="KRB-ak-eQZ"/>
+                                                    <constraint firstItem="fwH-nz-gUz" firstAttribute="leading" secondItem="Hsa-GE-wQq" secondAttribute="leading" constant="10" id="KRB-ak-eQZ"/>
                                                     <constraint firstItem="fwH-nz-gUz" firstAttribute="top" secondItem="Hsa-GE-wQq" secondAttribute="top" id="wCq-kx-Z4G"/>
-                                                    <constraint firstAttribute="trailing" secondItem="fwH-nz-gUz" secondAttribute="trailing" constant="20" id="y7U-F1-rQN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fwH-nz-gUz" secondAttribute="trailing" constant="10" id="y7U-F1-rQN"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1534,7 +1543,7 @@ myself just one click </string>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consult CQ use it" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-qw-6E7">
                                                                     <rect key="frame" x="50" y="15" width="329" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -1588,11 +1597,11 @@ myself just one click </string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0(451)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-LW-kIM">
-                                                            <rect key="frame" x="205.5" y="236.5" width="70" height="16"/>
+                                                            <rect key="frame" x="205.5" y="236" width="70" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="70" id="6EB-9u-sh9"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1602,7 +1611,7 @@ myself just one click </string>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="jiA-03-JUh"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                             <state key="normal" title="Book an Appointment">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
@@ -1611,14 +1620,14 @@ myself just one click </string>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Khalid Ahmed" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KL-1w-PWd">
-                                                            <rect key="frame" x="15" y="96.5" width="217" height="27.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                            <rect key="frame" x="15" y="91.5" width="217" height="32.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="23"/>
                                                             <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 years experience" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbY-Ii-RG8">
-                                                            <rect key="frame" x="15" y="144" width="217" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="15" y="144" width="217" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1678,7 +1687,7 @@ myself just one click </string>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="8xG-LE-9t5"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                     <state key="normal" title="Auto advisor from AI Dhara">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -2816,19 +2825,19 @@ myself just one click </string>
                                                 <rect key="frame" x="0.0" y="250" width="414" height="215"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMh-3D-hNq">
-                                                        <rect key="frame" x="20" y="15" width="374" height="185"/>
+                                                        <rect key="frame" x="10" y="15" width="394" height="185"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-aw-Q0k">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="93"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="93"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subject matter of counseling " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sie-4M-Hs3">
-                                                                        <rect key="frame" x="15" y="15" width="344" height="28"/>
+                                                                        <rect key="frame" x="15" y="15" width="364" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family relations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kU0-KM-DwM">
-                                                                        <rect key="frame" x="15" y="50" width="344" height="28"/>
+                                                                        <rect key="frame" x="15" y="50" width="364" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -2846,19 +2855,19 @@ myself just one click </string>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advisor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-Pf-hFO">
-                                                                <rect key="frame" x="20" y="108" width="267" height="24"/>
+                                                                <rect key="frame" x="20" y="108" width="287" height="24"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Anila Khaldoum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqC-qi-2Ms">
-                                                                <rect key="frame" x="20" y="146" width="267" height="24"/>
+                                                                <rect key="frame" x="20" y="146" width="287" height="24"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="00N-JH-hcI">
-                                                                <rect key="frame" x="297" y="108" width="60" height="60"/>
+                                                                <rect key="frame" x="317" y="108" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="MDb-z3-n9x"/>
                                                                     <constraint firstAttribute="height" constant="60" id="eQs-Fq-euL"/>
@@ -2886,22 +2895,22 @@ myself just one click </string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="MMh-3D-hNq" firstAttribute="top" secondItem="Eeh-JV-ltl" secondAttribute="top" constant="15" id="2KU-Wu-0b7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="MMh-3D-hNq" secondAttribute="trailing" constant="20" id="JP9-Ii-Djq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MMh-3D-hNq" secondAttribute="trailing" constant="10" id="JP9-Ii-Djq"/>
                                                     <constraint firstAttribute="bottom" secondItem="MMh-3D-hNq" secondAttribute="bottom" constant="15" id="MkN-zq-NlY"/>
-                                                    <constraint firstItem="MMh-3D-hNq" firstAttribute="leading" secondItem="Eeh-JV-ltl" secondAttribute="leading" constant="20" id="V2p-uG-s7v"/>
+                                                    <constraint firstItem="MMh-3D-hNq" firstAttribute="leading" secondItem="Eeh-JV-ltl" secondAttribute="leading" constant="10" id="V2p-uG-s7v"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ4-Nw-Hsg">
                                                 <rect key="frame" x="0.0" y="465" width="414" height="275"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqF-ui-ySL">
-                                                        <rect key="frame" x="20" y="0.0" width="374" height="260"/>
+                                                        <rect key="frame" x="10" y="0.0" width="394" height="260"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0rY-UT-gVX">
-                                                                <rect key="frame" x="0.0" y="15" width="374" height="68"/>
+                                                                <rect key="frame" x="0.0" y="15" width="394" height="68"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLU-wD-gtp">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="68"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_call" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-AR-Ekx">
                                                                                 <rect key="frame" x="10" y="24" width="20" height="20"/>
@@ -2911,7 +2920,7 @@ myself just one click </string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice call" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKQ-vl-dkB">
-                                                                                <rect key="frame" x="40" y="10" width="137" height="48"/>
+                                                                                <rect key="frame" x="40" y="10" width="147" height="48"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2928,10 +2937,10 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-3X-zWD">
-                                                                        <rect key="frame" x="187" y="0.0" width="187" height="68"/>
+                                                                        <rect key="frame" x="197" y="0.0" width="197" height="68"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointment status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-rh-mdV">
-                                                                                <rect key="frame" x="10" y="10" width="167" height="48"/>
+                                                                                <rect key="frame" x="10" y="10" width="177" height="48"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2948,10 +2957,10 @@ myself just one click </string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OcV-yI-wTE">
-                                                                <rect key="frame" x="0.0" y="83" width="374" height="68"/>
+                                                                <rect key="frame" x="0.0" y="83" width="394" height="68"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-MJ-5CT">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="68"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_calender_2" translatesAutoresizingMaskIntoConstraints="NO" id="1gE-mQ-qve">
                                                                                 <rect key="frame" x="10" y="24" width="20" height="20"/>
@@ -2961,7 +2970,7 @@ myself just one click </string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday 19 April 2021" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Yw-pCa">
-                                                                                <rect key="frame" x="40" y="10" width="137" height="48"/>
+                                                                                <rect key="frame" x="40" y="10" width="147" height="48"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2978,10 +2987,10 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-iQ-wjd">
-                                                                        <rect key="frame" x="187" y="0.0" width="187" height="68"/>
+                                                                        <rect key="frame" x="197" y="0.0" width="197" height="68"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has been confirmed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkE-Tj-6VY">
-                                                                                <rect key="frame" x="10" y="10" width="167" height="48"/>
+                                                                                <rect key="frame" x="10" y="10" width="177" height="48"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                                 <color key="textColor" red="0.1960784314" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2998,7 +3007,7 @@ myself just one click </string>
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovQ-3r-8vS">
-                                                                <rect key="frame" x="15" y="180.5" width="93.5" height="45"/>
+                                                                <rect key="frame" x="15" y="180.5" width="98.5" height="45"/>
                                                                 <color key="backgroundColor" red="0.1960784314" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="OLG-n9-uuk"/>
@@ -3008,7 +3017,7 @@ myself just one click </string>
                                                                 </state>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive periodic reminders before the date of the voice call" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHC-jF-apm">
-                                                                <rect key="frame" x="118.5" y="166" width="245.5" height="74"/>
+                                                                <rect key="frame" x="123.5" y="166" width="260.5" height="74"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                 <color key="textColor" red="0.1960784314" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3035,22 +3044,22 @@ myself just one click </string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="xqF-ui-ySL" firstAttribute="top" secondItem="wQ4-Nw-Hsg" secondAttribute="top" id="4RQ-k5-JDM"/>
-                                                    <constraint firstItem="xqF-ui-ySL" firstAttribute="leading" secondItem="wQ4-Nw-Hsg" secondAttribute="leading" constant="20" id="Qc3-88-eKA"/>
+                                                    <constraint firstItem="xqF-ui-ySL" firstAttribute="leading" secondItem="wQ4-Nw-Hsg" secondAttribute="leading" constant="10" id="Qc3-88-eKA"/>
                                                     <constraint firstAttribute="bottom" secondItem="xqF-ui-ySL" secondAttribute="bottom" constant="15" id="RR2-fI-FGZ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xqF-ui-ySL" secondAttribute="trailing" constant="20" id="ahW-rs-NgI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xqF-ui-ySL" secondAttribute="trailing" constant="10" id="ahW-rs-NgI"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rH-Qx-qfO">
                                                 <rect key="frame" x="0.0" y="740" width="414" height="742.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJp-FZ-qQa">
-                                                        <rect key="frame" x="20" y="15" width="374" height="712.5"/>
+                                                        <rect key="frame" x="10" y="15" width="394" height="712.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhw-Yj-UTr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="94.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="94.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How was your experience with our consultant Dr.Anila Khaldoum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-Y5-wNJ">
-                                                                        <rect key="frame" x="15" y="15" width="344" height="64.5"/>
+                                                                        <rect key="frame" x="15" y="15" width="364" height="64.5"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -3065,19 +3074,19 @@ myself just one click </string>
                                                                 </constraints>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TR5-R5-fmZ">
-                                                                <rect key="frame" x="0.0" y="104.5" width="374" height="204"/>
+                                                                <rect key="frame" x="0.0" y="104.5" width="394" height="204"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0A-4l-73i">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xpw-9h-84P">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpT-IJ-Tsf">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="68"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call quality" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwd-XO-cEC">
-                                                                                                <rect key="frame" x="10" y="10" width="167" height="48"/>
+                                                                                                <rect key="frame" x="10" y="10" width="177" height="48"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                                                 <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -3092,10 +3101,10 @@ myself just one click </string>
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjZ-SY-6gX">
-                                                                                        <rect key="frame" x="187" y="0.0" width="187" height="68"/>
+                                                                                        <rect key="frame" x="197" y="0.0" width="197" height="68"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktD-29-F4T" customClass="CosmosView" customModule="Cosmos">
-                                                                                                <rect key="frame" x="9.5" y="21.5" width="168" height="25"/>
+                                                                                                <rect key="frame" x="10" y="21.5" width="177" height="25"/>
                                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="height" constant="25" id="jNQ-DO-0Jl"/>
@@ -3138,16 +3147,16 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-U7-EU2">
-                                                                        <rect key="frame" x="0.0" y="68" width="374" height="68"/>
+                                                                        <rect key="frame" x="0.0" y="68" width="394" height="68"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Eo-MD-Bue">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iu7-Yv-Qp6">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="68"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quality of service" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udu-2p-0uL">
-                                                                                                <rect key="frame" x="10" y="10" width="167" height="48"/>
+                                                                                                <rect key="frame" x="10" y="10" width="177" height="48"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                                                 <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -3162,10 +3171,10 @@ myself just one click </string>
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXp-fW-74C">
-                                                                                        <rect key="frame" x="187" y="0.0" width="187" height="68"/>
+                                                                                        <rect key="frame" x="197" y="0.0" width="197" height="68"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maG-z8-5h4" customClass="CosmosView" customModule="Cosmos">
-                                                                                                <rect key="frame" x="9.5" y="21.5" width="168" height="25"/>
+                                                                                                <rect key="frame" x="10" y="21.5" width="177" height="25"/>
                                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="height" constant="25" id="82U-cU-OZ3"/>
@@ -3208,16 +3217,16 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2v9-7m-5Q8">
-                                                                        <rect key="frame" x="0.0" y="136" width="374" height="68"/>
+                                                                        <rect key="frame" x="0.0" y="136" width="394" height="68"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pbs-gQ-eqe">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="394" height="68"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1V-oU-3fs">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="68"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultant evaluation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pis-XI-JMz">
-                                                                                                <rect key="frame" x="10" y="10" width="167" height="48"/>
+                                                                                                <rect key="frame" x="10" y="10" width="177" height="48"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                                                 <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -3232,10 +3241,10 @@ myself just one click </string>
                                                                                         </constraints>
                                                                                     </view>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-j1-3Pz">
-                                                                                        <rect key="frame" x="187" y="0.0" width="187" height="68"/>
+                                                                                        <rect key="frame" x="197" y="0.0" width="197" height="68"/>
                                                                                         <subviews>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCe-ZI-mls" customClass="CosmosView" customModule="Cosmos">
-                                                                                                <rect key="frame" x="9.5" y="21.5" width="168" height="25"/>
+                                                                                                <rect key="frame" x="10" y="21.5" width="177" height="25"/>
                                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="height" constant="25" id="Og2-on-5Zw"/>
@@ -3280,10 +3289,10 @@ myself just one click </string>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3s-WR-uTg">
-                                                                <rect key="frame" x="10" y="323.5" width="354" height="210"/>
+                                                                <rect key="frame" x="10" y="323.5" width="374" height="210"/>
                                                                 <subviews>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nND-rb-dab" customClass="PlaceholderTextView" customModule="Al_Areef" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="5" width="344" height="200"/>
+                                                                        <rect key="frame" x="5" y="5" width="364" height="200"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="V8D-B2-wLa"/>
@@ -3311,7 +3320,7 @@ myself just one click </string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i25-Vq-dXy">
-                                                                <rect key="frame" x="131" y="587.5" width="112" height="45"/>
+                                                                <rect key="frame" x="138" y="587.5" width="118" height="45"/>
                                                                 <color key="backgroundColor" red="0.1960784314" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Dq0-1W-kWN"/>
@@ -3321,7 +3330,7 @@ myself just one click </string>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWN-Fk-QYK">
-                                                                <rect key="frame" x="20" y="647.5" width="334" height="45"/>
+                                                                <rect key="frame" x="20" y="647.5" width="354" height="45"/>
                                                                 <color key="backgroundColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="OIU-qB-3gR"/>
@@ -3329,6 +3338,9 @@ myself just one click </string>
                                                                 <state key="normal" title="Next">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnNextPressed:" destination="ppX-P9-E3X" eventType="touchUpInside" id="jeO-Ge-cQb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3357,9 +3369,9 @@ myself just one click </string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="EJp-FZ-qQa" secondAttribute="bottom" constant="15" id="4c0-Wc-sjt"/>
-                                                    <constraint firstAttribute="trailing" secondItem="EJp-FZ-qQa" secondAttribute="trailing" constant="20" id="G0q-LQ-sqv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EJp-FZ-qQa" secondAttribute="trailing" constant="10" id="G0q-LQ-sqv"/>
                                                     <constraint firstItem="EJp-FZ-qQa" firstAttribute="top" secondItem="2rH-Qx-qfO" secondAttribute="top" constant="15" id="W8y-Vm-uh9"/>
-                                                    <constraint firstItem="EJp-FZ-qQa" firstAttribute="leading" secondItem="2rH-Qx-qfO" secondAttribute="leading" constant="20" id="n4s-tI-7r1"/>
+                                                    <constraint firstItem="EJp-FZ-qQa" firstAttribute="leading" secondItem="2rH-Qx-qfO" secondAttribute="leading" constant="10" id="n4s-tI-7r1"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -3385,6 +3397,19 @@ myself just one click </string>
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="lblAppointmentStatus" destination="jkE-Tj-6VY" id="b6t-Kp-PSg"/>
+                        <outlet property="lblAppointmentStatusTitle" destination="f4L-rh-mdV" id="oI7-Jr-ALO"/>
+                        <outlet property="lblCallQuality" destination="Udu-2p-0uL" id="ZCM-C3-AxH"/>
+                        <outlet property="lblConsultantEvaluation" destination="Pis-XI-JMz" id="Alh-hx-T0D"/>
+                        <outlet property="lblDesignationr" destination="8dZ-Pf-hFO" id="THY-aa-lkQ"/>
+                        <outlet property="lblHeader" destination="sie-4M-Hs3" id="aNA-tK-BBs"/>
+                        <outlet property="lblHeader2" destination="4Qj-Y5-wNJ" id="mqy-VZ-GLm"/>
+                        <outlet property="lblName" destination="uqC-qi-2Ms" id="Zqv-Ww-j7G"/>
+                        <outlet property="lblQualityofservice" destination="Udu-2p-0uL" id="x7m-IV-4U6"/>
+                        <outlet property="lblReminder" destination="QHC-jF-apm" id="kJC-pY-sAF"/>
+                        <outlet property="lblSubHeader" destination="kU0-KM-DwM" id="sjY-CG-9Zz"/>
+                        <outlet property="lblVoiceCall" destination="gKQ-vl-dkB" id="l4d-M7-ca6"/>
+                        <outlet property="txtVwAdditionInfo" destination="nND-rb-dab" id="AHJ-79-seo"/>
                         <outlet property="vwAppointmentDetailBack" destination="xqF-ui-ySL" id="Fqg-EN-wkN"/>
                         <outlet property="vwConsultantProfileBack" destination="MMh-3D-hNq" id="u0c-0z-K02"/>
                         <outlet property="vwRatingDetailBack" destination="EJp-FZ-qQa" id="gez-sn-Y75"/>
@@ -3661,7 +3686,7 @@ myself just one click </string>
                                         <rect key="frame" x="20" y="80" width="374" height="56"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-QM-bKS">
-                                                <rect key="frame" x="0.0" y="8.5" width="52" height="39"/>
+                                                <rect key="frame" x="0.0" y="17" width="52" height="22"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ian-oE-XPn">
                                                 <rect key="frame" x="57" y="8" width="309" height="40"/>
@@ -3681,7 +3706,7 @@ myself just one click </string>
                                             <constraint firstItem="Ian-oE-XPn" firstAttribute="leading" secondItem="Hvu-QM-bKS" secondAttribute="trailing" constant="5" id="hBn-Mw-b2I"/>
                                             <constraint firstItem="Hvu-QM-bKS" firstAttribute="centerY" secondItem="Ian-oE-XPn" secondAttribute="centerY" id="hji-1L-SIb"/>
                                             <constraint firstItem="Ian-oE-XPn" firstAttribute="top" secondItem="Yri-dq-fP3" secondAttribute="top" constant="8" id="ksD-OD-Fvh"/>
-                                            <constraint firstItem="Hvu-QM-bKS" firstAttribute="height" secondItem="Yri-dq-fP3" secondAttribute="height" multiplier="0.7" id="owJ-qT-4tY"/>
+                                            <constraint firstItem="Hvu-QM-bKS" firstAttribute="height" secondItem="Yri-dq-fP3" secondAttribute="height" multiplier="0.4" id="owJ-qT-4tY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
