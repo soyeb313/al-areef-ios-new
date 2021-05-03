@@ -47,12 +47,23 @@ class AnswerQuestionsVC: UIViewController {
     }
     
     @IBAction func btnNextTapped(_ sender : UIButton){
-        pushConsultingDurationVC()
+        if consultType == ConsultingType.PersonalMeeting {
+            pushMapVC()
+        }else{
+            pushConsultingDurationVC()
+        }
+       
     }
     
     // MARK:- Push Methods
     private func pushConsultingDurationVC() {
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultingDurationVC.self)) as? ConsultingDurationVC else { return }
+        vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    func pushMapVC(){
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MapVC.self)) as? MapVC else { return }
         vc.consultType = consultType
         self.navigationController?.pushViewController(vc, animated: false)
     }

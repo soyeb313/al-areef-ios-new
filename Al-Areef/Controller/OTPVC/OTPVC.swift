@@ -9,7 +9,7 @@ import UIKit
 import Loaf
 import SVProgressHUD
 class OTPVC: UIViewController {
-
+    
     // MARK:- Outlets
     @IBOutlet weak var viewOTP          : OTPView!
     @IBOutlet weak var btnResent        : UIButton!
@@ -22,7 +22,7 @@ class OTPVC: UIViewController {
     var password = ""
     // MARK:- Variables
     var otp = ""
-    
+    var isFromConsultantRegsitration = false
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +41,14 @@ class OTPVC: UIViewController {
     }
     
     // MARK:- Button Actions
-
+    
     
     // MARK:- Push Methods
-
+    private func pushSelectPlanVC() {
+        guard let vc = UIStoryboard.Company.instantiateViewController(withIdentifier: String(describing: SelectPlanVC.self)) as? SelectPlanVC else { return }
+        
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
     
     // MARK:- Custom Methods
     
@@ -59,35 +63,39 @@ class OTPVC: UIViewController {
     }
     
     @IBAction func btnComplete(_ sender: Any) {
-        if self.viewOTP.getPin() == "" {
-            Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
-
-    }else
-        {
-            SVProgressHUD.show()
-            wsVerifyOTp()
+        if  isFromConsultantRegsitration {
+            pushSelectPlanVC()
+        }else {
+            if self.viewOTP.getPin() == "" {
+                Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+                
+            }else
+            {
+                SVProgressHUD.show()
+                wsVerifyOTp()
+            }
         }
     }
     @IBAction func btnResnet(_ sender: Any) {
         if self.viewOTP.getPin() == "" {
             Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
-
-    }else
+            
+        }else
         {
             SVProgressHUD.show()
             wsReSendOtp()
         }
-    
-       
+        
+        
     }
     func wsReSendOtp() {
-       
+        
         
         let parameters = [ "user_type": 1,
                            "mobile_number": phonenumber ,
-                          "user_id" :  1 ] as [String : Any]
-    
-
+                           "user_id" :  1 ] as [String : Any]
+        
+        
         let url = WSRequest.SendOtp()
         
         WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
@@ -101,20 +109,20 @@ class OTPVC: UIViewController {
                 self.otp = "\( responseDict["Otp"] as? Int ?? 0)"
                 DispatchQueue.main.async {
                     self.viewOTP.setPin(strPin: self.otp)
-                Loaf("OTP sent sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
-
-               
+                    Loaf("OTP sent sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                    
+                    
                 }
             }
-           
+            
         }
     }
-
+    
     func wsVerifyOTp() {
-       
+        
         
         let parameters = [ "otp": self.viewOTP.getPin(),
-                          "user_id" :  1 ] as [String : Any]
+                           "user_id" :  1 ] as [String : Any]
         let url = WSRequest.VerifyOtp()
         WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
             print(responseDict,err)
@@ -125,31 +133,31 @@ class OTPVC: UIViewController {
                 print(message)
                 DispatchQueue.main.async {
                     self.wsCustomerRegistration()
-//                    Loaf("OTP verify sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
-                  
+                    //                    Loaf("OTP verify sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                    
                 }
             }
-           
+            
         }
-
+        
     }
     
     func wsCustomerRegistration() {
-       
+        
         
         let parameters = [ "mobile_number": phonenumber,
-                          "username" :  "AF1",
-                          "password": password,
-                        "full_name" : fullName ,
-                        "city": userID,
-                        "id_number" : specialID,
-                        "email": email,
-                        "user_type" :  1,
-                        "lat": self.viewOTP.getPin(),
-                        "long": self.viewOTP.getPin() ,
-                        "gender" : gender] as [String : Any]
-    
-
+                           "username" :  "AF1",
+                           "password": password,
+                           "full_name" : fullName ,
+                           "city": userID,
+                           "id_number" : specialID,
+                           "email": email,
+                           "user_type" :  1,
+                           "lat": self.viewOTP.getPin(),
+                           "long": self.viewOTP.getPin() ,
+                           "gender" : gender] as [String : Any]
+        
+        
         let url = WSRequest.CustomerRegister()
         
         WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
@@ -158,7 +166,7 @@ class OTPVC: UIViewController {
             if let result = responseDict["message"] as? String
             {
                 if result == "success"  {
-                     let userDetails = responseDict["user_details"] as? NSDictionary
+                    let userDetails = responseDict["user_details"] as? NSDictionary
                     let message = "\(String(describing:result))"
                     print(message)
                     DispatchQueue.main.async {
@@ -178,17 +186,17 @@ class OTPVC: UIViewController {
                         let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
                         self.navigationController?.pushViewController(vc, animated: true)
                         Loaf("You have register  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
-                       
-                    
+                        
+                        
                     }
                 }else{
                     Loaf("Something went wrong", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "FF0000"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
                 }
-               
+                
             }
-           
+            
         }
-
+        
     }
 } //class
 

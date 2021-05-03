@@ -9,6 +9,16 @@ import UIKit
 
 class WriteMessageVC: UIViewController {
 
+    // MARK:- Outlets
+    @IBOutlet weak var txtVwMessage          : PlaceholderTextView!
+    @IBOutlet weak var btnAddWords           : UIButton!
+    @IBOutlet weak var lblWords1: UILabel!
+    @IBOutlet weak var lblWords2: UILabel!
+    @IBOutlet weak var lblPrice1: UILabel!
+    @IBOutlet weak var lblPrice2: UILabel!
+    @IBOutlet weak var vwPrice1: UIView!
+    @IBOutlet weak var vwPrice2: UIView!
+    
     // MARK:- Variables
     var consultType : ConsultingType?
     
@@ -28,6 +38,14 @@ class WriteMessageVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
+        lblWords1.text = "200 words".localiz()
+        lblWords2.text = "500 words".localiz()
+        lblPrice1.text = "30 dollars".localiz()
+        lblPrice2.text = "60 dollars".localiz()
+        btnAddWords.setTitle("+ Add words".localiz(), for: .normal)
+        self.vwPrice1.isHidden = true
+        self.vwPrice2.isHidden = true
+        txtVwMessage.placeholder = "Write your message".localiz()
     }
     
     // MARK:- Button Actions
@@ -37,6 +55,11 @@ class WriteMessageVC: UIViewController {
     
     @IBAction func btnNextPressed(_ sender : UIButton){
         pushMakePaymentVC()
+    }
+    
+    @IBAction func btnAddWords(_ sender : UIButton){
+        self.vwPrice1.isHidden = false
+        self.vwPrice2.isHidden = false
     }
     
     

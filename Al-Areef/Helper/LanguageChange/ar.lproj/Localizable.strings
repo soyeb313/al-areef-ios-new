@@ -281,3 +281,343 @@
 "Audio connections" = "التوصيلات الصوتية";
 "Video connections" = "وصلات الفيديو";
 "Personal meeting" = "اجتماع شخصي";
+"CONTINUE" = "استمر";
+"If you don't have an account? Sign Up" = "إذا كنت لا تملك حساب؟";
+"Log in as customer"="تسجيل الدخول كعميل";
+"Log in as doctor"="سجل الدخول كطبيب";
+"Continue as visitor"="تواصل كزائر";
+"SignUp"="اشتراك";
+"Log in as customer" = "تسجيل الدخول كعميل";
+"User id" = "معرف المستخدم";
+"Password" ="كلمه السر" ;
+"View appointments"="عرض المواعيد";
+"Consulting personal"="استشارة شخصية";
+"Consulting comapanies" = "شركات الاستشارات";
+"Courses"="الدورات";
+"Al-Dhasal bank" ="بنك الدسال";
+ "Ask us" = "اسألنا";
+"Adviser" = "مستشار";
+"Who we are" = "من نحن";
+"Conatact Us" = "اتصل بنا";
+"The beginning" = "البداية";
+"Hands"="الأيدي";
+"The beginning"="البداية";
+"Ask us"="اسألنا";
+"Better"="أحسن";
+"Call"="يتصل";
+"Show"="تبين";
+"Consulting Personal"= "استشارة شخصية";
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"="لوريم إيبسوم هو ببساطة نص شكلي في صناعة الطباعة والتنضيد. لقد كان لوريم إيبسوم هو النص الوهمي القياسي في هذه الصناعة منذ القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحًا من النوع وتدافعت عليه لعمل كتاب عينة. لقد نجا ليس فقط خمسة قرون ، ولكن أيضًا القفزة في التنضيد الإلكتروني ، حيث بقيت دون تغيير جوهري ";
+"Register to benefit from this service"="سجل للاستفادة من هذه الخدمة";
+"You can get advice online from a therapist myself just one click"= "يمكنك الحصول على المشورة عبر الإنترنت من معالج
+بنفسي بنقرة واحدة فقط
+";
+"Career success counseling"="استشارات النجاح الوظيفي";
+"The Bigining"="البداية";
+"Give your plate. Mental or"="أعط طبقك. العقلية أو";
+"Voice message"="رسالة صوتية";
+"(Reply within 24 hours)"="(الرد خلال 24 ساعة)";
+"Choose Duration"="اختر المدة";
+"Please specify how long you want to book the appointment"="يرجى تحديد المدة التي تريد حجز الموعد فيها";
+"10 USD"="10 دولارات أمريكية";
+"20 USD"="20 دولارات أمريكية";
+"30 USD"="30 دولارات أمريكية";
+"10 Minutes"="10 دقائق";
+"20 Minutes"="20 دقائق";
+"30 Minutes"="30 دقائق";
+"NEXT"="التالي";
+"Consult CQ use it"="استشر CQ استخدمه";
+"Dr. Khalid Ahmed"="د / خالد احمد";
+"Book an Appointment" = "احجز موعدًا";
+"15 years experience" = "15 عاما من الخبرة";
+"Auto advisor from Al Dhara"="مستشار سيارات من الضراء";
+"Using the existing cards"="استخدام البطاقات الموجودة";
+"1234-xxx-xxxx-xxx VISA"="1234-xxx-xxxx-xxx تأشيرة";
+"Use the existing card Apple"="استخدم بطاقة Apple الحالية";
+"Pay payment from khadal pay"="الدفع من khadal pay";
+"from the wallet check"="من التحقق من المحفظة";
+"Name on the card"="الاسم على البطاقة";
+"Card no"="لا بطاقة";
+"Card verification code(CVC)" = "رمز التحقق من البطاقة (CVC)";
+"Health expiration date"="تاريخ انتهاء الصلاحية الصحية";
+"Month"="شهر";
+"Year"="سنة";
+"Add a card"="إضافة بطاقة";
+"Continue to record the message"="استمر في تسجيل الرسالة";
+"Payment successful"="تم الدفع بنجاح";
+"$10.00" = "10.00 دولارات ";
+"Thank you for payment and you can now up to record your message."="شكرًا على الدفع ويمكنك الآن تسجيل رسالتك.";
+"Pay"="يدفع";
+"Voice Call"="مكالمة صوتية";
+"2021 Thursday 19 April"="2021 الخميس 19 أبريل";
+"4 pm"="4 م";
+"Confirmed"="مؤكد";
+"Status of Appointment"="حالة التعيين";
+"You will receive periodic reminders before the voice call."="ستتلقى تذكيرات دورية قبل المكالمة الصوتية.";
+"My Appointments"="المواعيد الخاصة بي";
+"Put the text here"="ضع النص هنا";
+"User Name"="اسم االمستخدم";
+"Email"="بريد إلكتروني";
+"Tabuk"="تبوك";
+"Phone number"="رقم الهاتف";
+"Mobile"="التليفون المحمول";
+"Save Changes"="حفظ التغييرات";
+"User ID"="معرف المستخدم";
+"Already have an account? Log in"="هل لديك حساب؟ تسجيل الدخول";
+"Sign up for doctor"="سجل للطبيب";
+"Sign up for company"="اشترك في الشركة";
+"Sign up for Customer"="قم بالتسجيل للعميل";
+
+"Completes"= "يكمل";
+"Fat name"="الاسم بالكامل";
+"Resend"="إعادة إرسال";
+"If you have not received your OTP code, you can press The re-transmitter button below to get a new code."="إذا لم تكن قد تلقيت رمز OTP الخاص بك ، فيمكنك الضغط على زر إعادة الإرسال أدناه للحصول على رمز جديد.";
+"Enter the OTP code"="أدخل رمز OTP";
+"Your Gender"="جنسك";
+"Special ID number"="رقم الهوية الخاص";
+"Your email address"="عنوان بريدك الإلكتروني";
+"Your phone number"="رقم تليفونك";
+"Register Now"="سجل الان";
+"Welcome to the most technologically advanced portal for Consultants"="مرحبًا بكم في البوابة الأكثر تقدمًا من الناحية التكنولوجية للمستشارين";
+"Create your profile to connect with patient instantly" = "إنشاء ملف التعريف الخاص بك للتواصل مع المريض على الفور";
+ "Join a network of professional consultants" = "انضم إلى شبكة من الاستشاريين المحترفين";
+ "Share your knowledge" = "شارك معرفتك";
+ "Learn and Grow" = "التعلم والنمو";
+"Via LinkedIn"="عبر LinkedIn";
+"Via Facebook"="عبر Facebook";
+"Enter your Name"="أدخل أسمك";
+"Mobile Number" = "رقم الهاتف المحمول";
+ "Email Address" = "عنوان البريد الإلكتروني";
+ "Gender" = "جنس";
+ "Create your Profile" = "اصنع حسابك الشخصي";
+
+"Via Email" = "عبر البريد الالكتروني";
+"Label" = "ملصق";
+"Create Your Profile"="اصنع حسابك الشخصي";
+"Academia"="الأكاديميا";
+"Work Experience"="خبرة في العمل";
+"Consultant's Profile" = "الملف الشخصي للمستشار";
+/* Class = "UILabel"; text = "List Certificate"; ObjectID = "4IQ-vA-QzM"; */
+"List Certificate" = "قائمة الشهادات";
+
+/* Class = "UILabel"; text = "College/University, city & Country"; ObjectID = "4rh-g0-DUZ"; */
+"College/University, city & Country" = "كلية / جامعة ، مدينة وبلد";
+
+/* Class = "UILabel"; text = "Certificate Title"; ObjectID = "7b7-hI-3ud"; */
+"Certificate Title" = "عنوان الشهادة";
+
+/* Class = "UILabel"; text = "Current Position Held"; ObjectID = "8AB-6S-pyi"; */
+"Current Position Held" = "المنصب الحالي المحتفظ به";
+
+/* Class = "UIButton"; normalTitle = "UPLOAD"; ObjectID = "Dpk-jy-z4A"; */
+"UPLOAD" = "تحميل";
+
+/* Class = "UILabel"; text = "Job Title"; ObjectID = "IdB-nu-5xG"; */
+"Job Title" = "مسمى وظيفي";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "Nba-xd-Ufp"; */
+"Email Address" = "عنوان البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "List Highest Academic Qualification"; ObjectID = "P03-RC-NEz"; */
+ "List Highest Academic Qualification" = "قائمة أعلى مؤهل أكاديمي";
+
+/* Class = "UILabel"; text = "Brief Job Description"; ObjectID = "Q8z-c7-Fwt"; */
+ "Brief Job Description" = "موجز الوصف الوظيفي";
+
+/* Class = "UILabel"; text = "List Work Experience"; ObjectID = "Viv-5O-gdQ"; */
+ "List Work Experience" = "قائمة خبرة العمل";
+
+/* Class = "UILabel"; text = "Describe yourself"; ObjectID = "WdV-Ik-2XV"; */
+"Describe yourself" = "صف نفسك";
+
+/* Class = "UILabel"; text = "Previous Positions Held"; ObjectID = "X0T-Gs-j20"; */
+"Previous Positions Held" = "المناصب السابقة التي شغلتها";
+
+/* Class = "UILabel"; text = "Welcome to the most technologically advanced portal for Consultants"; ObjectID = "aCU-UZ-ljM"; */
+  "Welcome to the most technologically advanced portal for Consultants" = "مرحبًا بكم في البوابة الأكثر تقدمًا من الناحية التكنولوجية للمستشارين";
+
+/* Class = "UILabel"; text = "Degree Title"; ObjectID = "bjB-Xw-VbS"; */
+ "Degree Title" = "عنوان الدرجة";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "cBX-zh-4l7"; */
+ "Mobile Number" = "رقم الهاتف المحمول";
+
+/* Class = "UILabel"; text = "Tenure"; ObjectID = "cUb-gd-6ag"; */
+ "Tenure" = "فترة";
+
+/* Class = "UILabel"; text = "Upload a video introducing yourself to your potential patients"; ObjectID = "cpr-BY-JZy"; */
+ "Upload a video introducing yourself to your potential patients" = "حمِّل مقطع فيديو تقدمي فيه نفسك لمرضاك المحتملين";
+
+
+
+/* Class = "UILabel"; text = "Name of Employer"; ObjectID = "eQO-oC-s4y"; */
+"Name of Employer" = "اسم الموظف";
+
+/* Class = "UILabel"; text = "Register Now"; ObjectID = "f4y-4e-4OQ"; */
+ "Register Now" = "سجل الان";
+
+/* Class = "UILabel"; text = "Current Position Held"; ObjectID = "hu2-ZW-2Wp"; */
+"Current Position Held" = "المنصب الحالي المحتفظ به";
+
+/* Class = "UILabel"; text = "Upload Degree (Jpeg, PNG, PDF)"; ObjectID = "ja6-jH-ggr"; */
+ "Upload Degree (Jpeg, PNG, PDF)" ="تحميل الدرجة (Jpeg ، PNG ، PDF)";
+
+/* Class = "UIButton"; normalTitle = "UPLOAD"; ObjectID = "jcH-RM-bl8"; */
+"UPLOAD" = "تحميل";
+
+
+
+/* Class = "UILabel"; text = "Tenure"; ObjectID = "k0O-Yj-LSF"; */
+ "Tenure" ="فترة";
+
+/* Class = "UILabel"; text = "Enter your Name"; ObjectID = "kOC-DP-iUh"; */
+"Enter your Name" = "أدخل أسمك";
+
+/* Class = "UILabel"; text = "Upload Certificate (Jpeg, PNG, PDF)"; ObjectID = "nQf-tc-8tD"; */
+"Upload Certificate (Jpeg, PNG, PDF)" = "تحميل الشهادة (Jpeg ، PNG ، PDF)";
+
+/* Class = "UILabel"; text = "Please provide a brief description about you"; ObjectID = "nWJ-vW-8Sq"; */
+"Please provide a brief description about you" = "الرجاء تقديم وصف موجز عنك";
+
+/* Class = "UIButton"; normalTitle = "Create your Profile"; ObjectID = "oDq-Py-g2N"; */
+"Create your Profile" = "اصنع حسابك الشخصي";
+
+/* Class = "UILabel"; text = "Brief Job Description"; ObjectID = "oqz-5Z-qqw"; */
+ "Brief Job Description" = "موجز الوصف الوظيفي";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "ptN-qW-vPa"; */
+ "Next" = "التالي" ;
+
+
+
+/* Class = "UILabel"; text = "Job Title"; ObjectID = "tG3-gN-17f"; */
+"Job Title" = "مسمى وظيفي";
+
+/* Class = "UILabel"; text = "Year Completed"; ObjectID = "uw2-vu-VFD"; */
+ "Year Completed" ="عام المنجزة";
+
+/* Class = "UILabel"; text = "College/University, city & Country"; ObjectID = "xIe-nW-7MW"; */
+ "College/University, city & Country" = "كلية / جامعة ، مدينة وبلد";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "yXp-yb-qlc"; */
+"Skip" = "يتخطى";
+
+
+/* Class = "UILabel"; text = "Family relations"; ObjectID = "179-XD-aXp"; */
+"Family relations" = "العلاقات الأسرية";
+
+/* Class = "UIButton"; normalTitle = "Register again"; ObjectID = "1ac-8W-nMB"; */
+"Register again" = "التسجيل مرة أخرى";
+
+/* Class = "UILabel"; text = "Dr. Anila Khaldoum"; ObjectID = "5p2-ov-AIs"; */
+"Dr. Anila Khaldoum" = "در. أنيل خلدوم";
+
+/* Class = "UILabel"; text = "Time has passed"; ObjectID = "6bo-Iy-OCR"; */
+"Time has passed" = "فات الوقت";
+
+/* Class = "UILabel"; text = "Press the circle button to start or stop recording"; ObjectID = "9Ne-xW-PlC"; */
+"Press the circle button to start or stop recording" = "اضغط على زر الدائرة لبدء التسجيل أو إيقافه";
+
+/* Class = "UILabel"; text = "Press the circle button to start or stop recording"; ObjectID = "B7p-AO-7I0"; */
+
+/* Class = "UILabel"; text = "03:34"; ObjectID = "CLb-cu-nAK"; */
+"CLb-cu-nAK.text" = "03:34";
+
+/* Class = "UILabel"; text = "Your voice note"; ObjectID = "JBZ-XR-SHW"; */
+"Your voice note" = "ملاحظتك الصوتية";
+
+/* Class = "UILabel"; text = "Our advisors take at least 24 hours to review and respond to voice notes. we appreciate your patience."; ObjectID = "LLr-AH-jZ8"; */
+"Our advisors take at least 24 hours to review and respond to voice notes. we appreciate your patience." = "يستغرق مستشارونا 24 ساعة على الأقل لمراجعة الملاحظات الصوتية والرد عليها. نحن نقدر سعة صدرك.";
+
+/* Class = "UILabel"; text = "03:34"; ObjectID = "MP0-nc-pEU"; */
+"03:3" = "03:34";
+
+/* Class = "UILabel"; text = "Advisor"; ObjectID = "SOm-0i-du3"; */
+"Advisor" = "مستشار";
+
+/* Class = "UILabel"; text = "Subject matter of counseling"; ObjectID = "TBM-cj-910"; */
+"Subject matter of counseling" = "موضوع الاستشارة";
+
+/* Class = "UILabel"; text = "Reboot"; ObjectID = "WGe-TM-vHT"; */
+"Reboot" = "اعادة التشغيل";
+
+/* Class = "UILabel"; text = "Time has passed"; ObjectID = "k0H-9A-Ozw"; */
+"Time has passed" = "فات الوقت";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "l2j-1m-EQv"; */
+"Send" = "إرسال";
+
+/* Class = "UILabel"; text = "Consultant responded"; ObjectID = "mNE-cT-ybA"; */
+"Consultant responded" = "رد المستشار";
+"Confirm the voice message"="قم بتأكيد الرسالة الصوتية";
+"Record the message"="تسجيل الرسالة";
+"Consultation details"="تفاصيل الاستشارة";
+"Voice message" = "رسالة صوتية";
+"Text message" = "رسالة نصية";
+"Audio connections" = "التوصيلات الصوتية";
+"Video connections" = "وصلات الفيديو";
+"Personal meeting" = "اجتماع شخصي";
+
+"Company Resgistration" = "إعادة تسجيل الشركة";
+"Company Name" = "اسم الشركة";
+"Company contact name" = "اسم جهة اتصال الشركة";
+"Email Address" = "عنوان البريد الإلكتروني";
+"Phone number" = "رقم الهاتف";
+"Number of staff" = "عدد الموظفين";
+"Next" = "التالي";
+"Business license for the company" = "رخصة تجارية للشركة";
+"Corporate Industry" = "صناعة الشركات";
+"Company Summary" = "ملخص عن الشركة";
+"Site" = "موقع";
+"Social media pages" = "صفحات التواصل الاجتماعي";
+
+"Select Plan" = "اختر خطة";
+"Plan A Features" = "ميزات الخطة أ";
+"Up to 10 registered employees." = "ما يصل إلى 10 موظفين مسجلين.";
+"Up to 3 sessions per employee." = "ما يصل إلى 3 جلسات لكل موظف.";
+"Allowing the employee to continue taking sessions by paying on his own" = "السماح للموظف بالاستمرار في حضور الجلسات عن طريق الدفع من تلقاء نفسه";
+"Company Wallet" = "محفظة الشركة";
+"Employee use and spending reports." = "تقارير استخدام وإنفاق الموظف.";
+"Company coverage only includes advice and courses. All other expenses incurred by the employee" = "تشمل تغطية الشركة فقط النصائح والدورات. جميع المصاريف الأخرى التي يتكبدها الموظف";
+"Plan B Features" = "ميزات الخطة ب";
+"Register up to 50 employees" = "سجل ما يصل إلى 50 موظفًا";
+"Access to the best advisors." = "الوصول إلى أفضل المستشارين.";
+"Up to 5 sessions per employee" = "ما يصل إلى 5 جلسات لكل موظف";
+"Increase employee coverage limit" = "زيادة حد تغطية الموظف";
+"Allow the employee to continue taking sessions by paying on his own." = "اسمح للموظف بمواصلة أخذ الجلسات عن طريق الدفع بمفرده.";
+"Employee Wallet" = "محفظة الموظف";
+"Employee usage and spending reports." = "تقارير استخدام وإنفاق الموظف.";
+"Plan C Features" = "ميزات الخطة ج";
+"Unlimited employee registration." = "تسجيل غير محدود للموظفين.";
+"Access to the best consultants." = "الوصول إلى أفضل المستشارين.";
+"Priority courses for the VIP." = "الدورات ذات الأولوية لكبار الشخصيات.";
+"Unlimited sessions per employee." = "جلسات غير محدودة لكل موظف.";
+"Allow the employee to continue taking sessions by paying on his own." = "اسمح للموظف بمواصلة أخذ الجلسات عن طريق الدفع بمفرده.";
+"Employee to add family members" = "موظف لإضافة أفراد الأسرة";
+"Employee's wallet" = "محفظة الموظف";
+"Employee usage and spending reports." = "تقارير استخدام وإنفاق الموظف.";
+"Company coverage only includes advice and courses. All other expenses to be beared by the employee" = "تشمل تغطية الشركة فقط النصائح والدورات. جميع المصاريف الأخرى التي يتحملها الموظف";
+"PLAN A" = "خطة أ";
+"PLAN B" = "خطة ب";
+"PLAN C" = "الخطة ج";
+"Buy" = "يشتري";
+"100 dollars" = "100 دولار";
+"30 dollars" = "30 دولار";
+"60 dollars" = "60 دولار";
+"1000 words" = "1000 كلمة";
+"200 words" = "200 كلمة";
+"500 words" = "500 كلمة";
+"Write your message" = "اكتب رسالتك";
+"+ Add words" = "+ أضف كلمات";
+"Please enter company name." = "الرجاء إدخال اسم الشركة.";
+"Please enter conatct Name." = "الرجاء إدخال اسم الاتصال.";
+"Please enter valid email." = "الرجاء إدخال بريد إلكتروني صحيح.";
+"Please enter conatct No." = "الرجاء إدخال موظفي الشركة.";
+"Please enter company staff." = "الرجاء إدخال موظفي الشركة.";
+"Please enter Company License." = "الرجاء إدخال ترخيص الشركة.";
+"Please enter corporate industry." = "الرجاء إدخال صناعة الشركة.";
+"Please enter company Summary." = "الرجاء إدخال ملخص الشركة.";
+"Please enter company site." = "الرجاء إدخال موقع الشركة.";
+"Please enter linkedIn Url." = "الرجاء إدخال linkIn Url.";
+"Please enter facebook Url." = "الرجاء إدخال facebook Url.";
+"Company registered sucessfully.." = "تم تسجيل الشركة بنجاح ..";

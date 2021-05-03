@@ -14,6 +14,7 @@ enum ConsultingType : String {
     case AudioConnections = "Audio connections"
     case VideoConnections = "Video connections"
     case PersonalMeeting = "Personal meeting"
+    case ConsultantRegistration = "ConsultantRegistration"
 }
 
 class ConsultingTypeVC: UIViewController {
@@ -59,9 +60,10 @@ class ConsultingTypeVC: UIViewController {
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultingDurationVC.self)) as? ConsultingDurationVC else { return }
             vc.consultType = self.consultTypeArr[index]
             self.navigationController?.pushViewController(vc, animated: false)
+        
         default:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AnswerQuestionsVC.self)) as? AnswerQuestionsVC else { return }
-            //vc.consultType = self.consultTypeArr[index]
+            vc.consultType = self.consultTypeArr[index]
             self.navigationController?.pushViewController(vc, animated: false)
         }
     }

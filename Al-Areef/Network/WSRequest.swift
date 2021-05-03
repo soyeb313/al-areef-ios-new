@@ -35,8 +35,11 @@ public class WSRequest {
     class func ConsultantAddProfileDesc() -> String {
         return WSRequest.GetBaseURL() +  "api/ws-consultant-register-add-profile"
     }
-
+    class func CorporatRegisteration() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-corporate-register"
     }
-   
+
+}
+//CorporatRegisteration
    
 

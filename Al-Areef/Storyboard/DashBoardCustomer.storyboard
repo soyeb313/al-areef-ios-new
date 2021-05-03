@@ -1259,12 +1259,12 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR8-Zz-6mM">
-                                                                        <rect key="frame" x="55" y="15" width="138" height="20"/>
+                                                                        <rect key="frame" x="240" y="15" width="80" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-eg-P9e">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="zyU-eg-P9e">
                                                                         <rect key="frame" x="334" y="12.5" width="25" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="a3i-4D-bEv"/>
@@ -1272,7 +1272,7 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDE-kQ-6Za">
-                                                                        <rect key="frame" x="207" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="112" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1285,21 +1285,21 @@ myself just one click </string>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="NR8-Zz-6mM" secondAttribute="bottom" constant="15" id="13t-KE-RoG"/>
-                                                                    <constraint firstItem="YDE-kQ-6Za" firstAttribute="leading" secondItem="NR8-Zz-6mM" secondAttribute="trailing" constant="14" id="2Pn-4H-VVF"/>
                                                                     <constraint firstItem="zyU-eg-P9e" firstAttribute="centerY" secondItem="NR8-Zz-6mM" secondAttribute="centerY" id="6k9-8c-Il4"/>
                                                                     <constraint firstItem="YDE-kQ-6Za" firstAttribute="top" secondItem="XN6-Fa-Um9" secondAttribute="top" id="76Z-g3-u3o"/>
                                                                     <constraint firstItem="EbY-Wk-rD0" firstAttribute="top" secondItem="XN6-Fa-Um9" secondAttribute="top" id="86o-VQ-cgt"/>
                                                                     <constraint firstAttribute="trailing" secondItem="EbY-Wk-rD0" secondAttribute="trailing" id="9p8-7w-wkt"/>
                                                                     <constraint firstAttribute="trailing" secondItem="zyU-eg-P9e" secondAttribute="trailing" constant="15" id="GpZ-ju-cto"/>
                                                                     <constraint firstItem="5rW-wG-At2" firstAttribute="centerY" secondItem="XN6-Fa-Um9" secondAttribute="centerY" id="TEW-A3-j1E"/>
-                                                                    <constraint firstItem="zyU-eg-P9e" firstAttribute="leading" secondItem="YDE-kQ-6Za" secondAttribute="trailing" constant="15" id="UbO-My-Kei"/>
                                                                     <constraint firstAttribute="bottom" secondItem="YDE-kQ-6Za" secondAttribute="bottom" id="eFK-iy-WSR"/>
                                                                     <constraint firstAttribute="bottom" secondItem="EbY-Wk-rD0" secondAttribute="bottom" id="fPT-lJ-YKz"/>
-                                                                    <constraint firstItem="NR8-Zz-6mM" firstAttribute="leading" secondItem="5rW-wG-At2" secondAttribute="trailing" constant="15" id="iad-C2-eez"/>
+                                                                    <constraint firstItem="NR8-Zz-6mM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YDE-kQ-6Za" secondAttribute="trailing" constant="14" id="jIn-C5-AAh"/>
                                                                     <constraint firstItem="NR8-Zz-6mM" firstAttribute="top" secondItem="XN6-Fa-Um9" secondAttribute="top" constant="15" id="jeM-X0-EYl"/>
+                                                                    <constraint firstItem="YDE-kQ-6Za" firstAttribute="leading" secondItem="5rW-wG-At2" secondAttribute="trailing" constant="14" id="lRd-TL-Gcm"/>
                                                                     <constraint firstItem="5rW-wG-At2" firstAttribute="leading" secondItem="XN6-Fa-Um9" secondAttribute="leading" constant="15" id="lgn-m7-KMZ"/>
                                                                     <constraint firstItem="YDE-kQ-6Za" firstAttribute="width" secondItem="XN6-Fa-Um9" secondAttribute="width" multiplier="0.3" id="pwX-bJ-wxn"/>
                                                                     <constraint firstItem="EbY-Wk-rD0" firstAttribute="leading" secondItem="XN6-Fa-Um9" secondAttribute="leading" id="tA9-xT-Rb8"/>
+                                                                    <constraint firstItem="zyU-eg-P9e" firstAttribute="leading" secondItem="NR8-Zz-6mM" secondAttribute="trailing" constant="14" id="xvU-GD-bU0"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mac-F1-ERk">
@@ -1339,12 +1339,12 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 words " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOX-yZ-vlK">
-                                                                        <rect key="frame" x="55" y="15" width="138" height="20"/>
+                                                                        <rect key="frame" x="243" y="15" width="77" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-Fb-6Pf">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-Fb-6Pf">
                                                                         <rect key="frame" x="334" y="12.5" width="25" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="8bK-gw-5Ql"/>
@@ -1352,7 +1352,7 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8y-xg-V0C">
-                                                                        <rect key="frame" x="207" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="112" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1367,16 +1367,16 @@ myself just one click </string>
                                                                     <constraint firstAttribute="bottom" secondItem="wOp-Rb-ABg" secondAttribute="bottom" id="23M-Hd-116"/>
                                                                     <constraint firstItem="wOp-Rb-ABg" firstAttribute="top" secondItem="do5-q8-V24" secondAttribute="top" id="A3w-5Q-iIJ"/>
                                                                     <constraint firstItem="q8y-xg-V0C" firstAttribute="top" secondItem="do5-q8-V24" secondAttribute="top" id="BfM-uS-kSo"/>
+                                                                    <constraint firstItem="q8y-xg-V0C" firstAttribute="leading" secondItem="QAC-xJ-jsO" secondAttribute="trailing" constant="14" id="CBL-2D-bhZ"/>
                                                                     <constraint firstItem="Hn8-Fb-6Pf" firstAttribute="centerY" secondItem="sOX-yZ-vlK" secondAttribute="centerY" id="DVr-ga-2Pk"/>
-                                                                    <constraint firstItem="q8y-xg-V0C" firstAttribute="leading" secondItem="sOX-yZ-vlK" secondAttribute="trailing" constant="14" id="G5F-dA-aWq"/>
-                                                                    <constraint firstItem="Hn8-Fb-6Pf" firstAttribute="leading" secondItem="q8y-xg-V0C" secondAttribute="trailing" constant="15" id="PIi-gf-Z5N"/>
+                                                                    <constraint firstItem="sOX-yZ-vlK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q8y-xg-V0C" secondAttribute="trailing" constant="14" id="Og6-iN-9Ki"/>
+                                                                    <constraint firstItem="Hn8-Fb-6Pf" firstAttribute="leading" secondItem="sOX-yZ-vlK" secondAttribute="trailing" constant="14" id="StW-gT-mxD"/>
                                                                     <constraint firstAttribute="trailing" secondItem="Hn8-Fb-6Pf" secondAttribute="trailing" constant="15" id="YaA-kV-kpS"/>
                                                                     <constraint firstItem="QAC-xJ-jsO" firstAttribute="leading" secondItem="do5-q8-V24" secondAttribute="leading" constant="15" id="YfO-Za-Lfe"/>
                                                                     <constraint firstItem="wOp-Rb-ABg" firstAttribute="leading" secondItem="do5-q8-V24" secondAttribute="leading" id="aRS-WI-obe"/>
                                                                     <constraint firstItem="q8y-xg-V0C" firstAttribute="width" secondItem="do5-q8-V24" secondAttribute="width" multiplier="0.3" id="dnF-6q-b3F"/>
                                                                     <constraint firstAttribute="bottom" secondItem="sOX-yZ-vlK" secondAttribute="bottom" constant="15" id="k3X-ap-0Ma"/>
                                                                     <constraint firstItem="QAC-xJ-jsO" firstAttribute="centerY" secondItem="do5-q8-V24" secondAttribute="centerY" id="kgK-1i-wUV"/>
-                                                                    <constraint firstItem="sOX-yZ-vlK" firstAttribute="leading" secondItem="QAC-xJ-jsO" secondAttribute="trailing" constant="15" id="rsl-sQ-BgT"/>
                                                                     <constraint firstItem="sOX-yZ-vlK" firstAttribute="top" secondItem="do5-q8-V24" secondAttribute="top" constant="15" id="t7A-o0-bVa"/>
                                                                     <constraint firstAttribute="trailing" secondItem="wOp-Rb-ABg" secondAttribute="trailing" id="v93-3a-haB"/>
                                                                     <constraint firstAttribute="bottom" secondItem="q8y-xg-V0C" secondAttribute="bottom" id="x3i-XH-M8i"/>
@@ -1393,12 +1393,12 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-iP-XPQ">
-                                                                        <rect key="frame" x="55" y="15" width="138" height="20"/>
+                                                                        <rect key="frame" x="246.5" y="15" width="73.5" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="WpK-Fn-HkG">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="WpK-Fn-HkG">
                                                                         <rect key="frame" x="334" y="12.5" width="25" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="8Kz-Go-PZ0"/>
@@ -1406,7 +1406,7 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-xy-iig">
-                                                                        <rect key="frame" x="207" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="55" y="0.0" width="112" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1421,19 +1421,19 @@ myself just one click </string>
                                                                     <constraint firstItem="kpm-Uz-d7O" firstAttribute="centerY" secondItem="wkp-cc-pPY" secondAttribute="centerY" id="1fa-z4-m9M"/>
                                                                     <constraint firstAttribute="bottom" secondItem="5jh-2g-BlZ" secondAttribute="bottom" id="38w-Ab-bL7"/>
                                                                     <constraint firstItem="5jh-2g-BlZ" firstAttribute="top" secondItem="wkp-cc-pPY" secondAttribute="top" id="CKx-3t-FET"/>
-                                                                    <constraint firstItem="WpK-Fn-HkG" firstAttribute="leading" secondItem="Jeq-xy-iig" secondAttribute="trailing" constant="15" id="FeW-ka-bOx"/>
                                                                     <constraint firstItem="WpK-Fn-HkG" firstAttribute="centerY" secondItem="lq3-iP-XPQ" secondAttribute="centerY" id="GVl-AT-EqP"/>
+                                                                    <constraint firstItem="lq3-iP-XPQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jeq-xy-iig" secondAttribute="trailing" constant="14" id="IPm-28-I4J"/>
                                                                     <constraint firstItem="5jh-2g-BlZ" firstAttribute="leading" secondItem="wkp-cc-pPY" secondAttribute="leading" id="MzA-v9-c6y"/>
-                                                                    <constraint firstItem="lq3-iP-XPQ" firstAttribute="leading" secondItem="kpm-Uz-d7O" secondAttribute="trailing" constant="15" id="RzC-gf-DwJ"/>
                                                                     <constraint firstItem="Jeq-xy-iig" firstAttribute="width" secondItem="wkp-cc-pPY" secondAttribute="width" multiplier="0.3" id="T8t-ZY-xzU"/>
                                                                     <constraint firstAttribute="trailing" secondItem="WpK-Fn-HkG" secondAttribute="trailing" constant="15" id="YWZ-zs-hV8"/>
                                                                     <constraint firstItem="lq3-iP-XPQ" firstAttribute="top" secondItem="wkp-cc-pPY" secondAttribute="top" constant="15" id="abQ-Zg-seI"/>
                                                                     <constraint firstAttribute="bottom" secondItem="Jeq-xy-iig" secondAttribute="bottom" id="gmS-la-ldn"/>
+                                                                    <constraint firstItem="WpK-Fn-HkG" firstAttribute="leading" secondItem="lq3-iP-XPQ" secondAttribute="trailing" constant="14" id="msV-IE-Bqe"/>
                                                                     <constraint firstItem="Jeq-xy-iig" firstAttribute="top" secondItem="wkp-cc-pPY" secondAttribute="top" id="o5m-fk-XZs"/>
                                                                     <constraint firstAttribute="bottom" secondItem="lq3-iP-XPQ" secondAttribute="bottom" constant="15" id="py5-Ee-klD"/>
-                                                                    <constraint firstItem="Jeq-xy-iig" firstAttribute="leading" secondItem="lq3-iP-XPQ" secondAttribute="trailing" constant="14" id="sHi-8e-AZe"/>
                                                                     <constraint firstItem="kpm-Uz-d7O" firstAttribute="leading" secondItem="wkp-cc-pPY" secondAttribute="leading" constant="15" id="uZB-hl-mzG"/>
                                                                     <constraint firstAttribute="trailing" secondItem="5jh-2g-BlZ" secondAttribute="trailing" id="v0v-uh-TGj"/>
+                                                                    <constraint firstItem="Jeq-xy-iig" firstAttribute="leading" secondItem="kpm-Uz-d7O" secondAttribute="trailing" constant="15" id="yO4-IR-ze8"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -1486,6 +1486,9 @@ myself just one click </string>
                     </view>
                     <connections>
                         <outlet property="btnNext" destination="wZ8-um-5z6" id="ePn-GA-i2f"/>
+                        <outlet property="icon1" destination="zyU-eg-P9e" id="VYc-pf-NvD"/>
+                        <outlet property="icon2" destination="Hn8-Fb-6Pf" id="qY1-tD-92p"/>
+                        <outlet property="icon3" destination="WpK-Fn-HkG" id="7bb-aW-1w8"/>
                         <outlet property="lblDescription" destination="fe2-OQ-dsF" id="Fdg-c8-eKz"/>
                         <outlet property="lblMin1" destination="NR8-Zz-6mM" id="QGy-Hu-fdd"/>
                         <outlet property="lblMin3" destination="lq3-iP-XPQ" id="8vV-TR-MI2"/>
@@ -1535,7 +1538,7 @@ myself just one click </string>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-4j-yFv">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-4j-yFv">
                                                                     <rect key="frame" x="15" y="10.5" width="25" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="SyW-tL-npL"/>
@@ -1744,7 +1747,7 @@ myself just one click </string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="mtO-xF-Z0f" id="wwC-Qf-pVt"/>
+                        <outlet property="tableView" destination="mtO-xF-Z0f" id="mDt-Qn-UVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9M-5Y-FwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1834,7 +1837,7 @@ myself just one click </string>
                                                                             <constraint firstAttribute="height" constant="25" id="gd8-e1-xkg"/>
                                                                             <constraint firstAttribute="width" constant="25" id="ue6-zw-aZY"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="facebook"/>
+                                                                        <state key="normal" image="icon_radio_button_2_active"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1862,7 +1865,7 @@ myself just one click </string>
                                                                             <constraint firstAttribute="width" constant="25" id="KLs-8u-g7L"/>
                                                                             <constraint firstAttribute="height" constant="25" id="SEz-D4-Sap"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="facebook"/>
+                                                                        <state key="normal" image="icon_radio_button_2_inactive"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1890,7 +1893,7 @@ myself just one click </string>
                                                                             <constraint firstAttribute="width" constant="25" id="aRT-QO-Z8j"/>
                                                                             <constraint firstAttribute="height" constant="25" id="wix-Ny-teJ"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="facebook"/>
+                                                                        <state key="normal" image="icon_radio_button_2_inactive"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1918,7 +1921,7 @@ myself just one click </string>
                                                                             <constraint firstAttribute="width" constant="25" id="PTr-f3-9TT"/>
                                                                             <constraint firstAttribute="height" constant="25" id="mzL-ut-4z6"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="facebook"/>
+                                                                        <state key="normal" image="icon_radio_button_2_inactive"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2150,10 +2153,10 @@ myself just one click </string>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hjd-t4-qYX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="22.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="YEE-Pb-qpR">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applepay" translatesAutoresizingMaskIntoConstraints="NO" id="YEE-Pb-qpR">
                                                                         <rect key="frame" x="0.0" y="0.0" width="22.5" height="22.5"/>
                                                                     </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-GJ-odq">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-GJ-odq">
                                                                         <rect key="frame" x="27.5" y="0.0" width="22.5" height="22.5"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -2161,16 +2164,16 @@ myself just one click </string>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2mH-nr-niu">
                                                                 <rect key="frame" x="0.0" y="27.5" width="50" height="22.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="AeC-dr-LQR">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="AeC-dr-LQR">
                                                                         <rect key="frame" x="0.0" y="0.0" width="22.5" height="22.5"/>
                                                                     </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="nsG-PN-Z1R">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Visa" translatesAutoresizingMaskIntoConstraints="NO" id="nsG-PN-Z1R">
                                                                         <rect key="frame" x="27.5" y="0.0" width="22.5" height="22.5"/>
                                                                     </imageView>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="2mH-nr-niu" firstAttribute="top" secondItem="hjd-t4-qYX" secondAttribute="bottom" constant="5" id="4Iz-1G-bkg"/>
                                                             <constraint firstAttribute="trailing" secondItem="hjd-t4-qYX" secondAttribute="trailing" id="J95-bz-Rm1"/>
@@ -2259,7 +2262,7 @@ myself just one click </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-bf-YpV">
                                 <rect key="frame" x="20.5" y="239" width="373" height="428"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="3M2-V6-37q">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paymentcheck" translatesAutoresizingMaskIntoConstraints="NO" id="3M2-V6-37q">
                                         <rect key="frame" x="156.5" y="30" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="aeQ-2w-lxN"/>
@@ -2295,7 +2298,6 @@ myself just one click </string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnBookAppointmentPressed:" destination="JpM-Cm-yZ3" eventType="touchUpInside" id="Ld3-Qh-iyL"/>
                                             <action selector="btnContinuePressed:" destination="J1f-k3-Nsp" eventType="touchUpInside" id="nxk-TC-X5D"/>
                                         </connections>
                                     </button>
@@ -2902,14 +2904,14 @@ myself just one click </string>
                                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_call" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-AR-Ekx">
-                                                                                <rect key="frame" x="10" y="21.5" width="25" height="25"/>
+                                                                                <rect key="frame" x="10" y="24" width="20" height="20"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="25" id="2VC-Mh-VPL"/>
-                                                                                    <constraint firstAttribute="height" constant="25" id="IRF-lb-LcT"/>
+                                                                                    <constraint firstAttribute="width" constant="20" id="2VC-Mh-VPL"/>
+                                                                                    <constraint firstAttribute="height" constant="20" id="IRF-lb-LcT"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice call" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKQ-vl-dkB">
-                                                                                <rect key="frame" x="45" y="10" width="132" height="48"/>
+                                                                                <rect key="frame" x="40" y="10" width="137" height="48"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2951,15 +2953,15 @@ myself just one click </string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-MJ-5CT">
                                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="68"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_call" translatesAutoresizingMaskIntoConstraints="NO" id="1gE-mQ-qve">
-                                                                                <rect key="frame" x="10" y="21.5" width="25" height="25"/>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_calender_2" translatesAutoresizingMaskIntoConstraints="NO" id="1gE-mQ-qve">
+                                                                                <rect key="frame" x="10" y="24" width="20" height="20"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="25" id="8nS-mT-RG5"/>
-                                                                                    <constraint firstAttribute="height" constant="25" id="v2M-2G-LTd"/>
+                                                                                    <constraint firstAttribute="width" constant="20" id="8nS-mT-RG5"/>
+                                                                                    <constraint firstAttribute="height" constant="20" id="v2M-2G-LTd"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday 19 April 2021" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Yw-pCa">
-                                                                                <rect key="frame" x="45" y="10" width="132" height="48"/>
+                                                                                <rect key="frame" x="40" y="10" width="137" height="48"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -3004,9 +3006,6 @@ myself just one click </string>
                                                                 <state key="normal" title="4PM">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <action selector="btnNextPressed:" destination="4Uh-Dc-QUF" eventType="touchUpInside" id="7Td-7c-sj3"/>
-                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will receive periodic reminders before the date of the voice call" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHC-jF-apm">
                                                                 <rect key="frame" x="118.5" y="166" width="245.5" height="74"/>
@@ -3320,9 +3319,6 @@ myself just one click </string>
                                                                 <state key="normal" title="Next">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <action selector="btnNextPressed:" destination="4Uh-Dc-QUF" eventType="touchUpInside" id="ddC-e7-p2r"/>
-                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWN-Fk-QYK">
                                                                 <rect key="frame" x="20" y="647.5" width="334" height="45"/>
@@ -3333,9 +3329,6 @@ myself just one click </string>
                                                                 <state key="normal" title="Next">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <action selector="btnNextPressed:" destination="Xk7-eI-1ss" eventType="touchUpInside" id="TWl-3e-RO7"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3469,6 +3462,7 @@ myself just one click </string>
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
+                                                                            <action selector="btnAddWords:" destination="4Uh-Dc-QUF" eventType="touchUpInside" id="ci4-uh-ATq"/>
                                                                             <action selector="btnAddWordsTapped:" destination="DGM-ot-aDL" eventType="touchUpInside" id="0SG-RN-5rr"/>
                                                                         </connections>
                                                                     </button>
@@ -3492,12 +3486,12 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 words " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udD-Hu-HPn">
-                                                                        <rect key="frame" x="55" y="15" width="138" height="22"/>
+                                                                        <rect key="frame" x="243" y="15" width="77" height="22"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="RHj-TE-QAE">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyboardGreen" translatesAutoresizingMaskIntoConstraints="NO" id="RHj-TE-QAE">
                                                                         <rect key="frame" x="334" y="13.5" width="25" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="25" id="G9j-jM-wlM"/>
@@ -3505,7 +3499,7 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQR-Da-cIw">
-                                                                        <rect key="frame" x="207" y="0.0" width="112" height="52"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="112" height="52"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3517,20 +3511,20 @@ myself just one click </string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="KQR-Da-cIw" firstAttribute="leading" secondItem="GHn-A3-n7f" secondAttribute="trailing" constant="14" id="3qq-XE-HKI"/>
                                                                     <constraint firstItem="KQR-Da-cIw" firstAttribute="top" secondItem="3Ko-bW-h0P" secondAttribute="top" id="98h-rp-vl1"/>
                                                                     <constraint firstAttribute="bottom" secondItem="3R2-np-BRG" secondAttribute="bottom" id="Cqy-qd-HU0"/>
-                                                                    <constraint firstItem="RHj-TE-QAE" firstAttribute="leading" secondItem="KQR-Da-cIw" secondAttribute="trailing" constant="15" id="GKo-Is-i9G"/>
+                                                                    <constraint firstItem="RHj-TE-QAE" firstAttribute="leading" secondItem="udD-Hu-HPn" secondAttribute="trailing" constant="14" id="H3Y-QG-M0r"/>
                                                                     <constraint firstAttribute="trailing" secondItem="3R2-np-BRG" secondAttribute="trailing" id="Lah-IO-EVi"/>
                                                                     <constraint firstItem="KQR-Da-cIw" firstAttribute="width" secondItem="3Ko-bW-h0P" secondAttribute="width" multiplier="0.3" id="QH8-Xb-C3f"/>
                                                                     <constraint firstItem="udD-Hu-HPn" firstAttribute="top" secondItem="3Ko-bW-h0P" secondAttribute="top" constant="15" id="SpJ-KP-3Te"/>
                                                                     <constraint firstAttribute="bottom" secondItem="KQR-Da-cIw" secondAttribute="bottom" id="UwV-7c-fyT"/>
                                                                     <constraint firstItem="GHn-A3-n7f" firstAttribute="centerY" secondItem="3Ko-bW-h0P" secondAttribute="centerY" id="VQ4-Bh-e65"/>
-                                                                    <constraint firstItem="KQR-Da-cIw" firstAttribute="leading" secondItem="udD-Hu-HPn" secondAttribute="trailing" constant="14" id="Xkz-FV-E6C"/>
                                                                     <constraint firstItem="GHn-A3-n7f" firstAttribute="leading" secondItem="3Ko-bW-h0P" secondAttribute="leading" constant="15" id="awn-kT-W50"/>
                                                                     <constraint firstAttribute="trailing" secondItem="RHj-TE-QAE" secondAttribute="trailing" constant="15" id="bV6-6W-bgW"/>
                                                                     <constraint firstItem="RHj-TE-QAE" firstAttribute="centerY" secondItem="udD-Hu-HPn" secondAttribute="centerY" id="cdy-Ov-W23"/>
-                                                                    <constraint firstItem="udD-Hu-HPn" firstAttribute="leading" secondItem="GHn-A3-n7f" secondAttribute="trailing" constant="15" id="hef-Up-bRK"/>
                                                                     <constraint firstItem="3R2-np-BRG" firstAttribute="leading" secondItem="3Ko-bW-h0P" secondAttribute="leading" id="kf2-jP-QZ6"/>
+                                                                    <constraint firstItem="udD-Hu-HPn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KQR-Da-cIw" secondAttribute="trailing" constant="14" id="m8c-Mv-St9"/>
                                                                     <constraint firstItem="3R2-np-BRG" firstAttribute="top" secondItem="3Ko-bW-h0P" secondAttribute="top" id="q4d-5Q-KW4"/>
                                                                     <constraint firstAttribute="bottom" secondItem="udD-Hu-HPn" secondAttribute="bottom" constant="15" id="zeD-gS-HvV"/>
                                                                 </constraints>
@@ -3546,12 +3540,12 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-XL-z5r">
-                                                                        <rect key="frame" x="55" y="15" width="138" height="20"/>
+                                                                        <rect key="frame" x="246.5" y="15" width="73.5" height="20"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" name="customColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-na-Kjp">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyboardGreen" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-na-Kjp">
                                                                         <rect key="frame" x="334" y="12.5" width="25" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="25" id="bbu-DX-N8I"/>
@@ -3559,7 +3553,7 @@ myself just one click </string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQO-jX-e4c">
-                                                                        <rect key="frame" x="207" y="0.0" width="112" height="50"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="112" height="50"/>
                                                                         <color key="backgroundColor" name="customColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3571,19 +3565,19 @@ myself just one click </string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="iGd-na-Kjp" firstAttribute="leading" secondItem="sQO-jX-e4c" secondAttribute="trailing" constant="15" id="1IR-EX-5dT"/>
                                                                     <constraint firstAttribute="trailing" secondItem="RHZ-tY-2Kf" secondAttribute="trailing" id="1S8-QX-Nv1"/>
                                                                     <constraint firstItem="sQO-jX-e4c" firstAttribute="width" secondItem="bul-qI-B5I" secondAttribute="width" multiplier="0.3" id="21h-e2-TBA"/>
                                                                     <constraint firstItem="RHZ-tY-2Kf" firstAttribute="top" secondItem="bul-qI-B5I" secondAttribute="top" id="27t-vC-OCm"/>
                                                                     <constraint firstItem="RHZ-tY-2Kf" firstAttribute="leading" secondItem="bul-qI-B5I" secondAttribute="leading" id="4Is-PR-Fbi"/>
                                                                     <constraint firstAttribute="bottom" secondItem="RHZ-tY-2Kf" secondAttribute="bottom" id="6gN-z6-TfJ"/>
+                                                                    <constraint firstItem="sQO-jX-e4c" firstAttribute="leading" secondItem="kGY-ef-OGc" secondAttribute="trailing" constant="14" id="8we-cS-vDs"/>
                                                                     <constraint firstItem="kGY-ef-OGc" firstAttribute="leading" secondItem="bul-qI-B5I" secondAttribute="leading" constant="15" id="Ahc-fr-eLN"/>
+                                                                    <constraint firstItem="cVk-XL-z5r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sQO-jX-e4c" secondAttribute="trailing" constant="14" id="HdS-N2-PYm"/>
+                                                                    <constraint firstItem="iGd-na-Kjp" firstAttribute="leading" secondItem="cVk-XL-z5r" secondAttribute="trailing" constant="14" id="L36-Xh-WcP"/>
                                                                     <constraint firstItem="sQO-jX-e4c" firstAttribute="top" secondItem="bul-qI-B5I" secondAttribute="top" id="Ml5-VH-iTu"/>
                                                                     <constraint firstAttribute="bottom" secondItem="sQO-jX-e4c" secondAttribute="bottom" id="Pqh-Ck-Mo3"/>
                                                                     <constraint firstItem="iGd-na-Kjp" firstAttribute="centerY" secondItem="cVk-XL-z5r" secondAttribute="centerY" id="Udy-4y-S8C"/>
                                                                     <constraint firstAttribute="trailing" secondItem="iGd-na-Kjp" secondAttribute="trailing" constant="15" id="ZGX-Ee-YT2"/>
-                                                                    <constraint firstItem="cVk-XL-z5r" firstAttribute="leading" secondItem="kGY-ef-OGc" secondAttribute="trailing" constant="15" id="bsU-bI-kD4"/>
-                                                                    <constraint firstItem="sQO-jX-e4c" firstAttribute="leading" secondItem="cVk-XL-z5r" secondAttribute="trailing" constant="14" id="cYR-6e-kOQ"/>
                                                                     <constraint firstItem="kGY-ef-OGc" firstAttribute="centerY" secondItem="bul-qI-B5I" secondAttribute="centerY" id="ebr-xs-Y5v"/>
                                                                     <constraint firstAttribute="bottom" secondItem="cVk-XL-z5r" secondAttribute="bottom" constant="15" id="gCw-Iz-nqV"/>
                                                                     <constraint firstItem="cVk-XL-z5r" firstAttribute="top" secondItem="bul-qI-B5I" secondAttribute="top" constant="15" id="yEL-cn-ICz"/>
@@ -3637,30 +3631,135 @@ myself just one click </string>
                             <constraint firstItem="UGa-DR-Jh7" firstAttribute="trailing" secondItem="fcB-QR-Ndz" secondAttribute="trailing" id="zv6-2X-4Bb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnAddWords" destination="7Z6-J3-3xH" id="GuH-n4-ns3"/>
+                        <outlet property="lblPrice1" destination="KQR-Da-cIw" id="jX4-kw-FBA"/>
+                        <outlet property="lblPrice2" destination="sQO-jX-e4c" id="92x-ev-Z5g"/>
+                        <outlet property="lblWords1" destination="udD-Hu-HPn" id="sv9-un-eNj"/>
+                        <outlet property="lblWords2" destination="cVk-XL-z5r" id="Y3a-z7-850"/>
+                        <outlet property="txtVwMessage" destination="dfP-AG-k5Y" id="Djm-ir-wkP"/>
+                        <outlet property="vwPrice1" destination="3Ko-bW-h0P" id="3D5-XG-68b"/>
+                        <outlet property="vwPrice2" destination="bul-qI-B5I" id="UYM-5x-0aO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wO4-Ld-6hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5844.9275362318849" y="1208.7053571428571"/>
         </scene>
+        <!--MapVC-->
+        <scene sceneID="TCf-zT-e7H">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Dy-BC-YA1" customClass="MapVC" customModule="Al_Areef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFP-uJ-rp1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBB-Kl-dz2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yri-dq-fP3">
+                                        <rect key="frame" x="20" y="80" width="374" height="56"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-QM-bKS">
+                                                <rect key="frame" x="0.0" y="8.5" width="52" height="39"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ian-oE-XPn">
+                                                <rect key="frame" x="57" y="8" width="309" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="17z-Rl-OKx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Hvu-QM-bKS" firstAttribute="leading" secondItem="Yri-dq-fP3" secondAttribute="leading" id="QaZ-Au-liQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ian-oE-XPn" secondAttribute="trailing" constant="8" id="UrK-dB-JgR"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ian-oE-XPn" secondAttribute="bottom" constant="8" id="foI-bi-cTz"/>
+                                            <constraint firstItem="Hvu-QM-bKS" firstAttribute="width" secondItem="Yri-dq-fP3" secondAttribute="height" multiplier="0.925" id="g2V-OF-oKz"/>
+                                            <constraint firstItem="Ian-oE-XPn" firstAttribute="leading" secondItem="Hvu-QM-bKS" secondAttribute="trailing" constant="5" id="hBn-Mw-b2I"/>
+                                            <constraint firstItem="Hvu-QM-bKS" firstAttribute="centerY" secondItem="Ian-oE-XPn" secondAttribute="centerY" id="hji-1L-SIb"/>
+                                            <constraint firstItem="Ian-oE-XPn" firstAttribute="top" secondItem="Yri-dq-fP3" secondAttribute="top" constant="8" id="ksD-OD-Fvh"/>
+                                            <constraint firstItem="Hvu-QM-bKS" firstAttribute="height" secondItem="Yri-dq-fP3" secondAttribute="height" multiplier="0.7" id="owJ-qT-4tY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28627452250000002" green="0.58823531870000001" blue="0.50980395079999996" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Yri-dq-fP3" secondAttribute="trailing" constant="20" id="C5C-SX-UPP"/>
+                                    <constraint firstItem="Yri-dq-fP3" firstAttribute="leading" secondItem="EBB-Kl-dz2" secondAttribute="leading" constant="20" id="dNE-eX-LRt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yri-dq-fP3" secondAttribute="bottom" constant="10" id="eKe-VG-QSh"/>
+                                    <constraint firstItem="Yri-dq-fP3" firstAttribute="top" secondItem="EBB-Kl-dz2" secondAttribute="top" constant="80" id="kiZ-uU-5NU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am9-Ej-jaU">
+                                <rect key="frame" x="0.0" y="146" width="414" height="621"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sr-BM-mQO">
+                                <rect key="frame" x="0.0" y="767" width="414" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXd-7D-fAJ">
+                                        <rect key="frame" x="339" y="20" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="YZj-Kv-WrX"/>
+                                            <constraint firstAttribute="height" constant="55" id="Zpo-VO-QDO"/>
+                                        </constraints>
+                                        <state key="normal" image="gps-dot"/>
+                                        <connections>
+                                            <action selector="btnSelectLocation:" destination="1Dy-BC-YA1" eventType="touchUpInside" id="QG4-Oo-mT1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use my current location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kly-Df-IQs">
+                                        <rect key="frame" x="126.5" y="10" width="202.5" height="75"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46666663889999999" green="0.63137257099999999" blue="0.59607845540000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="kly-Df-IQs" firstAttribute="top" secondItem="5Sr-BM-mQO" secondAttribute="top" constant="10" id="1aq-t8-WC4"/>
+                                    <constraint firstAttribute="bottom" secondItem="fXd-7D-fAJ" secondAttribute="bottom" constant="20" id="9Iq-WI-MZe"/>
+                                    <constraint firstItem="kly-Df-IQs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Sr-BM-mQO" secondAttribute="leading" constant="10" id="MZM-iL-efc"/>
+                                    <constraint firstItem="fXd-7D-fAJ" firstAttribute="top" secondItem="5Sr-BM-mQO" secondAttribute="top" constant="20" id="XiZ-mo-e1J"/>
+                                    <constraint firstItem="fXd-7D-fAJ" firstAttribute="leading" secondItem="kly-Df-IQs" secondAttribute="trailing" constant="10" id="YHu-Wz-xJX"/>
+                                    <constraint firstAttribute="bottom" secondItem="kly-Df-IQs" secondAttribute="bottom" constant="10" id="pLd-U3-ak7"/>
+                                    <constraint firstAttribute="trailing" secondItem="fXd-7D-fAJ" secondAttribute="trailing" constant="20" id="ty5-gL-RWK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sqf-ZS-kHc"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="1" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sqf-ZS-kHc" firstAttribute="bottom" secondItem="5Sr-BM-mQO" secondAttribute="bottom" id="4N8-Sg-14e"/>
+                            <constraint firstItem="EBB-Kl-dz2" firstAttribute="top" secondItem="gFP-uJ-rp1" secondAttribute="top" id="LDs-dc-kRE"/>
+                            <constraint firstItem="am9-Ej-jaU" firstAttribute="top" secondItem="EBB-Kl-dz2" secondAttribute="bottom" id="RBq-cL-W6l"/>
+                            <constraint firstItem="am9-Ej-jaU" firstAttribute="leading" secondItem="sqf-ZS-kHc" secondAttribute="leading" id="TPf-5N-wZJ"/>
+                            <constraint firstItem="sqf-ZS-kHc" firstAttribute="trailing" secondItem="am9-Ej-jaU" secondAttribute="trailing" id="UvF-zL-4fo"/>
+                            <constraint firstItem="EBB-Kl-dz2" firstAttribute="leading" secondItem="sqf-ZS-kHc" secondAttribute="leading" id="XTy-md-RZq"/>
+                            <constraint firstItem="sqf-ZS-kHc" firstAttribute="trailing" secondItem="EBB-Kl-dz2" secondAttribute="trailing" id="gNU-oi-z14"/>
+                            <constraint firstItem="5Sr-BM-mQO" firstAttribute="leading" secondItem="sqf-ZS-kHc" secondAttribute="leading" id="hog-Wg-Ya4"/>
+                            <constraint firstItem="5Sr-BM-mQO" firstAttribute="top" secondItem="am9-Ej-jaU" secondAttribute="bottom" id="sqT-cw-vxc"/>
+                            <constraint firstItem="sqf-ZS-kHc" firstAttribute="trailing" secondItem="5Sr-BM-mQO" secondAttribute="trailing" id="xVX-tW-yUV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="vwSearchBack" destination="Yri-dq-fP3" id="mZ5-Xx-cFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b37-6Y-Adt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6589.8550724637689" y="1209.375"/>
+        </scene>
     </scenes>
     <designables>
-        <designable name="CfF-0I-vko">
-            <size key="intrinsicContentSize" width="95" height="15"/>
-        </designable>
         <designable name="SXM-G5-cel">
             <size key="intrinsicContentSize" width="10" height="33"/>
         </designable>
-        <designable name="ktD-29-F4T">
-            <size key="intrinsicContentSize" width="145" height="25"/>
-        </designable>
-        <designable name="maG-z8-5h4">
-            <size key="intrinsicContentSize" width="145" height="25"/>
-        </designable>
         <designable name="nND-rb-dab">
             <size key="intrinsicContentSize" width="10" height="33"/>
-        </designable>
-        <designable name="vCe-ZI-mls">
-            <size key="intrinsicContentSize" width="145" height="25"/>
         </designable>
     </designables>
     <resources>
@@ -3672,13 +3771,24 @@ myself just one click </string>
         <image name="Image-4" width="1055" height="432"/>
         <image name="Image-5" width="1055" height="432"/>
         <image name="Placeholder" width="142" height="142"/>
+        <image name="Visa" width="86" height="56.5"/>
+        <image name="applepay" width="99.5" height="41"/>
         <image name="bell" width="74.5" height="80"/>
         <image name="facebook" width="128" height="128"/>
+        <image name="gps-dot" width="86" height="86.5"/>
+        <image name="history" width="35" height="35"/>
         <image name="icon_calender" width="59" height="55"/>
-        <image name="icon_call" width="40" height="40"/>
+        <image name="icon_calender_2" width="56.5" height="60.5"/>
+        <image name="icon_call" width="39.5" height="39.5"/>
         <image name="icon_radio_button_2_active" width="52" height="52"/>
         <image name="icon_radio_button_2_inactive" width="52" height="52"/>
+        <image name="keyboardGreen" width="45" height="31.5"/>
+        <image name="location" width="45" height="70"/>
+        <image name="mastercard" width="85" height="57.5"/>
+        <image name="paymentcheck" width="139" height="104"/>
         <image name="sos" width="129" height="103"/>
+        <image name="timer" width="44" height="44"/>
+        <image name="wallet" width="54.5" height="50.5"/>
         <namedColor name="customColor">
             <color red="0.30799999833106995" green="0.68400001525878906" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -56,6 +56,9 @@ class ChooseDurationVC: UIViewController {
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
             vc.consultType = consultType
             self.navigationController?.pushViewController(vc, animated: false)
+//        case .PersonalMeeting :
+//            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MapVC.self)) as? MapVC else { return }
+//            self.navigationController?.pushViewController(vc, animated: false)
         default:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentReservationVC.self)) as? AppointmentReservationVC else { return }
             self.navigationController?.pushViewController(vc, animated: false)

@@ -49,6 +49,10 @@ class SignUpVC: UIViewController {
         pushRegistrationStepOneVC()
     }
     
+    @IBAction func btnSignUpCompanyTapped(_ sender : UIButton){
+        pushCompanyRegistrationVC()
+    }
+    
     // MARK:- Button Actions
     @objc func handleTapOnLabel(_ recognizer: UITapGestureRecognizer) {
         guard let text = lblLoginInfo.attributedText?.string else {
@@ -62,6 +66,11 @@ class SignUpVC: UIViewController {
     }
     
     // MARK:- Push Methods
+    private func pushCompanyRegistrationVC() {
+        guard let vc = UIStoryboard.Company.instantiateViewController(withIdentifier: String(describing: CompanyRegistrationOneVC.self)) as? CompanyRegistrationOneVC else { return }
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     private func pushLoginVC() {
         guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LonginVC.self)) as? LonginVC else { return }
         self.navigationController?.pushViewController(vc, animated: false)

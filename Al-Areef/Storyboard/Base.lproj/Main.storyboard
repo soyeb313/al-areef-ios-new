@@ -530,6 +530,9 @@
                                                                 <state key="normal" title="Sign up for Company">
                                                                     <color key="titleColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSignUpCompanyTapped:" destination="8Zw-hm-fgb" eventType="touchUpInside" id="bPm-g7-hcl"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -664,10 +667,10 @@
     </scenes>
     <designables>
         <designable name="TMU-9R-0pt">
-            <size key="intrinsicContentSize" width="311" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="62.5" height="17"/>
         </designable>
         <designable name="bxp-qR-23f">
-            <size key="intrinsicContentSize" width="311" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="48" height="18.5"/>
         </designable>
     </designables>
     <resources>

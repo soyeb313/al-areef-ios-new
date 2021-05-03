@@ -19,12 +19,13 @@ class ConsultingDurationVC: UIViewController {
     @IBOutlet weak var vwAddWords       : UIView!
     @IBOutlet weak var lblMin1: UILabel!
     @IBOutlet weak var lblDescription   : UILabel!
-    
     @IBOutlet weak var lblPrice3: UILabel!
     @IBOutlet weak var lblMin3: UILabel!
-    
     @IBOutlet weak var lblPrice2: UILabel!
     @IBOutlet weak var lbmin2: UILabel!
+    @IBOutlet weak var icon1   : UIImageView!
+    @IBOutlet weak var icon2   : UIImageView!
+    @IBOutlet weak var icon3   : UIImageView!
     
     // MARK:- Variables
     var consultType : ConsultingType?
@@ -68,6 +69,9 @@ class ConsultingDurationVC: UIViewController {
             lbmin2.text  = "500 words".localiz()
             self.vwDurationBack2.isHidden = true
             self.vwDurationBack3.isHidden = true
+            self.icon1.image = #imageLiteral(resourceName: "keyboardGreen")
+            self.icon2.image = #imageLiteral(resourceName: "keyboardGreen")
+            self.icon3.image = #imageLiteral(resourceName: "keyboardGreen")
         }else{
             self.vwAddWords.isHidden = true
             lblPrice1.text = "100 USD".localiz()

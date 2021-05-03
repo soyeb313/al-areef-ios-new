@@ -1,11 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "icon_call.png",
+      "filename" : "Page-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Page-1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

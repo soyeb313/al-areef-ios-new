@@ -123,6 +123,9 @@ extension MakePaymentVC : PaymentSuccessProtocol {
             guard let vc = UIStoryboard.RecordMessage.instantiateViewController(withIdentifier: String(describing: RecordMessageVC.self)) as? RecordMessageVC else { return }
             self.navigationController?.pushViewController(vc, animated: true)
             self.dismiss(animated: false, completion: nil)
+        case .ConsultantRegistration :
+            self.dismiss(animated: false, completion: nil)
+            print("ConsultantRegistration")
         default:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultantDetailsVC.self)) as? ConsultantDetailsVC else { return }
     //        vc.consultType = consultType
