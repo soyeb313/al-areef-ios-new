@@ -39,6 +39,8 @@ extension NSAttributedString {
 //        return fullString
 //    }
     
+    
+    
     func createListwithIcons(_ list : [String],_ imageName : String, _ alignment : NSTextAlignment = .center, _ width : Int = 15,_ height : Int = 15,_ yPos : Int = -3) -> NSAttributedString {
             let fullString = NSMutableAttributedString(string: "" )
             
