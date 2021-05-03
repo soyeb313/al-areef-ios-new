@@ -473,7 +473,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgj-h6-tXd">
                                                         <rect key="frame" x="15" y="45.5" width="384" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-7C-aI6">
                                                         <rect key="frame" x="15" y="107" width="384" height="1"/>
@@ -509,7 +509,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cc5-yv-WE7">
                                                         <rect key="frame" x="15" y="45.5" width="384" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-NA-Pb4">
                                                         <rect key="frame" x="15" y="107" width="384" height="1"/>
@@ -545,7 +545,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mhj-WU-gDC">
                                                         <rect key="frame" x="15" y="45.5" width="384" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g9-Zd-qaM">
                                                         <rect key="frame" x="15" y="107" width="384" height="1"/>
@@ -1569,6 +1569,14 @@
                     </view>
                     <connections>
                         <outlet property="btnNext" destination="ptN-qW-vPa" id="1IH-sF-mcQ"/>
+                        <outlet property="txtCurrentEmployer" destination="IFZ-Rd-SOZ" id="QHG-8y-3uZ"/>
+                        <outlet property="txtCurrentJobTitle" destination="OZx-jD-sET" id="OSI-aY-sal"/>
+                        <outlet property="txtPreviouseJobTitle" destination="3jd-U3-je0" id="5xt-XO-5u6"/>
+                        <outlet property="txtPrivouseTenure" destination="ZY6-ZM-6pr" id="dHq-IE-Rvn"/>
+                        <outlet property="txtPrviouseDescription" destination="Ie7-ki-IaR" id="RHV-on-7uQ"/>
+                        <outlet property="txtTenure" destination="fFS-Fb-73Y" id="u5m-kI-HmI"/>
+                        <outlet property="txtViewCureentDescription" destination="ata-c2-UAq" id="Pq1-Bb-OdO"/>
+                        <outlet property="txtprviouseEmployer" destination="3u5-Cz-jgz" id="VMq-xJ-7Yc"/>
                         <outlet property="vwCurrentJobDescription" destination="ata-c2-UAq" id="yas-ck-eyL"/>
                         <outlet property="vwPreviousJobDescription" destination="Ie7-ki-IaR" id="nbF-gr-Rly"/>
                     </connections>
@@ -1589,7 +1597,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="733"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-X6-Ghp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="473.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgC-6D-o7X">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
@@ -1654,7 +1662,7 @@
                                                 <rect key="frame" x="0.0" y="330" width="414" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcH-RM-bl8">
-                                                        <rect key="frame" x="15" y="10" width="116" height="40"/>
+                                                        <rect key="frame" x="15" y="11" width="116" height="40"/>
                                                         <color key="backgroundColor" red="0.39215683940000001" green="0.65882354970000001" blue="0.58431375029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="jZA-EL-hTI"/>
@@ -1662,21 +1670,45 @@
                                                         <state key="normal" title="UPLOAD">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btnUpload:" destination="Vmt-ai-pPD" eventType="touchUpInside" id="DHX-MJ-Nkf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="jcH-RM-bl8" firstAttribute="top" secondItem="lMc-kt-kDX" secondAttribute="top" constant="10" id="9Pd-lN-oTz"/>
+                                                    <constraint firstItem="jcH-RM-bl8" firstAttribute="top" secondItem="lMc-kt-kDX" secondAttribute="top" constant="11" id="9Pd-lN-oTz"/>
                                                     <constraint firstItem="jcH-RM-bl8" firstAttribute="width" secondItem="lMc-kt-kDX" secondAttribute="width" multiplier="0.28" id="Qjx-S1-BGy"/>
                                                     <constraint firstItem="jcH-RM-bl8" firstAttribute="leading" secondItem="lMc-kt-kDX" secondAttribute="leading" constant="15" id="Tbf-qz-zMx"/>
-                                                    <constraint firstAttribute="bottom" secondItem="jcH-RM-bl8" secondAttribute="bottom" constant="10" id="jll-mX-ZPm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jcH-RM-bl8" secondAttribute="bottom" constant="9" id="jll-mX-ZPm"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzT-E4-An4">
+                                                <rect key="frame" x="0.0" y="390" width="414" height="83.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please enter your video link here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziq-uj-Szh">
+                                                        <rect key="frame" x="8" y="8" width="398" height="52"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="398" id="XJ2-79-8eq"/>
+                                                            <constraint firstAttribute="height" constant="52" id="tll-xu-BDe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ziq-uj-Szh" secondAttribute="bottom" constant="23.5" id="AEM-oz-vgr"/>
+                                                    <constraint firstItem="ziq-uj-Szh" firstAttribute="top" secondItem="FzT-E4-An4" secondAttribute="top" constant="8" id="HWv-Zm-182"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ziq-uj-Szh" secondAttribute="trailing" constant="8" id="bT8-9F-UuN"/>
+                                                    <constraint firstItem="ziq-uj-Szh" firstAttribute="leading" secondItem="FzT-E4-An4" secondAttribute="leading" constant="8" id="dS8-le-f3J"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="MaA-X6-Ghp" secondAttribute="bottom" id="4ge-eq-79k"/>
+                                    <constraint firstAttribute="bottom" secondItem="MaA-X6-Ghp" secondAttribute="bottom" constant="343" id="4ge-eq-79k"/>
                                     <constraint firstAttribute="trailing" secondItem="MaA-X6-Ghp" secondAttribute="trailing" id="RNY-ax-4Fo"/>
                                     <constraint firstItem="MaA-X6-Ghp" firstAttribute="top" secondItem="tgK-t7-wj8" secondAttribute="top" id="Yx1-6y-PAJ"/>
                                     <constraint firstItem="MaA-X6-Ghp" firstAttribute="leading" secondItem="tgK-t7-wj8" secondAttribute="leading" id="lrk-eb-LtR"/>
@@ -1712,12 +1744,15 @@
                     <connections>
                         <outlet property="btnNext" destination="qfA-1o-dvc" id="dWc-Km-BRq"/>
                         <outlet property="btnUpload" destination="jcH-RM-bl8" id="t0p-lo-Lpc"/>
+                        <outlet property="txtDescription" destination="bba-tJ-f5q" id="S7O-bA-KGL"/>
+                        <outlet property="txtLink" destination="ziq-uj-Szh" id="qFo-cT-joK"/>
+                        <outlet property="viewLink" destination="FzT-E4-An4" id="hMQ-zF-deW"/>
                         <outlet property="vwDescription" destination="efk-FH-bSL" id="QHP-Xc-ea7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zv6-za-SMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="804"/>
+            <point key="canvasLocation" x="708.69565217391312" y="803.57142857142856"/>
         </scene>
     </scenes>
     <resources>

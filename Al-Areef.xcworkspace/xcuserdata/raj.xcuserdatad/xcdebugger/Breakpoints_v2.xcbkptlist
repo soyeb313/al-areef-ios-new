@@ -684,8 +684,8 @@
             filePath = "Al-Areef/Controller/Doctor/AcademicQualificationVC/AcademicQualificationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -720,6 +720,38 @@
             endingLineNumber = "75"
             landmarkName = "wsUpdateAcadmicDetails1()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54BDD18A-3E66-4FCF-9A74-EB052EC223A4 - b4971649e9cc5adc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Al_Areef.AcademicQualificationVC.wsUpdateAcadmicDetails1() -&gt; ()"
+                  moduleName = "Al-Areef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raj/Documents/Backup/Demo/SwiftUI/22APR2021/Al-Areef%202/Al-Areef/Controller/Doctor/AcademicQualificationVC/AcademicQualificationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2471">
+               </Location>
+               <Location
+                  uuid = "54BDD18A-3E66-4FCF-9A74-EB052EC223A4 - 9e2393011a9ef62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Bool) -&gt; () in Al_Areef.AcademicQualificationVC.wsUpdateAcadmicDetails1() -&gt; ()"
+                  moduleName = "Al-Areef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raj/Documents/Backup/Demo/SwiftUI/22APR2021/Al-Areef%202/Al-Areef/Controller/Doctor/AcademicQualificationVC/AcademicQualificationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "249">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -863,6 +895,102 @@
             startingLineNumber = "110"
             endingLineNumber = "110"
             landmarkName = "wsUpdateAcadmicDetails2()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "257B59F7-6DA1-43AF-AD03-B143159ED384 - b4b6f6c05e046e4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Al_Areef.AcademicQualificationVC.wsUpdateAcadmicDetails2() -&gt; ()"
+                  moduleName = "Al-Areef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raj/Documents/Backup/Demo/SwiftUI/22APR2021/Al-Areef%202/Al-Areef/Controller/Doctor/AcademicQualificationVC/AcademicQualificationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "2471">
+               </Location>
+               <Location
+                  uuid = "257B59F7-6DA1-43AF-AD03-B143159ED384 - d85f8e65087f21e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Bool) -&gt; () in Al_Areef.AcademicQualificationVC.wsUpdateAcadmicDetails2() -&gt; ()"
+                  moduleName = "Al-Areef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raj/Documents/Backup/Demo/SwiftUI/22APR2021/Al-Areef%202/Al-Areef/Controller/Doctor/AcademicQualificationVC/AcademicQualificationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "249">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D7E1C7A-8090-40D9-B1F6-48AF18CFBF93"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Al-Areef/Controller/Doctor/WorkExperienceVC/WorkExperienceVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "wsWorkExperince2()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A3E0692-C808-4FF7-A288-CD2AEAFB75F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Al-Areef/Controller/Doctor/WorkExperienceVC/WorkExperienceVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "wsWorkExperince1()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52BD7E59-E352-4374-AB65-4EB1D6EF0228"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Al-Areef/Controller/Doctor/WorkExperienceVC/WorkExperienceVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "wsWorkExperince1()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99E170D5-8338-4400-B9E4-FAE0D6AC5724"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Al-Areef/Controller/Doctor/WorkExperienceVC/WorkExperienceVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "wsWorkExperince1()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

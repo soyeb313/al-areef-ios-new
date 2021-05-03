@@ -6,13 +6,27 @@
 //
 
 import UIKit
-
+import Loaf
+import Photos
+import AssetsLibrary
+import Alamofire
+import Loaf
+import SVProgressHUD
 class WorkExperienceVC: UIViewController {
 
+    @IBOutlet weak var txtPrviouseDescription: UITextView!
+    @IBOutlet weak var txtPreviouseJobTitle: UITextField!
+    @IBOutlet weak var txtPrivouseTenure: UITextField!
+    @IBOutlet weak var txtprviouseEmployer: UITextField!
+    @IBOutlet weak var txtTenure: UITextField!
     // MARK:- Outlets
+    @IBOutlet weak var txtViewCureentDescription: UITextView!
+    @IBOutlet weak var txtCurrentEmployer: UITextField!
+    @IBOutlet weak var txtCurrentJobTitle: UITextField!
     @IBOutlet weak var btnNext                          : UIButton!
     @IBOutlet weak var vwCurrentJobDescription          : UIView!
     @IBOutlet weak var vwPreviousJobDescription         : UIView!
+    var  userid = ""
     
     // MARK:- Variables
     
@@ -43,12 +57,110 @@ class WorkExperienceVC: UIViewController {
     
     
     @IBAction func btnNextTapped(_ sender : UIButton){
-        pushConsultantProfileVC()
-    }
+
+    if self.txtCurrentEmployer.text  == "" {
+        Loaf("Please enter cureent job title.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    }else   if self.txtCurrentEmployer.text  == ""
+    {
+        Loaf("Please enter your current employer.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    }else   if self.txtTenure.text  == ""
+    {
+        Loaf("Please enter current tenure".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    }else
+    if self.txtViewCureentDescription.text  == ""
+   {
+       Loaf("Please enter job desciption in brif.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+   }else if self.txtPreviouseJobTitle.text  == "" {
+    Loaf("Please enter your previous job title.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+}else   if self.txtprviouseEmployer.text  == ""
+{
+    Loaf("Please enter your previous employer name.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+}else   if self.txtPrivouseTenure.text  == ""
+{
+    Loaf("Please enter your previous job tenure.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+}else   if self.txtPrviouseDescription.text  == ""
+{
+    Loaf("Please enter previous job desciption in brif.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+}else{
+        SVProgressHUD.show()
+        wsWorkExperince1()
     
+       }
+        
+}
+        func wsWorkExperince1() {
+           
+            let parameters = [ "job_title":txtCurrentJobTitle.text ?? "",
+                              "employer_name": txtCurrentEmployer.text ?? "",
+                              "tenure" :  txtTenure.text ?? "",
+                              "job_description": txtViewCureentDescription.text ?? "",
+                              "user_id" : userid,
+                              "type" : 1  ] as [String : Any]
+        
+
+            let url = WSRequest.ConsultantAddWorkExp()
+            
+            WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
+                print(responseDict,err)
+                if let result = responseDict["message"] as? String
+                {
+                    
+                    let message = "\(String(describing:result))"
+                    print(message)
+                  
+                    DispatchQueue.main.async {
+                        if result == "success"
+                        {
+                            self.wsWorkExperince2()
+                          
+                        }
+                       
+
+                   
+                    }
+                }
+               
+            }
+
+        }
+    func wsWorkExperince2() {
+       
+        let parameters = [ "job_title":txtPreviouseJobTitle.text ?? "",
+                          "employer_name": txtprviouseEmployer.text ?? "",
+                          "tenure" :  txtPrivouseTenure.text ?? "",
+                          "job_description": txtPrviouseDescription.text ?? "",
+                          "user_id" : userid,
+                          "type" : 2  ] as [String : Any]
+    
+
+        let url = WSRequest.ConsultantAddWorkExp()
+        
+        WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
+            print(responseDict,err)
+            SVProgressHUD.dismiss()
+            if let result = responseDict["message"] as? String
+            {
+                
+                let message = "\(String(describing:result))"
+                print(message)
+              
+                DispatchQueue.main.async {
+                    if result == "success"
+                    {
+                        self.pushConsultantProfileVC()
+                        Loaf("Work experience Details updated sucessfully. Please Describe your self.", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                    }
+                }
+            }
+           
+        }
+
+    }
     // MARK:- Push Methods
     private func pushConsultantProfileVC() {
+        
         guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: ConsultantProfileVC.self)) as? ConsultantProfileVC else { return }
+        vc.userID = userid
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

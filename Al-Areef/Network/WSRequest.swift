@@ -29,7 +29,13 @@ public class WSRequest {
     class func ConsultantAddAcadmic2() -> String {
         return WSRequest.GetBaseURL() +  "api/ws-consultant-register-add-certificate"
     }
-   
+    class func ConsultantAddWorkExp() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-consultant-register-add-work-experience"
+    }
+    class func ConsultantAddProfileDesc() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-consultant-register-add-profile"
+    }
+
     }
    
    

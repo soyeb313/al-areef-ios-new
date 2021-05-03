@@ -206,6 +206,7 @@ class AcademicQualificationVC: UIViewController, UINavigationControllerDelegate 
     // MARK:- Push Methods
     private func pushWorkExperienceVC() {
         guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: WorkExperienceVC.self)) as? WorkExperienceVC else { return }
+        vc.userid = userID
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
