@@ -17,6 +17,8 @@ class AnswerQuestionsTextViewCell: UITableViewCell {
 
     @IBOutlet weak var txtVwInstruction: PlaceholderTextView!
     @IBOutlet weak var vwBack: UIView!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var vwDescription: UIView!
     weak var cellDelegate: GrowingCellProtocol?
     
     override func awakeFromNib() {
@@ -24,7 +26,15 @@ class AnswerQuestionsTextViewCell: UITableViewCell {
         
         vwBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         txtVwInstruction.delegate = self
-
+        txtVwInstruction.placeholder  = "Click here to start writing your answer".localiz()
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            vwDescription.semanticContentAttribute = .forceRightToLeft
+        }else
+        {
+            vwDescription.semanticContentAttribute = .forceLeftToRight
+        }
+        
+        lblDescription.text = "A question for the customer goes here?".localiz()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

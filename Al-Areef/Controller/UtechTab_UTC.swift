@@ -12,7 +12,15 @@ class UtechTab_UTC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            self.tabBar.semanticContentAttribute = .forceRightToLeft
+            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+        }else{
+            self.tabBar.semanticContentAttribute = .forceLeftToRight
+            self.navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+        }
+        
         UITabBar.appearance().tintColor = .blue
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.hexStringToUIColor(hex: "#303030")], for: .selected)

@@ -63,7 +63,7 @@ class CompanyRegistrationTwoVC: UIViewController {
     }
     
     // MARK:- Button Actions
-    @objc private func btnBackPressed() {
+    @IBAction func btnBackPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     

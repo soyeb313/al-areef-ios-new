@@ -80,7 +80,7 @@ class SelectPlanVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
         vc.consultType = .ConsultantRegistration
         self.navigationController?.pushViewController(vc, animated: false)
     }

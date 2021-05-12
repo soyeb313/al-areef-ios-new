@@ -51,7 +51,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="159" id="YBi-Nw-6lC"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="48"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="55"/>
                                                         <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -194,7 +194,7 @@
                                                                     <constraint firstAttribute="height" constant="47" id="FfH-4A-i7X"/>
                                                                     <constraint firstAttribute="width" constant="159" id="Ytp-jf-vLo"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="40"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="55"/>
                                                                 <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>

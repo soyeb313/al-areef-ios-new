@@ -61,7 +61,7 @@ class ChooseDurationVC: UIViewController {
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: WriteMessageVC.self)) as? WriteMessageVC else { return }
             self.navigationController?.pushViewController(vc, animated: false)
         case .VoiceMessage :
-            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
             vc.consultType = consultType
             self.navigationController?.pushViewController(vc, animated: false)
 //        case .PersonalMeeting :
@@ -124,7 +124,7 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDurationFooterCell") as? ChooseDurationFooterCell else{ return UITableViewCell() }
-            
+        cell.btnMore.setTitle("More consultants".localiz(), for: .normal)
         return cell.contentView
     }
     

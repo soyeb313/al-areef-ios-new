@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LanguageManager_iOS
 
 class LoginStepOneVC: UIViewController {
     var switchLanguage = LanguageDetails()
@@ -25,6 +26,19 @@ class LoginStepOneVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        setUpView()
+//        if  LanguageManager.shared.isRightToLeft == true {
+//
+//            switchLanguage.changeLanguageTo(lang: "ar")
+//                 UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//
+//            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+//                
+//        }else{
+//            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+//            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+//            switchLanguage.changeLanguageTo(lang: "en")
+//        }
     }
     
     // MARK:- SetUpView
@@ -33,7 +47,7 @@ class LoginStepOneVC: UIViewController {
         btnLoginCustomer.backgroundColor = .app_DarkGray
         btnLoginDoctor.setBorder(with: .app_Green, 1)
         btnLoginVisitor.setBorder(with: .app_Green, 1)
-        lblSignUpInfo.halfTextColorChange(fullText: switchLanguage.LocalString(key: "If you don't have an account? Sign Up".localiz()), changeText:"Sign Up",  fontColor: .app_Green)
+        lblSignUpInfo.halfTextColorChange(fullText: switchLanguage.LocalString(key: "If you don't have an account? Sign Up".localiz()), changeText:"Sign Up".localiz(),  fontColor: .app_Green)
        
         lblSignUpInfo.isUserInteractionEnabled = true
         lblSignUpInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))

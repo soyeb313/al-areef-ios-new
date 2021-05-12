@@ -26,10 +26,22 @@ class LanguageDetails: NSObject {
         bundle = Bundle(path: Bundle.main.path(forResource: language == "ar" ? language : "Base", ofType: "lproj")!)
 
         // bars direction
+//        if isArabic() {
+//            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//        } else {
+//            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+//        }
+        
         if isArabic() {
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            UIButton.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
         } else {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UIButton.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
         }
         
     }
@@ -67,22 +79,35 @@ class LanguageDetails: NSObject {
 
         // set language to user defaults
       //  Common.setValue(value: language as AnyObject, key: LANGUAGE_KEY)
-        UserDefaults.standard.set(language, forKey: LANGUAGE_KEY)
-        // set prefered languages for the app.
-        UserDefaults.standard.set([lang], forKey: "AppleLanguages")
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.set(language, forKey: LANGUAGE_KEY)
+//        // set prefered languages for the app.
+//        UserDefaults.standard.set([lang], forKey: "AppleLanguages")
+//        UserDefaults.standard.synchronize()
 
         // re-set the bundle object based on the new langauge
         bundle = Bundle(path: Bundle.main.path(forResource: language == "ar" ? language : "Base", ofType: "lproj")!)
 
         // app direction
-        if lang == "ar" {
-          
-             UIView.appearance().semanticContentAttribute = .forceRightToLeft
-        } else {
-          
-              UIView.appearance().semanticContentAttribute = .forceLeftToRight
-        }
+        
+//        if lang == "ar" {
+//            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//            UIButton.appearance().semanticContentAttribute = .forceRightToLeft
+//            UITextView.appearance().semanticContentAttribute = .forceRightToLeft
+//            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+//        } else {
+//            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+//            UIButton.appearance().semanticContentAttribute = .forceLeftToRight
+//            UITextView.appearance().semanticContentAttribute = .forceLeftToRight
+//            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
+//        }
+        
+//        if lang == "ar" {
+//
+//             UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//        } else {
+//
+//              UIView.appearance().semanticContentAttribute = .forceLeftToRight
+//        }
 
         //Log.info("Language changed to: \(language)")
     }

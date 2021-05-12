@@ -12,5 +12,8 @@ target 'Al-Areef' do
   pod 'Alamofire', '~> 4.9.1'
   pod 'SVProgressHUD'
   pod 'SDWebImage'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   pod 'Loaf'
+  pod 'FSCalendar'
 end

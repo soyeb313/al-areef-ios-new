@@ -32,7 +32,7 @@ class SignUpVC: UIViewController {
         btnSignUpCustomer.backgroundColor = .app_DarkGray
         btnSignUpDoctor.setBorder(with: .app_Green, 1)
         btnSignUpCompany.setBorder(with: .app_Green, 1)
-        lblLoginInfo.halfTextColorChange(fullText: "Already have an account? Log in".localiz(), changeText: "Log in", fontColor: .app_Green)
+        lblLoginInfo.halfTextColorChange(fullText: "Already have an account? Log in".localiz(), changeText: "Log in".localiz(), fontColor: .app_Green)
         lblLoginInfo.isUserInteractionEnabled = true
         lblLoginInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
         self.btnSignUpDoctor.setTitle("Sign up for doctor".localiz(), for: .normal)

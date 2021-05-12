@@ -16,6 +16,13 @@ class AppointmentReservationVC: UIViewController {
     @IBOutlet weak var btnEveningAppointment1          : UIButton!
     @IBOutlet weak var btnEveningAppointment2          : UIButton!
     @IBOutlet weak var btnEveningAppointment3          : UIButton!
+    @IBOutlet weak var btnNext                         : UIButton!
+    @IBOutlet weak var lblUserName                     : UILabel!
+    @IBOutlet weak var lblExperience                   : UILabel!
+    @IBOutlet weak var lblMorningAppointment           : UILabel!
+    @IBOutlet weak var lblEveningAppointment           : UILabel!
+    @IBOutlet weak var lblDate                         : UILabel!
+    @IBOutlet weak var vwMain           : UIView!
        
     
     // MARK:- Variables
@@ -40,6 +47,20 @@ class AppointmentReservationVC: UIViewController {
         setBtnEveningUI()
         btnMorningAppointment1.sendActions(for: .touchUpInside)
         btnEveningAppointment1.sendActions(for: .touchUpInside)
+        lblDate.text = "Thursday 19 April 2021".localiz()
+        lblUserName.text = "Dr. Anila Khaldoum".localiz()
+        lblExperience.text = "12 " + "years of experience".localiz()
+        lblMorningAppointment.text = "Morning Appointment".localiz()
+        lblEveningAppointment.text = "Evening Appointment".localiz()
+        btnNext.setTitle("Next".localiz(), for: .normal)
+        
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            vwMain.semanticContentAttribute = .forceRightToLeft
+        }else
+        {
+            vwMain.semanticContentAttribute = .forceLeftToRight
+        }
     }
     
     func setBtnMorningUI(){
@@ -97,7 +118,7 @@ class AppointmentReservationVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
         vc.consultType = consultType
         self.navigationController?.pushViewController(vc, animated: false)
     }

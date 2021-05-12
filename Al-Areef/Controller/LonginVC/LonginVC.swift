@@ -49,7 +49,7 @@ class LonginVC: UIViewController {
        
         viewBackUserID.setBorder(with: .app_Green, 1)
         viewBackPassword.setBorder(with: .app_Green, 1)
-        lblSignUpInfo.halfTextColorChange(fullText:  "If you don't have an account? Sign Up".localiz(), changeText:"SignUp".localiz() , fontColor: .app_Green)
+        lblSignUpInfo.halfTextColorChange(fullText: switchLanguage.LocalString(key: "If you don't have an account? Sign Up".localiz()), changeText:"Sign Up".localiz(),  fontColor: .app_Green)
         lblSignUpInfo.isUserInteractionEnabled = true
         lblSignUpInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
         self.hideKeyboardWhenTappedAround()
@@ -127,10 +127,13 @@ class LonginVC: UIViewController {
                         Utility.Save_Value_Userdefauts(Key: User_defaults_Constants.city, Value: city ?? "")
                         UserDefaults.standard.set(true, forKey: User_defaults_Constants.LOGGED_IN)
                         UserDefaults.standard.synchronize()
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
-                        self.navigationController?.pushViewController(vc, animated: true)
-                        Loaf("You have login  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                        
+                        self.pushLInfoSliderVC()
+                        
+//                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//                        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
+//                        self.navigationController?.pushViewController(vc, animated: true)
+//                        Loaf("You have login  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
                        
                     
                     }
@@ -144,6 +147,14 @@ class LonginVC: UIViewController {
         }
 
     }
+    
+    // MARK:- Push Methods
+    private func pushLInfoSliderVC() {
+        guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: InfoSliderVC.self)) as? InfoSliderVC else { return }
+        vc.isFromLogin = true
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     // MARK:- ReceiveMemoryWarning
     override func didReceiveMemoryWarning() {
         debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")

@@ -11,6 +11,7 @@ import UIKit
 extension UIColor {
     static var app_AppBackgroundColor   = UIColor.hexStringToUIColor(hex: "#EBF3F0")
     static var app_Green                = UIColor.hexStringToUIColor(hex: "#04B18D")
+    static var app_Gradient            = UIColor.hexStringToUIColor(hex: "#F1FFFA")
     static var app_DarkGray             = UIColor.hexStringToUIColor(hex: "#575757")
     static var app_MdiumTextColor       = UIColor.hexStringToUIColor(hex: "#777777")
 

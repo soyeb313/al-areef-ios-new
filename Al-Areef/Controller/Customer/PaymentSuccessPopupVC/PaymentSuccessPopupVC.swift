@@ -46,6 +46,7 @@ class PaymentSuccessPopupVC: UIViewController {
     
     @IBAction func btnContinuePressed(_ sender : UIButton){
         paymentSuccessDelegate?.PaymentSuccess(true)
+        self.dismiss(animated: false, completion: nil)
     }
     /*
     // MARK: - Navigation

@@ -18,6 +18,14 @@ class CustomerRegistrationVC: UIViewController {
     @IBOutlet weak var txtGender: SkyFloatingLabelTextField!
     @IBOutlet weak var txtFullName: SkyFloatingLabelTextField!
     
+    @IBOutlet weak var txtStreet: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtArea: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtCountry: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtCityTown: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtSelectLanguage: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var btnComplete: UIButton!
+    
     @IBOutlet weak var vwName: UIView!
     @IBOutlet weak var vwGender: UIView!
     @IBOutlet weak var vwIdNumber: UIView!
@@ -27,8 +35,19 @@ class CustomerRegistrationVC: UIViewController {
     @IBOutlet weak var vwPassword: UIView!
     @IBOutlet weak var lblRegistration: UILabel!
     
+    @IBOutlet weak var vwStreet: UIView!
+    @IBOutlet weak var vwArea: UIView!
+    @IBOutlet weak var vwCountry: UIView!
+    @IBOutlet weak var vwCityTown: UIView!
+    @IBOutlet weak var vwSelectLanguage: UIView!
+    
+ 
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblSelectLanguage: UILabel!
+    
+    
     // MARK:- Outlets
-    var OTP = ""
+    var OTP = "12345"
     // MARK:- Variables
     
     // MARK:- View Life Cycle
@@ -44,7 +63,7 @@ class CustomerRegistrationVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.hideKeyboardWhenTappedAround()
-        lblRegistration.text = "Registration".localiz()
+        
         vwName.setBorder(with: .app_Green, 1)
         vwGender.setBorder(with: .app_Green, 1)
         vwIdNumber.setBorder(with: .app_Green, 1)
@@ -52,13 +71,42 @@ class CustomerRegistrationVC: UIViewController {
         vwCity.setBorder(with: .app_Green, 1)
         vwPhoneNumber.setBorder(with: .app_Green, 1)
         vwPassword.setBorder(with: .app_Green, 1)
+        vwStreet.setBorder(with: .app_Green, 1)
+        vwArea.setBorder(with: .app_Green, 1)
+        vwCountry.setBorder(with: .app_Green, 1)
+        vwCityTown.setBorder(with: .app_Green, 1)
+        vwSelectLanguage.setBorder(with: .app_Green, 1)
         
         
+        txtStreet.placeholder = "Street".localiz()
+        txtArea.placeholder = "Area".localiz()
+        txtCountry.placeholder = "Country".localiz()
+        txtCityTown.placeholder = "City Town".localiz()
+        txtSelectLanguage.placeholder = "Select Language".localiz()
         
+        txtPasword.placeholder = "Password".localiz()
+        txtPhoneNumber.placeholder = "Your phone number".localiz()
+        txtUserId.placeholder = "City".localiz()
+        txtEmail.placeholder = "Your email address".localiz()
+        txtSpecialIdNumber.placeholder = "Special ID number".localiz()
+        txtGender.placeholder = "Your Gender".localiz()
+        txtFullName.placeholder = "Fat-full".localiz()
+        lblRegistration.text = "Registration".localiz()
+        
+        lblAddress.text = "Address".localiz()
+        lblSelectLanguage.text = "Preferred Language".localiz()
+        btnComplete.setTitle("Completes".localiz(), for: .normal)
     }
     
     // MARK:- Button Actions
+    
+    @IBAction func btnBackPressed() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func btnCompeteRegisterationTapped(_ sender : UIButton){
+        self.pushOTPVC()
+        /*
         
         if self.txtFullName.text  == "" {
             Loaf("Please enter full name.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
@@ -88,7 +136,7 @@ class CustomerRegistrationVC: UIViewController {
             SVProgressHUD.show()
             wsSendOtp()
            
-        }
+        }*/
         
     }
     func wsSendOtp() {

@@ -12,12 +12,15 @@ struct Tutorial {
 }
 
 import UIKit
+import Loaf
 
 class InfoSliderVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var btnSkip: UIButton!
+    
+    var isFromLogin = false
     
     // MARK:- Variables
     let tutorials = [
@@ -42,6 +45,7 @@ class InfoSliderVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         btnSkip.setBorder(with: .app_Green, 1)
+        btnSkip.setTitle("Skip".localiz(), for: .normal)
     }
     
     
@@ -69,7 +73,12 @@ class InfoSliderVC: UIViewController {
     
     // MARK:- Button Actions
     @IBAction func btnSkipTapped(_ sender : UIButton){
-        pushRegistrationStepTwoVC()
+        if isFromLogin {
+            appDelegate.setDashBoard()
+        }else{
+            pushRegistrationStepTwoVC()
+        }
+        
     }
     
     @IBAction func pageControlSelectionAction(_ sender: UIPageControl) {
@@ -80,6 +89,13 @@ class InfoSliderVC: UIViewController {
     private func pushRegistrationStepTwoVC() {
         guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: RegistrationStepTwoVC.self)) as? RegistrationStepTwoVC else { return }
         self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    func setDashboard(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
+        self.navigationController?.pushViewController(vc, animated: true)
+        Loaf("You have login  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
     }
     
     // MARK:- Custom Methods

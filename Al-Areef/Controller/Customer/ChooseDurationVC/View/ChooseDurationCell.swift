@@ -10,8 +10,20 @@ import UIKit
 class ChooseDurationCell: UITableViewCell {
 
     @IBOutlet weak var vwBack                         : UIView!
+    @IBOutlet weak var vwYearsExperience              : UIView!
+    @IBOutlet weak var vwCourses                      : UIView!
+    @IBOutlet weak var vwReviews                      : UIView!
+    @IBOutlet weak var vwPatientsServed               : UIView!
     @IBOutlet weak var btnBookAppointment             : UIButton!
-    
+    @IBOutlet weak var lblTitleYearsExperience        : UILabel!
+    @IBOutlet weak var lblTitleCourses                : UILabel!
+    @IBOutlet weak var lblTitleReviews                : UILabel!
+    @IBOutlet weak var lblTitlePatientsServed         : UILabel!
+    @IBOutlet weak var lblTitleYearsExperienceCnt     : UILabel!
+    @IBOutlet weak var lblTitleCoursesCnt             : UILabel!
+    @IBOutlet weak var lblTitleReviewsCnt             : UILabel!
+    @IBOutlet weak var lblTitlePatientsServedCnt      : UILabel!
+    @IBOutlet weak var lblBottom                      : UILabel!
     @IBOutlet weak var lblExperince: UILabel!
     @IBOutlet weak var lblConsultantName: UILabel!
     @IBOutlet weak var lblCQ: UILabel!
@@ -25,6 +37,25 @@ class ChooseDurationCell: UITableViewCell {
         self.lblConsultantName.text = "Dr. Khalid Ahmed".localiz()
         
         btnBookAppointment.setTitle("Book an Appointment".localiz(), for: .normal)
+        
+        self.vwYearsExperience.setCornerRadius(radius: 5)
+        self.vwYearsExperience.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
+        
+        self.vwCourses.setCornerRadius(radius: 5)
+        self.vwCourses.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
+        
+        self.vwReviews.setCornerRadius(radius: 5)
+        self.vwReviews.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
+        
+        self.vwPatientsServed.setCornerRadius(radius: 5)
+        self.vwPatientsServed.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
+        
+        
+        lblTitleYearsExperience.text = "years experience".localiz()
+        lblTitleCourses.text = "Courses".localiz()
+        lblTitleReviews.text = "Reviews".localiz()
+        lblTitlePatientsServed.text = "Patients served".localiz()
+        lblBottom.text = "Please specify how long you want to reserve the appointment form for each more consultant".localiz()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

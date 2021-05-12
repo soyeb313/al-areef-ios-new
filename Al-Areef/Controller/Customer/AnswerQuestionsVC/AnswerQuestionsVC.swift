@@ -39,6 +39,7 @@ class AnswerQuestionsVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         self.btnNext.setShadow(shadowColor: UIColor.lightGray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
+        self.btnNext.setTitle("Next".localiz(), for: .normal)
     }
     
     // MARK:- Button Actions
@@ -103,6 +104,10 @@ extension AnswerQuestionsVC : UITableViewDelegate, UITableViewDataSource{
             return cell
         }else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AnswerQuestionsCell.self), for: indexPath) as? AnswerQuestionsCell else{ return UITableViewCell() }
+            cell.lblQuestion.text = "A question for the customer goes here?".localiz()
+            cell.lblNo.text = "No".localiz()
+            cell.lblYes.text = "Yes".localiz()
+            cell.lblDontKnow.text = "I do not know".localiz()
             return cell
         }
        

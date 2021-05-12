@@ -13,6 +13,10 @@ class OTPVC: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var viewOTP          : OTPView!
     @IBOutlet weak var btnResent        : UIButton!
+    @IBOutlet weak var lblDescrition        : UILabel!
+    @IBOutlet weak var lblEnterCode        : UILabel!
+    
+    @IBOutlet weak var btnComplete: UIButton!
     var fullName = ""
     var gender = ""
     var email = ""
@@ -38,6 +42,10 @@ class OTPVC: UIViewController {
         self.viewOTP.setUpView(5, strPinValue: otp)
         self.btnResent.setCornerRadius(radius: 5)
         self.btnResent.setShadow(shadowColor: UIColor.lightGray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
+        btnComplete.setTitle("Completes".localiz(), for: .normal)
+        btnResent.setTitle("Resend".localiz(), for: .normal)
+        lblDescrition.text = "If you have not received your OTP code, you can press The re-transmitter button below to get a new code.".localiz()
+        lblEnterCode.text = "Enter the OTP code".localiz()
     }
     
     // MARK:- Button Actions
@@ -77,14 +85,16 @@ class OTPVC: UIViewController {
         }
     }
     @IBAction func btnResnet(_ sender: Any) {
-        if self.viewOTP.getPin() == "" {
-            Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
-            
-        }else
-        {
-            SVProgressHUD.show()
-            wsReSendOtp()
-        }
+        pushQuestionnaireFormVC()
+//        if self.viewOTP.getPin() == "" {
+//            Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+//            
+//        }else
+//        {
+//            SVProgressHUD.show()
+//            
+//            wsReSendOtp()
+//        }
         
         
     }
@@ -142,6 +152,12 @@ class OTPVC: UIViewController {
         
     }
     
+    func pushQuestionnaireFormVC(){
+        guard let vc = UIStoryboard.Customer.instantiateViewController(withIdentifier: String(describing: QuestionnaireFormVC.self)) as? QuestionnaireFormVC else { return }
+        
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     func wsCustomerRegistration() {
         
         
@@ -182,10 +198,9 @@ class OTPVC: UIViewController {
                         Utility.Save_Value_Userdefauts(Key: User_defaults_Constants.city, Value: city ?? "")
                         UserDefaults.standard.set(true, forKey: User_defaults_Constants.LOGGED_IN)
                         UserDefaults.standard.synchronize()
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
-                        self.navigationController?.pushViewController(vc, animated: true)
-                        Loaf("You have register  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                        guard let vc = UIStoryboard.Customer.instantiateViewController(withIdentifier: String(describing: QuestionnaireFormVC.self)) as? QuestionnaireFormVC else { return }
+                        
+                        self.navigationController?.pushViewController(vc, animated: false)
                         
                         
                     }

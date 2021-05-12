@@ -90,15 +90,15 @@ class MakePaymentVC: UIViewController {
     
     @IBAction func btnAddToCartPressed(_ sender : UIButton){
         guard let PopVC = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
-        PopVC.view.frame = self.view.frame
+        //PopVC.view.frame = self.view.frame
         PopVC.paymentSuccessDelegate = self
-        self.addChild(PopVC)
-        self.view.addSubview(PopVC.view)
-        PopVC.didMove(toParent: self)
+//        self.addChild(PopVC)
+//        self.view.addSubview(PopVC.view)
+//        PopVC.didMove(toParent: self)
 //        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
 //        vc.paymentSuccessDelegate = self
-//        vc.modalPresentationStyle = .overCurrentContext
-//        self.present(vc, animated: false)
+        PopVC.modalPresentationStyle = .overCurrentContext
+        self.present(PopVC, animated: false)
     }
     
     // MARK:- Push Methods

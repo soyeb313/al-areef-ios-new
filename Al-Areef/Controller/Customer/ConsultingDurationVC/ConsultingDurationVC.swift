@@ -26,6 +26,9 @@ class ConsultingDurationVC: UIViewController {
     @IBOutlet weak var icon1   : UIImageView!
     @IBOutlet weak var icon2   : UIImageView!
     @IBOutlet weak var icon3   : UIImageView!
+    @IBOutlet weak var iconPrice1   : UIImageView!
+    @IBOutlet weak var iconPrice2   : UIImageView!
+    @IBOutlet weak var iconPrice3   : UIImageView!
     
     // MARK:- Variables
     var consultType : ConsultingType?
@@ -77,7 +80,7 @@ class ConsultingDurationVC: UIViewController {
             self.icon3.image = #imageLiteral(resourceName: "keyboardGreen")
         }else{
             self.vwAddWords.isHidden = true
-            lblPrice1.text = "100 USD".localiz()
+            lblPrice1.text = "10 USD".localiz()
             lblPrice2.text =  "20 USD".localiz()
             lblPrice3.text  = "30 USD".localiz()
             lblMin1.text = "10 Minutes".localiz()
@@ -102,6 +105,24 @@ class ConsultingDurationVC: UIViewController {
     
     @IBAction func btnNextTapped(_ sender : UIButton){
         pushChooseDurationVC()
+    }
+    
+    @IBAction func btnSelectOptionTapped(_ sender : UIButton){
+        resetOtpIcon()
+        switch sender.tag {
+        case 1:
+            self.iconPrice1.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
+        case 2:
+            self.iconPrice2.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
+        default:
+            self.iconPrice3.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
+        }
+    }
+    
+    func resetOtpIcon(){
+        self.iconPrice1.image = #imageLiteral(resourceName: "icon_radio_button_2_inactive")
+        self.iconPrice2.image = #imageLiteral(resourceName: "icon_radio_button_2_inactive")
+        self.iconPrice3.image = #imageLiteral(resourceName: "icon_radio_button_2_inactive")
     }
     
     @IBAction func btnAddWordsTapped(_ sender : UIButton){

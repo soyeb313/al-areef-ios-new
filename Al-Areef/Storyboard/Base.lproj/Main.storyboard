@@ -11,6 +11,12 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--SplashVC-->
@@ -22,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="irx-0s-o5F">
-                                <rect key="frame" x="124" y="370" width="166" height="166"/>
+                                <rect key="frame" x="103.5" y="349.5" width="207" height="207"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-jJ-HmQ">
                                 <rect key="frame" x="273" y="64" width="121" height="38"/>
@@ -78,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-NR-bd1">
-                                <rect key="frame" x="124" y="370" width="166" height="166"/>
+                                <rect key="frame" x="103.5" y="349.5" width="207" height="207"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
                                 <state key="normal">
@@ -106,11 +112,11 @@
                             <constraint firstItem="a7P-jJ-HmQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eVk-we-JnL"/>
                             <constraint firstItem="PSZ-NR-bd1" firstAttribute="centerY" secondItem="irx-0s-o5F" secondAttribute="centerY" id="jVz-fw-7Dg"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="bottom" secondItem="a7P-jJ-HmQ" secondAttribute="bottom" id="pJH-UN-QzR"/>
-                            <constraint firstItem="irx-0s-o5F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="r51-nP-Jwi"/>
+                            <constraint firstItem="irx-0s-o5F" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="r51-nP-Jwi"/>
                             <constraint firstItem="PSZ-NR-bd1" firstAttribute="centerX" secondItem="irx-0s-o5F" secondAttribute="centerX" id="rqO-y4-M73"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxJ-oc-ujj" secondAttribute="trailing" constant="20" id="tRy-m2-XIQ"/>
                             <constraint firstItem="zbl-QR-NGo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xmf-0t-Kjk"/>
-                            <constraint firstItem="irx-0s-o5F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="zE4-UD-Edl"/>
+                            <constraint firstItem="irx-0s-o5F" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="zE4-UD-Edl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9by-H1-rSa"/>
@@ -167,6 +173,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="GyM-3L-96O"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                 <state key="normal" title="Log in as customer">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -180,6 +187,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="ciu-oN-lOM"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                 <state key="normal" title="Log in as doctor">
                                                                     <color key="titleColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -190,6 +198,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="inT-OX-tsi"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                 <state key="normal" title="Continue as visitor">
                                                                     <color key="titleColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -210,7 +219,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you don't have an account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkh-SH-m00">
                                                         <rect key="frame" x="10" y="20" width="394" height="88"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -315,7 +324,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxp-qR-23f" customClass="SkyFloatingLabelTextField" customModule="Al_Areef" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="5" width="311" height="40"/>
                                                                         <color key="textColor" red="0.015686274510000001" green="0.69411764710000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="User ID"/>
@@ -350,7 +359,7 @@
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMU-9R-0pt" customClass="SkyFloatingLabelTextField" customModule="Al_Areef" customModuleProvider="target">
                                                                         <rect key="frame" x="10" y="5" width="311" height="40"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
@@ -386,6 +395,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="o3U-QO-Tcp"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                 <state key="normal" title="Log in as customer">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -409,7 +419,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you don't have an account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwO-Io-Gh8">
                                                         <rect key="frame" x="10" y="20" width="394" height="88"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -498,6 +508,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="QNc-rH-ghq"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                 <state key="normal" title="Sign up for customer">
                                                                     <color key="titleColor" red="0.99607843159999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -511,6 +522,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="oFQ-IN-WDF"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                 <state key="normal" title="Sign up for doctor">
                                                                     <color key="titleColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -524,6 +536,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="SUT-vr-kHR"/>
                                                                 </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                 <state key="normal" title="Sign up for Company">
                                                                     <color key="titleColor" red="0.34117650989999998" green="0.34117650989999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
@@ -547,7 +560,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? Log in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOB-8z-HIr">
                                                         <rect key="frame" x="10" y="20" width="394" height="88"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -618,7 +631,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="UtechTab_UTC" automaticallyAdjustsScrollViewInsets="NO" id="Y2K-oP-c3J" customClass="UtechTab_UTC" customModule="Al_Areef" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="Image-8" id="vrs-9C-Sxo">
+                    <tabBar key="tabBar" contentMode="center" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="Image-8" id="vrs-9C-Sxo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -664,10 +677,10 @@
     </scenes>
     <designables>
         <designable name="TMU-9R-0pt">
-            <size key="intrinsicContentSize" width="62.5" height="17"/>
+            <size key="intrinsicContentSize" width="62" height="17"/>
         </designable>
         <designable name="bxp-qR-23f">
-            <size key="intrinsicContentSize" width="48" height="18.5"/>
+            <size key="intrinsicContentSize" width="47" height="18"/>
         </designable>
     </designables>
     <resources>
@@ -676,7 +689,7 @@
         <image name="Image-12" width="25" height="25"/>
         <image name="Image-8" width="80" height="40"/>
         <image name="Image-9" width="25" height="25"/>
-        <image name="Logo" width="294" height="294"/>
+        <image name="Logo" width="500.5" height="635.5"/>
         <image name="arrowdown" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

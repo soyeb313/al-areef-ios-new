@@ -12,6 +12,7 @@ class DasBoardCustViewController: UIViewController {
     @IBOutlet weak var tblServices: UITableView!
     @IBOutlet weak var btnViewappoinments: UIButton!
     @IBOutlet weak var viewBG             : UIView!
+    @IBOutlet weak var viewHeader             : UIView!
     var arrTitle = ["Consulting personal","Consulting comapanies", "Courses", "Al-Dhasal bank", "Ask us","Adviser","Who we are","Conatact Us"]
     var arrBtnTitle = ["The beginning","Hands", "The beginning", "Ask us", "The beginning","Better","Call","Show"]
     var arrImages : [UIImage] = [#imageLiteral(resourceName: "Image-1"),#imageLiteral(resourceName: "Image-2"),#imageLiteral(resourceName: "Image-3"),#imageLiteral(resourceName: "Image-4"),#imageLiteral(resourceName: "Image-2"),#imageLiteral(resourceName: "Image-6"),#imageLiteral(resourceName: "Image-5"),#imageLiteral(resourceName: "Image-7")]
@@ -23,20 +24,26 @@ class DasBoardCustViewController: UIViewController {
         self.btnViewappoinments.layer.borderColor = UIColor.white.cgColor
         self.btnViewappoinments.setTitle("View appointments".localiz(), for: .normal)
         setUpView()
+        viewHeader.semanticContentAttribute = .forceLeftToRight
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationController?.isNavigationBarHidden = true
+        
+        
     }
     
     // MARK:- SetUpView
     private func setUpView() {
-        
+        self.tblServices.sectionHeaderHeight = UITableView.automaticDimension
+        self.tblServices.estimatedSectionHeaderHeight = 35
         DispatchQueue.main.async {
-            self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.white.cgColor])
+            self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.app_Gradient.cgColor,UIColor.app_Gradient.cgColor])
             
         }
+        
+        
 
     }
     
@@ -64,9 +71,22 @@ extension DasBoardCustViewController : UITableViewDelegate, UITableViewDataSourc
         cell.imgServices.image = arrImages[indexPath.row]
         cell.btnAction.layer.cornerRadius = 5
         cell.btnAction.layer.masksToBounds = true
+        cell.vwBack.semanticContentAttribute = .forceLeftToRight
+
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         pushConsultingPersonalVC()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeHeaderCell") as? HomeHeaderCell else{ return UITableViewCell() }
+            
+        return cell.contentView
     }
 }

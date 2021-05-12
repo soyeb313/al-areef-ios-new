@@ -11,6 +11,8 @@ class ConsultingListHeaderCell: UITableViewCell {
 
     @IBOutlet weak var lblTitle                       : UILabel!
     @IBOutlet weak var lblSubTitle                    : UILabel!
+    @IBOutlet weak var lblName                    : UILabel!
+    @IBOutlet weak var lblID                    : UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

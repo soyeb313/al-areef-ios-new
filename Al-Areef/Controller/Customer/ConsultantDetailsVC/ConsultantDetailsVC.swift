@@ -26,7 +26,9 @@ class ConsultantDetailsVC: UIViewController {
     @IBOutlet weak var lblQualityofservice: UILabel!
     @IBOutlet weak var lblConsultantEvaluation: UILabel!
     @IBOutlet weak var txtVwAdditionInfo: PlaceholderTextView!
-    
+    @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet weak var btnBookAnotherAppointment: UIButton!
+    @IBOutlet weak var lblAppointmentDate             : UILabel!
     
     // MARK:- Variables
     var consultType : ConsultingType?
@@ -66,8 +68,9 @@ class ConsultantDetailsVC: UIViewController {
         lblQualityofservice.text = "Quality of service".localiz()
         lblConsultantEvaluation.text = "Consultant evaluation".localiz()
         txtVwAdditionInfo.placeholder = "Please write additional notes here".localiz()
-        
-        
+        btnSubmit.setTitle("Submit".localiz(), for: .normal)
+        btnBookAnotherAppointment.setTitle("Book another appointment".localiz(), for: .normal)
+        lblAppointmentDate.text = "2021 Thursday 19 April".localiz()
     }
     
     // MARK:- Button Actions
@@ -87,7 +90,7 @@ class ConsultantDetailsVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
         vc.consultType = consultType
         self.navigationController?.pushViewController(vc, animated: false)
     }

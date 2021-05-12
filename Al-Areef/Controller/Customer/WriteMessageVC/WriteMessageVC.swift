@@ -18,6 +18,8 @@ class WriteMessageVC: UIViewController {
     @IBOutlet weak var lblPrice2: UILabel!
     @IBOutlet weak var vwPrice1: UIView!
     @IBOutlet weak var vwPrice2: UIView!
+    @IBOutlet weak var iconPrice1   : UIImageView!
+    @IBOutlet weak var iconPrice2   : UIImageView!
     
     // MARK:- Variables
     var consultType : ConsultingType?
@@ -69,10 +71,27 @@ class WriteMessageVC: UIViewController {
         self.vwPrice2.isHidden = false
     }
     
+    @IBAction func btnSelectOptionTapped(_ sender : UIButton){
+        resetOtpIcon()
+        switch sender.tag {
+        case 1:
+            self.iconPrice1.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
+        default :
+            self.iconPrice2.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
+        
+        }
+    }
+    
+    func resetOtpIcon(){
+        self.iconPrice1.image = #imageLiteral(resourceName: "icon_radio_button_2_inactive")
+        self.iconPrice2.image = #imageLiteral(resourceName: "icon_radio_button_2_inactive")
+        
+    }
+    
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
         vc.consultType = consultType
         self.navigationController?.pushViewController(vc, animated: false)
     }

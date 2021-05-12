@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Loaf
 import Photos
 import AssetsLibrary
 import Alamofire

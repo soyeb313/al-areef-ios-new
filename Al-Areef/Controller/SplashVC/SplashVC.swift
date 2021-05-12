@@ -21,6 +21,13 @@ class SplashVC: UIViewController {
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // switchLanguage.changeLanguageTo(lang: "ar")
+        UserData.saveData(.language, "ar")
+        // set prefered languages for the app.
+        UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        
         let is_login = UserDefaults.standard.bool(forKey: User_defaults_Constants.LOGGED_IN)
         if is_login == true
         {
@@ -66,17 +73,16 @@ class SplashVC: UIViewController {
     // MARK:- Push Methods
     private func pushLoginVC() {
         // change the language
-    LanguageManager.shared.setLanguage(language: selectedLanguage)
-        if  LanguageManager.shared.isRightToLeft == true {
-                 UIView.appearance().semanticContentAttribute = .forceRightToLeft
-           }else{
-            UIView.appearance().semanticContentAttribute = .forceLeftToRight
-    
-        }
-       
-        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LoginStepOneVC.self)) as? LoginStepOneVC else { return }
-        self.navigationController?.pushViewController(vc, animated: false)
+        LanguageManager.shared.setLanguage(language: selectedLanguage)
+//        appDelegate.setSplash()
+//        appDelegate.setAppearance()
         
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LoginStepOneVC.self)) as? LoginStepOneVC else { return }
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+        appDelegate.setLogin()
+       
     }
     
     @IBAction func btnLang(_ sender: UIButton) {
@@ -89,6 +95,12 @@ class SplashVC: UIViewController {
         if lblLanguage.text == "Arabic" {
             self.lblLanguage.text = "English"
             self.btnLang.setTitle("Arabic", for: .normal)
+            switchLanguage.changeLanguageTo(lang: "en")
+            
+            UserData.saveData(.language, "en")
+            // set prefered languages for the app.
+//            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+//            UserDefaults.standard.synchronize()
        // switchLanguage.changeLanguageTo(lang: "ar")
                   //  self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
             selectedLanguage = .en
@@ -96,6 +108,13 @@ class SplashVC: UIViewController {
             self.lblLanguage.text = "Arabic"
             self.btnLang.setTitle("English", for: .normal)
             selectedLanguage = .ar
+            
+            switchLanguage.changeLanguageTo(lang: "ar")
+            UserData.saveData(.language, "ar")
+        
+            // set prefered languages for the app.
+//            UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
+//            UserDefaults.standard.synchronize()
 
         }
    

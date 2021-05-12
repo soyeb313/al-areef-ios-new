@@ -12,7 +12,9 @@ class ConsultingListVC: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var tableView          : UITableView!
     @IBOutlet weak var viewBG             : UIView!
-    
+    @IBOutlet weak var viewHeader             : UIView!
+    @IBOutlet weak var lblHeader             : UILabel!
+    //@IBOutlet weak var btnViewappoinments: UIButton!
     // MARK:- Variables
     
     // MARK:- View Life Cycle
@@ -32,13 +34,14 @@ class ConsultingListVC: UIViewController {
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionHeaderHeight = 35
         DispatchQueue.main.async {
-            self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.white.cgColor])
+            self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.app_Gradient.cgColor])
         }
-
+        viewHeader.semanticContentAttribute = .forceLeftToRight
+        lblHeader.text = "Counselling Topics".localized
     }
     
     // MARK:- Button Actions
-    @objc private func btnBackPressed() {
+    @IBAction func btnBackPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -82,6 +85,7 @@ extension ConsultingListVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ConsultingListCell.self), for: indexPath) as? ConsultingListCell else{ return UITableViewCell() }
+        cell.vwBack.semanticContentAttribute = .forceLeftToRight
         return cell
     }
     

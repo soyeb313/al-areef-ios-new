@@ -1,0 +1,325 @@
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "07I-W5-FlW"; */
+"07I-W5-FlW.text" = "Year";
+
+/* Class = "UIButton"; normalTitle = "The Bigining"; ObjectID = "26k-3O-QZG"; */
+"26k-3O-QZG.normalTitle" = "The Bigining";
+
+/* Class = "UIButton"; normalTitle = "View appointments"; ObjectID = "3nl-7R-Ao0"; */
+"3nl-7R-Ao0.normalTitle" = "View appointments";
+
+/* Class = "UILabel"; text = "Dr. Khalid Ahmed"; ObjectID = "4KL-1w-PWd"; */
+"4KL-1w-PWd.text" = "Dr. Khalid Ahmed";
+
+/* Class = "UILabel"; text = "How was your experience with our consultant Dr.Anila Khaldoum"; ObjectID = "4Qj-Y5-wNJ"; */
+"4Qj-Y5-wNJ.text" = "How was your experience with our consultant Dr.Anila Khaldoum";
+
+/* Class = "UILabel"; text = "10 minutes"; ObjectID = "4iw-SA-WGe"; */
+"4iw-SA-WGe.text" = "10 minutes";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "6of-SH-EpC"; */
+"6of-SH-EpC.text" = "No";
+
+/* Class = "UIButton"; normalTitle = "+ Add words"; ObjectID = "7Z6-J3-3xH"; */
+"7Z6-J3-3xH.normalTitle" = "+ Add words";
+
+/* Class = "UILabel"; text = "Payment successful"; ObjectID = "8bA-VN-TK9"; */
+"8bA-VN-TK9.text" = "Payment successful";
+
+/* Class = "UILabel"; text = "Advisor"; ObjectID = "8dZ-Pf-hFO"; */
+"8dZ-Pf-hFO.text" = "Advisor";
+
+/* Class = "UILabel"; text = "Thank you for payment and you can now up to record your message."; ObjectID = "8tJ-Qf-RWb"; */
+"8tJ-Qf-RWb.text" = "Thank you for payment and you can now up to record your message.";
+
+/* Class = "UIButton"; normalTitle = "View appointments"; ObjectID = "AW7-C4-Zah"; */
+"AW7-C4-Zah.normalTitle" = "View appointments";
+
+/* Class = "UIButton"; normalTitle = "11 am"; ObjectID = "Aas-MR-k4U"; */
+"Aas-MR-k4U.normalTitle" = "11 am";
+
+/* Class = "UIButton"; normalTitle = "Auto advisor from AI Dhara"; ObjectID = "BrU-s5-l6H"; */
+"BrU-s5-l6H.normalTitle" = "Auto advisor from AI Dhara";
+
+/* Class = "UIButton"; normalTitle = "11 am"; ObjectID = "CZE-bU-rX3"; */
+"CZE-bU-rX3.normalTitle" = "11 am";
+
+/* Class = "UILabel"; text = "20 duas."; ObjectID = "Dzq-tV-qtK"; */
+"Dzq-tV-qtK.text" = "20 duas.";
+
+/* Class = "UILabel"; text = "2021 Thursday 19 April"; ObjectID = "FMS-ig-eOe"; */
+"FMS-ig-eOe.text" = "2021 Thursday 19 April";
+
+/* Class = "UILabel"; text = "12 years of experience"; ObjectID = "FO9-OE-9Aj"; */
+"FO9-OE-9Aj.text" = "12 years of experience";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "FhY-IC-WQe"; */
+"FhY-IC-WQe.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "9 am"; ObjectID = "GSQ-Sk-yUW"; */
+"GSQ-Sk-yUW.normalTitle" = "9 am";
+
+/* Class = "UILabel"; text = "Using the existing cards"; ObjectID = "H2c-X6-xmi"; */
+"H2c-X6-xmi.text" = "Using the existing cards";
+
+/* Class = "UILabel"; text = " Thursday 19 April 2021"; ObjectID = "Hfz-32-uhD"; */
+"Hfz-32-uhD.text" = " Thursday 19 April 2021";
+
+/* Class = "UILabel"; text = "Consulting Personal"; ObjectID = "I3s-7B-dtz"; */
+"I3s-7B-dtz.text" = "Consulting Personal";
+
+/* Class = "UILabel"; text = "Month"; ObjectID = "ISd-m1-IIu"; */
+"ISd-m1-IIu.text" = "Month";
+
+/* Class = "UITextField"; placeholder = "Search Location"; ObjectID = "Ian-oE-XPn"; */
+"Ian-oE-XPn.placeholder" = "Search Location";
+
+/* Class = "UILabel"; text = "60 dollars"; ObjectID = "Jeq-xy-iig"; */
+"Jeq-xy-iig.text" = "60 dollars";
+
+/* Class = "UILabel"; text = "30 dollars"; ObjectID = "KQR-Da-cIw"; */
+"KQR-Da-cIw.text" = "30 dollars";
+
+/* Class = "UIButton"; normalTitle = "Add a card"; ObjectID = "KWz-Fw-5K5"; */
+"KWz-Fw-5K5.normalTitle" = "Add a card";
+
+/* Class = "UILabel"; text = "You can get advice online from a therapist \nmyself just one click "; ObjectID = "Lzc-eX-lZz"; */
+"Lzc-eX-lZz.text" = "You can get advice online from a therapist \nmyself just one click ";
+
+/* Class = "UILabel"; text = "1234-xxx-xxxx-xxx VISA"; ObjectID = "Mxl-Eu-IuE"; */
+"Mxl-Eu-IuE.text" = "1234-xxx-xxxx-xxx VISA";
+
+/* Class = "UILabel"; text = "1000 words"; ObjectID = "NR8-Zz-6mM"; */
+"NR8-Zz-6mM.text" = "1000 words";
+
+/* Class = "UIButton"; normalTitle = "The Bigining"; ObjectID = "Ncc-S0-sbx"; */
+"Ncc-S0-sbx.normalTitle" = "The Bigining";
+
+/* Class = "UIButton"; normalTitle = "9 am"; ObjectID = "OMb-UX-HEH"; */
+"OMb-UX-HEH.normalTitle" = "9 am";
+
+/* Class = "UILabel"; text = "1000/5"; ObjectID = "PbC-Tg-ac6"; */
+"PbC-Tg-ac6.text" = "1000/5";
+
+/* Class = "UILabel"; text = "Consultant evaluation"; ObjectID = "Pis-XI-JMz"; */
+"Pis-XI-JMz.text" = "Consultant evaluation";
+
+/* Class = "UILabel"; text = "You will receive periodic reminders before the date of the voice call"; ObjectID = "QHC-jF-apm"; */
+"QHC-jF-apm.text" = "You will receive periodic reminders before the date of the voice call";
+
+/* Class = "UIButton"; normalTitle = "Register to benefit from this service"; ObjectID = "Reu-SO-wNe"; */
+"Reu-SO-wNe.normalTitle" = "Register to benefit from this service";
+
+/* Class = "UILabel"; text = "$10.00"; ObjectID = "SOA-un-IH6"; */
+"SOA-un-IH6.text" = "$10.00";
+
+/* Class = "UILabel"; text = "1254"; ObjectID = "SOu-8k-8L0"; */
+"SOu-8k-8L0.text" = "1254";
+
+/* Class = "UILabel"; text = "Dr. Anila Khaldoum"; ObjectID = "T07-Le-9sR"; */
+"T07-Le-9sR.text" = "Dr. Anila Khaldoum";
+
+/* Class = "UILabel"; text = "A question for the customer goes here?"; ObjectID = "THu-R0-ARM"; */
+"THu-R0-ARM.text" = "A question for the customer goes here?";
+
+/* Class = "UILabel"; text = "10 minutes"; ObjectID = "Tzw-aY-8ZF"; */
+"Tzw-aY-8ZF.text" = "10 minutes";
+
+/* Class = "UILabel"; text = "Quality of service"; ObjectID = "Udu-2p-0uL"; */
+"Udu-2p-0uL.text" = "Quality of service";
+
+/* Class = "UILabel"; text = "Fat on the card"; ObjectID = "VVR-8m-miH"; */
+"VVR-8m-miH.text" = "Fat on the card";
+
+/* Class = "UIButton"; normalTitle = "More Search"; ObjectID = "Vp3-P2-wBP"; */
+"Vp3-P2-wBP.normalTitle" = "More Search";
+
+/* Class = "UILabel"; text = "15 years experience"; ObjectID = "WbY-Ii-RG8"; */
+"WbY-Ii-RG8.text" = "15 years experience";
+
+/* Class = "UILabel"; text = "You will receive periodic reminders before the voice call."; ObjectID = "Xtj-6y-kdF"; */
+"Xtj-6y-kdF.text" = "You will receive periodic reminders before the voice call.";
+
+/* Class = "UILabel"; text = "100 dollars"; ObjectID = "YDE-kQ-6Za"; */
+"YDE-kQ-6Za.text" = "100 dollars";
+
+/* Class = "UILabel"; text = "Voice message"; ObjectID = "YbR-Nv-02Q"; */
+"YbR-Nv-02Q.text" = "Voice message";
+
+/* Class = "UITabBarItem"; title = "\"\""; ObjectID = "ZXB-Te-32j"; */
+"ZXB-Te-32j.title" = "\"\"";
+
+/* Class = "UIButton"; normalTitle = "+ Add words"; ObjectID = "ZYO-KX-bfh"; */
+"ZYO-KX-bfh.normalTitle" = "+ Add words";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "Zex-Xh-l3L"; */
+"Zex-Xh-l3L.text" = "Yes";
+
+/* Class = "UILabel"; text = "500/0"; ObjectID = "ZhU-Jl-qVz"; */
+"ZhU-Jl-qVz.text" = "500/0";
+
+/* Class = "UILabel"; text = "Confirmed"; ObjectID = "aX3-ny-zmd"; */
+"aX3-ny-zmd.text" = "Confirmed";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "bqD-if-w8K"; */
+"bqD-if-w8K.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Use the existing card Apple"; ObjectID = "c4P-Yr-Zop"; */
+"c4P-Yr-Zop.text" = "Use the existing card Apple";
+
+/* Class = "UILabel"; text = "Career success counseling"; ObjectID = "c4j-JR-23A"; */
+"c4j-JR-23A.text" = "Career success counseling";
+
+/* Class = "UILabel"; text = "1254"; ObjectID = "cDe-x7-xxp"; */
+"cDe-x7-xxp.text" = "1254";
+
+/* Class = "UILabel"; text = "500 words"; ObjectID = "cVk-XL-z5r"; */
+"cVk-XL-z5r.text" = "500 words";
+
+/* Class = "UILabel"; text = "Evening Appointment"; ObjectID = "d0w-Ha-VeY"; */
+"d0w-Ha-VeY.text" = "Evening Appointment";
+
+/* Class = "UILabel"; text = "5.0(451)"; ObjectID = "dOb-LW-kIM"; */
+"dOb-LW-kIM.text" = "5.0(451)";
+
+/* Class = "UILabel"; text = "4 pm"; ObjectID = "dVp-k6-qO3"; */
+"dVp-k6-qO3.text" = "4 pm";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "dWN-Fk-QYK"; */
+"dWN-Fk-QYK.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Card verification code(CVC) "; ObjectID = "ekL-9Q-9qv"; */
+"ekL-9Q-9qv.text" = "Card verification code(CVC) ";
+
+/* Class = "UILabel"; text = "10 minutes"; ObjectID = "ex0-uB-Hvw"; */
+"ex0-uB-Hvw.text" = "10 minutes";
+
+/* Class = "UILabel"; text = "Appointment status"; ObjectID = "f4L-rh-mdV"; */
+"f4L-rh-mdV.text" = "Appointment status";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f4c-B0-Uog"; */
+"f4c-B0-Uog.text" = "Label";
+
+/* Class = "UILabel"; text = "A question for the customer goes here?"; ObjectID = "fE6-45-u6h"; */
+"fE6-45-u6h.text" = "A question for the customer goes here?";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fe2-OQ-dsF"; */
+"fe2-OQ-dsF.text" = "Label";
+
+/* Class = "UILabel"; text = "Voice call"; ObjectID = "gKQ-vl-dkB"; */
+"gKQ-vl-dkB.text" = "Voice call";
+
+/* Class = "UILabel"; text = "Call quality"; ObjectID = "hwd-XO-cEC"; */
+"hwd-XO-cEC.text" = "Call quality";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "i25-Vq-dXy"; */
+"i25-Vq-dXy.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Thursday 19 April 2021"; ObjectID = "iKX-Yw-pCa"; */
+"iKX-Yw-pCa.text" = "Thursday 19 April 2021";
+
+/* Class = "UILabel"; text = "has been confirmed"; ObjectID = "jkE-Tj-6VY"; */
+"jkE-Tj-6VY.text" = "has been confirmed";
+
+/* Class = "UILabel"; text = "Pay payment from khadal pay"; ObjectID = "jrY-PR-M3X"; */
+"jrY-PR-M3X.text" = "Pay payment from khadal pay";
+
+/* Class = "UILabel"; text = "20 duas."; ObjectID = "k26-sX-gkf"; */
+"k26-sX-gkf.text" = "20 duas.";
+
+/* Class = "UILabel"; text = "Family relations"; ObjectID = "kU0-KM-DwM"; */
+"kU0-KM-DwM.text" = "Family relations";
+
+/* Class = "UILabel"; text = "Use my current location"; ObjectID = "kly-Df-IQs"; */
+"kly-Df-IQs.text" = "Use my current location";
+
+/* Class = "UIButton"; normalTitle = "Book an Appointment"; ObjectID = "kuO-Ve-nda"; */
+"kuO-Ve-nda.normalTitle" = "Book an Appointment";
+
+/* Class = "UILabel"; text = "1254"; ObjectID = "l3q-h3-KJ0"; */
+"l3q-h3-KJ0.text" = "1254";
+
+/* Class = "UIButton"; normalTitle = "View appointments"; ObjectID = "lK8-qJ-4KG"; */
+"lK8-qJ-4KG.normalTitle" = "View appointments";
+
+/* Class = "UILabel"; text = "500 words"; ObjectID = "lq3-iP-XPQ"; */
+"lq3-iP-XPQ.text" = "500 words";
+
+/* Class = "UILabel"; text = "Give your plate.\nMental or"; ObjectID = "mBZ-Ct-5ve"; */
+"mBZ-Ct-5ve.text" = "Give your plate.\nMental or";
+
+/* Class = "UILabel"; text = "Health expiration date"; ObjectID = "nmJ-WP-xij"; */
+"nmJ-WP-xij.text" = "Health expiration date";
+
+/* Class = "UIButton"; normalTitle = "The beginning"; ObjectID = "oDx-22-1bY"; */
+"oDx-22-1bY.normalTitle" = "The beginning";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oV1-9m-d5B"; */
+"oV1-9m-d5B.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "4PM"; ObjectID = "ovQ-3r-8vS"; */
+"ovQ-3r-8vS.normalTitle" = "4PM";
+
+/* Class = "UILabel"; text = "Status of Appointment"; ObjectID = "pKe-vv-GBq"; */
+"pKe-vv-GBq.text" = "Status of Appointment";
+
+/* Class = "UILabel"; text = "10 duas."; ObjectID = "pQs-Ry-SvO"; */
+"pQs-Ry-SvO.text" = "10 duas.";
+
+/* Class = "UIButton"; normalTitle = "10 am"; ObjectID = "pdX-F0-NkO"; */
+"pdX-F0-NkO.normalTitle" = "10 am";
+
+/* Class = "UILabel"; text = "30 dollars"; ObjectID = "q8y-xg-V0C"; */
+"q8y-xg-V0C.text" = "30 dollars";
+
+/* Class = "UILabel"; text = "Card no"; ObjectID = "qL6-vd-f6V"; */
+"qL6-vd-f6V.text" = "Card no";
+
+/* Class = "UILabel"; text = "I do not know"; ObjectID = "qWy-Dj-Rqz"; */
+"qWy-Dj-Rqz.text" = "I do not know";
+
+/* Class = "UILabel"; text = "(Reply within 24 hours"; ObjectID = "qvk-4N-f1H"; */
+"qvk-4N-f1H.text" = "(Reply within 24 hours";
+
+/* Class = "UIButton"; normalTitle = "10 am"; ObjectID = "sNt-F7-ZFq"; */
+"sNt-F7-ZFq.normalTitle" = "10 am";
+
+/* Class = "UILabel"; text = "200 words "; ObjectID = "sOX-yZ-vlK"; */
+"sOX-yZ-vlK.text" = "200 words ";
+
+/* Class = "UILabel"; text = "60 dollars"; ObjectID = "sQO-jX-e4c"; */
+"sQO-jX-e4c.text" = "60 dollars";
+
+/* Class = "UILabel"; text = "subject matter of counseling "; ObjectID = "sie-4M-Hs3"; */
+"sie-4M-Hs3.text" = "subject matter of counseling ";
+
+/* Class = "UILabel"; text = "200 words "; ObjectID = "udD-Hu-HPn"; */
+"udD-Hu-HPn.text" = "200 words ";
+
+/* Class = "UILabel"; text = "Dr. Anila Khaldoum"; ObjectID = "uqC-qi-2Ms"; */
+"uqC-qi-2Ms.text" = "Dr. Anila Khaldoum";
+
+/* Class = "UILabel"; text = "Morning Appointment"; ObjectID = "uuh-6f-yuv"; */
+"uuh-6f-yuv.text" = "Morning Appointment";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "v5E-7f-G5t"; */
+"v5E-7f-G5t.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "wZ8-um-5z6"; */
+"wZ8-um-5z6.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "View appointments"; ObjectID = "wjG-4A-5Sl"; */
+"wjG-4A-5Sl.normalTitle" = "View appointments";
+
+
+/* Class = "UILabel"; text = "Consult CQ use it"; ObjectID = "xbb-qw-6E7"; */
+"xbb-qw-6E7.text" = "Consult CQ use it";
+
+/* Class = "UILabel"; text = "Voice Call"; ObjectID = "yBn-sM-y9r"; */
+"yBn-sM-y9r.text" = "Voice Call";
+
+/* Class = "UILabel"; text = "from the wallet check"; ObjectID = "zwD-6W-IXv"; */
+"zwD-6W-IXv.text" = "from the wallet check";
+
+/* Class = "UIButton"; normalTitle = "Continue to record the message"; ObjectID = "zzN-Pa-ruM"; */
+"zzN-Pa-ruM.normalTitle" = "Continue to record the message";

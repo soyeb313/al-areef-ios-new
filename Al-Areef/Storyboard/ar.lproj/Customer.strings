@@ -1,9 +1,4 @@
 
-/* Class = "UIButton"; normalTitle = "Completes"; ObjectID = "20K-vL-4q5"; */
-"20K-vL-4q5.normalTitle" = "Completes";
-
-/* Class = "UILabel"; text = "Password"; ObjectID = "6Uw-6G-HxK"; */
-"6Uw-6G-HxK.text" = "Password";
 
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "Gsv-vi-I0q"; */
 "Gsv-vi-I0q.placeholder" = "example@gmail.com";
