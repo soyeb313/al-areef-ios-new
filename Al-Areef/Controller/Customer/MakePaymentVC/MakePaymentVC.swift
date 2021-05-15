@@ -30,7 +30,11 @@ class MakePaymentVC: UIViewController {
     @IBOutlet weak var txtCardExpiryYear            : UITextField!
     @IBOutlet weak var txtCardVerficationCode       : UITextField!
     @IBOutlet weak var btnAddCard                   : UIButton!
-    
+    @IBOutlet weak var stackView: UIView!
+    @IBOutlet weak var vwOption1: UIView!
+    @IBOutlet weak var vwOption2: UIView!
+    @IBOutlet weak var vwOption3: UIView!
+    @IBOutlet weak var vwOption4: UIView!
     // MARK:- Variables
     var consultType : ConsultingType?
     
@@ -46,6 +50,23 @@ class MakePaymentVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            stackView.semanticContentAttribute = .forceRightToLeft
+            vwOption1.semanticContentAttribute = .forceRightToLeft
+            vwOption2.semanticContentAttribute = .forceRightToLeft
+            vwOption3.semanticContentAttribute = .forceRightToLeft
+            vwOption4.semanticContentAttribute = .forceRightToLeft
+        }else{
+            stackView.semanticContentAttribute = .forceLeftToRight
+            vwOption1.semanticContentAttribute = .forceLeftToRight
+            vwOption2.semanticContentAttribute = .forceLeftToRight
+            vwOption3.semanticContentAttribute = .forceLeftToRight
+            vwOption4.semanticContentAttribute = .forceLeftToRight
+        }
+        
+        
+        
         self.title = "Pay".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn

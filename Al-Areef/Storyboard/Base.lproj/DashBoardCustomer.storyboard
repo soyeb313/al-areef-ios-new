@@ -2266,12 +2266,12 @@ myself just one click </string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="Mxl-Eu-IuE" firstAttribute="leading" secondItem="TCs-RN-iIi" secondAttribute="trailing" constant="10" id="9oQ-ud-7HK"/>
                                                                     <constraint firstAttribute="bottom" secondItem="Mxl-Eu-IuE" secondAttribute="bottom" constant="10" id="H7u-Xe-T1B"/>
+                                                                    <constraint firstItem="TCs-RN-iIi" firstAttribute="leading" secondItem="yqs-l3-Wem" secondAttribute="leading" id="Mmi-md-r8E"/>
                                                                     <constraint firstItem="Mxl-Eu-IuE" firstAttribute="top" secondItem="yqs-l3-Wem" secondAttribute="top" constant="10" id="Pbv-h2-gQ4"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mxl-Eu-IuE" secondAttribute="trailing" constant="10" id="ZyI-c2-xiJ"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mxl-Eu-IuE" secondAttribute="trailing" constant="10" id="RQY-cx-FST"/>
                                                                     <constraint firstItem="TCs-RN-iIi" firstAttribute="centerY" secondItem="yqs-l3-Wem" secondAttribute="centerY" id="g5D-mA-iFm"/>
-                                                                    <constraint firstItem="TCs-RN-iIi" firstAttribute="leading" secondItem="yqs-l3-Wem" secondAttribute="leading" id="j9e-6w-Dr0"/>
+                                                                    <constraint firstItem="Mxl-Eu-IuE" firstAttribute="leading" secondItem="TCs-RN-iIi" secondAttribute="trailing" constant="10" id="rhF-MQ-zJR"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfV-xs-oEn">
@@ -2366,17 +2366,17 @@ myself just one click </string>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H2c-X6-xmi" secondAttribute="trailing" constant="15" id="6vR-8s-9Li"/>
                                                     <constraint firstItem="H2c-X6-xmi" firstAttribute="leading" secondItem="ss0-Th-e6x" secondAttribute="leading" constant="15" id="TUh-u5-yNu"/>
                                                     <constraint firstItem="H2c-X6-xmi" firstAttribute="top" secondItem="ss0-Th-e6x" secondAttribute="top" constant="15" id="dZb-aE-cyq"/>
-                                                    <constraint firstItem="rUm-O6-B71" firstAttribute="leading" secondItem="ss0-Th-e6x" secondAttribute="leading" constant="15" id="dkW-EY-Mmb"/>
                                                     <constraint firstItem="rUm-O6-B71" firstAttribute="top" secondItem="H2c-X6-xmi" secondAttribute="bottom" id="hFi-UP-6th"/>
-                                                    <constraint firstAttribute="trailing" secondItem="rUm-O6-B71" secondAttribute="trailing" constant="15" id="tcm-c8-ivV"/>
+                                                    <constraint firstItem="rUm-O6-B71" firstAttribute="width" secondItem="ss0-Th-e6x" secondAttribute="width" multiplier="0.927536" id="pag-5n-7Zr"/>
+                                                    <constraint firstItem="rUm-O6-B71" firstAttribute="centerX" secondItem="ss0-Th-e6x" secondAttribute="centerX" id="vwR-L6-BJR"/>
                                                     <constraint firstAttribute="bottom" secondItem="rUm-O6-B71" secondAttribute="bottom" constant="15" id="xiL-AU-Dxm"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-cg-sOj">
+                                            <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-cg-sOj">
                                                 <rect key="frame" x="0.0" y="583" width="414" height="108"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat on the card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-8m-miH">
-                                                        <rect key="frame" x="15" y="5" width="114" height="53"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat on the card" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-8m-miH">
+                                                        <rect key="frame" x="15" y="5" width="389" height="53"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2404,7 +2404,7 @@ myself just one click </string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VVR-8m-miH" secondAttribute="trailing" constant="10" id="DhN-Ef-LpT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VVR-8m-miH" secondAttribute="trailing" constant="10" id="DhN-Ef-LpT"/>
                                                     <constraint firstItem="VVR-8m-miH" firstAttribute="leading" secondItem="ftI-cg-sOj" secondAttribute="leading" constant="15" id="G5X-43-wle"/>
                                                     <constraint firstItem="VVR-8m-miH" firstAttribute="top" secondItem="ftI-cg-sOj" secondAttribute="top" constant="5" id="QCM-LU-uPy"/>
                                                     <constraint firstItem="5Zz-fz-pCw" firstAttribute="top" secondItem="VVR-8m-miH" secondAttribute="bottom" constant="10" id="Yg6-e4-gtE"/>
@@ -2416,8 +2416,8 @@ myself just one click </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybq-aC-cAj">
                                                 <rect key="frame" x="0.0" y="691" width="414" height="108"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card no" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-vd-f6V">
-                                                        <rect key="frame" x="15" y="15" width="60" height="43"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card no" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-vd-f6V">
+                                                        <rect key="frame" x="15" y="15" width="384" height="43"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2447,7 +2447,7 @@ myself just one click </string>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="LyZ-Gg-OZ4" secondAttribute="trailing" constant="15" id="HUy-iK-muA"/>
                                                     <constraint firstAttribute="bottom" secondItem="LyZ-Gg-OZ4" secondAttribute="bottom" id="OBy-x5-9Rm"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qL6-vd-f6V" secondAttribute="trailing" constant="15" id="WGv-pc-fH1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qL6-vd-f6V" secondAttribute="trailing" constant="15" id="WGv-pc-fH1"/>
                                                     <constraint firstItem="qL6-vd-f6V" firstAttribute="leading" secondItem="ybq-aC-cAj" secondAttribute="leading" constant="15" id="ch0-Sm-64R"/>
                                                     <constraint firstItem="qL6-vd-f6V" firstAttribute="top" secondItem="ybq-aC-cAj" secondAttribute="top" constant="15" id="keA-gX-NNC"/>
                                                     <constraint firstItem="LyZ-Gg-OZ4" firstAttribute="leading" secondItem="ybq-aC-cAj" secondAttribute="leading" constant="15" id="rkj-bn-5RB"/>
@@ -2656,6 +2656,7 @@ myself just one click </string>
                         <outlet property="lblSelectKhdalCard" destination="jrY-PR-M3X" id="jYG-ly-rBE"/>
                         <outlet property="lblSelectVisaCard" destination="c4P-Yr-Zop" id="nag-Ro-hxv"/>
                         <outlet property="lblSelectWalletCard" destination="zwD-6W-IXv" id="L7h-UH-l4I"/>
+                        <outlet property="stackView" destination="ss0-Th-e6x" id="gXJ-hK-9ic"/>
                         <outlet property="txtCardExpiryMonth" destination="d9p-KD-IFw" id="JOh-NR-e37"/>
                         <outlet property="txtCardExpiryYear" destination="Itx-Y1-rML" id="Uj8-3w-Dj7"/>
                         <outlet property="txtCardVerficationCode" destination="p2h-ju-NRn" id="kLx-TH-9H8"/>
@@ -2663,6 +2664,10 @@ myself just one click </string>
                         <outlet property="txtFldNumberCard" destination="YM2-YF-0Ax" id="6lq-YR-KDd"/>
                         <outlet property="vwNameCard" destination="5Zz-fz-pCw" id="cF0-O1-3rN"/>
                         <outlet property="vwNumberCard" destination="LyZ-Gg-OZ4" id="514-3M-Gli"/>
+                        <outlet property="vwOption1" destination="yqs-l3-Wem" id="mJz-wi-3dD"/>
+                        <outlet property="vwOption2" destination="GfV-xs-oEn" id="Gjg-jy-nS7"/>
+                        <outlet property="vwOption3" destination="QVA-fE-p9W" id="vCv-59-XHt"/>
+                        <outlet property="vwOption4" destination="riq-em-EV7" id="GWE-YN-D3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db2-3D-wIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
