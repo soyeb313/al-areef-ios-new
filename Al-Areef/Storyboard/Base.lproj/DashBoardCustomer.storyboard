@@ -2372,7 +2372,7 @@ myself just one click </string>
                                                     <constraint firstAttribute="bottom" secondItem="rUm-O6-B71" secondAttribute="bottom" constant="15" id="xiL-AU-Dxm"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-cg-sOj">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-cg-sOj">
                                                 <rect key="frame" x="0.0" y="583" width="414" height="108"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat on the card" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-8m-miH">
