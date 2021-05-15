@@ -13,10 +13,11 @@ class ConsultingListHeaderCell: UITableViewCell {
     @IBOutlet weak var lblSubTitle                    : UILabel!
     @IBOutlet weak var lblName                    : UILabel!
     @IBOutlet weak var lblID                    : UILabel!
+    @IBOutlet weak var vwProfile                   : UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        vwProfile.semanticContentAttribute = .forceLeftToRight
         lblTitle.text = "Give your plate. Mental or".localiz()
         lblSubTitle.text = "You can get advice online from a therapist myself just one click".localiz()
     }

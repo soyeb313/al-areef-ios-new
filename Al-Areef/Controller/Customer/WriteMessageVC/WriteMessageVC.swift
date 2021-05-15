@@ -12,6 +12,7 @@ class WriteMessageVC: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var txtVwMessage          : PlaceholderTextView!
     @IBOutlet weak var btnAddWords           : UIButton!
+    @IBOutlet weak var btnNext           : UIButton!
     @IBOutlet weak var lblWords1: UILabel!
     @IBOutlet weak var lblWords2: UILabel!
     @IBOutlet weak var lblPrice1: UILabel!
@@ -48,6 +49,7 @@ class WriteMessageVC: UIViewController {
         lblPrice1.text = "30 dollars".localiz()
         lblPrice2.text = "60 dollars".localiz()
         btnAddWords.setTitle("+ Add words".localiz(), for: .normal)
+        btnNext.setTitle("Next".localiz(), for: .normal)
         self.vwPrice1.isHidden = true
         self.vwPrice2.isHidden = true
         txtVwMessage.placeholder = "Write your message".localiz()

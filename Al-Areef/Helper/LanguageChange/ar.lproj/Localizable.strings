@@ -272,7 +272,7 @@
 "Time has passed" = "فات الوقت";
 
 /* Class = "UIButton"; normalTitle = "Send"; ObjectID = "l2j-1m-EQv"; */
-"Send" = "إرسال";
+"c" = "إرسال";
 
 /* Class = "UILabel"; text = "Consultant responded"; ObjectID = "mNE-cT-ybA"; */
 "Consultant responded" = "رد المستشار";
@@ -701,3 +701,5 @@
 "Complete" = "يكمل";
 "The highest level of satisfaction" = "أعلى مستوى رضا";
 "The lowest level of satisfaction" = "أقل مستوى رضا";
+"Press the circle button to start or stop recording" = "اضغط على زر الدائرة لبدء التسجيل أو إيقافه";
+"Time has passed" = "فات الوقت";

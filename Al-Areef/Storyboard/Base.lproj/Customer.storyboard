@@ -485,7 +485,7 @@
                                                         <rect key="frame" x="134.5" y="40" width="145" height="145"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uw-6G-HxK">
-                                                        <rect key="frame" x="156" y="215" width="102" height="17"/>
+                                                        <rect key="frame" x="161.5" y="215" width="91.5" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="h6z-8Z-Dzd"/>
                                                         </constraints>
@@ -1649,40 +1649,40 @@
     </scenes>
     <designables>
         <designable name="Gsv-vi-I0q">
-            <size key="intrinsicContentSize" width="135.5" height="21.5"/>
+            <size key="intrinsicContentSize" width="119.5" height="18"/>
         </designable>
         <designable name="IEU-zg-Pr1">
-            <size key="intrinsicContentSize" width="128" height="21.5"/>
+            <size key="intrinsicContentSize" width="115.5" height="18"/>
         </designable>
         <designable name="Ilu-5H-gsf">
-            <size key="intrinsicContentSize" width="27.5" height="21.5"/>
+            <size key="intrinsicContentSize" width="25" height="18"/>
         </designable>
         <designable name="cGo-X5-7v7">
-            <size key="intrinsicContentSize" width="140" height="21.5"/>
+            <size key="intrinsicContentSize" width="123.5" height="18"/>
         </designable>
         <designable name="eEk-4W-Gad">
-            <size key="intrinsicContentSize" width="67.5" height="20"/>
+            <size key="intrinsicContentSize" width="62" height="17"/>
         </designable>
         <designable name="k0i-Cq-6L1">
-            <size key="intrinsicContentSize" width="135.5" height="21.5"/>
+            <size key="intrinsicContentSize" width="119.5" height="18"/>
         </designable>
         <designable name="leS-5n-U9h">
-            <size key="intrinsicContentSize" width="87" height="21.5"/>
+            <size key="intrinsicContentSize" width="78.5" height="18"/>
         </designable>
         <designable name="ltr-xG-6XW">
-            <size key="intrinsicContentSize" width="50" height="21.5"/>
+            <size key="intrinsicContentSize" width="44" height="18"/>
         </designable>
         <designable name="nTj-eJ-A2f">
-            <size key="intrinsicContentSize" width="50" height="21.5"/>
+            <size key="intrinsicContentSize" width="44" height="18"/>
         </designable>
         <designable name="uqA-eU-byI">
-            <size key="intrinsicContentSize" width="128" height="21.5"/>
+            <size key="intrinsicContentSize" width="115.5" height="18"/>
         </designable>
         <designable name="wOs-I8-kd6">
-            <size key="intrinsicContentSize" width="50" height="21.5"/>
+            <size key="intrinsicContentSize" width="44" height="18"/>
         </designable>
         <designable name="zic-gx-Czx">
-            <size key="intrinsicContentSize" width="87" height="21.5"/>
+            <size key="intrinsicContentSize" width="78.5" height="18"/>
         </designable>
     </designables>
     <resources>

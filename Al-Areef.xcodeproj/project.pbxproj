@@ -44,7 +44,6 @@
 		7922408426499D2E0076E14C /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922408326499D2E0076E14C /* CalendarVC.swift */; };
 		7923A20C2645B0E600E14DE2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7923A20B2645B0E600E14DE2 /* UserData.swift */; };
 		7965F19A264BF2170059DF36 /* StepSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7965F199264BF2170059DF36 /* StepSlider.m */; };
-		7965F19D264C0A020059DF36 /* DropDownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7965F19C264C0A020059DF36 /* DropDownText.swift */; };
 		79692CCC262087880056FB00 /* UIColor + AI-Areef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */; };
 		79692CD726208E0F0056FB00 /* LoginStepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */; };
 		79692CDB26208E330056FB00 /* LonginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79692CDA26208E330056FB00 /* LonginVC.swift */; };
@@ -165,7 +164,6 @@
 		7923A20B2645B0E600E14DE2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		7965F198264BF2170059DF36 /* StepSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSlider.h; sourceTree = "<group>"; };
 		7965F199264BF2170059DF36 /* StepSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSlider.m; sourceTree = "<group>"; };
-		7965F19C264C0A020059DF36 /* DropDownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownText.swift; sourceTree = "<group>"; };
 		79692CCB262087880056FB00 /* UIColor + AI-Areef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + AI-Areef.swift"; sourceTree = "<group>"; };
 		79692CD626208E0F0056FB00 /* LoginStepOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStepOneVC.swift; sourceTree = "<group>"; };
 		79692CDA26208E330056FB00 /* LonginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginVC.swift; sourceTree = "<group>"; };
@@ -473,7 +471,6 @@
 			children = (
 				79692CF42620B9560056FB00 /* SkyFloatingLabelTextField */,
 				79D98B002634454C003B511B /* PlaceholderTextView.swift */,
-				7965F19C264C0A020059DF36 /* DropDownText.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -1122,7 +1119,6 @@
 				79692CF12620A8150056FB00 /* SignUpVC.swift in Sources */,
 				7923A20C2645B0E600E14DE2 /* UserData.swift in Sources */,
 				79B42E1F263FF375007252ED /* ChooseDurationCell.swift in Sources */,
-				7965F19D264C0A020059DF36 /* DropDownText.swift in Sources */,
 				79B42E14263FF375007252ED /* ConsultingTypeCell.swift in Sources */,
 				35748D76263E35430002DC21 /* ApiCall.swift in Sources */,
 				79B42DB6263FEBF1007252ED /* CompanyRegistrationTwoVC.swift in Sources */,

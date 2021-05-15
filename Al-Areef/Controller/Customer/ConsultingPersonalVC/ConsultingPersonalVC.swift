@@ -38,7 +38,7 @@ class ConsultingPersonalVC: UIViewController {
             
         }
         viewHeader.semanticContentAttribute = .forceLeftToRight
-        lblHeader.text = "Counselling".localized
+        lblHeader.text = "Counselling".localiz()
     }
     
     // MARK:- Button Actions

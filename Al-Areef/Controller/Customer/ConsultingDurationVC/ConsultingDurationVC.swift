@@ -11,6 +11,7 @@ class ConsultingDurationVC: UIViewController {
 
     // MARK:- Outlets
     @IBOutlet weak var btnNext          : UIButton!
+    @IBOutlet weak var btnAddWords      : UIButton!
     @IBOutlet weak var lblPrice1: UILabel!
     @IBOutlet weak var vwBack           : UIView!
     @IBOutlet weak var vwDurationBack1  : UIView!
@@ -64,6 +65,10 @@ class ConsultingDurationVC: UIViewController {
         self.btnNext.setShadow(shadowColor: UIColor.lightGray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         
         lblDescription.text = "Please specify how long you want to book the appointment".localiz()
+        btnAddWords.setTitle("+ Add words".localiz(), for: .normal)
+        vwDurationBack1.semanticContentAttribute = .forceLeftToRight
+        vwDurationBack2.semanticContentAttribute = .forceLeftToRight
+        vwDurationBack3.semanticContentAttribute = .forceLeftToRight
         
         if consultType == ConsultingType.TextMessage {
             self.vwAddWords.isHidden = false

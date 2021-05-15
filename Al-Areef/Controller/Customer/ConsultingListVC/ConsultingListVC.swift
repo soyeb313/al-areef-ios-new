@@ -37,7 +37,7 @@ class ConsultingListVC: UIViewController {
             self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.app_Gradient.cgColor])
         }
         viewHeader.semanticContentAttribute = .forceLeftToRight
-        lblHeader.text = "Counselling Topics".localized
+        lblHeader.text = "Counselling Topics".localiz()
     }
     
     // MARK:- Button Actions

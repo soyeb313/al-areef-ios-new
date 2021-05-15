@@ -56,6 +56,9 @@ class ChooseDurationCell: UITableViewCell {
         lblTitleReviews.text = "Reviews".localiz()
         lblTitlePatientsServed.text = "Patients served".localiz()
         lblBottom.text = "Please specify how long you want to reserve the appointment form for each more consultant".localiz()
+        
+        vwBack.semanticContentAttribute = .forceLeftToRight
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

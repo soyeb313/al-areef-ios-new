@@ -21,7 +21,8 @@ class RecordMessageVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Record the message".localiz()
-       
+        lblPressInfo.text = "Press the circle button to start or stop recording".localiz()
+        lblTimePassed.text = "Time has passed".localiz()
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         

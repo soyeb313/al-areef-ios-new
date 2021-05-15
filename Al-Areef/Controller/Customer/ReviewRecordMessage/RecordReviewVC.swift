@@ -44,6 +44,13 @@ class RecordReviewVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
+        lblCounslingSubject.text = "Subject matter of counseling".localiz()
+        lblFamilyrelations.text = "Family relations".localiz()
+        lblConsultantRole.text = "Advisor".localiz()
+        lblYourVoice.text = "Your voice note".localiz()
+        lblConsultantResponded.text = "Consultant responded".localiz()
+        lblReboot.text = "Reboot".localiz()
+        lblAdviseInfo.text = "Our advisors take at least 24 hours to review and respond to voice notes. we appreciate your patience.".localiz()
     }
     
     // MARK:- Button Actions

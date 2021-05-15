@@ -49,7 +49,7 @@ class ConsultingTypeVC: UIViewController {
             
         }
         viewHeader.semanticContentAttribute = .forceLeftToRight
-        lblHeader.text = "Appointment Types".localized
+        lblHeader.text = "Appointment Types".localiz()
     }
     
     // MARK:- Button Actions

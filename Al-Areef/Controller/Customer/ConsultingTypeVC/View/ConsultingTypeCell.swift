@@ -22,6 +22,8 @@ class ConsultingTypeCell: UITableViewCell {
         //lblTitle.text = "Voice message".localiz();
         lblSubTitle.text = "(Reply within 24 hours)".localiz()
         btnShowDetail.setTitle("The Bigining".localiz(), for: .normal)
+        vwBack.semanticContentAttribute = .forceLeftToRight
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
