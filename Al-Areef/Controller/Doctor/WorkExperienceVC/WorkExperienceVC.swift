@@ -43,7 +43,13 @@ class WorkExperienceVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Work Experience".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         
         self.navigationItem.leftBarButtonItem = backBtn
         self.vwCurrentJobDescription.setBorder(with: .lightGray, 0.8)

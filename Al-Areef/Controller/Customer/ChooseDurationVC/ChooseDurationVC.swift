@@ -14,7 +14,7 @@ class ChooseDurationVC: UIViewController {
    
     // MARK:- Variables
     var consultType : ConsultingType?
-    
+    var navFlag = ""
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,16 @@ class ChooseDurationVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Choose Duration".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
-        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
-        self.navigationItem.rightBarButtonItem = searchbtn
+//        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+//        self.navigationItem.rightBarButtonItem = searchbtn
         
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionHeaderHeight = 35
@@ -53,24 +58,45 @@ class ChooseDurationVC: UIViewController {
         pushMakePaymentVC()
     }
     
+    @IBAction func btnpaymentPressed(_ sender : UIButton){
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
+        vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    @IBAction func btnCalenderPressed(_ sender : UIButton){
+        if sender.tag == 0 {
+            if consultType?.rawValue == "Voice message" ||  consultType?.rawValue == "Text message"
+            {
+                guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
+                vc.consultType = consultType
+                self.navigationController?.pushViewController(vc, animated: false)
+            }else{
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CalendarVC.self)) as? CalendarVC else { return }
+            vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: false)
+            }
+        }
+    }
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        switch consultType {
-        case .TextMessage:
-            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: WriteMessageVC.self)) as? WriteMessageVC else { return }
-            self.navigationController?.pushViewController(vc, animated: false)
-        case .VoiceMessage :
-            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
-            vc.consultType = consultType
-            self.navigationController?.pushViewController(vc, animated: false)
-//        case .PersonalMeeting :
-//            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MapVC.self)) as? MapVC else { return }
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: TimelineVC.self)) as? TimelineVC else { return }
+        
+        self.navigationController?.pushViewController(vc, animated: false)
+//        switch consultType {
+//        case .TextMessage:
+//            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: WriteMessageVC.self)) as? WriteMessageVC else { return }
 //            self.navigationController?.pushViewController(vc, animated: false)
-        default:
-            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentReservationVC.self)) as? AppointmentReservationVC else { return }
-            self.navigationController?.pushViewController(vc, animated: false)
-        }
+//        case .VoiceMessage :
+//
+//            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: TimelineVC.self)) as? TimelineVC else { return }
+//
+//            self.navigationController?.pushViewController(vc, animated: false)
+//        default:
+//            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentReservationVC.self)) as? AppointmentReservationVC else { return }
+//            self.navigationController?.pushViewController(vc, animated: false)
+//        }
     }
     
     // MARK:- Custom Methods
@@ -91,8 +117,21 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-        
+        if section == 0 {
+            return 1
+        }else{
+            return 4
+        }
+       
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        switch consultType {
+        case .AudioConnections,.ConsultantRegistration,.PersonalMeeting:
+            return 2
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -101,6 +140,7 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ChooseDurationCell.self), for: indexPath) as? ChooseDurationCell else{ return UITableViewCell() }
+        cell.btnSelectProfile.tag = indexPath.section
         return cell
     }
     
@@ -109,23 +149,49 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableView.automaticDimension
+        if section == 0 {
+            switch consultType {
+            case .VoiceMessage,.TextMessage : return UITableView.automaticDimension
+            default : return CGFloat.leastNonzeroMagnitude
+            }
+            
+        }else{
+            return CGFloat.leastNonzeroMagnitude
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDurationHeaderCell") as? ChooseDurationHeaderCell else{ return UITableViewCell() }
-            
-        return cell.contentView
+        if section == 0 {
+            switch consultType {
+            case .VoiceMessage,.TextMessage :
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDurationHeaderCell") as? ChooseDurationHeaderCell else{ return UITableViewCell() }
+                return cell.contentView
+            default :return  UIView()
+            }
+        }else{
+            return UIView()
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return UITableView.automaticDimension
+        if section == 0 {
+            return UITableView.automaticDimension
+        }else{
+            return CGFloat.leastNonzeroMagnitude
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDurationFooterCell") as? ChooseDurationFooterCell else{ return UITableViewCell() }
-        cell.btnMore.setTitle("More consultants".localiz(), for: .normal)
-        return cell.contentView
+        if section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDurationFooterCell") as? ChooseDurationFooterCell else{ return UITableViewCell() }
+            cell.btnMore.setTitle("More consultants".localiz(), for: .normal)
+            return cell.contentView
+        }else{
+            return UIView()
+        }
+        
     }
     
 }

@@ -20,6 +20,7 @@ class RegistrationStepOneVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,7 +29,7 @@ class RegistrationStepOneVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-
+       
     }
     
     // MARK:- Button Actions

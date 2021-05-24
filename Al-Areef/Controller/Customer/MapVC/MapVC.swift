@@ -40,7 +40,13 @@ class MapVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Select meeting location".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
         lbllocationDescription.text = "Use my current location".localiz()
@@ -61,8 +67,24 @@ class MapVC: UIViewController {
     }
     
     @IBAction func btnSelectLocation(_ sender : UIButton) {
-        pushConsultingDurationVC()
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
+        vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
     }
+    
+    @IBAction func btnConfirmLocation(_ sender : UIButton){
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
+        vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    @IBAction func btnSkipLocation(_ sender : UIButton){
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
+        vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    
     
     // MARK:- Push Methods
     private func pushConsultingDurationVC() {

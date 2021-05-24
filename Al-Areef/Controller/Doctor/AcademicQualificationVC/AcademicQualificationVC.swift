@@ -46,7 +46,13 @@ class AcademicQualificationVC: UIViewController, UINavigationControllerDelegate 
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Academia".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         
         self.navigationItem.leftBarButtonItem = backBtn
         self.btnDegreeCertificateUpload.setCornerRadius(radius: 5)

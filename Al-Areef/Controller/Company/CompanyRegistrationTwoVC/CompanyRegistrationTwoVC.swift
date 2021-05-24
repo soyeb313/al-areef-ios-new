@@ -48,7 +48,13 @@ class CompanyRegistrationTwoVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Company Resgistration".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         vwLinkedInBack.setBorder(with: .app_MdiumTextColor, 0.8)
         vwFacebookBack.setBorder(with: .app_MdiumTextColor, 0.8)
         vwLinkedInBack.setShadow()

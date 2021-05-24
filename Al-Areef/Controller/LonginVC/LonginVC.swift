@@ -36,10 +36,12 @@ class LonginVC: UIViewController {
                  UIView.appearance().semanticContentAttribute = .forceRightToLeft
          
             UITextField.appearance().semanticContentAttribute = .forceRightToLeft
-                
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceRightToLeft
         }else{
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
-            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceLeftToRight
+
             switchLanguage.changeLanguageTo(lang: "en")
         }
     }
@@ -77,9 +79,9 @@ class LonginVC: UIViewController {
     }
     
     @IBAction func btnLoginClicked(_ sender: Any) {
+        self.pushLInfoSliderVC()
         
-        
-        if txtemail.text == "" {
+        /*if txtemail.text == "" {
             Loaf("Please enter Email.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else  if  isValidEmail(testStr:txtemail.text ?? "") == false
         {
@@ -89,7 +91,7 @@ class LonginVC: UIViewController {
         }else{
             SVProgressHUD.show()
             wsLoginUser()
-        }
+        }*/
        
 
         
@@ -150,9 +152,7 @@ class LonginVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushLInfoSliderVC() {
-        guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: InfoSliderVC.self)) as? InfoSliderVC else { return }
-        vc.isFromLogin = true
-        self.navigationController?.pushViewController(vc, animated: false)
+        appDelegate.setDashBoard()
     }
     
     // MARK:- ReceiveMemoryWarning

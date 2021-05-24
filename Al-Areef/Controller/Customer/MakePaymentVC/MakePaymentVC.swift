@@ -68,11 +68,16 @@ class MakePaymentVC: UIViewController {
         
         
         self.title = "Pay".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
-        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
-        self.navigationItem.rightBarButtonItem = searchbtn
+//        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+//        self.navigationItem.rightBarButtonItem = searchbtn
         
         vwNameCard.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         vwNumberCard.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
@@ -145,11 +150,27 @@ class MakePaymentVC: UIViewController {
 extension MakePaymentVC : PaymentSuccessProtocol {
     func PaymentSuccess(_ flag: Bool) {
         switch consultType {
+        case .TextMessage,.VoiceMessage :
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentVC.self)) as? AppointmentVC else { return }
+            vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: true)
+        default :
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentVC.self)) as? AppointmentVC else { return }
+            vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
+       /* switch consultType {
         case .TextMessage:
             break
         case .VoiceMessage:
-            guard let vc = UIStoryboard.RecordMessage.instantiateViewController(withIdentifier: String(describing: RecordMessageVC.self)) as? RecordMessageVC else { return }
+            
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentVC.self)) as? AppointmentVC else { return }
             self.navigationController?.pushViewController(vc, animated: true)
+            
+//            guard let vc = UIStoryboard.RecordMessage.instantiateViewController(withIdentifier: String(describing: RecordMessageVC.self)) as? RecordMessageVC else { return }
+//            self.navigationController?.pushViewController(vc, animated: true)
             self.dismiss(animated: false, completion: nil)
         case .ConsultantRegistration :
             self.navigationController?.popToRootViewController(animated: true)
@@ -159,7 +180,7 @@ extension MakePaymentVC : PaymentSuccessProtocol {
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultantDetailsVC.self)) as? ConsultantDetailsVC else { return }
     //        vc.consultType = consultType
             self.navigationController?.pushViewController(vc, animated: false)
-        }
+        }*/
        
     }
     

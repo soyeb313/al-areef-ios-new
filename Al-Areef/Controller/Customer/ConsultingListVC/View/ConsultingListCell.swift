@@ -12,6 +12,7 @@ class ConsultingListCell: UITableViewCell {
     @IBOutlet weak var vwBack                         : UIView!
     @IBOutlet weak var lblTitle                       : UILabel!
     @IBOutlet weak var btnShowDetail                  : UIButton!
+    @IBOutlet weak var imgCounselling                 : UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

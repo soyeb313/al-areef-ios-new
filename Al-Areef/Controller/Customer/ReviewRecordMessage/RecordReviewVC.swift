@@ -41,7 +41,12 @@ class RecordReviewVC: UIViewController {
     private func setUpView() {
         self.title = "Consultation details".localiz()
        
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
         lblCounslingSubject.text = "Subject matter of counseling".localiz()

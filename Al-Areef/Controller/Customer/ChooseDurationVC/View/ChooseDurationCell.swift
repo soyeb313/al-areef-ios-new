@@ -10,6 +10,7 @@ import UIKit
 class ChooseDurationCell: UITableViewCell {
 
     @IBOutlet weak var vwBack                         : UIView!
+    @IBOutlet weak var vwPGray                         : UIView!
     @IBOutlet weak var vwYearsExperience              : UIView!
     @IBOutlet weak var vwCourses                      : UIView!
     @IBOutlet weak var vwReviews                      : UIView!
@@ -24,6 +25,7 @@ class ChooseDurationCell: UITableViewCell {
     @IBOutlet weak var lblTitleReviewsCnt             : UILabel!
     @IBOutlet weak var lblTitlePatientsServedCnt      : UILabel!
     @IBOutlet weak var lblBottom                      : UILabel!
+    @IBOutlet weak var btnSelectProfile               : UIButton!
     @IBOutlet weak var lblExperince: UILabel!
     @IBOutlet weak var lblConsultantName: UILabel!
     @IBOutlet weak var lblCQ: UILabel!
@@ -59,6 +61,11 @@ class ChooseDurationCell: UITableViewCell {
         
         vwBack.semanticContentAttribute = .forceLeftToRight
         
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            vwPGray.semanticContentAttribute = .forceLeftToRight
+        }else{
+            vwPGray.semanticContentAttribute = .forceRightToLeft
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

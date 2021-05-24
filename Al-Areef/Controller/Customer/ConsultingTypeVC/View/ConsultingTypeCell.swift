@@ -13,6 +13,7 @@ class ConsultingTypeCell: UITableViewCell {
     @IBOutlet weak var lblTitle                       : UILabel!
     @IBOutlet weak var lblSubTitle                    : UILabel!
     @IBOutlet weak var btnShowDetail                  : UIButton!
+    @IBOutlet weak var imgAppointmentType             : UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,11 @@ class ConsultingTypeCell: UITableViewCell {
         btnShowDetail.setTitle("The Bigining".localiz(), for: .normal)
         vwBack.semanticContentAttribute = .forceLeftToRight
         
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            self.vwBack.semanticContentAttribute = .forceLeftToRight
+        }else{
+            self.vwBack.semanticContentAttribute = .forceRightToLeft
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

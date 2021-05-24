@@ -65,7 +65,12 @@ class WriteMessageVC: UIViewController {
     }
     
     @IBAction func btnNextPressed(_ sender : UIButton){
-        pushMakePaymentVC()
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ConsultingTypeVC.self) {
+                self.navigationController?.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     @IBAction func btnAddWords(_ sender : UIButton){

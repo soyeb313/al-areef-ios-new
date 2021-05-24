@@ -30,9 +30,11 @@ class ConsultingDurationVC: UIViewController {
     @IBOutlet weak var iconPrice1   : UIImageView!
     @IBOutlet weak var iconPrice2   : UIImageView!
     @IBOutlet weak var iconPrice3   : UIImageView!
+    @IBOutlet weak var imgAppointmant   : UIImageView!
     
     // MARK:- Variables
     var consultType : ConsultingType?
+    var appointmantImg = UIImage()
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +53,16 @@ class ConsultingDurationVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Choose Duration".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
-        self.navigationItem.leftBarButtonItem = backBtn
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
         
-        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
-        self.navigationItem.rightBarButtonItem = searchbtn
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
+        self.navigationItem.leftBarButtonItem = backBtn
+        imgAppointmant.image = appointmantImg
+//        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
+//        self.navigationItem.rightBarButtonItem = searchbtn
         
         self.vwBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         self.vwDurationBack1.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
@@ -137,9 +144,19 @@ class ConsultingDurationVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushChooseDurationVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
-        vc.consultType = consultType
-        self.navigationController?.pushViewController(vc, animated: false)
+        
+        switch consultType {
+        case .TextMessage,.VoiceMessage:
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
+            vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: false)
+        default:
+            guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MapVC.self)) as? MapVC else { return }
+            vc.consultType = consultType
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+        
+        
     }
     
     

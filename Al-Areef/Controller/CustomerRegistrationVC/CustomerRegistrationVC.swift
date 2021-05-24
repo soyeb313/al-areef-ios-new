@@ -17,6 +17,8 @@ class CustomerRegistrationVC: UIViewController {
     @IBOutlet weak var txtSpecialIdNumber: SkyFloatingLabelTextField!
     @IBOutlet weak var txtGender: SkyFloatingLabelTextField!
     @IBOutlet weak var txtFullName: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtAge: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtLastName: SkyFloatingLabelTextField!
     
     @IBOutlet weak var txtStreet: SkyFloatingLabelTextField!
     @IBOutlet weak var txtArea: SkyFloatingLabelTextField!
@@ -25,7 +27,8 @@ class CustomerRegistrationVC: UIViewController {
     @IBOutlet weak var txtSelectLanguage: SkyFloatingLabelTextField!
     
     @IBOutlet weak var btnComplete: UIButton!
-    
+    @IBOutlet weak var vwLastName: UIView!
+    @IBOutlet weak var vwAge: UIView!
     @IBOutlet weak var vwName: UIView!
     @IBOutlet weak var vwGender: UIView!
     @IBOutlet weak var vwIdNumber: UIView!
@@ -44,7 +47,7 @@ class CustomerRegistrationVC: UIViewController {
  
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblSelectLanguage: UILabel!
-    
+    @IBOutlet weak var lblLogin: UILabel!
     
     // MARK:- Outlets
     var OTP = "12345"
@@ -76,8 +79,11 @@ class CustomerRegistrationVC: UIViewController {
         vwCountry.setBorder(with: .app_Green, 1)
         vwCityTown.setBorder(with: .app_Green, 1)
         vwSelectLanguage.setBorder(with: .app_Green, 1)
+        vwAge.setBorder(with: .app_Green, 1)
+        vwLastName.setBorder(with: .app_Green, 1)
         
-        
+        txtLastName.placeholder = "Last Name".localiz()
+        txtAge.placeholder = "Age".localiz()
         txtStreet.placeholder = "Street".localiz()
         txtArea.placeholder = "Area".localiz()
         txtCountry.placeholder = "Country".localiz()
@@ -96,10 +102,31 @@ class CustomerRegistrationVC: UIViewController {
         lblAddress.text = "Address".localiz()
         lblSelectLanguage.text = "Preferred Language".localiz()
         btnComplete.setTitle("Completes".localiz(), for: .normal)
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            vwGender.semanticContentAttribute = .forceRightToLeft
+            vwCountry.semanticContentAttribute = .forceRightToLeft
+            vwCityTown.semanticContentAttribute = .forceRightToLeft
+            vwSelectLanguage.semanticContentAttribute = .forceRightToLeft
+            vwAge.semanticContentAttribute = .forceRightToLeft
+        }
+        
+        lblLogin.halfTextColorChange(fullText: "Already have an account? Log in".localiz(), changeText: "Log in".localiz(), fontColor: .app_Green)
+        lblLogin.isUserInteractionEnabled = true
+        lblLogin.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
     }
     
     // MARK:- Button Actions
-    
+    @objc func handleTapOnLabel(_ recognizer: UITapGestureRecognizer) {
+        guard let text = lblLogin.attributedText?.string else {
+            return
+        }
+        
+       // if let range = text.range(of: "Log in"),
+        ///   recognizer.didTapAttributedTextInLabel(label: lblLoginInfo, inRange: NSRange(range, in: text)) {
+            pushLoginVC()
+       // }
+    }
     @IBAction func btnBackPressed() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -139,6 +166,12 @@ class CustomerRegistrationVC: UIViewController {
         }*/
         
     }
+    
+    private func pushLoginVC() {
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LonginVC.self)) as? LonginVC else { return }
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     func wsSendOtp() {
        
         

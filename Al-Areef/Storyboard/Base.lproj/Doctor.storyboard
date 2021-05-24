@@ -164,7 +164,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4f-NH-5Rl">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="555.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-Ib-YKr">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-Ib-YKr">
                                                         <rect key="frame" x="124" y="195" width="166" height="165.5"/>
                                                     </imageView>
                                                 </subviews>
@@ -258,7 +258,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEW-oz-3LD">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-eA-jw2">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-eA-jw2">
                                                         <rect key="frame" x="103.5" y="165.5" width="207" height="207"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4y-4e-4OQ">
@@ -918,7 +918,7 @@
                                                             <action selector="btnDegreeUpload:" destination="zlB-7H-XA2" eventType="touchUpInside" id="Zx5-Po-oK4"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rek-RE-R13">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rek-RE-R13">
                                                         <rect key="frame" x="145" y="20" width="128" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="MJ3-RR-EI8"/>
@@ -1149,7 +1149,7 @@
                         <outlet property="btnNext" destination="ZwW-j2-AmJ" id="qhf-lt-o5B"/>
                         <outlet property="lblCertificate" destination="jmg-7u-GRw" id="RzU-t6-Erb"/>
                         <outlet property="lblCertificateName" destination="n5p-Iy-wv1" id="tcb-zW-v7j"/>
-                        <outlet property="lblDegree" destination="rek-RE-R13" id="RxJ-91-m8h"/>
+                        <outlet property="lblDegree" destination="rek-RE-R13" id="aLE-nM-nT3"/>
                         <outlet property="txtCertificateCollegeUniverstiy" destination="CUX-tf-lQt" id="hjF-As-wc1"/>
                         <outlet property="txtCertificatetitle" destination="vcO-jq-GVr" id="5bk-zN-BKp"/>
                         <outlet property="txtCollegeUniversity" destination="o6M-wb-tP8" id="MDj-LL-43C"/>
@@ -1766,7 +1766,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="500.5" height="635.5"/>
+        <image name="Logo-1" width="167" height="212"/>
         <image name="email" width="128" height="128"/>
         <image name="facebook" width="128" height="128"/>
         <image name="linkedin" width="128" height="128"/>

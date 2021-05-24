@@ -37,7 +37,13 @@ class SelectPlanVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Select Plan".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         btnBuy.setShadow()
         
         self.navigationItem.leftBarButtonItem = backBtn

@@ -23,7 +23,13 @@ class RecordMessageVC: UIViewController {
         self.title = "Record the message".localiz()
         lblPressInfo.text = "Press the circle button to start or stop recording".localiz()
         lblTimePassed.text = "Time has passed".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
     }

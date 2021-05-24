@@ -10,12 +10,15 @@ import UIKit
 class ConsultingListVC: UIViewController {
 
     // MARK:- Outlets
-    @IBOutlet weak var tableView          : UITableView!
-    @IBOutlet weak var viewBG             : UIView!
+    @IBOutlet weak var tableView              : UITableView!
+    @IBOutlet weak var viewBG                 : UIView!
     @IBOutlet weak var viewHeader             : UIView!
-    @IBOutlet weak var lblHeader             : UILabel!
+    @IBOutlet weak var lblHeader              : UILabel!
+    @IBOutlet weak var btnBack             : UIButton!
     //@IBOutlet weak var btnViewappoinments: UIButton!
+    
     // MARK:- Variables
+    var imgArr = [#imageLiteral(resourceName: "counselling1"),#imageLiteral(resourceName: "counselling2"),#imageLiteral(resourceName: "counselling3"),#imageLiteral(resourceName: "counselling4"),#imageLiteral(resourceName: "counselling5"),#imageLiteral(resourceName: "counselling6"),#imageLiteral(resourceName: "counselling7"),#imageLiteral(resourceName: "counselling8"),#imageLiteral(resourceName: "counselling9"),#imageLiteral(resourceName: "counselling10")]
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -24,6 +27,7 @@ class ConsultingListVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -38,6 +42,19 @@ class ConsultingListVC: UIViewController {
         }
         viewHeader.semanticContentAttribute = .forceLeftToRight
         lblHeader.text = "Counselling Topics".localiz()
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            viewHeader.semanticContentAttribute = .forceRightToLeft
+        }else{
+            viewHeader.semanticContentAttribute = .forceLeftToRight
+        }
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        btnBack.setImage(UIImage(named: backButton), for: .normal)
     }
     
     // MARK:- Button Actions
@@ -75,7 +92,7 @@ extension ConsultingListVC : UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return imgArr.count
         
     }
     
@@ -86,6 +103,7 @@ extension ConsultingListVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ConsultingListCell.self), for: indexPath) as? ConsultingListCell else{ return UITableViewCell() }
         cell.vwBack.semanticContentAttribute = .forceLeftToRight
+        cell.imgCounselling.image = imgArr[indexPath.row]
         return cell
     }
     

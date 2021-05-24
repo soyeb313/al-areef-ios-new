@@ -31,9 +31,9 @@ class SplashVC: UIViewController {
         let is_login = UserDefaults.standard.bool(forKey: User_defaults_Constants.LOGGED_IN)
         if is_login == true
         {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
-            self.navigationController?.pushViewController(vc, animated: true)
+//            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//            let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
+//            self.navigationController?.pushViewController(vc, animated: true)
         }else{
             setUpView()
         }
@@ -81,7 +81,10 @@ class SplashVC: UIViewController {
 //            guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LoginStepOneVC.self)) as? LoginStepOneVC else { return }
 //            self.navigationController?.pushViewController(vc, animated: true)
 //        }
-        appDelegate.setLogin()
+        
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: SplashVideoVC.self)) as? SplashVideoVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+        //appDelegate.setLogin()
        
     }
     

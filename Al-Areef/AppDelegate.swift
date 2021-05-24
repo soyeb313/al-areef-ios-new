@@ -114,14 +114,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setAppearance(){
+        
+        
         if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
-            
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceRightToLeft
+
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
 //            UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
         }else
         {
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
-            
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceLeftToRight
+
 //            UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
 
         }

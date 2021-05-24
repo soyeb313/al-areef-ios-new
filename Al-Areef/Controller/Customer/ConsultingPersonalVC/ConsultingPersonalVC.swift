@@ -14,6 +14,7 @@ class ConsultingPersonalVC: UIViewController {
     @IBOutlet weak var viewBG             : UIView!
     @IBOutlet weak var viewHeader             : UIView!
     @IBOutlet weak var lblHeader             : UILabel!
+    @IBOutlet weak var btnBack             : UIButton!
     // MARK:- Variables
     
     // MARK:- View Life Cycle
@@ -37,8 +38,21 @@ class ConsultingPersonalVC: UIViewController {
             self.viewBG.layerGradient(colors: [UIColor.app_Green.cgColor,UIColor.app_Gradient.cgColor,UIColor.app_Gradient.cgColor])
             
         }
-        viewHeader.semanticContentAttribute = .forceLeftToRight
+        //viewHeader.semanticContentAttribute = .forceLeftToRight
         lblHeader.text = "Counselling".localiz()
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            viewHeader.semanticContentAttribute = .forceRightToLeft
+        }else{
+            viewHeader.semanticContentAttribute = .forceLeftToRight
+        }
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        btnBack.setImage(UIImage(named: backButton), for: .normal)
     }
     
     // MARK:- Button Actions

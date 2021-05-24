@@ -24,8 +24,10 @@ class ConsultingTypeVC: UIViewController {
     @IBOutlet weak var viewBG             : UIView!
     @IBOutlet weak var viewHeader             : UIView!
     @IBOutlet weak var lblHeader             : UILabel!
+    @IBOutlet weak var btnBack             : UIButton!
     // MARK:- Variables
     var consultTypeArr = [ConsultingType.VoiceMessage,ConsultingType.TextMessage,ConsultingType.AudioConnections,ConsultingType.VideoConnections,ConsultingType.PersonalMeeting]
+    var imgArr = [ #imageLiteral(resourceName: "appointment1"), #imageLiteral(resourceName: "appointment2"), #imageLiteral(resourceName: "appointment3"), #imageLiteral(resourceName: "appointment4"), #imageLiteral(resourceName: "appointment5")]
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,20 @@ class ConsultingTypeVC: UIViewController {
         }
         viewHeader.semanticContentAttribute = .forceLeftToRight
         lblHeader.text = "Appointment Types".localiz()
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            viewHeader.semanticContentAttribute = .forceRightToLeft
+        }else{
+            viewHeader.semanticContentAttribute = .forceLeftToRight
+        }
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        btnBack.setImage(UIImage(named: backButton), for: .normal)
+
     }
     
     // MARK:- Button Actions
@@ -65,11 +81,13 @@ class ConsultingTypeVC: UIViewController {
         case .VoiceMessage,.TextMessage:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultingDurationVC.self)) as? ConsultingDurationVC else { return }
             vc.consultType = self.consultTypeArr[index]
+            vc.appointmantImg = self.imgArr[index]
             self.navigationController?.pushViewController(vc, animated: false)
         
         default:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AnswerQuestionsVC.self)) as? AnswerQuestionsVC else { return }
             vc.consultType = self.consultTypeArr[index]
+            vc.appointmantImg = self.imgArr[index]
             self.navigationController?.pushViewController(vc, animated: false)
         }
     }
@@ -105,7 +123,11 @@ extension ConsultingTypeVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ConsultingTypeCell.self), for: indexPath) as? ConsultingTypeCell else{ return UITableViewCell() }
         cell.lblTitle.text = consultTypeArr[indexPath.row].rawValue.localiz()
-        cell.vwBack.semanticContentAttribute = .forceLeftToRight
+        
+        //cell.vwBack.semanticContentAttribute = .forceLeftToRight
+        
+        cell.imgAppointmentType.image = imgArr[indexPath.row]
+        
         return cell
     }
     

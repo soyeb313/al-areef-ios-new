@@ -41,7 +41,12 @@ class AppointmentReservationVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Reservation and appointment".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         setBtnMorningUI()
         setBtnEveningUI()
@@ -112,15 +117,23 @@ class AppointmentReservationVC: UIViewController {
     }
     
     @IBAction func btnNextPressed(_ sender : UIButton){
-        pushMakePaymentVC()
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
+        vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
+//        for controller in self.navigationController!.viewControllers as Array {
+//            if controller.isKind(of: ConsultingTypeVC.self) {
+//                self.navigationController?.popToViewController(controller, animated: true)
+//                break
+//            }
+//        }
     }
     
     
     // MARK:- Push Methods
     private func pushMakePaymentVC() {
-        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
-        vc.consultType = consultType
-        self.navigationController?.pushViewController(vc, animated: false)
+//        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
+//        vc.consultType = consultType
+//        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     // MARK:- Custom Methods

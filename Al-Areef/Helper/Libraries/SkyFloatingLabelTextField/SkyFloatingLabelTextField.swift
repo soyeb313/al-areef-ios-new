@@ -10,6 +10,7 @@
 //  for the specific language governing permissions and limitations under the License.
 
 import UIKit
+import LanguageManager_iOS
 
 /**
  An enum for the possible error label placements.
@@ -30,7 +31,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
      A Boolean value that determines if the language displayed is LTR. 
      Default value set automatically from the application language settings.
      */
-    @objc open var isLTRLanguage: Bool = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {
+    @objc open var isLTRLanguage: Bool = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
         didSet {
            updateTextAligment()
         }
@@ -47,6 +48,16 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
             errorLabel.textAlignment = .right
         }
 
+        if  LanguageManager.shared.isRightToLeft == true {
+            textAlignment = .right
+            titleLabel.textAlignment = .right
+            errorLabel.textAlignment = .right
+        }else
+        {
+            textAlignment = .left
+            titleLabel.textAlignment = .left
+            errorLabel.textAlignment = .left
+        }
         // Override error message default alignment
         if let errorLabelAlignment = errorLabelAlignment {
             errorLabel.textAlignment = errorLabelAlignment

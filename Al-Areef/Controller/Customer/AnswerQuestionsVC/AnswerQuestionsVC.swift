@@ -15,7 +15,7 @@ class AnswerQuestionsVC: UIViewController {
     
     // MARK:- Variables
     var consultType : ConsultingType?
-    
+    var appointmantImg = UIImage()
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,13 @@ class AnswerQuestionsVC: UIViewController {
         self.title = "Answer Questions".localiz()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 35
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         self.btnNext.setShadow(shadowColor: UIColor.lightGray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         self.btnNext.setTitle("Next".localiz(), for: .normal)
@@ -60,6 +66,7 @@ class AnswerQuestionsVC: UIViewController {
     private func pushConsultingDurationVC() {
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultingDurationVC.self)) as? ConsultingDurationVC else { return }
         vc.consultType = consultType
+        vc.appointmantImg = self.appointmantImg
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

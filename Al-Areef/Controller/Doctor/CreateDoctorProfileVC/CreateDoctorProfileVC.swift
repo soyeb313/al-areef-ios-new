@@ -34,9 +34,15 @@ class CreateDoctorProfileVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Create Your Profile".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
         
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
         
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        btnCreateProfile.setTitle("Create your Profile".localiz(), for: .normal)
         self.navigationItem.leftBarButtonItem = backBtn
         
     }
@@ -48,6 +54,7 @@ class CreateDoctorProfileVC: UIViewController {
     
     
     @IBAction func btnCreateProfileTapped(_ sender : UIButton){
+   //     self.pushAcademicQualificationVC()
         if self.txtxName.text  == "" {
             Loaf("Please enter full name.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if self.txtMobileNo.text  == ""

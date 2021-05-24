@@ -33,7 +33,7 @@ class PaymentSuccessPopupVC: UIViewController {
         btnContinue.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         btnContinue.setTitle("Continue to record the message".localiz(), for: .normal)
         self.lblDescription.text = "Payment successful".localiz()
-        self.lblAmount.text = "$10.00".localiz()
+        self.lblAmount.text = "KWD 10.00".localiz()
         self.lblSubDescription.text = "Thank you for payment and you can now up to record your message.".localiz()
     }
     

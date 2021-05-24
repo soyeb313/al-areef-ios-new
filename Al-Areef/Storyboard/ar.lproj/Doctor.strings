@@ -1,0 +1,138 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0xl-JR-Doe"; */
+"0xl-JR-Doe.text" = "Label";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "43A-CO-x8x"; */
+"43A-CO-x8x.text" = "Gender";
+
+/* Class = "UILabel"; text = "List Certificate"; ObjectID = "4IQ-vA-QzM"; */
+"4IQ-vA-QzM.text" = "List Certificate";
+
+/* Class = "UILabel"; text = "College/University, city & Country"; ObjectID = "4rh-g0-DUZ"; */
+"4rh-g0-DUZ.text" = "College/University, city & Country";
+
+/* Class = "UILabel"; text = "Certificate Title"; ObjectID = "7b7-hI-3ud"; */
+"7b7-hI-3ud.text" = "Certificate Title";
+
+/* Class = "UILabel"; text = "Current Position Held"; ObjectID = "8AB-6S-pyi"; */
+"8AB-6S-pyi.text" = "Current Position Held";
+
+/* Class = "UIButton"; normalTitle = "UPLOAD"; ObjectID = "Dpk-jy-z4A"; */
+"Dpk-jy-z4A.normalTitle" = "UPLOAD";
+
+/* Class = "UILabel"; text = "Via Facebook"; ObjectID = "Fp7-qr-MzL"; */
+"Fp7-qr-MzL.text" = "Via Facebook";
+
+/* Class = "UILabel"; text = "Via Email"; ObjectID = "Hcw-E8-Qvr"; */
+"Hcw-E8-Qvr.text" = "Via Email";
+
+/* Class = "UILabel"; text = "Job Title"; ObjectID = "IdB-nu-5xG"; */
+"IdB-nu-5xG.text" = "Job Title";
+
+/* Class = "UILabel"; text = "Email Address"; ObjectID = "Nba-xd-Ufp"; */
+"Nba-xd-Ufp.text" = "Email Address";
+
+/* Class = "UILabel"; text = "List Highest Academic Qualification"; ObjectID = "P03-RC-NEz"; */
+"P03-RC-NEz.text" = "List Highest Academic Qualification";
+
+/* Class = "UILabel"; text = "Brief Job Description"; ObjectID = "Q8z-c7-Fwt"; */
+"Q8z-c7-Fwt.text" = "Brief Job Description";
+
+/* Class = "UILabel"; text = "List Work Experience"; ObjectID = "Viv-5O-gdQ"; */
+"Viv-5O-gdQ.text" = "List Work Experience";
+
+/* Class = "UILabel"; text = "Describe yourself"; ObjectID = "WdV-Ik-2XV"; */
+"WdV-Ik-2XV.text" = "Describe yourself";
+
+/* Class = "UILabel"; text = "Previous Positions Held"; ObjectID = "X0T-Gs-j20"; */
+"X0T-Gs-j20.text" = "Previous Positions Held";
+
+/* Class = "UILabel"; text = "Name of Employer"; ObjectID = "XOw-U6-i2f"; */
+"XOw-U6-i2f.text" = "Name of Employer";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "ZwW-j2-AmJ"; */
+"ZwW-j2-AmJ.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Welcome to the most technologically advanced portal for Consultants"; ObjectID = "aCU-UZ-ljM"; */
+"aCU-UZ-ljM.text" = "Welcome to the most technologically advanced portal for Consultants";
+
+/* Class = "UILabel"; text = "Degree Title"; ObjectID = "bjB-Xw-VbS"; */
+"bjB-Xw-VbS.text" = "Degree Title";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "cBX-zh-4l7"; */
+"cBX-zh-4l7.text" = "Mobile Number";
+
+/* Class = "UILabel"; text = "Tenure"; ObjectID = "cUb-gd-6ag"; */
+"cUb-gd-6ag.text" = "Tenure";
+
+/* Class = "UILabel"; text = "Upload a video introducing yourself to your potential patients"; ObjectID = "cpr-BY-JZy"; */
+"cpr-BY-JZy.text" = "Upload a video introducing yourself to your potential patients";
+
+/* Class = "UILabel"; text = "Via LinkedIn"; ObjectID = "dr5-Us-zOY"; */
+"dr5-Us-zOY.text" = "Via LinkedIn";
+
+/* Class = "UILabel"; text = "Name of Employer"; ObjectID = "eQO-oC-s4y"; */
+"eQO-oC-s4y.text" = "Name of Employer";
+
+/* Class = "UILabel"; text = "Register Now"; ObjectID = "f4y-4e-4OQ"; */
+"f4y-4e-4OQ.text" = "Register Now";
+
+/* Class = "UIButton"; normalTitle = "Register Now"; ObjectID = "g4Y-we-AhR"; */
+"g4Y-we-AhR.normalTitle" = "Register Now";
+
+/* Class = "UILabel"; text = "Current Position Held"; ObjectID = "hu2-ZW-2Wp"; */
+"hu2-ZW-2Wp.text" = "Current Position Held";
+
+/* Class = "UILabel"; text = "Upload Degree (Jpeg, PNG, PDF)"; ObjectID = "ja6-jH-ggr"; */
+"ja6-jH-ggr.text" = "Upload Degree (Jpeg, PNG, PDF)";
+
+/* Class = "UIButton"; normalTitle = "UPLOAD"; ObjectID = "jcH-RM-bl8"; */
+"jcH-RM-bl8.normalTitle" = "UPLOAD";
+
+/* Class = "UIButton"; normalTitle = "UPLOAD"; ObjectID = "jeB-Sq-DTX"; */
+"jeB-Sq-DTX.normalTitle" = "UPLOAD";
+
+/* Class = "UILabel"; text = "Tenure"; ObjectID = "k0O-Yj-LSF"; */
+"k0O-Yj-LSF.text" = "Tenure";
+
+/* Class = "UILabel"; text = "Enter your Name"; ObjectID = "kOC-DP-iUh"; */
+"kOC-DP-iUh.text" = "Enter your Name";
+
+/* Class = "UILabel"; text = "Upload Certificate (Jpeg, PNG, PDF)"; ObjectID = "nQf-tc-8tD"; */
+"nQf-tc-8tD.text" = "Upload Certificate (Jpeg, PNG, PDF)";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "nU6-9z-LUp"; */
+"nU6-9z-LUp.text" = "Password";
+
+/* Class = "UILabel"; text = "Please provide a brief description about you"; ObjectID = "nWJ-vW-8Sq"; */
+"nWJ-vW-8Sq.text" = "Please provide a brief description about you";
+
+/* Class = "UIButton"; normalTitle = "Create your Profile"; ObjectID = "oDq-Py-g2N"; */
+"oDq-Py-g2N.normalTitle" = "Create your Profile";
+
+/* Class = "UILabel"; text = "Brief Job Description"; ObjectID = "oqz-5Z-qqw"; */
+"oqz-5Z-qqw.text" = "Brief Job Description";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "prJ-LM-cZh"; */
+"prJ-LM-cZh.text" = "Gender";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "ptN-qW-vPa"; */
+"ptN-qW-vPa.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "qfA-1o-dvc"; */
+"qfA-1o-dvc.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Job Title"; ObjectID = "tG3-gN-17f"; */
+"tG3-gN-17f.text" = "Job Title";
+
+/* Class = "UILabel"; text = "Year Completed"; ObjectID = "uw2-vu-VFD"; */
+"uw2-vu-VFD.text" = "Year Completed";
+
+/* Class = "UILabel"; text = "College/University, city & Country"; ObjectID = "xIe-nW-7MW"; */
+"xIe-nW-7MW.text" = "College/University, city & Country";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "yXp-yb-qlc"; */
+"yXp-yb-qlc.normalTitle" = "Skip";
+
+/* Class = "UITextField"; placeholder = "Please enter your video link here."; ObjectID = "ziq-uj-Szh"; */
+"ziq-uj-Szh.placeholder" = "Please enter your video link here.";

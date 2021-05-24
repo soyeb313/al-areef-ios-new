@@ -28,7 +28,13 @@ class RecordDoneVC: UIViewController {
         self.title = "Confirm the voice message".localiz()
         lblTimePassed.text = "Time has passed".localiz()
         lblTimeInfo.text = "Press the circle button to start or stop recording".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         btnRegisteragin.setTitle("Record again".localiz(), for: .normal)
         btnSend.setTitle("Send".localiz(), for: .normal)

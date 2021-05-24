@@ -36,6 +36,9 @@ class OTPVC: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
+    @IBAction func btnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK:- SetUpView
     private func setUpView() {
@@ -74,18 +77,19 @@ class OTPVC: UIViewController {
         if  isFromConsultantRegsitration {
             pushSelectPlanVC()
         }else {
-            if self.viewOTP.getPin() == "" {
-                Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
-                
-            }else
-            {
-                SVProgressHUD.show()
-                wsVerifyOTp()
-            }
+            pushQuestionnaireFormVC()
+//            if self.viewOTP.getPin() == "" {
+//                Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+//
+//            }else
+//            {
+//                SVProgressHUD.show()
+//                wsVerifyOTp()
+//            }
         }
     }
     @IBAction func btnResnet(_ sender: Any) {
-        pushQuestionnaireFormVC()
+//        pushQuestionnaireFormVC()
 //        if self.viewOTP.getPin() == "" {
 //            Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
 //            

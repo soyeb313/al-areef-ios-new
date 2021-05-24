@@ -38,7 +38,13 @@ class CartVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Cart".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
         self.vwBack.setCornerRadius(radius: 10)
@@ -54,6 +60,7 @@ class CartVC: UIViewController {
          lblDurationTitle.text = "Duration".localiz() + ":"
          lblFeesTitle.text = "Fees".localiz() + ":"
          lblNameTitle.text = "Name".localiz() + ":"
+        lblServiceName.text = consultType?.rawValue
     }
     
     // MARK:- Button Actions

@@ -24,7 +24,12 @@ class DasBoardCustViewController: UIViewController {
         self.btnViewappoinments.layer.borderColor = UIColor.white.cgColor
         self.btnViewappoinments.setTitle("View appointments".localiz(), for: .normal)
         setUpView()
-        viewHeader.semanticContentAttribute = .forceLeftToRight
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            self.viewHeader.semanticContentAttribute = .forceRightToLeft
+        }else{
+            self.viewHeader.semanticContentAttribute = .forceLeftToRight
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,16 +70,29 @@ extension DasBoardCustViewController : UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier:"DashBoardTableViewCell", for: indexPath) as! DashBoardTableViewCell
-        cell.lblTitleSertvice.text = arrTitle[indexPath.row].localiz()
-        cell.btnAction.setTitle(arrBtnTitle[indexPath.row].localiz(), for: .normal)
-        cell.imgServices.image = arrImages[indexPath.row]
-        cell.btnAction.layer.cornerRadius = 5
-        cell.btnAction.layer.masksToBounds = true
-        cell.vwBack.semanticContentAttribute = .forceLeftToRight
+        
+        if arrTitle[indexPath.row] == "Conatact Us"{
+            let cell = tableView.dequeueReusableCell(withIdentifier:"DashBoardVideoCell", for: indexPath) as! DashBoardVideoCell
+            cell.btnAction.setTitle(arrBtnTitle[indexPath.row].localiz(), for: .normal)
+            //cell.imgServices.image = arrImages[indexPath.row]
+            cell.btnAction.layer.cornerRadius = 5
+            cell.btnAction.layer.masksToBounds = true
+            cell.vwBack.semanticContentAttribute = .forceLeftToRight
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier:"DashBoardTableViewCell", for: indexPath) as! DashBoardTableViewCell
+            cell.lblTitleSertvice.text = arrTitle[indexPath.row].localiz()
+            cell.btnAction.setTitle(arrBtnTitle[indexPath.row].localiz(), for: .normal)
+            cell.imgServices.image = arrImages[indexPath.row]
+            cell.btnAction.layer.cornerRadius = 5
+            cell.btnAction.layer.masksToBounds = true
+            cell.vwBack.semanticContentAttribute = .forceLeftToRight
+            return cell
+        }
+        
 
         
-        return cell
+       
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         pushConsultingPersonalVC()

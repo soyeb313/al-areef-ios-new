@@ -47,7 +47,13 @@ class ConsultantDetailsVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         self.title = "Consutation details".localiz()
-        let backBtn = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(btnBackPressed))
+        
+        var backButton = "backButton1"
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            backButton = "backButton"
+        }
+        
+        let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         vwConsultantProfileBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
         vwAppointmentDetailBack.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
@@ -92,6 +98,12 @@ class ConsultantDetailsVC: UIViewController {
     private func pushMakePaymentVC() {
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
         vc.consultType = consultType
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    private func pushTimelineVC() {
+        guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: TimelineVC.self)) as? TimelineVC else { return }
+        //vc.consultType = consultType
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

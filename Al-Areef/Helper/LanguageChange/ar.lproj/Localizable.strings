@@ -71,7 +71,7 @@
 "Add a card"="إضافة بطاقة";
 "Continue to record the message"="استمر في تسجيل الرسالة";
 "Payment successful"="تم الدفع بنجاح";
-"$10.00" = "10.00 دولارات ";
+"KWD 10.00" = "KWD 10.00";
 "Thank you for payment and you can now up to record your message."="شكرًا على الدفع ويمكنك الآن تسجيل رسالتك.";
 "Pay"="يدفع";
 "Voice Call"="مكالمة صوتية";
@@ -346,7 +346,7 @@
 "Add a card"="إضافة بطاقة";
 "Continue to record the message"="استمر في تسجيل الرسالة";
 "Payment successful"="تم الدفع بنجاح";
-"$10.00" = "10.00 دولارات ";
+"$10.00" = "KWD 10";
 "Thank you for payment and you can now up to record your message."="شكرًا على الدفع ويمكنك الآن تسجيل رسالتك.";
 "Pay"="يدفع";
 "Voice Call"="مكالمة صوتية";
@@ -703,3 +703,27 @@
 "The lowest level of satisfaction" = "أقل مستوى رضا";
 "Press the circle button to start or stop recording" = "اضغط على زر الدائرة لبدء التسجيل أو إيقافه";
 "Time has passed" = "فات الوقت";
+"About" = "حول";
+"The knower was born out of the need to treat the people who were born the knower out of the need to treat people with mental health challenges. The knower was born out of the need to treat people with mental health challenges. The knower was born out of the need to treat people with mental health challenges. Mental health challenges. The knowledgeable was born out of a need to treat people with mental health challenges. The knower was born out of a need to treat people with mental health challenges. The knowledgeable was born out of a need to treat people with mental health challenges." = "ولد العارف من منطلق الحاجة إلى معالجة الأشخاص الذين ولد العارف من منطلق الحاجة إلى معالجة الأشخاص الذين يعانون من تحديات الصحة العقلية.ولد العارف من منطلق الحاجة إلى معالجة الأشخاص الذين يعانون من تحديات الصحة العقلية.ولد العارف من منطلق الحاجة إلى معالجة الأشخاص الذين يعانون من تحديات الصحة العقلية.ولد العارف من منطلق الحاجة إلى معالجة الأشخاص الذين يعانون من تحديات الصحة العقلية.ولد العارف من منطلق الحاجة إلى معالجة الأشخاص الذين يعانون من تحديات الصحة العقلية.جة إلى معالجة الأشخاص الذين يعانون من تحديات الصحة العقلية.";
+"Qualifications" = "مؤهلات";
+"Previous positions" = "المناصب السابقة";
+"Work Experience" = "خبرة في العمل";
+"Courses Published" = "الدورات المنشورة";
+"Webinars" = "ندوات عبر الإنترنت";
+"Timeline" = "الجدول الزمني";
+"Last Name" = "الكنية";
+"Start Typing" = "ابدأ الطباعة";
+"Start Recording" = "ابدأ التسجيل";
+"Previous Recommendations" = "التوصيات السابقة";
+"Manage this booking" = "إدارة هذا الحجز";
+
+"Select Reason" =  "تحديد السبب";
+"Client No Show"= "العميل لا يحضر";
+"Client Late"="تأخر العميل";
+"Client asked for cancellation"="العميل طلب الإلغاء";
+"Cancel meeting on Doctor’s discretion" = "إلغاء الاجتماع حسب تقدير الطبيب";
+"Submit" = "إرسال";
+"Write here" = "اكتب هنا";
+"Reschedule"= "إعادة الجدولة";
+"Cancel"= "يلغي";
+"$10.00" = "KWD 10";

@@ -39,6 +39,21 @@ class LoginStepOneVC: UIViewController {
 //            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
 //            switchLanguage.changeLanguageTo(lang: "en")
 //        }
+        
+        if  LanguageManager.shared.isRightToLeft == true {
+          
+            switchLanguage.changeLanguageTo(lang: "ar")
+                 UIView.appearance().semanticContentAttribute = .forceRightToLeft
+         
+            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceRightToLeft
+        }else{
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            UITextField.appearance().semanticContentAttribute = .forceLeftToRight
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceLeftToRight
+
+            switchLanguage.changeLanguageTo(lang: "en")
+        }
     }
     
     // MARK:- SetUpView
