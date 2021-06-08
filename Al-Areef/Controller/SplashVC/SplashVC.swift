@@ -22,20 +22,19 @@ class SplashVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // switchLanguage.changeLanguageTo(lang: "ar")
-        UserData.saveData(.language, "ar")
-        // set prefered languages for the app.
-        UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
-        UserDefaults.standard.synchronize()
-        
-        let is_login = UserDefaults.standard.bool(forKey: User_defaults_Constants.LOGGED_IN)
-        if is_login == true
-        {
-//            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//            let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
-//            self.navigationController?.pushViewController(vc, animated: true)
+        if let loggedInUserType = UserData.returnValue(.LoggedInUserType) as? String{
+            if loggedInUserType == "Customer" {
+                appDelegate.setDashBoard()
+            }else if loggedInUserType == "Doctor" {
+                appDelegate.setDoctorDashBoard()
+            }
         }else{
-            setUpView()
+            // switchLanguage.changeLanguageTo(lang: "ar")
+             UserData.saveData(.language, "ar")
+             // set prefered languages for the app.
+             UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
+             UserDefaults.standard.synchronize()
+             setUpView()
         }
        
     }
@@ -140,7 +139,41 @@ class SplashVC: UIViewController {
     @IBAction func btnContinue(_ sender: Any) {
         pushLoginVC()
     }
-    
+    func setDashBoard(){
+      //  self.setAppearance()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
+            guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: UtechTab_UTC.self)) as? UtechTab_UTC else { return }
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.navigationBar.isHidden = true
+            if let keyWindow = UIApplication.shared.windows.first {
+                keyWindow.rootViewController = navigationController
+                keyWindow.makeKeyAndVisible()
+            }else{
+                UIApplication.shared.windows.first?.rootViewController = navigationController
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
+            }
+        }
+        
+    }
+    func setAppearance(){
+        
+        
+        if let lang = UserData.returnValue(.language) as? String,lang == "ar" {
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceRightToLeft
+
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//            UINavigationBar.appearance().semanticContentAttribute = .forceRightToLeft
+        }else
+        {
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            SkyFloatingLabelTextField.appearance().semanticContentAttribute = .forceLeftToRight
+
+//            UINavigationBar.appearance().semanticContentAttribute = .forceLeftToRight
+
+        }
+    }
 } //class
 
 

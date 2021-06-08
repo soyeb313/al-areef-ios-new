@@ -6,15 +6,22 @@
 //
 
 import UIKit
-
+import SVProgressHUD
+import Loaf
 class ChooseDurationVC: UIViewController {
 
     // MARK:- Outlets
     @IBOutlet weak var tableView          : UITableView!
    
     // MARK:- Variables
+    var selectedServices = ""
     var consultType : ConsultingType?
     var navFlag = ""
+    var words = ""
+    var rate = ""
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
+    var arrConsultPerson = NSArray()
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +43,15 @@ class ChooseDurationVC: UIViewController {
         let backBtn = UIBarButtonItem(image: UIImage(named: backButton), style: .plain, target: self, action: #selector(btnBackPressed))
         self.navigationItem.leftBarButtonItem = backBtn
         
+        switch consultType {
+        case .TextMessage:
+            selectedServices = "text"
+        case .VoiceMessage:
+            selectedServices = "voice"
+        default:
+            selectedServices = "text"
+        }
+        GetCounsultingPerson()
 //        let searchbtn = UIBarButtonItem(image: UIImage(named: "iossearch"), style: .plain, target: self, action: #selector(btnSearchPressed))
 //        self.navigationItem.rightBarButtonItem = searchbtn
         
@@ -59,24 +75,43 @@ class ChooseDurationVC: UIViewController {
     }
     
     @IBAction func btnpaymentPressed(_ sender : UIButton){
+        var docter_id = 0
+        if let dict = arrConsultPerson[0] as? NSDictionary {
+            docter_id   = dict["id"] as? Int ?? 0
+        }
+
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
         vc.consultType = consultType
+        vc.words = words
+        vc.rate = rate
+        vc.couslingTopic_name = couslingTopic_name
+        vc.couslingTopic_id = couslingTopic_id
+        vc.consultant_id = docter_id
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
     @IBAction func btnCalenderPressed(_ sender : UIButton){
-        if sender.tag == 0 {
+        
             if consultType?.rawValue == "Voice message" ||  consultType?.rawValue == "Text message"
             {
+                var docter_id = 0
+                if let dict = arrConsultPerson[sender.tag] as? NSDictionary {
+                    docter_id   = dict["id"] as? Int ?? 0
+                }
                 guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CartVC.self)) as? CartVC else { return }
                 vc.consultType = consultType
+                vc.words = words
+                vc.rate = rate
+                vc.couslingTopic_name = couslingTopic_name
+                vc.couslingTopic_id = couslingTopic_id
+                vc.consultant_id = docter_id
                 self.navigationController?.pushViewController(vc, animated: false)
             }else{
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: CalendarVC.self)) as? CalendarVC else { return }
             vc.consultType = consultType
             self.navigationController?.pushViewController(vc, animated: false)
             }
-        }
+        
     }
     
     // MARK:- Push Methods
@@ -118,9 +153,9 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+              return arrConsultPerson.count
         }else{
-            return 4
+            return arrConsultPerson.count
         }
        
     }
@@ -140,11 +175,23 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ChooseDurationCell.self), for: indexPath) as? ChooseDurationCell else{ return UITableViewCell() }
-        cell.btnSelectProfile.tag = indexPath.section
+        cell.btnSelectProfile.tag = indexPath.row
+        cell.btnSelectProfile.addTarget(self, action: #selector(btnCalenderPressed), for: .touchUpInside)
+        if let dict = arrConsultPerson[indexPath.row] as? NSDictionary {
+            cell.lblConsultantName.text = dict ["full_name"] as? String
+            cell.lblExperince.text = "0 years experience".localiz()
+            cell.imgProfile.image = #imageLiteral(resourceName: "doctor")
+            cell.lblTitleReviewsCnt.text = "0"
+            cell.lblTitleCoursesCnt.text = "0"
+            cell.lblTitleYearsExperienceCnt.text = "0"
+            cell.lblTitlePatientsServedCnt.text = "0"
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
         
     }
     
@@ -194,5 +241,41 @@ extension ChooseDurationVC : UITableViewDelegate, UITableViewDataSource{
         
     }
     
+    func GetCounsultingPerson() {
+        let parameters = [ "user_id":UserDefaults.standard.value(forKey: User_defaults_Constants.user_id) ?? "",
+                           "service_type": selectedServices ,
+                           "lang": "en"
+                          ] as [String : Any]
+        let url = WSRequest.GetCounsultingPerson()
+        WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
+            print(responseDict,err)
+            SVProgressHUD.dismiss()
+            if let result = responseDict["message"] as? String
+            {
+                if result == "success"  {
+                     let userDetails = responseDict["user_details"] as? NSDictionary
+                    let message = "\(String(describing:result))"
+                    print(message)
+                    DispatchQueue.main.async {
+                     
+                       self.arrConsultPerson = responseDict["data"] as! NSArray
+                        self.tableView.reloadData()
+//                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//                        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
+//                        self.navigationController?.pushViewController(vc, animated: true)
+//                        Loaf("You have login  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                       
+                    
+                    }
+                }else{
+                    Loaf(responseDict["message"] as? String ?? ""
+                         , state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "FF0000"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+                }
+               
+            }
+           
+        }
+
+    }
 }
 

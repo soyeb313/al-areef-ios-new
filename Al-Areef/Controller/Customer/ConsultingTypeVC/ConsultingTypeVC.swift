@@ -29,6 +29,8 @@ class ConsultingTypeVC: UIViewController {
     var consultTypeArr = [ConsultingType.VoiceMessage,ConsultingType.TextMessage,ConsultingType.AudioConnections,ConsultingType.VideoConnections,ConsultingType.PersonalMeeting]
     var imgArr = [ #imageLiteral(resourceName: "appointment1"), #imageLiteral(resourceName: "appointment2"), #imageLiteral(resourceName: "appointment3"), #imageLiteral(resourceName: "appointment4"), #imageLiteral(resourceName: "appointment5")]
     // MARK:- View Life Cycle
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -82,6 +84,9 @@ class ConsultingTypeVC: UIViewController {
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ConsultingDurationVC.self)) as? ConsultingDurationVC else { return }
             vc.consultType = self.consultTypeArr[index]
             vc.appointmantImg = self.imgArr[index]
+            vc.couslingTopic_name = couslingTopic_name
+            vc.couslingTopic_id = couslingTopic_id
+           
             self.navigationController?.pushViewController(vc, animated: false)
         
         default:

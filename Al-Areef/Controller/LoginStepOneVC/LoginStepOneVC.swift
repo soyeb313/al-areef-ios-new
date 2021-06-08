@@ -33,7 +33,7 @@ class LoginStepOneVC: UIViewController {
 //                 UIView.appearance().semanticContentAttribute = .forceRightToLeft
 //
 //            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
-//                
+//
 //        }else{
 //            UIView.appearance().semanticContentAttribute = .forceLeftToRight
 //            UITextField.appearance().semanticContentAttribute = .forceRightToLeft
@@ -67,12 +67,16 @@ class LoginStepOneVC: UIViewController {
         lblSignUpInfo.isUserInteractionEnabled = true
         lblSignUpInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
         btnLoginCustomer.setTitle("Log in as customer".localiz(), for: .normal)
-        btnLoginVisitor.setTitle("Log in as doctor".localiz(), for: .normal)
-        btnLoginDoctor.setTitle("Continue as visitor".localiz(), for: .normal)
+        btnLoginDoctor.setTitle("Log in as doctor".localiz(), for: .normal)
+        btnLoginVisitor.setTitle("Continue as visitor".localiz(), for: .normal)
     }
     
     @IBAction func btnLoginCustomerTapped(_ sender : UIButton){
-        pushLoginVC()
+        pushLoginVC(true)
+    }
+    
+    @IBAction func btnLoginDoctorTapped(_ sender : UIButton){
+        pushLoginVC(false)
     }
     
     // MARK:- Button Actions
@@ -88,8 +92,9 @@ class LoginStepOneVC: UIViewController {
     }
     
     // MARK:- Push Methods
-    private func pushLoginVC() {
+    private func pushLoginVC(_ isCutomerLogin : Bool) {
         guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: LonginVC.self)) as? LonginVC else { return }
+        vc.isCutomerLogin = isCutomerLogin
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

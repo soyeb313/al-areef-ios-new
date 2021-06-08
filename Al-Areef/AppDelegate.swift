@@ -3,7 +3,7 @@
 //  Al-Areef
 //
 //  Created by Amruta Warankar on 09/04/21.
-//
+//com.Al-Areef.Al-AreefApp
 
 import UIKit
 import IQKeyboardManagerSwift
@@ -46,7 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UIApplication.shared.windows.forEach { $0.subviews.forEach { $0.removeFromSuperview(); UIApplication.shared.windows.first?.addSubview($0) }}
         setUpGoogleAPIs()
         SVProgressHUD.setDefaultMaskType(.gradient)
-        setSplash()
+        
+        if let loggedInUserType = UserData.returnValue(.LoggedInUserType) as? String{
+            if loggedInUserType == "Customer" {
+                appDelegate.setDashBoard()
+            }else if loggedInUserType == "Doctor" {
+                appDelegate.setDoctorDashBoard()
+            }
+        }else{
+            setSplash()
+        }
+        
+        //setSplash()
 
         return true
     }
@@ -100,6 +111,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             
             guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: String(describing: UtechTab_UTC.self)) as? UtechTab_UTC else { return }
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.navigationBar.isHidden = true
+            if let keyWindow = UIApplication.shared.windows.first {
+                keyWindow.rootViewController = navigationController
+                keyWindow.makeKeyAndVisible()
+            }else{
+                UIApplication.shared.windows.first?.rootViewController = navigationController
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
+            }
+        }
+        
+    }
+    
+    func setDoctorDashBoard(){
+        self.setAppearance()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
+            guard let vc = UIStoryboard.Doctor.instantiateViewController(withIdentifier: String(describing: DoctorTabBarVC.self)) as? DoctorTabBarVC else { return }
             let navigationController = UINavigationController(rootViewController: vc)
             navigationController.navigationBar.isHidden = true
             if let keyWindow = UIApplication.shared.windows.first {

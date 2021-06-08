@@ -39,6 +39,51 @@ public class WSRequest {
         return WSRequest.GetBaseURL() +  "api/ws-corporate-register"
     }
 
+    class func GetCounslingTopics() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-get-packges"
+    }
+    
+    class func GetCounslingTopicsDuration() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-get-services-duration"
+    }
+    
+    class func GetCounsultingPerson() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-get-consultant-person-listing"
+    }
+    
+    class func GetCounsultantDetails() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-get-consultant-detail"
+    }
+    
+    class func PlaceTextOrder() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-place-text-service"
+    }
+    
+    class func Gettrail() -> String {
+        return WSRequest.GetBaseURL() +  "api/ws-get-trails"
+    }
+    
+    class func CreateRegularWorkSchedule() -> String {
+           return WSRequest.GetBaseURL() +  "api/ws-create-regular-work-schedule"
+    }
+    class func createOccasionalWorkSchedule() -> String {
+           return WSRequest.GetBaseURL() +  "api/ws-create-occasional-work-schedule"
+    }
+    
+    class func getWorkScheduleList() -> String {
+           return WSRequest.GetBaseURL() +  "api/work-schedule-list"
+    }
+    
+    class func getCountryList() -> String {
+           return WSRequest.GetBaseURL() +  "api/ws-get-country"
+    }
+    
+    class func getCityList() -> String {
+           return WSRequest.GetBaseURL() +  "api/ws-get-city"
+    }
+    class func customerRegistrationStep2() -> String {
+           return WSRequest.GetBaseURL() +  "api/ws-customer-register-step-2"
+    }
 }
 //CorporatRegisteration
    

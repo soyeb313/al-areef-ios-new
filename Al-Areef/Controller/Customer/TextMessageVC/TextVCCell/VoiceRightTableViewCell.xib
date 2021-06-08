@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="KGk-i7-Jjw" customClass="VoiceRightTableViewCell" customModule="Al_Areef" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uR-ZN-Kri">
+                        <rect key="frame" x="73" y="8" width="243" height="57"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6B6-rw-wEC">
+                                <rect key="frame" x="11" y="5" width="48" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0E-8g-GyA">
+                                        <rect key="frame" x="14" y="9" width="26" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="IP8-qg-3An"/>
+                                            <constraint firstAttribute="height" constant="30" id="TId-aN-zyv"/>
+                                        </constraints>
+                                        <state key="normal" image="Polygon 11"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="61d-xJ-FZy"/>
+                                    <constraint firstItem="Y0E-8g-GyA" firstAttribute="leading" secondItem="6B6-rw-wEC" secondAttribute="leading" constant="14" id="IT5-sk-NqW"/>
+                                    <constraint firstAttribute="width" constant="48" id="R0z-b6-cOt"/>
+                                    <constraint firstItem="Y0E-8g-GyA" firstAttribute="top" secondItem="6B6-rw-wEC" secondAttribute="top" constant="9" id="Rc8-dS-vsk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y0E-8g-GyA" secondAttribute="trailing" constant="8" id="kgr-A3-Q9h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y0E-8g-GyA" secondAttribute="bottom" constant="9" id="koh-5m-tPg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.30000001192092896" progressImage="button_background.png" trackImage="button_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-Wu-iHe">
+                                <rect key="frame" x="75" y="27" width="163" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="CB6-cV-Twk"/>
+                                    <constraint firstAttribute="height" constant="4" id="n1U-Ea-d9g"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3470720947" green="0.66378802059999997" blue="0.57646268609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="243" id="DU7-tP-9Zo"/>
+                            <constraint firstItem="gyd-Wu-iHe" firstAttribute="top" secondItem="2uR-ZN-Kri" secondAttribute="top" constant="27" id="Mmd-fE-gMq"/>
+                            <constraint firstItem="6B6-rw-wEC" firstAttribute="leading" secondItem="2uR-ZN-Kri" secondAttribute="leading" constant="11" id="Z9Q-oU-PUf"/>
+                            <constraint firstAttribute="height" constant="57" id="ejl-Bk-w35"/>
+                            <constraint firstItem="6B6-rw-wEC" firstAttribute="top" secondItem="2uR-ZN-Kri" secondAttribute="top" constant="5" id="oO8-sd-gmC"/>
+                            <constraint firstItem="gyd-Wu-iHe" firstAttribute="leading" secondItem="6B6-rw-wEC" secondAttribute="trailing" constant="16" id="qoC-ms-NaJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2uR-ZN-Kri" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="73" id="4NV-xu-YuN"/>
+                    <constraint firstAttribute="trailing" secondItem="2uR-ZN-Kri" secondAttribute="trailing" constant="4" id="4d3-Uu-8mZ"/>
+                    <constraint firstItem="2uR-ZN-Kri" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NYW-XO-3BX"/>
+                    <constraint firstAttribute="bottom" secondItem="2uR-ZN-Kri" secondAttribute="bottom" constant="7" id="SL8-Xt-C01"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnPlay" destination="Y0E-8g-GyA" id="gfe-Wn-KFb"/>
+                <outlet property="progressview" destination="gyd-Wu-iHe" id="kbq-p4-geT"/>
+            </connections>
+            <point key="canvasLocation" x="105.79710144927537" y="62.946428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Polygon 11" width="62" height="72"/>
+        <image name="button_background.png" width="13" height="13"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

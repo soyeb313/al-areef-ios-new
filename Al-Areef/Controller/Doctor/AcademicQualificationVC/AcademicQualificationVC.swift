@@ -26,6 +26,18 @@ class AcademicQualificationVC: UIViewController, UINavigationControllerDelegate 
     @IBOutlet weak var txtDegreComlptedYear: UITextField!
     @IBOutlet weak var txtCertificatetitle: UITextField!
     @IBOutlet weak var lblCertificateName: UITextField!
+    
+    @IBOutlet weak var lblHeader1 : UILabel!
+    @IBOutlet weak var lblCurrentPositionHeld : UILabel!
+    @IBOutlet weak var lblDegreeTitle : UILabel!
+    @IBOutlet weak var lblYearCompleted : UILabel!
+    @IBOutlet weak var lblCollege : UILabel!
+    @IBOutlet weak var lblUploadDegree : UILabel!
+    @IBOutlet weak var lblListCertificate : UILabel!
+    @IBOutlet weak var lblCertificateTitle : UILabel!
+    @IBOutlet weak var lblCollege1 : UILabel!
+    @IBOutlet weak var lblUploadDegree1 : UILabel!
+    
     var userID = ""
     var imgFlag = ""
     var imageDegree = UIImage()
@@ -37,6 +49,21 @@ class AcademicQualificationVC: UIViewController, UINavigationControllerDelegate 
         setUpView()
         lblDegree.isHidden  = true
         lblCertificate.isHidden = true
+        
+        lblHeader1.text = "List Highest Academic Qualification".localiz()
+        lblCurrentPositionHeld.text = "Current Position Held".localiz()
+        lblDegreeTitle.text = "Degree Title".localiz()
+        lblYearCompleted.text = "Year Completed".localiz()
+        lblCollege.text = "College/University, city & Country".localiz()
+        lblUploadDegree.text = "Upload Degree (Jpeg, PNG, PDF)".localiz()
+        lblListCertificate.text = "List Certificate".localiz()
+        lblCertificateTitle.text = "Certificate Title".localiz()
+        lblCollege1.text = "College/University, city & Country".localiz()
+        lblUploadDegree1.text = "Upload Certificate (Jpeg, PNG, PDF)".localiz()
+        btnCertificateUpload.setTitle("UPLOAD".localiz(), for: .normal)
+        btnDegreeCertificateUpload.setTitle("UPLOAD".localiz(), for: .normal)
+        
+        btnNext.setTitle("Next".localiz(), for: .normal)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -126,7 +153,7 @@ class AcademicQualificationVC: UIViewController, UINavigationControllerDelegate 
                     if result == "success"
                     {
                         self.pushWorkExperienceVC()
-                        Loaf("Acadmic Details updated sucessfully. Please fill work experience", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
+                        Loaf("Acadmic Details updated sucessfully. Please fill work experience".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
                     }
                    
 
@@ -145,7 +172,7 @@ class AcademicQualificationVC: UIViewController, UINavigationControllerDelegate 
             Loaf("Please enter completed year.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if self.txtCollegeUniversity.text  == ""
         {
-            Loaf("Please enter your  college/universtiy,city&country.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter your college/universtiy,city&country.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else
         if self.lblDegree.text  == ""
        {

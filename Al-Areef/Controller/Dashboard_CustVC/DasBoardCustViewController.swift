@@ -70,7 +70,6 @@ extension DasBoardCustViewController : UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         if arrTitle[indexPath.row] == "Conatact Us"{
             let cell = tableView.dequeueReusableCell(withIdentifier:"DashBoardVideoCell", for: indexPath) as! DashBoardVideoCell
             cell.btnAction.setTitle(arrBtnTitle[indexPath.row].localiz(), for: .normal)

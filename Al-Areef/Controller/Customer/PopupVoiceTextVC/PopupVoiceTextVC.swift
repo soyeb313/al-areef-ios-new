@@ -11,6 +11,8 @@ class PopupVoiceTextVC: UIViewController {
 
     @IBOutlet weak var btnTemp : UIButton!
     var isFromVoice = true
+    @IBOutlet weak var lblDescrption: UILabel!
+    var name = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,9 @@ class PopupVoiceTextVC: UIViewController {
         }else{
             btnTemp.setImage(#imageLiteral(resourceName: "popup_screen2"), for: .normal)
         }
+        let str = "Your appointment with".localiz()
+        let str1 = "was successfully completed. The consultant will soon provide you prescription".localiz()
+        self.lblDescrption.text = str + " " + "\(name)" + " " + str1
     }
     
 

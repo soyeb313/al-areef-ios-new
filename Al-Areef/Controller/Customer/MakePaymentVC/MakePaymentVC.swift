@@ -35,6 +35,11 @@ class MakePaymentVC: UIViewController {
     @IBOutlet weak var vwOption2: UIView!
     @IBOutlet weak var vwOption3: UIView!
     @IBOutlet weak var vwOption4: UIView!
+    var words = ""
+    var rate = ""
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
+    var consultant_id  =  0
     // MARK:- Variables
     var consultType : ConsultingType?
     
@@ -118,6 +123,12 @@ class MakePaymentVC: UIViewController {
         guard let PopVC = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: PaymentSuccessPopupVC.self)) as? PaymentSuccessPopupVC else { return }
         //PopVC.view.frame = self.view.frame
         PopVC.paymentSuccessDelegate = self
+        PopVC.consultType = consultType
+        PopVC.words = words
+        PopVC.rate = rate
+        PopVC.couslingTopic_name =  couslingTopic_name
+        PopVC.couslingTopic_id =  couslingTopic_id
+        PopVC.consultant_id =  consultant_id
 //        self.addChild(PopVC)
 //        self.view.addSubview(PopVC.view)
 //        PopVC.didMove(toParent: self)
@@ -153,6 +164,11 @@ extension MakePaymentVC : PaymentSuccessProtocol {
         case .TextMessage,.VoiceMessage :
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentVC.self)) as? AppointmentVC else { return }
             vc.consultType = consultType
+            vc.words = words
+            vc.rate = rate
+            vc.couslingTopic_name =  couslingTopic_name
+            vc.couslingTopic_id =  couslingTopic_id
+            vc.consultant_id =  consultant_id
             self.navigationController?.pushViewController(vc, animated: true)
         default :
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: AppointmentVC.self)) as? AppointmentVC else { return }

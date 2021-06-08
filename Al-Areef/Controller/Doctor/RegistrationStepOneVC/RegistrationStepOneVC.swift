@@ -12,7 +12,7 @@ class RegistrationStepOneVC: UIViewController {
     // MARK:- Outlets
     @IBOutlet weak var btnRegisterNow          : UIButton!
     @IBOutlet weak var txtName          : UITextField!
-  
+    @IBOutlet weak var lblInfo          : UILabel!
   
     // MARK:- Variables
     
@@ -29,7 +29,8 @@ class RegistrationStepOneVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-       
+        lblInfo.text = "Welcome to the most technologically advanced portal for Consultants".localiz()
+        btnRegisterNow.setTitle("Register Now".localiz(), for: .normal)
     }
     
     // MARK:- Button Actions

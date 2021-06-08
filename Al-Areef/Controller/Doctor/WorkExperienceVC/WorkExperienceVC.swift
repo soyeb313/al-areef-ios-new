@@ -12,6 +12,10 @@ import AssetsLibrary
 import Alamofire
 import Loaf
 import SVProgressHUD
+
+
+
+
 class WorkExperienceVC: UIViewController {
 
     @IBOutlet weak var txtPrviouseDescription: UITextView!
@@ -26,6 +30,19 @@ class WorkExperienceVC: UIViewController {
     @IBOutlet weak var btnNext                          : UIButton!
     @IBOutlet weak var vwCurrentJobDescription          : UIView!
     @IBOutlet weak var vwPreviousJobDescription         : UIView!
+    
+    @IBOutlet weak var lblListWorkExperience            : UILabel!
+    @IBOutlet weak var lblCurrentPositionHeld           : UILabel!
+    @IBOutlet weak var lblJobTitle                      : UILabel!
+    @IBOutlet weak var lblNameofEmployer                : UILabel!
+    @IBOutlet weak var lblTenure                        : UILabel!
+    @IBOutlet weak var lblBriefJobDescription           : UILabel!
+    @IBOutlet weak var lblPreviousPositionsHeld         : UILabel!
+    @IBOutlet weak var lblPreviousNameofEmployer        : UILabel!
+    @IBOutlet weak var lblPreviousTenure                : UILabel!
+    @IBOutlet weak var lblPreviousJobTitle              : UILabel!
+    @IBOutlet weak var lblPreviousBriefJobDescription   : UILabel!
+    
     var  userid = ""
     
     // MARK:- Variables
@@ -54,6 +71,20 @@ class WorkExperienceVC: UIViewController {
         self.navigationItem.leftBarButtonItem = backBtn
         self.vwCurrentJobDescription.setBorder(with: .lightGray, 0.8)
         self.vwPreviousJobDescription.setBorder(with: .lightGray, 0.8)
+        
+        lblListWorkExperience.text = "List Work Experience".localiz()
+        lblCurrentPositionHeld.text = "Current Position Held".localiz()
+        lblJobTitle.text = "Job Title".localiz()
+        lblNameofEmployer.text = "Name of Employer".localiz()
+        lblTenure.text = "Tenure".localiz()
+        lblBriefJobDescription.text = "Brief Job Description".localiz()
+        lblPreviousPositionsHeld.text = "Previous Positions Held".localiz()
+        lblPreviousNameofEmployer.text = "Name of Employer".localiz()
+        lblPreviousTenure.text = "Tenure".localiz()
+        lblPreviousJobTitle.text = "Job Title".localiz()
+        lblPreviousBriefJobDescription.text = "Brief Job Description".localiz()
+        
+        btnNext.setTitle("Next".localiz(), for: .normal)
     }
     
     // MARK:- Button Actions
@@ -65,28 +96,28 @@ class WorkExperienceVC: UIViewController {
     @IBAction func btnNextTapped(_ sender : UIButton){
 
     if self.txtCurrentEmployer.text  == "" {
-        Loaf("Please enter cureent job title.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        Loaf("Please enter cureent job title.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
     }else   if self.txtCurrentEmployer.text  == ""
     {
-        Loaf("Please enter your current employer.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        Loaf("Please enter your current employer.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
     }else   if self.txtTenure.text  == ""
     {
-        Loaf("Please enter current tenure".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        Loaf("Please enter current tenure".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
     }else
     if self.txtViewCureentDescription.text  == ""
    {
-       Loaf("Please enter job desciption in brif.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+       Loaf("Please enter job desciption in brif.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
    }else if self.txtPreviouseJobTitle.text  == "" {
-    Loaf("Please enter your previous job title.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    Loaf("Please enter your previous job title.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
 }else   if self.txtprviouseEmployer.text  == ""
 {
-    Loaf("Please enter your previous employer name.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    Loaf("Please enter your previous employer name.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
 }else   if self.txtPrivouseTenure.text  == ""
 {
-    Loaf("Please enter your previous job tenure.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    Loaf("Please enter your previous job tenure.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
 }else   if self.txtPrviouseDescription.text  == ""
 {
-    Loaf("Please enter previous job desciption in brif.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+    Loaf("Please enter previous job desciption in brif.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
 }else{
         SVProgressHUD.show()
         wsWorkExperince1()

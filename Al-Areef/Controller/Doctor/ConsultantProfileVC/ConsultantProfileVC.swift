@@ -20,6 +20,11 @@ class ConsultantProfileVC: UIViewController {
     @IBOutlet weak var btnUpload              : UIButton!
     @IBOutlet weak var vwDescription          : UIView!
     @IBOutlet weak var viewLink: UIView!
+    @IBOutlet weak var lblDescribeYourself : UILabel!
+    @IBOutlet weak var lblDiscription : UILabel!
+    @IBOutlet weak var lblUploadVideo : UILabel!
+    
+    
     var userID = ""
     // MARK:- Variables
     
@@ -27,6 +32,12 @@ class ConsultantProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        lblDescribeYourself.text = "Describe yourself".localiz()
+        lblDiscription.text = "Please provide a brief description about you".localiz()
+        lblUploadVideo.text = "Upload a video introducing yourself to your potential patients".localiz()
+        btnUpload.setTitle("UPLOAD".localiz(), for: .normal)
+        txtLink.placeholder = "Please enter your video link here.".localiz()
+        btnNext.setTitle("Next".localiz(), for: .normal)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -67,10 +78,10 @@ class ConsultantProfileVC: UIViewController {
     
     @IBAction func btnNextTapped(_ sender : UIButton){
         if self.txtDescription.text  == "" {
-            Loaf("Please describe yourself.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please describe yourself.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if self.txtLink.text  == ""
         {
-            Loaf("Please enter video link.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter video link.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else{
             SVProgressHUD.show()
             wsAddProfileDesc()
@@ -99,7 +110,7 @@ class ConsultantProfileVC: UIViewController {
                 DispatchQueue.main.async {
                     if result == "success"
                     {
-                        let alert = UIAlertController(title: "Success", message: "You have register sucessfully.", preferredStyle: UIAlertController.Style.alert)
+                        let alert = UIAlertController(title: "Success".localiz(), message: "You have register sucessfully.".localiz(), preferredStyle: UIAlertController.Style.alert)
                           alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {(action:UIAlertAction!) in
                             self.pushLoginVC()
                           }))

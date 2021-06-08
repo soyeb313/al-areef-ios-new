@@ -13,6 +13,12 @@ class RegistrationStepTwoVC: UIViewController {
     @IBOutlet weak var vwFacebook          : UIView!
     @IBOutlet weak var vwEmail             : UIView!
     
+    @IBOutlet weak var lblLinkedIn          : UILabel!
+    @IBOutlet weak var lblFacebook          : UILabel!
+    @IBOutlet weak var lblEmail             : UILabel!
+    @IBOutlet weak var lblRegisterNow       : UILabel!
+    
+    
     // MARK:- Variables
     
     // MARK:- View Life Cycle
@@ -30,6 +36,14 @@ class RegistrationStepTwoVC: UIViewController {
         vwLinkedIn.setBorder(with: .app_Green, 1)
         vwFacebook.setBorder(with: .app_Green, 1)
         vwEmail.setBorder(with: .app_Green, 1)
+        
+        lblLinkedIn.text = "Via LinkedIn".localiz()
+        lblFacebook.text = "Via Facebook".localiz()
+        lblEmail.text = "Via Email".localiz()
+        lblRegisterNow.text = "Register Now".localiz()
+        
+        
+        
     }
     
     // MARK:- Button Actions

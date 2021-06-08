@@ -16,16 +16,29 @@ class AppointmentVC: UIViewController {
     @IBOutlet weak var brnClose: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnResecdule: UIButton!
+    var words = ""
+    var rate = ""
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
+    var consultant_id  =  0
+   var name = ""
+    var jobTitle = ""
+    var topic = ""
+    var location = ""
     // MARK:- Variables
     var consultType : ConsultingType?
-    
+    var arrRecommendation = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         self.viewCancel.isHidden = true
+        self.GetConsulatantDetails() 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
 
     // MARK:- SetUpView
     private func setUpView() {
@@ -72,9 +85,22 @@ class AppointmentVC: UIViewController {
         switch consultType {
         case .TextMessage:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: TextMessageVC.self)) as? TextMessageVC else { return }
+            vc.words = words
+            vc.rate = rate
+            vc.couslingTopic_name = couslingTopic_name
+            vc.couslingTopic_id = couslingTopic_id
+            vc.consultant_id = consultant_id
+            vc.name = name
+           
             self.navigationController?.pushViewController(vc, animated: false)
         case .VoiceMessage:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: VoiceMessageVC.self)) as? VoiceMessageVC else { return }
+            vc.words = words
+            vc.rate = rate
+            vc.couslingTopic_name = couslingTopic_name
+            vc.couslingTopic_id = couslingTopic_id
+            vc.consultant_id = consultant_id
+            vc.name = name
             self.navigationController?.pushViewController(vc, animated: true)
             self.dismiss(animated: false, completion: nil)
         case .AudioConnections:

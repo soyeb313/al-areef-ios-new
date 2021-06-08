@@ -21,7 +21,12 @@ class PaymentSuccessPopupVC: UIViewController {
     @IBOutlet weak var lblAmount             : UILabel!
     
     weak var paymentSuccessDelegate: PaymentSuccessProtocol?
-    
+    var words = ""
+    var rate = ""
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
+    var consultant_id  =  0
+    var consultType : ConsultingType?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
@@ -31,9 +36,20 @@ class PaymentSuccessPopupVC: UIViewController {
         
         btnContinue.setCornerRadius(radius: 5)
         btnContinue.setShadow(shadowColor: UIColor.gray, shadowOpacity: 1, shadowRadius: 2, offset: CGSize(width: 0, height: 1))
-        btnContinue.setTitle("Continue to record the message".localiz(), for: .normal)
+        switch consultType {
+        case .TextMessage:
+        btnContinue.setTitle("Continue to type the message".localiz(), for: .normal)
+        break
+        case .VoiceMessage:
+            btnContinue.setTitle("Continue to record the message".localiz(), for: .normal)
+        break
+        default :
+            btnContinue.setTitle("Continue to type the message".localiz(), for: .normal)
+
+        }
+      
         self.lblDescription.text = "Payment successful".localiz()
-        self.lblAmount.text = "KWD 10.00".localiz()
+        self.lblAmount.text = rate
         self.lblSubDescription.text = "Thank you for payment and you can now up to record your message.".localiz()
     }
     

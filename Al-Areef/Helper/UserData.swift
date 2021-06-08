@@ -11,6 +11,8 @@ final class UserData {
 
     enum userDataKeys : String {
         case language           = "LANGUAGE_KEY"
+        case UserProfileData            = "UserProfileData"
+        case LoggedInUserType           = "LoggedInUserType"
     }
     
     // MARK:- init Methods
@@ -39,6 +41,25 @@ final class UserData {
         userdefault.synchronize()
     }
     
+    class func saveCodableData<T: Codable>(for type: userDataKeys, value: T) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(value) {
+            userdefault.set(encoded, forKey: type.rawValue)
+        }
+    }
+    
+    class func returnCodableData<T: Codable>(for type: userDataKeys, valueType : T.Type)->T? {
+        let decoder = JSONDecoder()
+        if let user_data = userdefault.object(forKey: type.rawValue) as? Data{
+            if let decoded = try? decoder.decode(valueType, from: user_data){
+                return decoded
+            }else{
+                return nil
+            }
+        }else{
+            return nil
+        }
+    }
 } //class
 
 

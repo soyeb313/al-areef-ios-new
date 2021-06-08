@@ -24,6 +24,14 @@ class OTPVC: UIViewController {
     var specialID = ""
     var userID = ""
     var password = ""
+    
+    var lastName = ""
+    var street = ""
+    var area = ""
+    var country = ""
+    var city = ""
+    var Preferredlang = ""
+    var Agegroup = ""
     // MARK:- Variables
     var otp = ""
     var isFromConsultantRegsitration = false
@@ -78,27 +86,27 @@ class OTPVC: UIViewController {
             pushSelectPlanVC()
         }else {
             pushQuestionnaireFormVC()
-//            if self.viewOTP.getPin() == "" {
-//                Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
-//
-//            }else
-//            {
-//                SVProgressHUD.show()
-//                wsVerifyOTp()
-//            }
+            if self.viewOTP.getPin() == "" {
+                Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+
+            }else
+            {
+                SVProgressHUD.show()
+                wsVerifyOTp()
+            }
         }
     }
     @IBAction func btnResnet(_ sender: Any) {
-//        pushQuestionnaireFormVC()
-//        if self.viewOTP.getPin() == "" {
-//            Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
-//            
-//        }else
-//        {
-//            SVProgressHUD.show()
-//            
-//            wsReSendOtp()
-//        }
+        pushQuestionnaireFormVC()
+        if self.viewOTP.getPin() == "" {
+            Loaf("Please enter OTP ".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            
+        }else
+        {
+            SVProgressHUD.show()
+            
+            wsReSendOtp()
+        }
         
         
     }
@@ -164,13 +172,19 @@ class OTPVC: UIViewController {
     
     func wsCustomerRegistration() {
         
-        
         let parameters = [ "mobile_number": phonenumber,
                            "username" :  "AF1",
                            "password": password,
-                           "full_name" : fullName ,
-                           "city": userID,
+                           "full_name" : fullName + lastName ,
+                           "first_name":fullName,
+                           "last_name": lastName,
+                           "age":Agegroup,
+                           "city": city,
+                           "street_address":street,
+                           "area":area,
+                           "country":country,
                            "id_number" : specialID,
+                           "selected_lang":Preferredlang,
                            "email": email,
                            "user_type" :  1,
                            "lat": self.viewOTP.getPin(),
@@ -202,10 +216,7 @@ class OTPVC: UIViewController {
                         Utility.Save_Value_Userdefauts(Key: User_defaults_Constants.city, Value: city ?? "")
                         UserDefaults.standard.set(true, forKey: User_defaults_Constants.LOGGED_IN)
                         UserDefaults.standard.synchronize()
-                        guard let vc = UIStoryboard.Customer.instantiateViewController(withIdentifier: String(describing: QuestionnaireFormVC.self)) as? QuestionnaireFormVC else { return }
-                        
-                        self.navigationController?.pushViewController(vc, animated: false)
-                        
+                        self.pushQuestionnaireFormVC(userid: "\(user_id ?? 0)")
                         
                     }
                 }else{
@@ -216,6 +227,12 @@ class OTPVC: UIViewController {
             
         }
         
+    }
+    
+    func pushQuestionnaireFormVC(userid:String){
+        guard let vc = UIStoryboard.Customer.instantiateViewController(withIdentifier: String(describing: QuestionnaireFormVC.self)) as? QuestionnaireFormVC else { return }
+        vc.user_id = userid
+        self.navigationController?.pushViewController(vc, animated: false)
     }
 } //class
 

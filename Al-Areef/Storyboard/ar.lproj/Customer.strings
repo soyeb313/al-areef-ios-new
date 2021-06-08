@@ -1,13 +1,48 @@
 
+/* Class = "UIButton"; normalTitle = "Completes"; ObjectID = "20K-vL-4q5"; */
+"20K-vL-4q5.normalTitle" = "Completes";
+
+/* Class = "UILabel"; text = "Already have an account? Log in"; ObjectID = "4Y8-Wv-aoq"; */
+"4Y8-Wv-aoq.text" = "Already have an account? Log in";
+
+/* Class = "UILabel"; text = "Years of Experience"; ObjectID = "4fv-0O-2Xm"; */
+"4fv-0O-2Xm.text" = "Years of Experience";
+
+/* Class = "UILabel"; text = "Registration"; ObjectID = "6Uw-6G-HxK"; */
+"6Uw-6G-HxK.text" = "Registration";
+
+/* Class = "UILabel"; text = "How satisfied are you with your job performance in the current job?"; ObjectID = "7cf-cW-mVk"; */
+"7cf-cW-mVk.text" = "How satisfied are you with your job performance in the current job?";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "9iE-dF-W1r"; */
+"9iE-dF-W1r.text" = "Address";
 
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "Gsv-vi-I0q"; */
 "Gsv-vi-I0q.placeholder" = "example@gmail.com";
 
+/* Class = "UILabel"; text = "How satisfied are you with the management performance of your current company?"; ObjectID = "HBC-HU-8ad"; */
+"HBC-HU-8ad.text" = "How satisfied are you with the management performance of your current company?";
+
 /* Class = "UIButton"; normalTitle = "Resend"; ObjectID = "HDn-mK-BN2"; */
 "HDn-mK-BN2.normalTitle" = "Resend";
 
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "IEU-zg-Pr1"; */
+"IEU-zg-Pr1.placeholder" = "example@gmail.com";
+
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "Ilu-5H-gsf"; */
 "Ilu-5H-gsf.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "Preferred Language"; ObjectID = "Lka-fq-s6a"; */
+"Lka-fq-s6a.text" = "Preferred Language";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "V9S-Ji-2tc"; */
+"V9S-Ji-2tc.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "The lowest level of satisfaction"; ObjectID = "Vko-TT-Uit"; */
+"Vko-TT-Uit.text" = "The lowest level of satisfaction";
+
+/* Class = "UILabel"; text = "The number of companies and places you worked in previously"; ObjectID = "XhD-i2-Vs3"; */
+"XhD-i2-Vs3.text" = "The number of companies and places you worked in previously";
 
 /* Class = "UILabel"; text = "If you have not received your OTP code, you can press The re-transmitter button below to get a new code."; ObjectID = "c0i-CY-HIp"; */
 "c0i-CY-HIp.text" = "If you have not received your OTP code, you can press The re-transmitter button below to get a new code.";
@@ -15,17 +50,62 @@
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "cGo-X5-7v7"; */
 "cGo-X5-7v7.placeholder" = "example@gmail.com";
 
+/* Class = "UILabel"; text = "Age"; ObjectID = "cuV-Sd-NJC"; */
+"cuV-Sd-NJC.text" = "Age";
+
+/* Class = "UILabel"; text = "Do you like your current job or not?"; ObjectID = "cuZ-4Z-mtC"; */
+"cuZ-4Z-mtC.text" = "Do you like your current job or not?";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "eEk-4W-Gad"; */
+"eEk-4W-Gad.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "Current Position"; ObjectID = "ftB-MW-CUn"; */
+"ftB-MW-CUn.text" = "Current Position";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "gGz-BW-acN"; */
+"gGz-BW-acN.text" = "Type";
+
+/* Class = "UILabel"; text = "Qualification"; ObjectID = "i5n-OH-YL6"; */
+"i5n-OH-YL6.text" = "Qualification";
+
 /* Class = "UILabel"; text = "Enter the OTP code"; ObjectID = "iMC-YM-lrP"; */
 "iMC-YM-lrP.text" = "Enter the OTP code";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "k0i-Cq-6L1"; */
+"k0i-Cq-6L1.placeholder" = "example@gmail.com";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "leS-5n-U9h"; */
+"leS-5n-U9h.placeholder" = "example@gmail.com";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "ltr-xG-6XW"; */
+"ltr-xG-6XW.placeholder" = "example@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "mta-oe-ryo"; */
+"mta-oe-ryo.normalTitle" = "Next";
 
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "nTj-eJ-A2f"; */
 "nTj-eJ-A2f.placeholder" = "example@gmail.com";
 
+/* Class = "UILabel"; text = "The highest level of satisfaction"; ObjectID = "opc-lB-cUo"; */
+"opc-lB-cUo.text" = "The highest level of satisfaction";
+
 /* Class = "UIButton"; normalTitle = "Completes"; ObjectID = "qpA-uS-QHp"; */
 "qpA-uS-QHp.normalTitle" = "Completes";
 
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "qyD-KZ-ZwI"; */
+"qyD-KZ-ZwI.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "The highest level of satisfaction"; ObjectID = "tsq-4Z-BsU"; */
+"tsq-4Z-BsU.text" = "The highest level of satisfaction";
+
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "uqA-eU-byI"; */
 "uqA-eU-byI.placeholder" = "example@gmail.com";
+
+/* Class = "UILabel"; text = "The lowest level of satisfaction"; ObjectID = "uvY-BM-SFA"; */
+"uvY-BM-SFA.text" = "The lowest level of satisfaction";
+
+/* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "wOs-I8-kd6"; */
+"wOs-I8-kd6.placeholder" = "example@gmail.com";
 
 /* Class = "UITextField"; placeholder = "example@gmail.com"; ObjectID = "zic-gx-Czx"; */
 "zic-gx-Czx.placeholder" = "example@gmail.com";

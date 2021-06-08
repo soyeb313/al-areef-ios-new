@@ -24,7 +24,11 @@ class CartVC: UIViewController {
     @IBOutlet weak var lblDuration          : UILabel!
     @IBOutlet weak var lblFees              : UILabel!
     @IBOutlet weak var lblName              : UILabel!
-    
+    var words = ""
+    var rate = ""
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
+    var consultant_id  =  0
     
     // MARK:- Variables
     var consultType : ConsultingType?
@@ -61,6 +65,11 @@ class CartVC: UIViewController {
          lblFeesTitle.text = "Fees".localiz() + ":"
          lblNameTitle.text = "Name".localiz() + ":"
         lblServiceName.text = consultType?.rawValue
+        
+        lblTopicName.text = couslingTopic_name
+        lblDuration.text = words
+        lblFees.text = rate
+        lblName.text = UserDefaults.standard.value(forKey: User_defaults_Constants.full_name) as? String
     }
     
     // MARK:- Button Actions
@@ -76,6 +85,12 @@ class CartVC: UIViewController {
     private func pushMakePaymentVC() {
         guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MakePaymentVC.self)) as? MakePaymentVC else { return }
         vc.consultType = consultType
+        vc.words = words
+        vc.rate = rate
+        vc.couslingTopic_name =  couslingTopic_name
+        vc.couslingTopic_id =  couslingTopic_id
+        vc.consultant_id =  consultant_id
+       
         self.navigationController?.pushViewController(vc, animated: false)
     }
 

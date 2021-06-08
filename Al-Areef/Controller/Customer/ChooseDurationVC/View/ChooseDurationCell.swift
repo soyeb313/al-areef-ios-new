@@ -9,6 +9,7 @@ import UIKit
 
 class ChooseDurationCell: UITableViewCell {
 
+    @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var vwBack                         : UIView!
     @IBOutlet weak var vwPGray                         : UIView!
     @IBOutlet weak var vwYearsExperience              : UIView!

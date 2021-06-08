@@ -8,6 +8,8 @@
 import UIKit
 import Loaf
 import SVProgressHUD
+import DropDown
+
 class CreateDoctorProfileVC: UIViewController {
     
     @IBOutlet weak var txtPassword: UITextField!
@@ -19,8 +21,15 @@ class CreateDoctorProfileVC: UIViewController {
     @IBOutlet weak var txtxName: UITextField!
     var userId = ""
     @IBOutlet weak var txtMobileNo: UITextField!
-    // MARK:- Variables
     
+    @IBOutlet weak var lblEnterName: UILabel!
+    @IBOutlet weak var lblEnterMobileNo: UILabel!
+    @IBOutlet weak var lblEnterEmail: UILabel!
+    @IBOutlet weak var lblEnterGender: UILabel!
+    @IBOutlet weak var lblEnterPassword: UILabel!
+    
+    // MARK:- Variables
+   
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +42,7 @@ class CreateDoctorProfileVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
+        
         self.title = "Create Your Profile".localiz()
         
         var backButton = "backButton1"
@@ -45,6 +55,13 @@ class CreateDoctorProfileVC: UIViewController {
         btnCreateProfile.setTitle("Create your Profile".localiz(), for: .normal)
         self.navigationItem.leftBarButtonItem = backBtn
         
+        lblEnterName.text = "Enter your Name".localiz()
+        lblEnterMobileNo.text = "Mobile Number".localiz()
+        lblEnterEmail.text = "Email Address".localiz()
+        lblEnterGender.text = "Gender".localiz()
+        lblEnterPassword.text = "Password".localiz()
+        
+        txtGender.delegate = self
     }
     
     // MARK:- Button Actions
@@ -56,22 +73,22 @@ class CreateDoctorProfileVC: UIViewController {
     @IBAction func btnCreateProfileTapped(_ sender : UIButton){
    //     self.pushAcademicQualificationVC()
         if self.txtxName.text  == "" {
-            Loaf("Please enter full name.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter full name.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if self.txtMobileNo.text  == ""
         {
-            Loaf("Please enter your  mobile number.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter your  mobile number.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if self.txtEmail.text  == ""
         {
-            Loaf("Please enter your Email id.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter your Email id.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if  isValidEmail(testStr:txtEmail.text ?? "") == false
         {
-            Loaf("Please enter valid Email id.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter valid Email id.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if  txtGender.text == ""
         {
-            Loaf("Please enter your gender.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter your gender.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else   if  txtPassword.text == ""
         {
-            Loaf("Please enter password.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            Loaf("Please enter password.".localiz(), state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else
         {
             SVProgressHUD.show()
@@ -133,6 +150,7 @@ class CreateDoctorProfileVC: UIViewController {
     
     // MARK:- Custom Methods
     
+    
     // MARK:- ReceiveMemoryWarning
     override func didReceiveMemoryWarning() {
         debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")
@@ -147,3 +165,26 @@ class CreateDoctorProfileVC: UIViewController {
 } //class
 
 
+extension CreateDoctorProfileVC : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.endEditing(true)
+        let dropDown = DropDown()
+        
+        dropDown.anchorView = textField
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        
+        let genderArr = ["Male".localiz(),"Female".localiz()]
+        
+        dropDown.dataSource = genderArr
+        
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Selected item: \(item) at index: \(index)")
+            textField.text = item
+            
+        }
+
+        
+        dropDown.show()
+        
+    }
+}

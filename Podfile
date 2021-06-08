@@ -16,4 +16,7 @@ target 'Al-Areef' do
   pod 'GooglePlaces'
   pod 'Loaf'
   pod 'FSCalendar'
+  pod 'iRecordView'
+  pod 'SideMenu', '~> 6.0'
+  pod 'DropDown'
 end

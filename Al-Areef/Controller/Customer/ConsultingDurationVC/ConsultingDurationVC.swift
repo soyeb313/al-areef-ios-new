@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import SVProgressHUD
+import Loaf
 class ConsultingDurationVC: UIViewController {
 
     // MARK:- Outlets
@@ -31,14 +32,22 @@ class ConsultingDurationVC: UIViewController {
     @IBOutlet weak var iconPrice2   : UIImageView!
     @IBOutlet weak var iconPrice3   : UIImageView!
     @IBOutlet weak var imgAppointmant   : UIImageView!
-    
+    var selectedServices = ""
+    var arrTopicsDuration = NSArray()
     // MARK:- Variables
     var consultType : ConsultingType?
     var appointmantImg = UIImage()
+    var rate = ""
+    var words = ""
+    var couslingTopic_name =  ""
+    var couslingTopic_id =  0
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        SVProgressHUD.show()
+        wsGetCounslingTopicDuration()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -90,6 +99,7 @@ class ConsultingDurationVC: UIViewController {
             self.icon1.image = #imageLiteral(resourceName: "keyboardGreen")
             self.icon2.image = #imageLiteral(resourceName: "keyboardGreen")
             self.icon3.image = #imageLiteral(resourceName: "keyboardGreen")
+            selectedServices = "text"
         }else{
             self.vwAddWords.isHidden = true
             lblPrice1.text = "10 USD".localiz()
@@ -100,6 +110,8 @@ class ConsultingDurationVC: UIViewController {
             lbmin2.text  = "20 Minutes".localiz()
             self.vwDurationBack2.isHidden = false
             self.vwDurationBack3.isHidden = false
+            
+            selectedServices = "voice"
         }
         
         btnNext.setTitle("NEXT".localiz(), for: .normal)
@@ -116,18 +128,35 @@ class ConsultingDurationVC: UIViewController {
     
     
     @IBAction func btnNextTapped(_ sender : UIButton){
+        if words == ""
+        {
+            if consultType == ConsultingType.TextMessage {
+                Loaf("Please choose words. "
+                     , state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "FF0000"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+            }else{
+            Loaf("Please choose min. "
+                 , state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "FF0000"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+        }
+        }else{
         pushChooseDurationVC()
+        }
     }
     
     @IBAction func btnSelectOptionTapped(_ sender : UIButton){
         resetOtpIcon()
         switch sender.tag {
         case 1:
+            rate = self.lblPrice1.text!
+            words = self.lblMin1.text!
             self.iconPrice1.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
         case 2:
+            rate = self.lblPrice2.text!
+            words = self.lbmin2.text!
             self.iconPrice2.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
         default:
             self.iconPrice3.image = #imageLiteral(resourceName: "icon_radio_button_2_active")
+            rate = self.lblPrice3.text!
+            words = self.lblMin3.text!
         }
     }
     
@@ -149,6 +178,10 @@ class ConsultingDurationVC: UIViewController {
         case .TextMessage,.VoiceMessage:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: ChooseDurationVC.self)) as? ChooseDurationVC else { return }
             vc.consultType = consultType
+            vc.rate = rate
+            vc.words = words
+            vc.couslingTopic_name = couslingTopic_name
+            vc.couslingTopic_id = couslingTopic_id
             self.navigationController?.pushViewController(vc, animated: false)
         default:
             guard let vc = UIStoryboard.DashBoardCustomer.instantiateViewController(withIdentifier: String(describing: MapVC.self)) as? MapVC else { return }
@@ -173,4 +206,69 @@ class ConsultingDurationVC: UIViewController {
     }
     
     
+    func wsGetCounslingTopicDuration() {
+        let parameters = [ "user_id":UserDefaults.standard.value(forKey: User_defaults_Constants.user_id) ?? "",
+                           "service_type": selectedServices ,
+                           "lang": "en"
+                          ] as [String : Any]
+        let url = WSRequest.GetCounslingTopicsDuration()
+        WebServiceHandler.sharedInstance.postWebService(URL: url, paramDict: parameters, Header: nil, viewController: self) { (responseDict,err) in
+            print(responseDict,err)
+            SVProgressHUD.dismiss()
+            if let result = responseDict["message"] as? String
+            {
+                if result == "success"  {
+                     let userDetails = responseDict["user_details"] as? NSDictionary
+                    let message = "\(String(describing:result))"
+                    print(message)
+                    DispatchQueue.main.async {
+                        self.arrTopicsDuration = responseDict["data"] as! NSArray
+                        var obj1 = NSDictionary()
+                        var obj2 = NSDictionary()
+                        var obj3 = NSDictionary()
+                        obj1 = self.arrTopicsDuration[0] as! NSDictionary
+                        obj2 = self.arrTopicsDuration[1] as! NSDictionary
+                        obj3 = self.arrTopicsDuration[2] as! NSDictionary
+                        
+                        
+                        if self.consultType == ConsultingType.TextMessage {
+                            self.vwAddWords.isHidden = false
+                            self.lblPrice1.text = "\(obj1["rate"] ?? "") KWD".localiz()
+                            self.lblPrice2.text = "\(obj2["rate"] ?? "") KWD".localiz()
+                            self.lblPrice3.text  = "\(obj3["rate"] ?? "") KWD".localiz()
+                            self.lblMin1.text = "\(obj1["no_of_words"] ?? "") words".localiz()
+                            self.lblMin3.text =  "\(obj2["no_of_words"] ?? "") words".localiz()
+                            self.lbmin2.text  =  "\(obj3["no_of_words"] ?? "") words".localiz()
+                            self.vwDurationBack2.isHidden = true
+                            self.vwDurationBack3.isHidden = true
+                            self.icon1.image = #imageLiteral(resourceName: "keyboardGreen")
+                            self.icon2.image = #imageLiteral(resourceName: "keyboardGreen")
+                            self.icon3.image = #imageLiteral(resourceName: "keyboardGreen")
+                        }else{
+                            self.vwAddWords.isHidden = true
+                            self.lblPrice1.text = "10 KWD".localiz()
+                            self.lblPrice2.text =  "20 KWD".localiz()
+                            self.lblPrice3.text  = "30 KWD".localiz()
+                            self.lblMin1.text = "10 Minutes".localiz()
+                            self.lblMin3.text = "30 Minutes".localiz()
+                            self.lbmin2.text  = "20 Minutes".localiz()
+                            self.vwDurationBack2.isHidden = false
+                            self.vwDurationBack3.isHidden = false
+                            
+                            self.selectedServices = "voice"
+                        }
+                       
+                    
+                    }
+                }else{
+                    SVProgressHUD.dismiss()
+                    Loaf(responseDict["message"] as? String ?? ""
+                         , state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "FF0000"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
+                }
+               
+            }
+           
+        }
+
+    }
 } //class

@@ -15,6 +15,19 @@ class AppointmentProfileCell: UITableViewCell {
     @IBOutlet weak var vwbtnBack            : UIView!
     
     @IBOutlet weak var lblRecommendations              : UILabel!
+    
+    @IBOutlet weak var lblDetails: UILabel!
+    @IBOutlet weak var lblRate: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    
+    @IBOutlet weak var lblDuration: UILabel!
+    @IBOutlet weak var lblJobTitle: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var ImgProfile: UIImageView!
+    @IBOutlet weak var lblCounslingTopic: UILabel!
+    @IBOutlet weak var lblLocation: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.vwBack.setCornerRadius(radius: 5)

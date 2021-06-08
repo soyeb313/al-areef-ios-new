@@ -64,7 +64,7 @@ class WebServiceHandler: NSObject {
                         
                     case .failure(let error):
                         print(error)
-                       
+                        SVProgressHUD.dismiss()
                         Utility.ShowAlertWithTitleAndMessage(vc: viewController, titleStr: "", messageStr: Utility.GetFailedMessage())
                         
                     }

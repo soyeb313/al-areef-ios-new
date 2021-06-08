@@ -21,6 +21,7 @@ class LonginVC: UIViewController {
     @IBOutlet weak var viewBackPassword          : UIView!
     
     // MARK:- Variables
+    var isCutomerLogin = true
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -55,7 +56,11 @@ class LonginVC: UIViewController {
         lblSignUpInfo.isUserInteractionEnabled = true
         lblSignUpInfo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnLabel(_:))))
         self.hideKeyboardWhenTappedAround()
-        self.btnLogin.setTitle("Log in as customer".localiz(), for: .normal)
+        if isCutomerLogin {
+            self.btnLogin.setTitle("Log in as customer".localiz(), for: .normal)
+        }else{
+            self.btnLogin.setTitle("Log in as doctor".localiz(), for: .normal)
+        }
         self.txtemail.placeholder = "User id".localiz()
         self.txtPassword.placeholder = "Password".localiz()
     }
@@ -79,9 +84,9 @@ class LonginVC: UIViewController {
     }
     
     @IBAction func btnLoginClicked(_ sender: Any) {
-        self.pushLInfoSliderVC()
+//        self.pushLInfoSliderVC()
         
-        /*if txtemail.text == "" {
+        if txtemail.text == "" {
             Loaf("Please enter Email.".localized, state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "05B48B"), icon: UIImage(named: "toast_alert"))), location: .top, sender: self).show()
         }else  if  isValidEmail(testStr:txtemail.text ?? "") == false
         {
@@ -91,7 +96,7 @@ class LonginVC: UIViewController {
         }else{
             SVProgressHUD.show()
             wsLoginUser()
-        }*/
+        }
        
 
         
@@ -114,6 +119,22 @@ class LonginVC: UIViewController {
             {
                 if result == "success"  {
                      let userDetails = responseDict["user_details"] as? NSDictionary
+                   
+                   
+                    if let jsonData = responseDict["user_details"] as? [String : Any] {
+                    
+                        
+                        let jsonString = try? jsonData.toJson()
+                        if let jsonData = jsonString?.data(using: .utf8){
+                            let user = try? JSONDecoder().decode(UserDetails.self, from: jsonData)
+                            if let userData = user {
+                                UserData.saveCodableData(for: .UserProfileData, value: userData)
+                            }
+                            
+                        }
+                        //let user = try! JSONDecoder().decode(UserDetails.self, from: jsonData)
+                    }
+                    
                     let message = "\(String(describing:result))"
                     print(message)
                     DispatchQueue.main.async {
@@ -131,12 +152,7 @@ class LonginVC: UIViewController {
                         UserDefaults.standard.synchronize()
                         
                         self.pushLInfoSliderVC()
-                        
-//                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//                        let vc = storyBoard.instantiateViewController(withIdentifier: "UtechTab_UTC") as! UtechTab_UTC
-//                        self.navigationController?.pushViewController(vc, animated: true)
-//                        Loaf("You have login  sucessfully..", state: .custom(.init(backgroundColor: hexStringToUIColor(hex: "15B525"), icon: UIImage(named: "toast_sucess"))), location: .top, sender: self).show()
-                       
+                          
                     
                     }
                 }else{
@@ -152,7 +168,14 @@ class LonginVC: UIViewController {
     
     // MARK:- Push Methods
     private func pushLInfoSliderVC() {
-        appDelegate.setDashBoard()
+        if isCutomerLogin {
+            UserData.saveData(.LoggedInUserType, "Customer")
+            appDelegate.setDashBoard()
+        }else{
+            UserData.saveData(.LoggedInUserType, "Doctor")
+            appDelegate.setDoctorDashBoard()
+        }
+        
     }
     
     // MARK:- ReceiveMemoryWarning
